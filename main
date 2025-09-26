@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Webpage Title</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>What a Fancy Title</h1>
+
+        <p title="tooltip">and we got a paragraph too <strong>crazy</strong></p>
+        <br>
+        <a href="https://www.chess.com/game/live/110827408819">chess flex cuz why not</a>
+        
+        <hr>
+
+        <img src="C:\Users\bearm\OneDrive\Pictures\Screenshots 1\Screenshot 2025-09-20 111452.png" alt="alternate text" width="206" height="244">
+
+        <!-- comments w -->
+    </body>
+
+</html>
