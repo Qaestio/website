@@ -23,9 +23,9 @@
             --social-c:   #f0923b;
             --social-bg:  rgba(240,146,59,0.15);
 
-            --hour-h:  62px;
-            --time-w:  56px;
-            --hdr-h:   52px;
+            --hour-h: 62px;
+            --time-w: 56px;
+            --hdr-h:  52px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -87,8 +87,8 @@
             line-height: 1;
             transition: background 0.15s, border-color 0.15s;
         }
-        .btn:hover  { background: #252525; border-color: #383838; }
-        .btn.icon   { padding: 0.45rem 0.65rem; font-size: 1rem; }
+        .btn:hover   { background: #252525; border-color: #383838; }
+        .btn.icon    { padding: 0.45rem 0.65rem; font-size: 1rem; }
         .btn.primary { background: #2f6edd; border-color: #2f6edd; color: #fff; }
         .btn.primary:hover { background: #3d7dee; border-color: #3d7dee; }
         .btn.danger  { color: #e05252; border-color: rgba(224,82,82,0.3); }
@@ -117,8 +117,8 @@
             cursor: pointer;
             transition: all 0.15s;
         }
-        .vbtn + .vbtn          { border-left: 1px solid var(--border); }
-        .vbtn.active           { background: var(--surface2); color: var(--text); }
+        .vbtn + .vbtn            { border-left: 1px solid var(--border); }
+        .vbtn.active             { background: var(--surface2); color: var(--text); }
         .vbtn:hover:not(.active) { color: var(--text); }
 
         /* ── Filters ── */
@@ -145,11 +145,21 @@
         .chip .dot { width: 7px; height: 7px; border-radius: 50%; }
         .chip.off  { opacity: 0.3; }
 
+        /* ── Cal outer (holds grid + task panel side by side) ── */
+        .cal-outer {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            min-height: 0;
+        }
+
         /* ── Calendar wrap ── */
         .cal-wrap {
             flex: 1;
             overflow: auto;
-            position: relative;
+            min-width: 0;
+            min-height: 0;
         }
         .cal-wrap::-webkit-scrollbar       { width: 5px; height: 5px; }
         .cal-wrap::-webkit-scrollbar-track { background: transparent; }
@@ -253,14 +263,8 @@
             transition: filter 0.12s;
         }
         .appt:hover { filter: brightness(1.2); }
-        .appt-title {
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .appt-time { opacity: 0.7; font-size: 0.66rem; margin-top: 1px; }
-        .appt-rec  { opacity: 0.6; font-size: 0.62rem; }
+        .appt-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .appt-time  { opacity: 0.7; font-size: 0.66rem; margin-top: 1px; }
 
         /* Current time line */
         .now-line {
@@ -280,6 +284,187 @@
             background: #e05252;
         }
 
+        /* ── Task panel ── */
+        .tasks-panel {
+            width: 260px;
+            flex-shrink: 0;
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--bg);
+        }
+        .tp-header {
+            height: var(--hdr-h);
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .tp-title {
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+        .tp-add {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .tp-pin-btn {
+            flex-shrink: 0;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--dim);
+            cursor: pointer;
+            font-size: 0.72rem;
+            font-family: inherit;
+            padding: 0.35rem 0.55rem;
+            white-space: nowrap;
+            transition: all 0.15s;
+            line-height: 1;
+        }
+        .tp-pin-btn:hover { border-color: #3a3a3a; color: var(--muted); }
+        .tp-pin-btn.on {
+            border-color: rgba(240,146,59,0.45);
+            color: #f0923b;
+            background: rgba(240,146,59,0.08);
+        }
+        .tp-input {
+            flex: 1;
+            min-width: 0;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.4rem 0.6rem;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.82rem;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+        .tp-input:focus { border-color: #3a3a3a; }
+        .tp-add-btn {
+            flex-shrink: 0;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.15rem;
+            line-height: 1;
+            padding: 0.3rem 0.55rem;
+            transition: background 0.15s;
+        }
+        .tp-add-btn:hover { background: #252525; }
+
+        /* Task list */
+        .tp-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.25rem 0;
+        }
+        .tp-list::-webkit-scrollbar       { width: 4px; }
+        .tp-list::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+
+        .tp-section {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.55rem 0.85rem 0.2rem;
+        }
+        .tp-empty {
+            padding: 2rem 1rem;
+            font-size: 0.82rem;
+            color: var(--dim);
+            text-align: center;
+        }
+
+        /* Individual task item */
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            padding: 0.45rem 0.85rem;
+            transition: background 0.1s;
+        }
+        .task-item:hover { background: rgba(255,255,255,0.02); }
+        .task-item.pinned { background: rgba(240,146,59,0.03); }
+        .task-item.pinned:hover { background: rgba(240,146,59,0.06); }
+
+        .task-check {
+            width: 16px;
+            height: 16px;
+            min-width: 16px;
+            border: 1.5px solid var(--dim);
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+            flex-shrink: 0;
+        }
+        .task-check:hover { border-color: var(--muted); }
+        .task-check.checked {
+            background: #2f6edd;
+            border-color: #2f6edd;
+        }
+        .task-check.checked::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 7px;
+            border: 1.5px solid #fff;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg) translate(-1px, -1px);
+        }
+
+        .task-text {
+            flex: 1;
+            font-size: 0.82rem;
+            color: var(--text);
+            word-break: break-word;
+            line-height: 1.4;
+        }
+        .task-text.done {
+            text-decoration: line-through;
+            color: var(--dim);
+        }
+
+        .task-pin-mark {
+            font-size: 0.68rem;
+            color: #f0923b;
+            opacity: 0.65;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-weight: 600;
+        }
+
+        .task-del {
+            background: none;
+            border: none;
+            color: var(--dim);
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            padding: 0;
+            flex-shrink: 0;
+            margin-top: 1px;
+            opacity: 0;
+            transition: opacity 0.15s, color 0.15s;
+        }
+        .task-item:hover .task-del { opacity: 1; }
+        .task-del:hover { color: #e05252; }
+
         /* ── Modal ── */
         .overlay {
             position: fixed;
@@ -291,7 +476,6 @@
             z-index: 100;
             padding: 1rem;
         }
-        .overlay.hidden { display: flex !important; }  /* overridden below */
         .overlay.hidden { display: none !important; }
         .modal {
             background: var(--surface);
@@ -337,12 +521,7 @@
         }
         .input:focus { border-color: #3a3a3a; }
         .input.err   { border-color: #e05252; }
-        .err-msg {
-            font-size: 0.72rem;
-            color: #e05252;
-            margin-top: 0.3rem;
-            display: none;
-        }
+        .err-msg { font-size: 0.72rem; color: #e05252; margin-top: 0.3rem; display: none; }
         .err-msg.show { display: block; }
         .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
 
@@ -367,13 +546,7 @@
         .cat-opt .cdot { width: 7px; height: 7px; border-radius: 50%; }
         .cat-opt.sel   { color: #fff; border-color: transparent; }
 
-        /* Repeat section */
-        .repeat-custom-row { margin-top: 0.5rem; }
-        .section-divider {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 0.9rem 0;
-        }
+        .section-divider { border: none; border-top: 1px solid var(--border); margin: 0.9rem 0; }
 
         .modal-footer {
             display: flex;
@@ -394,25 +567,14 @@
             box-shadow: 0 8px 32px rgba(0,0,0,0.55);
         }
         .popup.hidden { display: none; }
-        .popup-badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            padding: 2px 7px;
-            border-radius: 10px;
-            margin-bottom: 0.4rem;
-        }
+        .popup-badge  { display: inline-block; font-size: 0.7rem; padding: 2px 7px; border-radius: 10px; margin-bottom: 0.4rem; }
         .popup-title  { font-weight: 600; font-size: 0.88rem; margin-bottom: 0.2rem; }
         .popup-time   { font-size: 0.77rem; color: var(--muted); }
         .popup-repeat { font-size: 0.72rem; color: var(--dim); margin-top: 0.15rem; }
         .popup-notes  { font-size: 0.77rem; color: var(--dim); margin-top: 0.3rem; }
         .popup-btns   { display: flex; gap: 0.35rem; align-items: center; margin-top: 0.65rem; flex-wrap: wrap; }
         .popup-btns .btn { font-size: 0.77rem; padding: 0.32rem 0.6rem; }
-        .popup-del-label {
-            width: 100%;
-            font-size: 0.72rem;
-            color: var(--muted);
-            margin-bottom: 0.1rem;
-        }
+        .popup-del-label { width: 100%; font-size: 0.72rem; color: var(--muted); margin-bottom: 0.1rem; }
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
@@ -427,6 +589,17 @@
             .cur-label { min-width: 0; font-size: 0.8rem; }
             .day-col  { min-width: 88px; }
             .day-view .day-col { min-width: 0; }
+
+            /* Stack cal and tasks vertically on mobile */
+            .cal-outer { flex-direction: column; }
+            .cal-wrap  { flex: 1; min-height: 0; }
+            .tasks-panel {
+                width: 100%;
+                max-height: 42vh;
+                flex-shrink: 0;
+                border-left: none;
+                border-top: 1px solid var(--border);
+            }
         }
     </style>
 </head>
@@ -458,9 +631,25 @@
 <!-- Category filters -->
 <div class="filters" id="filters"></div>
 
-<!-- Calendar -->
-<div class="cal-wrap" id="calWrap">
-    <div class="cal-grid" id="calGrid"></div>
+<!-- Main content area: calendar grid + task panel -->
+<div class="cal-outer">
+    <div class="cal-wrap" id="calWrap">
+        <div class="cal-grid" id="calGrid"></div>
+    </div>
+
+    <!-- Task panel (day view only) -->
+    <div class="tasks-panel hidden" id="tasksPanel">
+        <div class="tp-header">
+            <span class="tp-title">Tasks</span>
+        </div>
+        <div class="tp-add">
+            <button class="tp-pin-btn" id="tpPinBtn" onclick="toggleNewPin()" title="Pin to every day">↻ Daily</button>
+            <input  class="tp-input"   id="tpInput"  placeholder="Add a task…"
+                    onkeydown="if(event.key==='Enter')addTask()" />
+            <button class="tp-add-btn" onclick="addTask()">+</button>
+        </div>
+        <div class="tp-list" id="tpList"></div>
+    </div>
 </div>
 
 <!-- Add / Edit modal -->
@@ -471,25 +660,18 @@
             <button class="close-btn" onclick="closeModal()">×</button>
         </div>
 
-        <!-- Title -->
         <div class="field">
             <label class="label">Title</label>
             <input class="input" id="fTitle" placeholder="e.g. Doctor appointment" />
         </div>
-
-        <!-- Category -->
         <div class="field">
             <label class="label">Category</label>
             <div class="cat-grid" id="catGrid"></div>
         </div>
-
-        <!-- Date -->
         <div class="field">
             <label class="label">Date</label>
             <input class="input" id="fDate" type="date" />
         </div>
-
-        <!-- Start / End -->
         <div class="row2">
             <div class="field">
                 <label class="label">Start</label>
@@ -504,7 +686,6 @@
 
         <hr class="section-divider" />
 
-        <!-- Repeat -->
         <div class="field">
             <label class="label">Repeat</label>
             <select class="input" id="fRepeat" onchange="onRepeatChange()">
@@ -515,9 +696,7 @@
                 <option value="custom">Custom interval…</option>
             </select>
         </div>
-
-        <!-- Custom interval row -->
-        <div class="hidden repeat-custom-row" id="customRow">
+        <div class="hidden" id="customRow">
             <div class="row2">
                 <div class="field">
                     <label class="label">Every</label>
@@ -533,8 +712,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Until date -->
         <div class="field hidden" id="untilRow">
             <label class="label">Until <span style="color:var(--dim);font-size:0.72rem">optional</span></label>
             <input class="input" id="fUntil" type="date" />
@@ -542,12 +719,10 @@
 
         <hr class="section-divider" />
 
-        <!-- Notes -->
         <div class="field">
             <label class="label">Notes <span style="color:var(--dim);font-size:0.72rem">optional</span></label>
             <input class="input" id="fNotes" placeholder="Add a note…" />
         </div>
-
         <div class="modal-footer">
             <button class="btn" onclick="closeModal()">Cancel</button>
             <button class="btn primary" onclick="saveAppt()">Save</button>
@@ -562,12 +737,10 @@
     <div class="popup-time"    id="pTime"></div>
     <div class="popup-repeat"  id="pRepeat"></div>
     <div class="popup-notes"   id="pNotes"></div>
-    <div class="popup-btns"    id="pBtns">
+    <div class="popup-btns">
         <button class="btn" onclick="popupEdit()">Edit</button>
-        <!-- non-recurring delete -->
-        <button class="btn danger" id="pDelOne" onclick="popupDelete()">Delete</button>
-        <!-- recurring delete options -->
-        <span class="popup-del-label hidden" id="pDelLabel">Delete:</span>
+        <button class="btn danger" id="pDelOne"   onclick="popupDelete()">Delete</button>
+        <span   class="popup-del-label hidden" id="pDelLabel">Delete:</span>
         <button class="btn danger hidden" id="pDelThis" onclick="popupDeleteThis()">This only</button>
         <button class="btn danger hidden" id="pDelAll"  onclick="popupDeleteAll()">All events</button>
         <button class="btn" style="margin-left:auto" onclick="closePopup()">×</button>
@@ -594,21 +767,24 @@ const HOURS   = Array.from({length: END_H - START_H}, (_, i) => i + START_H);
 
 // ── State ─────────────────────────────────────────────────────────────────────
 
-let curDate  = new Date();
-let curView  = 'week';
-let appts    = JSON.parse(localStorage.getItem('cal_v1') || '[]');
-let selCat   = 'school';
-let editId   = null;
-let popupId  = null;
-let popupDate = null;   // date-key of the shown occurrence (for recurring delete)
-let activeF  = new Set(Object.keys(CATS));
+let curDate   = new Date();
+let curView   = 'week';
+let appts     = JSON.parse(localStorage.getItem('cal_v1')       || '[]');
+let tasks     = JSON.parse(localStorage.getItem('cal_tasks_v1') || '[]');
+let selCat    = 'school';
+let editId    = null;
+let popupId   = null;
+let popupDate = null;
+let activeF   = new Set(Object.keys(CATS));
+let newPin    = false;   // pin-toggle state for new task input
 
 // ── Utils ─────────────────────────────────────────────────────────────────────
 
-const uid    = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
-const pad    = n  => String(n).padStart(2,'0');
-const save   = () => localStorage.setItem('cal_v1', JSON.stringify(appts));
-const mkEl   = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
+const uid       = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+const pad       = n  => String(n).padStart(2,'0');
+const save      = () => localStorage.setItem('cal_v1', JSON.stringify(appts));
+const saveTasks = () => localStorage.setItem('cal_tasks_v1', JSON.stringify(tasks));
+const mkEl      = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
 function dKey(d) {
     return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
@@ -646,10 +822,6 @@ function weekDates(d) {
 
 // ── Recurrence ────────────────────────────────────────────────────────────────
 
-/**
- * Returns true if appointment `a` has an occurrence on `targetDate`.
- * Handles the original date and all subsequent recurrences.
- */
 function isOccurrence(a, targetDate) {
     const orig   = parseDate(a.date);
     const target = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
@@ -664,7 +836,7 @@ function isOccurrence(a, targetDate) {
 
     const diffDays = Math.round(diffMs / 86400000);
 
-    if (rep.type === 'daily')   return true;   // every day from origin
+    if (rep.type === 'daily')   return true;
     if (rep.type === 'weekly')  return diffDays % 7 === 0;
     if (rep.type === 'monthly') {
         if (target.getDate() !== orig.getDate()) return false;
@@ -674,8 +846,8 @@ function isOccurrence(a, targetDate) {
     if (rep.type === 'custom') {
         const n = Math.max(1, rep.interval || 1);
         const u = rep.unit || 'days';
-        if (u === 'days')   return diffDays % n === 0;
-        if (u === 'weeks')  return diffDays % (n * 7) === 0;
+        if (u === 'days')  return diffDays % n === 0;
+        if (u === 'weeks') return diffDays % (n * 7) === 0;
         if (u === 'months') {
             if (target.getDate() !== orig.getDate()) return false;
             const mDiff = (target.getFullYear() - orig.getFullYear()) * 12 + (target.getMonth() - orig.getMonth());
@@ -685,7 +857,6 @@ function isOccurrence(a, targetDate) {
     return false;
 }
 
-/** Returns all appointments that fall on a given date, including recurring occurrences. */
 function apptsForDate(targetDate) {
     const key = dKey(targetDate);
     const results = [];
@@ -694,9 +865,7 @@ function apptsForDate(targetDate) {
         if (!rep || rep.type === 'none') {
             if (a.date === key) results.push(a);
         } else {
-            if (isOccurrence(a, targetDate) && !(rep.excluded || []).includes(key)) {
-                results.push(a);
-            }
+            if (isOccurrence(a, targetDate) && !(rep.excluded || []).includes(key)) results.push(a);
         }
     });
     return results;
@@ -715,12 +884,20 @@ function repLabel(rep) {
     return '';
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
+// ── Calendar render ───────────────────────────────────────────────────────────
 
 function render() {
     updateLabel();
     buildGrid(curView === 'week' ? weekDates(curDate) : [curDate]);
     buildFilters();
+
+    const panel = document.getElementById('tasksPanel');
+    if (curView === 'day') {
+        panel.classList.remove('hidden');
+        buildTaskPanel(curDate);
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function updateLabel() {
@@ -741,7 +918,6 @@ function buildGrid(dates) {
     grid.className = `cal-grid${curView==='day' ? ' day-view' : ''}`;
     grid.innerHTML = '';
 
-    // Time column
     const tc = mkEl('div','time-col');
     tc.appendChild(mkEl('div','time-corner'));
     HOURS.forEach(h => {
@@ -755,14 +931,12 @@ function buildGrid(dates) {
     dates.forEach(date => {
         const col = mkEl('div','day-col');
 
-        // Header
         const hdr = mkEl('div', `day-hdr${isToday(date) ? ' today' : ''}`);
         const dn  = mkEl('div','day-name'); dn.textContent = DAYS_S[date.getDay()];
         const num = mkEl('div','day-num');  num.textContent = date.getDate();
         hdr.appendChild(dn); hdr.appendChild(num);
         col.appendChild(hdr);
 
-        // Body
         const body = mkEl('div','day-body');
 
         HOURS.forEach(h => {
@@ -775,7 +949,6 @@ function buildGrid(dates) {
             .filter(a => activeF.has(a.category))
             .forEach(a => body.appendChild(buildApptEl(a, hh, date)));
 
-        // Now line
         if (isToday(date)) {
             const now = new Date();
             const min = now.getHours() * 60 + now.getMinutes();
@@ -801,8 +974,7 @@ function buildApptEl(a, hh, date) {
     const div = mkEl('div','appt');
     div.style.cssText = `top:${top}px;height:${height}px;background:${cat.bg};border-left-color:${cat.color};color:${cat.color}`;
 
-    const t = mkEl('div','appt-title');
-    t.textContent = a.title;
+    const t = mkEl('div','appt-title'); t.textContent = a.title;
     div.appendChild(t);
 
     if (height > 30) {
@@ -863,7 +1035,122 @@ function scrollToNow() {
     document.getElementById('calWrap').scrollTop = Math.max(0, minToPx(min) - 120);
 }
 
-// ── Modal ─────────────────────────────────────────────────────────────────────
+// ── Task panel ────────────────────────────────────────────────────────────────
+
+function buildTaskPanel(date) {
+    const key     = dKey(date);
+    const pinned  = tasks.filter(t => t.pinned);
+    const regular = tasks.filter(t => !t.pinned && t.date === key);
+    const list    = document.getElementById('tpList');
+    list.innerHTML = '';
+
+    if (pinned.length === 0 && regular.length === 0) {
+        const e = mkEl('div','tp-empty');
+        e.textContent = 'No tasks — add one above';
+        list.appendChild(e);
+        return;
+    }
+
+    // Pinned tasks (always at top)
+    if (pinned.length > 0) {
+        const lbl = mkEl('div','tp-section');
+        lbl.textContent = 'Pinned – Daily';
+        list.appendChild(lbl);
+        pinned.forEach(t => list.appendChild(mkTaskItem(t, key)));
+    }
+
+    // Regular tasks for this day
+    if (regular.length > 0) {
+        const lbl = mkEl('div','tp-section');
+        lbl.textContent = "Today's";
+        list.appendChild(lbl);
+        regular.forEach(t => list.appendChild(mkTaskItem(t, key)));
+    }
+}
+
+function mkTaskItem(task, dateKey) {
+    const checked = task.pinned
+        ? (task.completedDates || []).includes(dateKey)
+        : !!task.completed;
+
+    const item = mkEl('div', `task-item${task.pinned ? ' pinned' : ''}`);
+
+    const chk = mkEl('div', `task-check${checked ? ' checked' : ''}`);
+    chk.addEventListener('click', () => toggleTask(task.id, dateKey));
+
+    const txt = mkEl('span', `task-text${checked ? ' done' : ''}`);
+    txt.textContent = task.text;
+
+    const del = mkEl('button','task-del');
+    del.textContent = '×';
+    del.title = 'Remove task';
+    del.addEventListener('click', e => { e.stopPropagation(); deleteTask(task.id); });
+
+    item.appendChild(chk);
+    item.appendChild(txt);
+
+    if (task.pinned) {
+        const mark = mkEl('span','task-pin-mark');
+        mark.textContent = '↻';
+        mark.title = 'Repeats every day';
+        item.appendChild(mark);
+    }
+
+    item.appendChild(del);
+    return item;
+}
+
+function addTask() {
+    const input = document.getElementById('tpInput');
+    const text  = input.value.trim();
+    if (!text) { input.focus(); return; }
+
+    const task = { id: uid(), text, pinned: newPin };
+    if (newPin) {
+        task.date           = null;
+        task.completedDates = [];
+    } else {
+        task.date      = dKey(curDate);
+        task.completed = false;
+    }
+
+    tasks.push(task);
+    saveTasks();
+    input.value = '';
+    buildTaskPanel(curDate);
+    input.focus();
+}
+
+function toggleTask(id, dateKey) {
+    const t = tasks.find(x => x.id === id);
+    if (!t) return;
+
+    if (t.pinned) {
+        if (!t.completedDates) t.completedDates = [];
+        const i = t.completedDates.indexOf(dateKey);
+        i !== -1 ? t.completedDates.splice(i, 1) : t.completedDates.push(dateKey);
+    } else {
+        t.completed = !t.completed;
+    }
+
+    saveTasks();
+    buildTaskPanel(curDate);
+}
+
+function deleteTask(id) {
+    tasks = tasks.filter(t => t.id !== id);
+    saveTasks();
+    buildTaskPanel(curDate);
+}
+
+function toggleNewPin() {
+    newPin = !newPin;
+    const btn = document.getElementById('tpPinBtn');
+    btn.classList.toggle('on', newPin);
+    btn.textContent = newPin ? '↻ Daily ✓' : '↻ Daily';
+}
+
+// ── Appointment modal ─────────────────────────────────────────────────────────
 
 function openAdd(date, start, end) {
     editId = null;
@@ -900,13 +1187,8 @@ function setRepeatUI(rep) {
     const type = rep?.type || 'none';
     document.getElementById('fRepeat').value  = type;
     document.getElementById('fUntil').value   = rep?.until || '';
-    if (type === 'custom') {
-        document.getElementById('fInterval').value = rep.interval || 1;
-        document.getElementById('fUnit').value     = rep.unit || 'days';
-    } else {
-        document.getElementById('fInterval').value = 1;
-        document.getElementById('fUnit').value     = 'days';
-    }
+    document.getElementById('fInterval').value = type === 'custom' ? (rep.interval || 1) : 1;
+    document.getElementById('fUnit').value     = type === 'custom' ? (rep.unit || 'days') : 'days';
     onRepeatChange();
 }
 
@@ -919,15 +1201,11 @@ function onRepeatChange() {
 function getRepeatData() {
     const type = document.getElementById('fRepeat').value;
     if (type === 'none') return { type: 'none' };
-    const rep = {
-        type,
-        until: document.getElementById('fUntil').value || null,
-    };
+    const rep = { type, until: document.getElementById('fUntil').value || null };
     if (type === 'custom') {
         rep.interval = Math.max(1, parseInt(document.getElementById('fInterval').value) || 1);
         rep.unit     = document.getElementById('fUnit').value;
     }
-    // Preserve excluded occurrences when editing
     if (editId) {
         const orig = appts.find(x => x.id === editId);
         if (orig?.repeat?.excluded) rep.excluded = orig.repeat.excluded;
@@ -955,7 +1233,6 @@ function clearEndErr() {
     document.getElementById('fEnd').classList.remove('err');
     document.getElementById('fEndErr').classList.remove('show');
 }
-
 function showEndErr() {
     document.getElementById('fEnd').classList.add('err');
     document.getElementById('fEndErr').classList.add('show');
@@ -965,21 +1242,17 @@ function closeModal() {
     document.getElementById('overlay').classList.add('hidden');
     editId = null;
 }
-
 function overlayClick(e) {
     if (e.target === document.getElementById('overlay')) closeModal();
 }
 
 function saveAppt() {
-    // Title validation
     const title = document.getElementById('fTitle').value.trim();
     if (!title) {
         document.getElementById('fTitle').classList.add('err');
         document.getElementById('fTitle').focus();
         return;
     }
-
-    // End-time validation
     const start = document.getElementById('fStart').value;
     const end   = document.getElementById('fEnd').value;
     if (!start || !end || timeToMin(end) <= timeToMin(start)) {
@@ -987,18 +1260,15 @@ function saveAppt() {
         document.getElementById('fEnd').focus();
         return;
     }
-
     const a = {
         id:       editId || uid(),
         title,
         category: selCat,
         date:     document.getElementById('fDate').value,
-        start,
-        end,
+        start, end,
         notes:    document.getElementById('fNotes').value.trim(),
         repeat:   getRepeatData(),
     };
-
     if (editId) {
         const i = appts.findIndex(x => x.id === editId);
         i !== -1 ? appts[i] = a : appts.push(a);
@@ -1015,7 +1285,6 @@ document.getElementById('fStart').addEventListener('change', function () {
     const startMin = timeToMin(this.value);
     const endEl    = document.getElementById('fEnd');
     if (endEl.value && timeToMin(endEl.value) <= startMin) {
-        // Auto-bump end to start + 1 hour (cap at 23:00)
         const newEnd = Math.min(startMin + 60, 23 * 60);
         endEl.value  = `${pad(Math.floor(newEnd / 60))}:${pad(newEnd % 60)}`;
     }
@@ -1037,8 +1306,7 @@ function showPopup(id, dateKey, e) {
     const a = appts.find(x => x.id === id);
     if (!a) return;
     const cat = CATS[a.category] || CATS.personal;
-    popupId   = id;
-    popupDate = dateKey;
+    popupId = id; popupDate = dateKey;
 
     const pb = document.getElementById('pBadge');
     pb.textContent   = cat.label;
@@ -1056,7 +1324,6 @@ function showPopup(id, dateKey, e) {
     pn.textContent   = a.notes || '';
     pn.style.display = a.notes ? 'block' : 'none';
 
-    // Show correct delete buttons
     const isRec = a.repeat && a.repeat.type !== 'none';
     document.getElementById('pDelOne').classList.toggle('hidden', isRec);
     document.getElementById('pDelLabel').classList.toggle('hidden', !isRec);
@@ -1076,25 +1343,19 @@ function showPopup(id, dateKey, e) {
 function outsidePopup(e) {
     if (!document.getElementById('popup').contains(e.target)) closePopup();
 }
-
 function closePopup() {
     document.getElementById('popup').classList.add('hidden');
     popupId = null; popupDate = null;
 }
-
 function popupEdit() {
     const a = appts.find(x => x.id === popupId);
     if (a) { closePopup(); openEdit(a); }
 }
-
-// Non-recurring delete
 function popupDelete() {
     if (!popupId) return;
     appts = appts.filter(x => x.id !== popupId);
     save(); closePopup(); render();
 }
-
-// Delete just this occurrence (add date to excluded list)
 function popupDeleteThis() {
     const a = appts.find(x => x.id === popupId);
     if (!a || !popupDate) return;
@@ -1102,8 +1363,6 @@ function popupDeleteThis() {
     if (!a.repeat.excluded.includes(popupDate)) a.repeat.excluded.push(popupDate);
     save(); closePopup(); render();
 }
-
-// Delete all occurrences (remove the appointment entirely)
 function popupDeleteAll() {
     if (!popupId) return;
     appts = appts.filter(x => x.id !== popupId);
