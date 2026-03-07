@@ -314,26 +314,6 @@
             border-bottom: 1px solid var(--border);
             flex-shrink: 0;
         }
-        .tp-pin-btn {
-            flex-shrink: 0;
-            background: none;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--dim);
-            cursor: pointer;
-            font-size: 0.72rem;
-            font-family: inherit;
-            padding: 0.35rem 0.55rem;
-            white-space: nowrap;
-            transition: all 0.15s;
-            line-height: 1;
-        }
-        .tp-pin-btn:hover { border-color: #3a3a3a; color: var(--muted); }
-        .tp-pin-btn.on {
-            border-color: rgba(240,146,59,0.45);
-            color: #f0923b;
-            background: rgba(240,146,59,0.08);
-        }
         .tp-input {
             flex: 1;
             min-width: 0;
@@ -388,15 +368,43 @@
 
         /* Individual task item */
         .task-item {
+            position: relative;
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
             padding: 0.45rem 0.85rem;
             transition: background 0.1s;
+            user-select: none;
         }
         .task-item:hover { background: rgba(255,255,255,0.02); }
         .task-item.pinned { background: rgba(240,146,59,0.03); }
         .task-item.pinned:hover { background: rgba(240,146,59,0.06); }
+        .task-item.dragging { opacity: 0.3; }
+        .task-item.drag-before::before,
+        .task-item.drag-after::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            height: 2px;
+            background: #2f6edd;
+            border-radius: 1px;
+            pointer-events: none;
+        }
+        .task-item.drag-before::before { top: 0; }
+        .task-item.drag-after::after   { bottom: 0; }
+
+        /* Drag handle */
+        .drag-handle {
+            flex-shrink: 0;
+            color: var(--dim);
+            cursor: grab;
+            display: flex;
+            align-items: center;
+            margin-top: 2px;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+        .task-item:hover .drag-handle { opacity: 1; }
 
         .task-check {
             width: 16px;
@@ -440,14 +448,23 @@
             color: var(--dim);
         }
 
-        .task-pin-mark {
-            font-size: 0.68rem;
-            color: #f0923b;
-            opacity: 0.65;
+        /* Pin button on each task */
+        .task-pin-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1px;
             flex-shrink: 0;
-            margin-top: 2px;
-            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-top: 1px;
+            color: var(--dim);
+            opacity: 0;
+            transition: color 0.15s, opacity 0.15s;
         }
+        .task-item:hover .task-pin-btn { opacity: 1; }
+        .task-pin-btn.active           { color: #f0923b; opacity: 1; }
+        .task-pin-btn:hover            { color: #f0923b; opacity: 1 !important; }
 
         .task-del {
             background: none;
@@ -643,7 +660,6 @@
             <span class="tp-title">Tasks</span>
         </div>
         <div class="tp-add">
-            <button class="tp-pin-btn" id="tpPinBtn" onclick="toggleNewPin()" title="Pin to every day">↻ Daily</button>
             <input  class="tp-input"   id="tpInput"  placeholder="Add a task…"
                     onkeydown="if(event.key==='Enter')addTask()" />
             <button class="tp-add-btn" onclick="addTask()">+</button>
@@ -776,7 +792,8 @@ let editId    = null;
 let popupId   = null;
 let popupDate = null;
 let activeF   = new Set(Object.keys(CATS));
-let newPin    = false;   // pin-toggle state for new task input
+let dragId    = null;    // id of the task currently being dragged
+let dragGroup = null;    // 'pinned' | 'regular'
 
 // ── Utils ─────────────────────────────────────────────────────────────────────
 
@@ -1056,7 +1073,7 @@ function buildTaskPanel(date) {
         const lbl = mkEl('div','tp-section');
         lbl.textContent = 'Pinned – Daily';
         list.appendChild(lbl);
-        pinned.forEach(t => list.appendChild(mkTaskItem(t, key)));
+        pinned.forEach(t => list.appendChild(mkTaskItem(t, key, 'pinned')));
     }
 
     // Regular tasks for this day
@@ -1064,39 +1081,56 @@ function buildTaskPanel(date) {
         const lbl = mkEl('div','tp-section');
         lbl.textContent = "Today's";
         list.appendChild(lbl);
-        regular.forEach(t => list.appendChild(mkTaskItem(t, key)));
+        regular.forEach(t => list.appendChild(mkTaskItem(t, key, 'regular')));
     }
 }
 
-function mkTaskItem(task, dateKey) {
+// SVG constants for task items
+const SVG_PIN = `<svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+  <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z"/>
+</svg>`;
+const SVG_GRIP = `<svg width="10" height="14" viewBox="0 0 10 14" fill="currentColor" aria-hidden="true">
+  <circle cx="3" cy="2"  r="1.5"/><circle cx="7" cy="2"  r="1.5"/>
+  <circle cx="3" cy="7"  r="1.5"/><circle cx="7" cy="7"  r="1.5"/>
+  <circle cx="3" cy="12" r="1.5"/><circle cx="7" cy="12" r="1.5"/>
+</svg>`;
+
+function mkTaskItem(task, dateKey, group) {
     const checked = task.pinned
         ? (task.completedDates || []).includes(dateKey)
         : !!task.completed;
 
     const item = mkEl('div', `task-item${task.pinned ? ' pinned' : ''}`);
+    item.draggable        = true;
+    item.dataset.id       = task.id;
+    item.dataset.group    = group;
 
+    // Drag handle
+    const handle = mkEl('span', 'drag-handle');
+    handle.innerHTML = SVG_GRIP;
+
+    // Checkbox
     const chk = mkEl('div', `task-check${checked ? ' checked' : ''}`);
-    chk.addEventListener('click', () => toggleTask(task.id, dateKey));
+    chk.addEventListener('click', e => { e.stopPropagation(); toggleTask(task.id, dateKey); });
 
+    // Text
     const txt = mkEl('span', `task-text${checked ? ' done' : ''}`);
     txt.textContent = task.text;
 
-    const del = mkEl('button','task-del');
+    // Pin button
+    const pin = mkEl('button', `task-pin-btn${task.pinned ? ' active' : ''}`);
+    pin.innerHTML = SVG_PIN;
+    pin.title = task.pinned ? 'Unpin task' : 'Pin to every day';
+    pin.addEventListener('click', e => { e.stopPropagation(); toggleTaskPin(task.id); });
+
+    // Delete button
+    const del = mkEl('button', 'task-del');
     del.textContent = '×';
     del.title = 'Remove task';
     del.addEventListener('click', e => { e.stopPropagation(); deleteTask(task.id); });
 
-    item.appendChild(chk);
-    item.appendChild(txt);
-
-    if (task.pinned) {
-        const mark = mkEl('span','task-pin-mark');
-        mark.textContent = '↻';
-        mark.title = 'Repeats every day';
-        item.appendChild(mark);
-    }
-
-    item.appendChild(del);
+    item.append(handle, chk, txt, pin, del);
+    enableDrag(item, task.id, group);
     return item;
 }
 
@@ -1105,16 +1139,7 @@ function addTask() {
     const text  = input.value.trim();
     if (!text) { input.focus(); return; }
 
-    const task = { id: uid(), text, pinned: newPin };
-    if (newPin) {
-        task.date           = null;
-        task.completedDates = [];
-    } else {
-        task.date      = dKey(curDate);
-        task.completed = false;
-    }
-
-    tasks.push(task);
+    tasks.push({ id: uid(), text, pinned: false, date: dKey(curDate), completed: false });
     saveTasks();
     input.value = '';
     buildTaskPanel(curDate);
@@ -1124,7 +1149,6 @@ function addTask() {
 function toggleTask(id, dateKey) {
     const t = tasks.find(x => x.id === id);
     if (!t) return;
-
     if (t.pinned) {
         if (!t.completedDates) t.completedDates = [];
         const i = t.completedDates.indexOf(dateKey);
@@ -1132,7 +1156,6 @@ function toggleTask(id, dateKey) {
     } else {
         t.completed = !t.completed;
     }
-
     saveTasks();
     buildTaskPanel(curDate);
 }
@@ -1143,11 +1166,84 @@ function deleteTask(id) {
     buildTaskPanel(curDate);
 }
 
-function toggleNewPin() {
-    newPin = !newPin;
-    const btn = document.getElementById('tpPinBtn');
-    btn.classList.toggle('on', newPin);
-    btn.textContent = newPin ? '↻ Daily ✓' : '↻ Daily';
+function toggleTaskPin(id) {
+    const t = tasks.find(x => x.id === id);
+    if (!t) return;
+    if (t.pinned) {
+        // Unpin → move to today's regular tasks
+        t.pinned    = false;
+        t.date      = dKey(curDate);
+        t.completed = false;
+        delete t.completedDates;
+    } else {
+        // Pin → make it a daily task
+        t.pinned         = true;
+        t.date           = null;
+        t.completedDates = [];
+        delete t.completed;
+    }
+    saveTasks();
+    buildTaskPanel(curDate);
+}
+
+// ── Drag-and-drop ─────────────────────────────────────────────────────────────
+
+function enableDrag(el, taskId, group) {
+    el.addEventListener('dragstart', e => {
+        dragId    = taskId;
+        dragGroup = group;
+        e.dataTransfer.effectAllowed = 'move';
+        // Defer adding class so the ghost image isn't faded
+        requestAnimationFrame(() => el.classList.add('dragging'));
+    });
+
+    el.addEventListener('dragend', () => {
+        el.classList.remove('dragging');
+        clearDragUI();
+        dragId = null; dragGroup = null;
+    });
+
+    el.addEventListener('dragover', e => {
+        if (el.dataset.group !== dragGroup || el.dataset.id === dragId) {
+            e.dataTransfer.dropEffect = 'none';
+            return;
+        }
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        clearDragUI();
+        const mid = el.getBoundingClientRect().top + el.getBoundingClientRect().height / 2;
+        el.classList.add(e.clientY < mid ? 'drag-before' : 'drag-after');
+    });
+
+    el.addEventListener('dragleave', e => {
+        if (!el.contains(e.relatedTarget)) {
+            el.classList.remove('drag-before', 'drag-after');
+        }
+    });
+
+    el.addEventListener('drop', e => {
+        e.preventDefault();
+        if (el.dataset.group !== dragGroup || el.dataset.id === dragId) return;
+        const before = el.classList.contains('drag-before');
+        clearDragUI();
+        dropTask(dragId, el.dataset.id, before);
+    });
+}
+
+function clearDragUI() {
+    document.querySelectorAll('.drag-before,.drag-after')
+        .forEach(el => el.classList.remove('drag-before','drag-after'));
+}
+
+function dropTask(fromId, toId, insertBefore) {
+    if (fromId === toId) return;
+    const fromIdx = tasks.findIndex(t => t.id === fromId);
+    if (fromIdx === -1) return;
+    const [moved] = tasks.splice(fromIdx, 1);
+    const toIdx = tasks.findIndex(t => t.id === toId);
+    tasks.splice(toIdx === -1 ? tasks.length : (insertBefore ? toIdx : toIdx + 1), 0, moved);
+    saveTasks();
+    buildTaskPanel(curDate);
 }
 
 // ── Appointment modal ─────────────────────────────────────────────────────────
