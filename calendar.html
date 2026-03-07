@@ -39,6 +39,8 @@
 
         body { display: flex; flex-direction: column; overflow: hidden; }
 
+        .hidden { display: none !important; }
+
         /* ── Top bar ── */
         .topbar {
             display: flex;
@@ -85,8 +87,8 @@
             line-height: 1;
             transition: background 0.15s, border-color 0.15s;
         }
-        .btn:hover { background: #252525; border-color: #383838; }
-        .btn.icon { padding: 0.45rem 0.65rem; font-size: 1rem; }
+        .btn:hover  { background: #252525; border-color: #383838; }
+        .btn.icon   { padding: 0.45rem 0.65rem; font-size: 1rem; }
         .btn.primary { background: #2f6edd; border-color: #2f6edd; color: #fff; }
         .btn.primary:hover { background: #3d7dee; border-color: #3d7dee; }
         .btn.danger  { color: #e05252; border-color: rgba(224,82,82,0.3); }
@@ -115,8 +117,8 @@
             cursor: pointer;
             transition: all 0.15s;
         }
-        .vbtn + .vbtn { border-left: 1px solid var(--border); }
-        .vbtn.active  { background: var(--surface2); color: var(--text); }
+        .vbtn + .vbtn          { border-left: 1px solid var(--border); }
+        .vbtn.active           { background: var(--surface2); color: var(--text); }
         .vbtn:hover:not(.active) { color: var(--text); }
 
         /* ── Filters ── */
@@ -141,7 +143,7 @@
             transition: opacity 0.15s;
         }
         .chip .dot { width: 7px; height: 7px; border-radius: 50%; }
-        .chip.off { opacity: 0.3; }
+        .chip.off  { opacity: 0.3; }
 
         /* ── Calendar wrap ── */
         .cal-wrap {
@@ -149,7 +151,7 @@
             overflow: auto;
             position: relative;
         }
-        .cal-wrap::-webkit-scrollbar { width: 5px; height: 5px; }
+        .cal-wrap::-webkit-scrollbar       { width: 5px; height: 5px; }
         .cal-wrap::-webkit-scrollbar-track { background: transparent; }
         .cal-wrap::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
 
@@ -258,6 +260,7 @@
             text-overflow: ellipsis;
         }
         .appt-time { opacity: 0.7; font-size: 0.66rem; margin-top: 1px; }
+        .appt-rec  { opacity: 0.6; font-size: 0.62rem; }
 
         /* Current time line */
         .now-line {
@@ -288,7 +291,8 @@
             z-index: 100;
             padding: 1rem;
         }
-        .overlay.hidden { display: none; }
+        .overlay.hidden { display: flex !important; }  /* overridden below */
+        .overlay.hidden { display: none !important; }
         .modal {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -296,8 +300,13 @@
             padding: 1.5rem;
             width: 100%;
             max-width: 400px;
+            max-height: calc(100vh - 2rem);
+            overflow-y: auto;
+            overscroll-behavior: contain;
             box-shadow: 0 16px 48px rgba(0,0,0,0.5);
         }
+        .modal::-webkit-scrollbar       { width: 4px; }
+        .modal::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
         .modal-hdr {
             display: flex;
             align-items: center;
@@ -324,9 +333,17 @@
             font-size: 0.87rem;
             outline: none;
             transition: border-color 0.15s;
+            appearance: none;
         }
         .input:focus { border-color: #3a3a3a; }
         .input.err   { border-color: #e05252; }
+        .err-msg {
+            font-size: 0.72rem;
+            color: #e05252;
+            margin-top: 0.3rem;
+            display: none;
+        }
+        .err-msg.show { display: block; }
         .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
 
         /* Category selector */
@@ -350,6 +367,14 @@
         .cat-opt .cdot { width: 7px; height: 7px; border-radius: 50%; }
         .cat-opt.sel   { color: #fff; border-color: transparent; }
 
+        /* Repeat section */
+        .repeat-custom-row { margin-top: 0.5rem; }
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 0.9rem 0;
+        }
+
         .modal-footer {
             display: flex;
             gap: 0.5rem;
@@ -365,7 +390,7 @@
             border-radius: 8px;
             padding: 0.9rem 1rem;
             z-index: 50;
-            width: 220px;
+            width: 230px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.55);
         }
         .popup.hidden { display: none; }
@@ -378,9 +403,16 @@
         }
         .popup-title  { font-weight: 600; font-size: 0.88rem; margin-bottom: 0.2rem; }
         .popup-time   { font-size: 0.77rem; color: var(--muted); }
-        .popup-notes  { font-size: 0.77rem; color: var(--dim); margin-top: 0.25rem; }
-        .popup-btns   { display: flex; gap: 0.35rem; align-items: center; margin-top: 0.6rem; }
+        .popup-repeat { font-size: 0.72rem; color: var(--dim); margin-top: 0.15rem; }
+        .popup-notes  { font-size: 0.77rem; color: var(--dim); margin-top: 0.3rem; }
+        .popup-btns   { display: flex; gap: 0.35rem; align-items: center; margin-top: 0.65rem; flex-wrap: wrap; }
         .popup-btns .btn { font-size: 0.77rem; padding: 0.32rem 0.6rem; }
+        .popup-del-label {
+            width: 100%;
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-bottom: 0.1rem;
+        }
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
@@ -438,18 +470,26 @@
             <h2 id="modalH">New Appointment</h2>
             <button class="close-btn" onclick="closeModal()">×</button>
         </div>
+
+        <!-- Title -->
         <div class="field">
             <label class="label">Title</label>
             <input class="input" id="fTitle" placeholder="e.g. Doctor appointment" />
         </div>
+
+        <!-- Category -->
         <div class="field">
             <label class="label">Category</label>
             <div class="cat-grid" id="catGrid"></div>
         </div>
+
+        <!-- Date -->
         <div class="field">
             <label class="label">Date</label>
             <input class="input" id="fDate" type="date" />
         </div>
+
+        <!-- Start / End -->
         <div class="row2">
             <div class="field">
                 <label class="label">Start</label>
@@ -458,12 +498,56 @@
             <div class="field">
                 <label class="label">End</label>
                 <input class="input" id="fEnd" type="time" />
+                <span class="err-msg" id="fEndErr">End must be after start</span>
             </div>
         </div>
+
+        <hr class="section-divider" />
+
+        <!-- Repeat -->
+        <div class="field">
+            <label class="label">Repeat</label>
+            <select class="input" id="fRepeat" onchange="onRepeatChange()">
+                <option value="none">Does not repeat</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly (same day)</option>
+                <option value="custom">Custom interval…</option>
+            </select>
+        </div>
+
+        <!-- Custom interval row -->
+        <div class="hidden repeat-custom-row" id="customRow">
+            <div class="row2">
+                <div class="field">
+                    <label class="label">Every</label>
+                    <input class="input" id="fInterval" type="number" min="1" max="365" value="1" />
+                </div>
+                <div class="field">
+                    <label class="label">&nbsp;</label>
+                    <select class="input" id="fUnit">
+                        <option value="days">Days</option>
+                        <option value="weeks">Weeks</option>
+                        <option value="months">Months</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Until date -->
+        <div class="field hidden" id="untilRow">
+            <label class="label">Until <span style="color:var(--dim);font-size:0.72rem">optional</span></label>
+            <input class="input" id="fUntil" type="date" />
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- Notes -->
         <div class="field">
             <label class="label">Notes <span style="color:var(--dim);font-size:0.72rem">optional</span></label>
             <input class="input" id="fNotes" placeholder="Add a note…" />
         </div>
+
         <div class="modal-footer">
             <button class="btn" onclick="closeModal()">Cancel</button>
             <button class="btn primary" onclick="saveAppt()">Save</button>
@@ -473,19 +557,25 @@
 
 <!-- Detail popup -->
 <div class="popup hidden" id="popup">
-    <span class="popup-badge" id="pBadge"></span>
-    <div class="popup-title" id="pTitle"></div>
-    <div class="popup-time"  id="pTime"></div>
-    <div class="popup-notes" id="pNotes"></div>
-    <div class="popup-btns">
-        <button class="btn"        onclick="popupEdit()">Edit</button>
-        <button class="btn danger" onclick="popupDelete()">Delete</button>
-        <button class="btn"        style="margin-left:auto" onclick="closePopup()">×</button>
+    <span class="popup-badge"  id="pBadge"></span>
+    <div class="popup-title"   id="pTitle"></div>
+    <div class="popup-time"    id="pTime"></div>
+    <div class="popup-repeat"  id="pRepeat"></div>
+    <div class="popup-notes"   id="pNotes"></div>
+    <div class="popup-btns"    id="pBtns">
+        <button class="btn" onclick="popupEdit()">Edit</button>
+        <!-- non-recurring delete -->
+        <button class="btn danger" id="pDelOne" onclick="popupDelete()">Delete</button>
+        <!-- recurring delete options -->
+        <span class="popup-del-label hidden" id="pDelLabel">Delete:</span>
+        <button class="btn danger hidden" id="pDelThis" onclick="popupDeleteThis()">This only</button>
+        <button class="btn danger hidden" id="pDelAll"  onclick="popupDeleteAll()">All events</button>
+        <button class="btn" style="margin-left:auto" onclick="closePopup()">×</button>
     </div>
 </div>
 
 <script>
-// ── Data ──────────────────────────────────────────────────────────────────────
+// ── Constants ─────────────────────────────────────────────────────────────────
 
 const CATS = {
     school:   { label: 'School',   color: '#5b9cf6', bg: 'rgba(91,156,246,0.16)'  },
@@ -494,11 +584,12 @@ const CATS = {
     social:   { label: 'Social',   color: '#f0923b', bg: 'rgba(240,146,59,0.16)'  },
 };
 
-const DAYS_S  = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const DAYS_L  = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const MONTHS  = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const START_H = 6;   // 6 AM
-const END_H   = 22;  // 10 PM
+const DAYS_S = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DAYS_L = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTHS = ['January','February','March','April','May','June','July','August',
+                'September','October','November','December'];
+const START_H = 6;
+const END_H   = 22;
 const HOURS   = Array.from({length: END_H - START_H}, (_, i) => i + START_H);
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -509,17 +600,22 @@ let appts    = JSON.parse(localStorage.getItem('cal_v1') || '[]');
 let selCat   = 'school';
 let editId   = null;
 let popupId  = null;
+let popupDate = null;   // date-key of the shown occurrence (for recurring delete)
 let activeF  = new Set(Object.keys(CATS));
 
 // ── Utils ─────────────────────────────────────────────────────────────────────
 
-const uid  = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
-const pad  = n  => String(n).padStart(2,'0');
-const save = () => localStorage.setItem('cal_v1', JSON.stringify(appts));
-const mkEl = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
+const uid    = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+const pad    = n  => String(n).padStart(2,'0');
+const save   = () => localStorage.setItem('cal_v1', JSON.stringify(appts));
+const mkEl   = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
 function dKey(d) {
     return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+}
+function parseDate(s) {
+    const [y,m,d] = s.split('-').map(Number);
+    return new Date(y, m-1, d);
 }
 function timeToMin(t) {
     const [h,m] = t.split(':').map(Number);
@@ -543,7 +639,80 @@ function weekDates(d) {
     const offset = d.getDay() === 0 ? -6 : 1 - d.getDay();
     const mon = new Date(d);
     mon.setDate(d.getDate() + offset);
-    return Array.from({length:7}, (_,i) => { const dt = new Date(mon); dt.setDate(mon.getDate()+i); return dt; });
+    return Array.from({length:7}, (_,i) => {
+        const dt = new Date(mon); dt.setDate(mon.getDate()+i); return dt;
+    });
+}
+
+// ── Recurrence ────────────────────────────────────────────────────────────────
+
+/**
+ * Returns true if appointment `a` has an occurrence on `targetDate`.
+ * Handles the original date and all subsequent recurrences.
+ */
+function isOccurrence(a, targetDate) {
+    const orig   = parseDate(a.date);
+    const target = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
+    const diffMs = target - orig;
+    if (diffMs < 0) return false;
+
+    const rep = a.repeat;
+    if (rep.until) {
+        const until = parseDate(rep.until);
+        if (target > until) return false;
+    }
+
+    const diffDays = Math.round(diffMs / 86400000);
+
+    if (rep.type === 'daily')   return true;   // every day from origin
+    if (rep.type === 'weekly')  return diffDays % 7 === 0;
+    if (rep.type === 'monthly') {
+        if (target.getDate() !== orig.getDate()) return false;
+        const mDiff = (target.getFullYear() - orig.getFullYear()) * 12 + (target.getMonth() - orig.getMonth());
+        return mDiff >= 0;
+    }
+    if (rep.type === 'custom') {
+        const n = Math.max(1, rep.interval || 1);
+        const u = rep.unit || 'days';
+        if (u === 'days')   return diffDays % n === 0;
+        if (u === 'weeks')  return diffDays % (n * 7) === 0;
+        if (u === 'months') {
+            if (target.getDate() !== orig.getDate()) return false;
+            const mDiff = (target.getFullYear() - orig.getFullYear()) * 12 + (target.getMonth() - orig.getMonth());
+            return mDiff >= 0 && mDiff % n === 0;
+        }
+    }
+    return false;
+}
+
+/** Returns all appointments that fall on a given date, including recurring occurrences. */
+function apptsForDate(targetDate) {
+    const key = dKey(targetDate);
+    const results = [];
+    appts.forEach(a => {
+        const rep = a.repeat;
+        if (!rep || rep.type === 'none') {
+            if (a.date === key) results.push(a);
+        } else {
+            if (isOccurrence(a, targetDate) && !(rep.excluded || []).includes(key)) {
+                results.push(a);
+            }
+        }
+    });
+    return results;
+}
+
+function repLabel(rep) {
+    if (!rep || rep.type === 'none') return '';
+    if (rep.type === 'daily')   return '↻ Daily';
+    if (rep.type === 'weekly')  return '↻ Weekly';
+    if (rep.type === 'monthly') return '↻ Monthly';
+    if (rep.type === 'custom') {
+        const n = rep.interval || 1;
+        const u = rep.unit || 'days';
+        return `↻ Every ${n} ${u}`;
+    }
+    return '';
 }
 
 // ── Render ────────────────────────────────────────────────────────────────────
@@ -582,7 +751,6 @@ function buildGrid(dates) {
     });
     grid.appendChild(tc);
 
-    // Days
     const dw = mkEl('div','days-wrap');
     dates.forEach(date => {
         const col = mkEl('div','day-col');
@@ -597,17 +765,15 @@ function buildGrid(dates) {
         // Body
         const body = mkEl('div','day-body');
 
-        // Hour click targets
         HOURS.forEach(h => {
             const c = mkEl('div','h-cell');
             c.addEventListener('click', () => openAdd(dKey(date), `${pad(h)}:00`, `${pad(Math.min(h+1,23))}:00`));
             body.appendChild(c);
         });
 
-        // Appointments
-        appts
-            .filter(a => a.date === dKey(date) && activeF.has(a.category))
-            .forEach(a => body.appendChild(buildApptEl(a, hh)));
+        apptsForDate(date)
+            .filter(a => activeF.has(a.category))
+            .forEach(a => body.appendChild(buildApptEl(a, hh, date)));
 
         // Now line
         if (isToday(date)) {
@@ -626,24 +792,26 @@ function buildGrid(dates) {
     grid.appendChild(dw);
 }
 
-function buildApptEl(a, hh) {
+function buildApptEl(a, hh, date) {
     const cat    = CATS[a.category] || CATS.personal;
     const top    = minToPx(timeToMin(a.start));
     const height = Math.max(((timeToMin(a.end) - timeToMin(a.start)) / 60) * hh, 18);
+    const isRec  = a.repeat && a.repeat.type !== 'none';
 
     const div = mkEl('div','appt');
     div.style.cssText = `top:${top}px;height:${height}px;background:${cat.bg};border-left-color:${cat.color};color:${cat.color}`;
 
-    const t = mkEl('div','appt-title'); t.textContent = a.title;
+    const t = mkEl('div','appt-title');
+    t.textContent = a.title;
     div.appendChild(t);
 
     if (height > 30) {
         const tm = mkEl('div','appt-time');
-        tm.textContent = `${fmt12(a.start)} – ${fmt12(a.end)}`;
+        tm.textContent = `${fmt12(a.start)} – ${fmt12(a.end)}${isRec ? ' ↻' : ''}`;
         div.appendChild(tm);
     }
 
-    div.addEventListener('click', e => { e.stopPropagation(); showPopup(a.id, e); });
+    div.addEventListener('click', e => { e.stopPropagation(); showPopup(a.id, dKey(date), e); });
     return div;
 }
 
@@ -706,6 +874,8 @@ function openAdd(date, start, end) {
     document.getElementById('fStart').value        = start || '09:00';
     document.getElementById('fEnd').value          = end   || '10:00';
     document.getElementById('fNotes').value        = '';
+    clearEndErr();
+    setRepeatUI({ type: 'none' });
     renderCatGrid('school');
     document.getElementById('overlay').classList.remove('hidden');
     setTimeout(() => document.getElementById('fTitle').focus(), 50);
@@ -720,8 +890,49 @@ function openEdit(a) {
     document.getElementById('fStart').value        = a.start;
     document.getElementById('fEnd').value          = a.end;
     document.getElementById('fNotes').value        = a.notes || '';
+    clearEndErr();
+    setRepeatUI(a.repeat || { type: 'none' });
     renderCatGrid(a.category);
     document.getElementById('overlay').classList.remove('hidden');
+}
+
+function setRepeatUI(rep) {
+    const type = rep?.type || 'none';
+    document.getElementById('fRepeat').value  = type;
+    document.getElementById('fUntil').value   = rep?.until || '';
+    if (type === 'custom') {
+        document.getElementById('fInterval').value = rep.interval || 1;
+        document.getElementById('fUnit').value     = rep.unit || 'days';
+    } else {
+        document.getElementById('fInterval').value = 1;
+        document.getElementById('fUnit').value     = 'days';
+    }
+    onRepeatChange();
+}
+
+function onRepeatChange() {
+    const v = document.getElementById('fRepeat').value;
+    document.getElementById('customRow').classList.toggle('hidden', v !== 'custom');
+    document.getElementById('untilRow').classList.toggle('hidden', v === 'none');
+}
+
+function getRepeatData() {
+    const type = document.getElementById('fRepeat').value;
+    if (type === 'none') return { type: 'none' };
+    const rep = {
+        type,
+        until: document.getElementById('fUntil').value || null,
+    };
+    if (type === 'custom') {
+        rep.interval = Math.max(1, parseInt(document.getElementById('fInterval').value) || 1);
+        rep.unit     = document.getElementById('fUnit').value;
+    }
+    // Preserve excluded occurrences when editing
+    if (editId) {
+        const orig = appts.find(x => x.id === editId);
+        if (orig?.repeat?.excluded) rep.excluded = orig.repeat.excluded;
+    }
+    return rep;
 }
 
 function renderCatGrid(sel) {
@@ -740,6 +951,16 @@ function renderCatGrid(sel) {
     });
 }
 
+function clearEndErr() {
+    document.getElementById('fEnd').classList.remove('err');
+    document.getElementById('fEndErr').classList.remove('show');
+}
+
+function showEndErr() {
+    document.getElementById('fEnd').classList.add('err');
+    document.getElementById('fEndErr').classList.add('show');
+}
+
 function closeModal() {
     document.getElementById('overlay').classList.add('hidden');
     editId = null;
@@ -750,21 +971,34 @@ function overlayClick(e) {
 }
 
 function saveAppt() {
+    // Title validation
     const title = document.getElementById('fTitle').value.trim();
     if (!title) {
         document.getElementById('fTitle').classList.add('err');
         document.getElementById('fTitle').focus();
         return;
     }
+
+    // End-time validation
+    const start = document.getElementById('fStart').value;
+    const end   = document.getElementById('fEnd').value;
+    if (!start || !end || timeToMin(end) <= timeToMin(start)) {
+        showEndErr();
+        document.getElementById('fEnd').focus();
+        return;
+    }
+
     const a = {
         id:       editId || uid(),
         title,
         category: selCat,
         date:     document.getElementById('fDate').value,
-        start:    document.getElementById('fStart').value,
-        end:      document.getElementById('fEnd').value,
+        start,
+        end,
         notes:    document.getElementById('fNotes').value.trim(),
+        repeat:   getRepeatData(),
     };
+
     if (editId) {
         const i = appts.findIndex(x => x.id === editId);
         i !== -1 ? appts[i] = a : appts.push(a);
@@ -774,14 +1008,37 @@ function saveAppt() {
     save(); closeModal(); render();
 }
 
+// ── Time validation listeners ─────────────────────────────────────────────────
+
+document.getElementById('fStart').addEventListener('change', function () {
+    clearEndErr();
+    const startMin = timeToMin(this.value);
+    const endEl    = document.getElementById('fEnd');
+    if (endEl.value && timeToMin(endEl.value) <= startMin) {
+        // Auto-bump end to start + 1 hour (cap at 23:00)
+        const newEnd = Math.min(startMin + 60, 23 * 60);
+        endEl.value  = `${pad(Math.floor(newEnd / 60))}:${pad(newEnd % 60)}`;
+    }
+});
+
+document.getElementById('fEnd').addEventListener('change', function () {
+    const startEl = document.getElementById('fStart');
+    if (startEl.value && timeToMin(this.value) <= timeToMin(startEl.value)) {
+        showEndErr();
+    } else {
+        clearEndErr();
+    }
+});
+
 // ── Popup ─────────────────────────────────────────────────────────────────────
 
-function showPopup(id, e) {
+function showPopup(id, dateKey, e) {
     closePopup();
     const a = appts.find(x => x.id === id);
     if (!a) return;
     const cat = CATS[a.category] || CATS.personal;
-    popupId = id;
+    popupId   = id;
+    popupDate = dateKey;
 
     const pb = document.getElementById('pBadge');
     pb.textContent   = cat.label;
@@ -789,16 +1046,29 @@ function showPopup(id, e) {
 
     document.getElementById('pTitle').textContent = a.title;
     document.getElementById('pTime').textContent  = `${fmt12(a.start)} – ${fmt12(a.end)}`;
+
+    const pr = document.getElementById('pRepeat');
+    const rl = repLabel(a.repeat);
+    pr.textContent   = rl;
+    pr.style.display = rl ? 'block' : 'none';
+
     const pn = document.getElementById('pNotes');
-    pn.textContent    = a.notes || '';
-    pn.style.display  = a.notes ? 'block' : 'none';
+    pn.textContent   = a.notes || '';
+    pn.style.display = a.notes ? 'block' : 'none';
+
+    // Show correct delete buttons
+    const isRec = a.repeat && a.repeat.type !== 'none';
+    document.getElementById('pDelOne').classList.toggle('hidden', isRec);
+    document.getElementById('pDelLabel').classList.toggle('hidden', !isRec);
+    document.getElementById('pDelThis').classList.toggle('hidden', !isRec);
+    document.getElementById('pDelAll').classList.toggle('hidden', !isRec);
 
     const popup = document.getElementById('popup');
     popup.classList.remove('hidden');
 
     const vw = window.innerWidth, vh = window.innerHeight;
-    popup.style.left = Math.min(e.clientX + 12, vw - 232) + 'px';
-    popup.style.top  = Math.min(e.clientY +  8, vh - 170) + 'px';
+    popup.style.left = Math.min(e.clientX + 12, vw - 242) + 'px';
+    popup.style.top  = Math.min(e.clientY +  8, vh - 200) + 'px';
 
     setTimeout(() => document.addEventListener('click', outsidePopup, {once:true}), 0);
 }
@@ -809,7 +1079,7 @@ function outsidePopup(e) {
 
 function closePopup() {
     document.getElementById('popup').classList.add('hidden');
-    popupId = null;
+    popupId = null; popupDate = null;
 }
 
 function popupEdit() {
@@ -817,7 +1087,24 @@ function popupEdit() {
     if (a) { closePopup(); openEdit(a); }
 }
 
+// Non-recurring delete
 function popupDelete() {
+    if (!popupId) return;
+    appts = appts.filter(x => x.id !== popupId);
+    save(); closePopup(); render();
+}
+
+// Delete just this occurrence (add date to excluded list)
+function popupDeleteThis() {
+    const a = appts.find(x => x.id === popupId);
+    if (!a || !popupDate) return;
+    if (!a.repeat.excluded) a.repeat.excluded = [];
+    if (!a.repeat.excluded.includes(popupDate)) a.repeat.excluded.push(popupDate);
+    save(); closePopup(); render();
+}
+
+// Delete all occurrences (remove the appointment entirely)
+function popupDeleteAll() {
     if (!popupId) return;
     appts = appts.filter(x => x.id !== popupId);
     save(); closePopup(); render();
@@ -828,7 +1115,7 @@ function popupDelete() {
 renderCatGrid('school');
 render();
 scrollToNow();
-setInterval(render, 60000); // refresh time line every minute
+setInterval(render, 60000);
 </script>
 </body>
 </html>
