@@ -265,6 +265,7 @@
         .appt:hover { filter: brightness(1.2); }
         .appt-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .appt-time  { opacity: 0.7; font-size: 0.66rem; margin-top: 1px; }
+        .appt-text  { overflow: hidden; }
 
         /* Current time line */
         .now-line {
@@ -773,6 +774,8 @@ const CATS = {
     social:   { label: 'Social',   color: '#f0923b', bg: 'rgba(240,146,59,0.16)'  },
 };
 
+const PRIORITY = { school: 4, health: 3, social: 2, personal: 1 };
+
 const DAYS_S = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const DAYS_L = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const MONTHS = ['January','February','March','April','May','June','July','August',
@@ -962,9 +965,10 @@ function buildGrid(dates) {
             body.appendChild(c);
         });
 
-        apptsForDate(date)
-            .filter(a => activeF.has(a.category))
-            .forEach(a => body.appendChild(buildApptEl(a, hh, date)));
+        const dayAppts = apptsForDate(date).filter(a => activeF.has(a.category));
+        const dayEls   = dayAppts.map(a => ({ appt: a, el: buildApptEl(a, hh, date) }));
+        resolveOverlaps(dayEls, hh);
+        dayEls.forEach(({ el }) => body.appendChild(el));
 
         if (isToday(date)) {
             const now = new Date();
@@ -982,6 +986,65 @@ function buildGrid(dates) {
     grid.appendChild(dw);
 }
 
+function resolveOverlaps(eventEls, hh) {
+    // Set z-index by priority so higher-priority events render on top
+    eventEls.forEach(ev => {
+        ev.el.style.zIndex = 2 + (PRIORITY[ev.appt.category] || 1);
+    });
+
+    eventEls.forEach((ev, i) => {
+        const aPrio   = PRIORITY[ev.appt.category] || 1;
+        const aTop    = minToPx(timeToMin(ev.appt.start));
+        const aHeight = Math.max(((timeToMin(ev.appt.end) - timeToMin(ev.appt.start)) / 60) * hh, 18);
+        const aBot    = aTop + aHeight;
+        const textWrap = ev.el.querySelector('.appt-text');
+        if (!textWrap) return;
+
+        let paddingTop        = 0;     // push text down (overlap at top)
+        let maxTextHeight     = aHeight; // clip text height (overlap at bottom)
+        let hasOverlapAtTop   = false;
+        let hasOverlapAtBot   = false;
+        let hideAll           = false;
+
+        eventEls.forEach((other, j) => {
+            if (i === j || hideAll) return;
+            const bPrio = PRIORITY[other.appt.category] || 1;
+            if (bPrio <= aPrio) return; // only care about higher-priority events
+
+            const bTop    = minToPx(timeToMin(other.appt.start));
+            const bHeight = Math.max(((timeToMin(other.appt.end) - timeToMin(other.appt.start)) / 60) * hh, 18);
+            const bBot    = bTop + bHeight;
+
+            if (aTop >= bBot || aBot <= bTop) return; // no overlap
+
+            const ovTop = Math.max(aTop, bTop) - aTop; // local coords, >=0
+            const ovBot = Math.min(aBot, bBot) - aTop; // local coords, <=aHeight
+            const thresh = 3;
+
+            if (ovTop <= thresh && ovBot >= aHeight - thresh) {
+                hideAll = true; // fully covered
+            } else if (ovTop <= thresh) {
+                hasOverlapAtTop = true;
+                paddingTop = Math.max(paddingTop, ovBot);
+            } else if (ovBot >= aHeight - thresh) {
+                hasOverlapAtBot = true;
+                maxTextHeight = Math.min(maxTextHeight, ovTop);
+            } else {
+                hideAll = true; // middle overlap — complex, hide all
+            }
+        });
+
+        if (hideAll || (hasOverlapAtTop && hasOverlapAtBot)) {
+            textWrap.style.display = 'none';
+        } else if (hasOverlapAtTop) {
+            textWrap.style.paddingTop = paddingTop + 'px';
+        } else if (hasOverlapAtBot) {
+            textWrap.style.maxHeight = maxTextHeight + 'px';
+            textWrap.style.overflow  = 'hidden';
+        }
+    });
+}
+
 function buildApptEl(a, hh, date) {
     const cat    = CATS[a.category] || CATS.personal;
     const top    = minToPx(timeToMin(a.start));
@@ -991,14 +1054,16 @@ function buildApptEl(a, hh, date) {
     const div = mkEl('div','appt');
     div.style.cssText = `top:${top}px;height:${height}px;background:${cat.bg};border-left-color:${cat.color};color:${cat.color}`;
 
+    const textWrap = mkEl('div', 'appt-text');
     const t = mkEl('div','appt-title'); t.textContent = a.title;
-    div.appendChild(t);
+    textWrap.appendChild(t);
 
     if (height > 30) {
         const tm = mkEl('div','appt-time');
         tm.textContent = `${fmt12(a.start)} – ${fmt12(a.end)}${isRec ? ' ↻' : ''}`;
-        div.appendChild(tm);
+        textWrap.appendChild(tm);
     }
+    div.appendChild(textWrap);
 
     div.addEventListener('click', e => { e.stopPropagation(); showPopup(a.id, dKey(date), e); });
     return div;
