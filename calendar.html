@@ -1121,7 +1121,16 @@ function scrollToNow() {
 
 function buildTaskPanel(date) {
     const key     = dKey(date);
-    const pinned  = tasks.filter(t => t.pinned);
+    // A task appears in the pinned section for a given date if:
+    // - it's currently pinned (or was ever pinned, via pinnedUntil), AND
+    // - the date is on or after pinnedFrom (if set), AND
+    // - the date is before pinnedUntil (if set — means it was later unpinned)
+    const pinned  = tasks.filter(t => {
+        if (!t.pinned && !t.pinnedUntil) return false;
+        if (t.pinnedFrom   && key <  t.pinnedFrom)   return false;
+        if (t.pinnedUntil  && key >= t.pinnedUntil)  return false;
+        return true;
+    });
     const regular = tasks.filter(t => !t.pinned && t.date === key);
     const list    = document.getElementById('tpList');
     list.innerHTML = '';
@@ -1161,11 +1170,16 @@ const SVG_GRIP = `<svg width="10" height="14" viewBox="0 0 10 14" fill="currentC
 </svg>`;
 
 function mkTaskItem(task, dateKey, group) {
-    const checked = task.pinned
+    // Use completedDates for any task that was ever pinned (current or historical)
+    const everPinned = task.pinned || !!task.pinnedFrom;
+    const checked = everPinned
         ? (task.completedDates || []).includes(dateKey)
         : !!task.completed;
+    // A "historical" pinned task is one unpinned before this date — show it
+    // as read-only pinned (no re-pin button) to avoid confusion
+    const isHistorical = !task.pinned && !!task.pinnedUntil;
 
-    const item = mkEl('div', `task-item${task.pinned ? ' pinned' : ''}`);
+    const item = mkEl('div', `task-item${(task.pinned || isHistorical) ? ' pinned' : ''}`);
     item.draggable        = true;
     item.dataset.id       = task.id;
     item.dataset.group    = group;
@@ -1182,10 +1196,11 @@ function mkTaskItem(task, dateKey, group) {
     const txt = mkEl('span', `task-text${checked ? ' done' : ''}`);
     txt.textContent = task.text;
 
-    // Pin button
+    // Pin button — hidden for historical tasks (already unpinned; shown on past date only)
     const pin = mkEl('button', `task-pin-btn${task.pinned ? ' active' : ''}`);
     pin.innerHTML = SVG_PIN;
     pin.title = task.pinned ? 'Unpin task' : 'Pin to every day';
+    if (isHistorical) pin.style.display = 'none';
     pin.addEventListener('click', e => { e.stopPropagation(); toggleTaskPin(task.id); });
 
     // Delete button
@@ -1214,7 +1229,8 @@ function addTask() {
 function toggleTask(id, dateKey) {
     const t = tasks.find(x => x.id === id);
     if (!t) return;
-    if (t.pinned) {
+    // Use per-date completedDates for current pinned tasks and historical pinned tasks
+    if (t.pinned || t.pinnedFrom) {
         if (!t.completedDates) t.completedDates = [];
         const i = t.completedDates.indexOf(dateKey);
         i !== -1 ? t.completedDates.splice(i, 1) : t.completedDates.push(dateKey);
@@ -1235,17 +1251,21 @@ function toggleTaskPin(id) {
     const t = tasks.find(x => x.id === id);
     if (!t) return;
     if (t.pinned) {
-        // Unpin → move to today's regular tasks
-        t.pinned    = false;
-        t.date      = dKey(curDate);
-        t.completed = false;
-        delete t.completedDates;
+        // Unpin → stop showing as pinned from today onwards, but keep history
+        // for past dates (pinnedFrom..today-1 still visible via pinnedUntil check)
+        t.pinned      = false;
+        t.pinnedUntil = dKey(curDate); // pinned section hides on dates >= this
+        t.date        = dKey(curDate); // show as a regular task for today
+        t.completed   = false;
+        // Intentionally keep pinnedFrom + completedDates for historical display
     } else {
-        // Pin → make it a daily task
+        // Pin → start showing as pinned from today onwards only
         t.pinned         = true;
+        t.pinnedFrom     = dKey(curDate); // pinned section shows on dates >= this
         t.date           = null;
-        t.completedDates = [];
+        t.completedDates = t.completedDates || [];
         delete t.completed;
+        delete t.pinnedUntil;
     }
     saveTasks();
     buildTaskPanel(curDate);
