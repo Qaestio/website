@@ -1196,11 +1196,10 @@ function mkTaskItem(task, dateKey, group) {
     const txt = mkEl('span', `task-text${checked ? ' done' : ''}`);
     txt.textContent = task.text;
 
-    // Pin button — hidden for historical tasks (already unpinned; shown on past date only)
+    // Pin button
     const pin = mkEl('button', `task-pin-btn${task.pinned ? ' active' : ''}`);
     pin.innerHTML = SVG_PIN;
     pin.title = task.pinned ? 'Unpin task' : 'Pin to every day';
-    if (isHistorical) pin.style.display = 'none';
     pin.addEventListener('click', e => { e.stopPropagation(); toggleTaskPin(task.id); });
 
     // Delete button
