@@ -442,14 +442,14 @@ async function loadViaEvents() {
         ...(completed.status === 'fulfilled' ? segments(completed.value) : []),
     ];
 
-    // Find VCT 2026 main-league events (exclude GC, Challengers, Masters, Champions)
+    // Find VCT 2026 main-league events (must be VCT-branded; exclude GC, Challengers, Masters, Champions)
     const leagueEvents = evList.filter(ev => {
         const t = getStr(ev, ['title','event','name']).toLowerCase();
         if (!t.includes('2026')) return false;
+        if (!t.includes('vct')) return false;  // Exclude Evolution Series, Clash, etc.
         if (!( t.includes('americas') || t.includes('emea') ||
                t.includes('pacific')  || t.includes('china') ||
                /\bcn\b/.test(t) )) return false;
-        // Exclude non-tier-1 events
         if (t.includes('game changer') || t.includes('gc ') || t.includes(' gc')
             || t.includes('challengers') || t.includes('masters')
             || t.includes('champions')) return false;
@@ -490,48 +490,79 @@ async function loadViaEvents() {
         }
     }
 
+    if (Object.keys(teamMap).length <= 5) return false;
+
+    // Enrich logos from rankings (events schedule has no logo data)
+    await enrichLogos(teamMap);
+
     allTeams = Object.values(teamMap);
-    return allTeams.length > 5;
+    return true;
+}
+
+function normName(s) {
+    return s.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
 function processMatches(matches, region, teamMap) {
     for (const m of matches) {
         // Support both flat fields and nested {name, score} objects
-        const t1obj   = (m.team1 && typeof m.team1 === 'object') ? m.team1 : null;
-        const t2obj   = (m.team2 && typeof m.team2 === 'object') ? m.team2 : null;
-        const t1name  = (t1obj?.name || getStr(m, ['team1_name','team_1'])).trim();
-        const t2name  = (t2obj?.name || getStr(m, ['team2_name','team_2'])).trim();
+        const t1obj  = (m.team1 && typeof m.team1 === 'object') ? m.team1 : null;
+        const t2obj  = (m.team2 && typeof m.team2 === 'object') ? m.team2 : null;
+        const t1name = (t1obj?.name || getStr(m, ['team1_name','team_1'])).trim();
+        const t2name = (t2obj?.name || getStr(m, ['team2_name','team_2'])).trim();
         if (!t1name || !t2name) continue;
-
-        // Skip upcoming/unplayed matches (score is "–" or missing)
-        const rawS1 = t1obj?.score ?? getStr(m, ['score1','team1_score','score_1','maps1']);
-        const rawS2 = t2obj?.score ?? getStr(m, ['score2','team2_score','score_2','maps2']);
-        const s1 = parseInt(rawS1);
-        const s2 = parseInt(rawS2);
-        if (isNaN(s1) || isNaN(s2)) continue;
-        if (s1 === 0 && s2 === 0) continue;  // match not played yet
-
-        const t1logo = getStr(m, ['team1_logo','team_1_logo','logo1','team1_img']);
-        const t2logo = getStr(m, ['team2_logo','team_2_logo','logo2','team2_img']);
+        // Skip placeholder entries
+        if (/^tbd$/i.test(t1name) || /^tbd$/i.test(t2name)) continue;
 
         const k1 = t1name.toLowerCase();
         const k2 = t2name.toLowerCase();
 
-        if (!teamMap[k1]) teamMap[k1] = { name: t1name, logo: t1logo, region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
-        if (!teamMap[k2]) teamMap[k2] = { name: t2name, logo: t2logo, region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
+        // Register team regardless of whether the match has been played yet
+        if (!teamMap[k1]) teamMap[k1] = { name: t1name, logo: '', region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
+        if (!teamMap[k2]) teamMap[k2] = { name: t2name, logo: '', region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
 
-        // Update logos if blank
+        // Compute records only for completed matches
+        const rawS1 = t1obj?.score ?? getStr(m, ['score1','team1_score','score_1','maps1']);
+        const rawS2 = t2obj?.score ?? getStr(m, ['score2','team2_score','score_2','maps2']);
+        const s1 = parseInt(rawS1);
+        const s2 = parseInt(rawS2);
+        if (isNaN(s1) || isNaN(s2) || (s1 === 0 && s2 === 0)) continue;
+
+        const t1logo = getStr(m, ['team1_logo','team_1_logo','logo1','team1_img']);
+        const t2logo = getStr(m, ['team2_logo','team_2_logo','logo2','team2_img']);
         if (!teamMap[k1].logo && t1logo) teamMap[k1].logo = t1logo;
         if (!teamMap[k2].logo && t2logo) teamMap[k2].logo = t2logo;
 
-        // Match result
         if (s1 > s2) { teamMap[k1].matchW++; teamMap[k2].matchL++; }
         else if (s2 > s1) { teamMap[k2].matchW++; teamMap[k1].matchL++; }
-        // Tie: neither gets W or L (rare in VCT)
 
-        // Map tally
         teamMap[k1].mapW += s1;  teamMap[k1].mapL += s2;
         teamMap[k2].mapW += s2;  teamMap[k2].mapL += s1;
+    }
+}
+
+async function enrichLogos(teamMap) {
+    // Build a normalized-name index into teamMap
+    const normIndex = {};
+    for (const k of Object.keys(teamMap)) {
+        normIndex[normName(k)] = k;
+    }
+
+    const fetches = FALLBACK_FETCH.map(({ apiKey }) =>
+        apiFetch(`/rankings?region=${apiKey}`)
+            .then(data => segments(data))
+            .catch(() => [])
+    );
+    const results = await Promise.all(fetches);
+
+    for (const segs of results) {
+        for (const t of segs) {
+            const rName = getStr(t, ['team','name','team_name']).trim();
+            const rLogo = getStr(t, ['logo','team_logo','img']);
+            if (!rName || !rLogo) continue;
+            const k = normIndex[normName(rName)];
+            if (k && !teamMap[k].logo) teamMap[k].logo = rLogo;
+        }
     }
 }
 
