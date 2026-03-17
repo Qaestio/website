@@ -747,6 +747,21 @@
     </div>
 </div>
 
+<!-- Repeat scope dialog (this event only vs all events) -->
+<div class="overlay hidden" id="repeatScopeOverlay">
+    <div class="modal" style="max-width:340px">
+        <div class="modal-hdr">
+            <h2>Edit recurring event</h2>
+        </div>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1.1rem">This is a repeating event. Apply your changes to:</p>
+        <div class="modal-footer" style="flex-direction:column;gap:0.5rem">
+            <button class="btn primary" style="width:100%" onclick="confirmRepeatScope('one')">This event only</button>
+            <button class="btn" style="width:100%" onclick="confirmRepeatScope('all')">All events in series</button>
+            <button class="btn" style="width:100%;margin-top:0.25rem" onclick="cancelRepeatScope()">Cancel</button>
+        </div>
+    </div>
+</div>
+
 <!-- Detail popup -->
 <div class="popup hidden" id="popup">
     <span class="popup-badge"  id="pBadge"></span>
@@ -792,6 +807,7 @@ let appts     = JSON.parse(localStorage.getItem('cal_v1')       || '[]');
 let tasks     = JSON.parse(localStorage.getItem('cal_tasks_v1') || '[]');
 let selCat    = 'school';
 let editId    = null;
+let editDate  = null;   // specific occurrence date when editing a recurring event
 let popupId   = null;
 let popupDate = null;
 let activeF   = new Set(Object.keys(CATS));
@@ -1348,12 +1364,13 @@ function openAdd(date, start, end) {
     setTimeout(() => document.getElementById('fTitle').focus(), 50);
 }
 
-function openEdit(a) {
-    editId = a.id;
+function openEdit(a, dateKey) {
+    editId   = a.id;
+    editDate = dateKey || a.date;
     document.getElementById('modalH').textContent  = 'Edit Appointment';
     document.getElementById('fTitle').value        = a.title;
     document.getElementById('fTitle').classList.remove('err');
-    document.getElementById('fDate').value         = a.date;
+    document.getElementById('fDate').value         = editDate;
     document.getElementById('fStart').value        = a.start;
     document.getElementById('fEnd').value          = a.end;
     document.getElementById('fNotes').value        = a.notes || '';
@@ -1421,10 +1438,14 @@ function showEndErr() {
 function closeModal() {
     document.getElementById('overlay').classList.add('hidden');
     editId = null;
+    editDate = null;
 }
 function overlayClick(e) {
     if (e.target === document.getElementById('overlay')) closeModal();
 }
+
+// Stores validated form data while the repeat-scope dialog is open
+let _pendingSave = null;
 
 function saveAppt() {
     const title = document.getElementById('fTitle').value.trim();
@@ -1440,8 +1461,7 @@ function saveAppt() {
         document.getElementById('fEnd').focus();
         return;
     }
-    const a = {
-        id:       editId || uid(),
+    const formData = {
         title,
         category: selCat,
         date:     document.getElementById('fDate').value,
@@ -1449,13 +1469,69 @@ function saveAppt() {
         notes:    document.getElementById('fNotes').value.trim(),
         repeat:   getRepeatData(),
     };
+
+    // If editing a recurring event, ask the user what scope to apply
     if (editId) {
-        const i = appts.findIndex(x => x.id === editId);
-        i !== -1 ? appts[i] = a : appts.push(a);
+        const orig = appts.find(x => x.id === editId);
+        if (orig && orig.repeat && orig.repeat.type !== 'none') {
+            _pendingSave = formData;
+            document.getElementById('repeatScopeOverlay').classList.remove('hidden');
+            return;
+        }
+    }
+
+    _commitSave(formData, null);
+}
+
+function _commitSave(formData, scope) {
+    if (scope === 'one') {
+        // Exclude the edited occurrence from the original series
+        const orig = appts.find(x => x.id === editId);
+        if (orig) {
+            if (!orig.repeat.excluded) orig.repeat.excluded = [];
+            if (!orig.repeat.excluded.includes(editDate)) orig.repeat.excluded.push(editDate);
+        }
+        // Create a standalone copy for just this occurrence
+        appts.push({
+            id:       uid(),
+            title:    formData.title,
+            category: formData.category,
+            date:     editDate,
+            start:    formData.start,
+            end:      formData.end,
+            notes:    formData.notes,
+            repeat:   { type: 'none' },
+        });
     } else {
-        appts.push(a);
+        // Edit all: update the base event
+        const a = {
+            id:       editId || uid(),
+            title:    formData.title,
+            category: formData.category,
+            date:     formData.date,
+            start:    formData.start,
+            end:      formData.end,
+            notes:    formData.notes,
+            repeat:   formData.repeat,
+        };
+        if (editId) {
+            const i = appts.findIndex(x => x.id === editId);
+            i !== -1 ? appts[i] = a : appts.push(a);
+        } else {
+            appts.push(a);
+        }
     }
     save(); closeModal(); render();
+}
+
+function confirmRepeatScope(scope) {
+    document.getElementById('repeatScopeOverlay').classList.add('hidden');
+    if (_pendingSave) { _commitSave(_pendingSave, scope); _pendingSave = null; }
+}
+
+function cancelRepeatScope() {
+    document.getElementById('repeatScopeOverlay').classList.add('hidden');
+    _pendingSave = null;
 }
 
 // ── Time validation listeners ─────────────────────────────────────────────────
@@ -1529,7 +1605,7 @@ function closePopup() {
 }
 function popupEdit() {
     const a = appts.find(x => x.id === popupId);
-    if (a) { closePopup(); openEdit(a); }
+    if (a) { closePopup(); openEdit(a, popupDate); }
 }
 function popupDelete() {
     if (!popupId) return;
