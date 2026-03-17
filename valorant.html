@@ -375,9 +375,13 @@ let sortMode  = 'alpha';
 // ── Fetch helpers ──────────────────────────────────────────────────────────────
 
 async function apiFetch(path) {
-    const r = await fetch(API + path, { signal: AbortSignal.timeout(12000) });
+    const target = API + path;
+    const url = 'https://corsproxy.io/?url=' + encodeURIComponent(target);
+    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
-    return r.json();
+    const json = await r.json();
+    // corsproxy.io wraps in {status,data:{...}} — unwrap if present
+    return (json && json.status === 'success' && json.data) ? json.data : json;
 }
 
 function segments(data) {
@@ -469,7 +473,13 @@ async function loadViaEvents() {
 
     for (const [region, events] of Object.entries(byRegion)) {
         for (const ev of events) {
-            const id = getStr(ev, ['id','event_id','eventId']);
+            // ID may be a direct field or embedded in a url_path like /event/1234/...
+            let id = getStr(ev, ['id','event_id','eventId']);
+            if (!id) {
+                const urlPath = getStr(ev, ['url_path','url','link']);
+                const m = urlPath.match(/\/event\/(\d+)\//);
+                if (m) id = m[1];
+            }
             if (!id) continue;
             try {
                 const md = await apiFetch(`/events/matches?event_id=${id}`);
@@ -486,13 +496,18 @@ async function loadViaEvents() {
 
 function processMatches(matches, region, teamMap) {
     for (const m of matches) {
-        const t1name = getStr(m, ['team1','team_1','team1_name']).trim();
-        const t2name = getStr(m, ['team2','team_2','team2_name']).trim();
+        // Support both flat fields and nested {name, score} objects
+        const t1obj   = (m.team1 && typeof m.team1 === 'object') ? m.team1 : null;
+        const t2obj   = (m.team2 && typeof m.team2 === 'object') ? m.team2 : null;
+        const t1name  = (t1obj?.name || getStr(m, ['team1_name','team_1'])).trim();
+        const t2name  = (t2obj?.name || getStr(m, ['team2_name','team_2'])).trim();
         if (!t1name || !t2name) continue;
 
-        // Parse map scores — expect integers like "2" and "1" for a 2-1 match
-        const s1 = parseInt(getStr(m, ['score1','team1_score','score_1','maps1']));
-        const s2 = parseInt(getStr(m, ['score2','team2_score','score_2','maps2']));
+        // Skip upcoming/unplayed matches (score is "–" or missing)
+        const rawS1 = t1obj?.score ?? getStr(m, ['score1','team1_score','score_1','maps1']);
+        const rawS2 = t2obj?.score ?? getStr(m, ['score2','team2_score','score_2','maps2']);
+        const s1 = parseInt(rawS1);
+        const s2 = parseInt(rawS2);
         if (isNaN(s1) || isNaN(s2)) continue;
         if (s1 === 0 && s2 === 0) continue;  // match not played yet
 
