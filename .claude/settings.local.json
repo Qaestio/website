@@ -5,7 +5,18 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:vlresports.vercel.app)",
       "WebFetch(domain:vlrggapi.vercel.app)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:www.vlr.gg)",
+      "Bash(curl -s \"https://vlrggapi.vercel.app/v2/stats?region=jp&timespan=90\")",
+      "Bash(curl -s \"https://vlrggapi.vercel.app/v2/stats?region=eu&timespan=90\")",
+      "Bash(curl -s \"https://vlrggapi.vercel.app/v2/stats?region=ap&timespan=90\")",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \"import requests, bs4; print\\(''''requests and bs4 available''''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python scrape_vct.py)",
+      "Bash(set PYTHONIOENCODING=utf-8)",
+      "Bash(python -c \":*)",
+      "Bash(python -c \"import json; data=json.load\\(open\\(''../vct_data.json'', encoding=''utf-8''\\)\\); [print\\(t[''name''], t[''region'']\\) for t in data[''teams''] if ''envy'' in t[''name''].lower\\(\\) or ''nrg'' in t[''name''].lower\\(\\)]\")"
     ]
   }
 }

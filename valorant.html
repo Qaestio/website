@@ -280,6 +280,86 @@
         .lh-stats  { display: flex; gap: 1.25rem; flex-shrink: 0; }
         .lh-stat   { min-width: 58px; text-align: center; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
 
+        /* ── Team block (row + dropdown wrapper) ── */
+        .team-block { display: flex; flex-direction: column; }
+
+        .team-row {
+            cursor: pointer;
+            user-select: none;
+        }
+        .team-row.expanded {
+            border-radius: 8px 8px 0 0;
+            border-bottom-color: transparent;
+        }
+        .expand-chevron {
+            color: var(--dim);
+            font-size: 0.7rem;
+            flex-shrink: 0;
+            margin-left: 0.3rem;
+            transition: transform 0.18s ease;
+            line-height: 1;
+        }
+        .team-row.expanded .expand-chevron { transform: rotate(180deg); }
+
+        /* ── Player dropdown ── */
+        .player-dropdown {
+            display: none;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-left: 3px solid var(--rc, var(--border));
+            border-radius: 0 0 8px 8px;
+        }
+        .player-dropdown.open { display: block; }
+
+        /* pd-header and pd-row share grid layout aligned with team row content */
+        .pd-header,
+        .pd-row {
+            display: grid;
+            grid-template-columns: 1fr 58px 58px 64px 20px;
+            gap: 0.4rem;
+            align-items: center;
+            padding: 0.28rem 0.9rem;
+            padding-left: calc(0.9rem + 18px + 0.8rem + 34px + 0.8rem);
+        }
+        .pd-header {
+            border-bottom: 1px solid var(--border);
+            padding-top: 0.45rem;
+            padding-bottom: 0.35rem;
+        }
+        .pd-header span {
+            font-size: 0.6rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: right;
+        }
+        .pd-header span:first-child { text-align: left; }
+        .pd-row { transition: background 0.1s; }
+        .pd-row:hover { background: var(--surface2); }
+
+        .pd-name {
+            font-size: 0.84rem;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .pd-val {
+            font-size: 0.82rem;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+        .pd-val.hi  { color: #52c77a; }
+        .pd-val.lo  { color: #e05252; }
+        .pd-val.dim { color: var(--dim); }
+
+        .pd-msg {
+            padding: 0.75rem 0.9rem 0.75rem calc(0.9rem + 18px + 0.8rem + 34px + 0.8rem);
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
         /* ── Responsive ── */
         @media (max-width: 540px) {
             .controls { height: auto; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
@@ -287,6 +367,8 @@
             .stat-col { min-width: 48px; }
             .team-rank { display: none; }
             .lh-rank   { display: none; }
+            .pd-header,
+            .pd-row    { padding-left: 0.9rem; }
         }
     </style>
 </head>
@@ -334,9 +416,7 @@
     <div id="teamList" class="team-list hidden"></div>
 
     <div id="sourceNote" class="source-note hidden">
-        Data via <a href="https://vlrggapi.vercel.app" target="_blank" rel="noopener"
-            style="color:var(--muted);text-decoration:none">vlrggapi</a>
-        scraping <a href="https://vlr.gg" target="_blank" rel="noopener"
+        Data scraped from <a href="https://vlr.gg" target="_blank" rel="noopener"
             style="color:var(--muted);text-decoration:none">vlr.gg</a>
         · <span id="dataMode"></span>
     </div>
@@ -345,8 +425,6 @@
 <script>
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const API = 'https://vlrggapi.vercel.app/v2';
-
 const REGIONS = {
     americas: { label: 'Americas', color: 'var(--americas-c)', rawColor: '#f0923b', bg: 'var(--americas-bg)' },
     emea:     { label: 'EMEA',     color: 'var(--emea-c)',     rawColor: '#f0c040', bg: 'var(--emea-bg)'     },
@@ -354,41 +432,18 @@ const REGIONS = {
     china:    { label: 'China',    color: 'var(--china-c)',    rawColor: '#e05252', bg: 'var(--china-bg)'    },
 };
 
-// Region order for "sort by region" (then by win % within region)
 const REGION_ORDER = { americas: 0, emea: 1, pacific: 2, china: 3 };
-
-// Fallback: top-N teams from each region API key
-const FALLBACK_FETCH = [
-    { apiKey: 'na', region: 'americas', cap: 14 },
-    { apiKey: 'eu', region: 'emea',     cap: 14 },
-    { apiKey: 'ap', region: 'pacific',  cap: 10 },
-    { apiKey: 'kr', region: 'pacific',  cap:  5 },  // Pacific also has KR sub-region
-    { apiKey: 'cn', region: 'china',    cap: 10 },
-];
 
 // ── State ──────────────────────────────────────────────────────────────────────
 
-let allTeams  = [];   // { name, logo, region, matchW, matchL, mapW, mapL }
+let allTeams  = [];
 let activeReg = new Set(Object.keys(REGIONS));
 let sortMode  = 'alpha';
 
-// ── Fetch helpers ──────────────────────────────────────────────────────────────
+const expandedTeams   = new Set();
+const playerHtmlCache = {};
 
-async function apiFetch(path) {
-    const target = API + path;
-    const url = 'https://corsproxy.io/?url=' + encodeURIComponent(target);
-    const r = await fetch(url, { signal: AbortSignal.timeout(15000) });
-    if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
-    const json = await r.json();
-    // corsproxy.io wraps in {status,data:{...}} — unwrap if present
-    return (json && json.status === 'success' && json.data) ? json.data : json;
-}
-
-function segments(data) {
-    return data?.data?.segments || data?.segments || [];
-}
-
-// ── Data loading ──────────────────────────────────────────────────────────────
+// ── Data loading ───────────────────────────────────────────────────────────────
 
 async function loadData() {
     document.getElementById('refreshBtn').disabled = true;
@@ -397,30 +452,20 @@ async function loadData() {
     document.getElementById('listHeader').classList.add('hidden');
     document.getElementById('sourceNote').classList.add('hidden');
     allTeams = [];
+    Object.keys(playerHtmlCache).forEach(k => delete playerHtmlCache[k]);
+    expandedTeams.clear();
 
-    let dataMode = '';
-
-    try {
-        const ok = await loadViaEvents();
-        if (ok) {
-            dataMode = 'match &amp; map records from event results';
-        } else {
-            throw new Error('no events found');
-        }
-    } catch (e) {
-        console.warn('Events approach failed, falling back to rankings:', e.message);
-        try {
-            await loadViaRankings();
-            dataMode = 'match records from regional rankings (map records unavailable)';
-        } catch (e2) {
-            setStatus(`<div style="color:#e05252">Could not load data — check your connection.<br>
-                <button class="btn" onclick="loadData()" style="margin-top:0.75rem">Retry</button></div>`);
-            document.getElementById('refreshBtn').disabled = false;
-            return;
-        }
+    const ok = await loadViaJson();
+    if (!ok) {
+        setStatus(`<div style="color:#e05252">
+            Could not load <code style="font-size:0.85em">vct_data.json</code>.<br>
+            Run <code style="font-size:0.85em">python scraper/scrape_vct.py</code> to generate it, then refresh.
+            <br><button class="btn" onclick="loadData()" style="margin-top:0.75rem">↻ Retry</button>
+        </div>`);
+        document.getElementById('refreshBtn').disabled = false;
+        return;
     }
 
-    document.getElementById('dataMode').innerHTML = dataMode;
     document.getElementById('sourceNote').classList.remove('hidden');
     buildFilters();
     render();
@@ -428,184 +473,48 @@ async function loadData() {
     clearStatus();
 }
 
-// ── Approach 1: Events → matches → compute records ────────────────────────────
-
-async function loadViaEvents() {
-    // Fetch both pages of events concurrently
-    const [upcoming, completed] = await Promise.allSettled([
-        apiFetch('/events?q=upcoming'),
-        apiFetch('/events?q=completed'),
-    ]);
-
-    const evList = [
-        ...(upcoming.status === 'fulfilled'  ? segments(upcoming.value)  : []),
-        ...(completed.status === 'fulfilled' ? segments(completed.value) : []),
-    ];
-
-    // Find VCT 2026 main-league events (must be VCT-branded; exclude GC, Challengers, Masters, Champions)
-    const leagueEvents = evList.filter(ev => {
-        const t = getStr(ev, ['title','event','name']).toLowerCase();
-        if (!t.includes('2026')) return false;
-        if (!t.includes('vct')) return false;  // Exclude Evolution Series, Clash, etc.
-        if (!( t.includes('americas') || t.includes('emea') ||
-               t.includes('pacific')  || t.includes('china') ||
-               /\bcn\b/.test(t) )) return false;
-        if (t.includes('game changer') || t.includes('gc ') || t.includes(' gc')
-            || t.includes('challengers') || t.includes('masters')
-            || t.includes('champions')) return false;
-        return true;
-    });
-
-    if (leagueEvents.length === 0) return false;
-
-    // Group by region
-    const byRegion = { americas: [], emea: [], pacific: [], china: [] };
-    for (const ev of leagueEvents) {
-        const t = getStr(ev, ['title','event','name']).toLowerCase();
-        if      (t.includes('americas'))         byRegion.americas.push(ev);
-        else if (t.includes('emea'))             byRegion.emea.push(ev);
-        else if (t.includes('pacific'))          byRegion.pacific.push(ev);
-        else if (t.includes('china') || /\bcn\b/.test(t)) byRegion.china.push(ev);
+async function loadViaJson() {
+    let data;
+    try {
+        const r = await fetch('./vct_data.json', { cache: 'no-cache' });
+        if (!r.ok) return false;
+        data = await r.json();
+    } catch (e) {
+        return false;
     }
 
-    // Fetch matches for every relevant event and accumulate records
-    const teamMap = {};  // lower-case name → team object
+    if (!Array.isArray(data?.teams) || data.teams.length < 10) return false;
 
-    for (const [region, events] of Object.entries(byRegion)) {
-        for (const ev of events) {
-            // ID may be a direct field or embedded in a url_path like /event/1234/...
-            let id = getStr(ev, ['id','event_id','eventId']);
-            if (!id) {
-                const urlPath = getStr(ev, ['url_path','url','link']);
-                const m = urlPath.match(/\/event\/(\d+)\//);
-                if (m) id = m[1];
-            }
-            if (!id) continue;
-            try {
-                const md = await apiFetch(`/events/matches?event_id=${id}`);
-                processMatches(segments(md), region, teamMap);
-            } catch (e) {
-                console.warn(`Failed to load matches for event ${id}:`, e.message);
-            }
-        }
+    allTeams = data.teams.map(t => ({
+        name:    t.name,
+        logo:    t.logo   || '',
+        region:  t.region,
+        matchW:  t.matchW || 0,
+        matchL:  t.matchL || 0,
+        mapW:    t.mapW   || 0,
+        mapL:    t.mapL   || 0,
+        players: t.players || [],
+    }));
+
+    let updatedStr = '';
+    if (data.lastUpdated) {
+        try {
+            const d = new Date(data.lastUpdated);
+            updatedStr = ` · updated ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+        } catch (_) {}
     }
+    document.getElementById('dataMode').innerHTML =
+        `match &amp; map records${updatedStr}`;
 
-    if (Object.keys(teamMap).length <= 5) return false;
-
-    // Enrich logos from rankings (events schedule has no logo data)
-    await enrichLogos(teamMap);
-
-    allTeams = Object.values(teamMap);
     return true;
-}
-
-function normName(s) {
-    return s.toLowerCase().replace(/[^a-z0-9]/g, '');
-}
-
-function processMatches(matches, region, teamMap) {
-    for (const m of matches) {
-        // Support both flat fields and nested {name, score} objects
-        const t1obj  = (m.team1 && typeof m.team1 === 'object') ? m.team1 : null;
-        const t2obj  = (m.team2 && typeof m.team2 === 'object') ? m.team2 : null;
-        const t1name = (t1obj?.name || getStr(m, ['team1_name','team_1'])).trim();
-        const t2name = (t2obj?.name || getStr(m, ['team2_name','team_2'])).trim();
-        if (!t1name || !t2name) continue;
-        // Skip placeholder entries
-        if (/^tbd$/i.test(t1name) || /^tbd$/i.test(t2name)) continue;
-
-        const k1 = t1name.toLowerCase();
-        const k2 = t2name.toLowerCase();
-
-        // Register team regardless of whether the match has been played yet
-        if (!teamMap[k1]) teamMap[k1] = { name: t1name, logo: '', region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
-        if (!teamMap[k2]) teamMap[k2] = { name: t2name, logo: '', region, matchW: 0, matchL: 0, mapW: 0, mapL: 0 };
-
-        // Compute records only for completed matches
-        const rawS1 = t1obj?.score ?? getStr(m, ['score1','team1_score','score_1','maps1']);
-        const rawS2 = t2obj?.score ?? getStr(m, ['score2','team2_score','score_2','maps2']);
-        const s1 = parseInt(rawS1);
-        const s2 = parseInt(rawS2);
-        if (isNaN(s1) || isNaN(s2) || (s1 === 0 && s2 === 0)) continue;
-
-        const t1logo = getStr(m, ['team1_logo','team_1_logo','logo1','team1_img']);
-        const t2logo = getStr(m, ['team2_logo','team_2_logo','logo2','team2_img']);
-        if (!teamMap[k1].logo && t1logo) teamMap[k1].logo = t1logo;
-        if (!teamMap[k2].logo && t2logo) teamMap[k2].logo = t2logo;
-
-        if (s1 > s2) { teamMap[k1].matchW++; teamMap[k2].matchL++; }
-        else if (s2 > s1) { teamMap[k2].matchW++; teamMap[k1].matchL++; }
-
-        teamMap[k1].mapW += s1;  teamMap[k1].mapL += s2;
-        teamMap[k2].mapW += s2;  teamMap[k2].mapL += s1;
-    }
-}
-
-async function enrichLogos(teamMap) {
-    // Build a normalized-name index into teamMap
-    const normIndex = {};
-    for (const k of Object.keys(teamMap)) {
-        normIndex[normName(k)] = k;
-    }
-
-    const fetches = FALLBACK_FETCH.map(({ apiKey }) =>
-        apiFetch(`/rankings?region=${apiKey}`)
-            .then(data => segments(data))
-            .catch(() => [])
-    );
-    const results = await Promise.all(fetches);
-
-    for (const segs of results) {
-        for (const t of segs) {
-            const rName = getStr(t, ['team','name','team_name']).trim();
-            const rLogo = getStr(t, ['logo','team_logo','img']);
-            if (!rName || !rLogo) continue;
-            const k = normIndex[normName(rName)];
-            if (k && !teamMap[k].logo) teamMap[k].logo = rLogo;
-        }
-    }
-}
-
-// ── Approach 2: Rankings fallback ─────────────────────────────────────────────
-
-async function loadViaRankings() {
-    const fetches = FALLBACK_FETCH.map(({ apiKey, region, cap }) =>
-        apiFetch(`/rankings?region=${apiKey}`)
-            .then(data => ({ segs: segments(data).slice(0, cap), region }))
-            .catch(() => ({ segs: [], region }))
-    );
-    const results = await Promise.all(fetches);
-
-    const seen = new Set();
-    for (const { segs, region } of results) {
-        for (const t of segs) {
-            const name = getStr(t, ['team','name','team_name']).trim();
-            if (!name || seen.has(name.toLowerCase())) continue;
-            seen.add(name.toLowerCase());
-
-            let matchW = 0, matchL = 0;
-            const rec = getStr(t, ['record','w_l','wl']);
-            const m = rec.match(/(\d+)\s*[-–—]\s*(\d+)/);
-            if (m) { matchW = parseInt(m[1]); matchL = parseInt(m[2]); }
-
-            allTeams.push({
-                name,
-                logo:   getStr(t, ['logo','team_logo','img']),
-                region,
-                matchW, matchL,
-                mapW: 0, mapL: 0,
-            });
-        }
-    }
 }
 
 // ── Utilities ──────────────────────────────────────────────────────────────────
 
-function getStr(obj, keys) {
-    for (const k of keys) {
-        if (obj && obj[k] != null) return String(obj[k]);
-    }
-    return '';
+function normName(s) {
+    return s.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]/g, '');
 }
 
 function winRate(t) {
@@ -621,6 +530,72 @@ function setStatus(html) {
 
 function clearStatus() {
     document.getElementById('statusEl').classList.add('hidden');
+}
+
+// ── Player stats ───────────────────────────────────────────────────────────────
+
+function pdValClass(val, hiThresh, loThresh) {
+    if (val >= hiThresh) return 'pd-val hi';
+    if (val <= loThresh) return 'pd-val lo';
+    return 'pd-val';
+}
+
+async function openPlayerDropdown(dropdownEl, team) {
+    const key = normName(team.name);
+
+    if (playerHtmlCache[key]) {
+        dropdownEl.innerHTML = playerHtmlCache[key];
+        return;
+    }
+
+    if (!team.players || team.players.length === 0) {
+        const msg = '<div class="pd-msg">No player stats available — re-run the scraper to update.</div>';
+        dropdownEl.innerHTML = msg;
+        playerHtmlCache[key] = msg;
+        return;
+    }
+
+    const frag = document.createDocumentFragment();
+
+    // Header row
+    const hdr = document.createElement('div');
+    hdr.className = 'pd-header';
+    ['Player', 'ACS', 'Rating', 'FK/FD', ''].forEach(label => {
+        const s = document.createElement('span');
+        s.textContent = label;
+        hdr.appendChild(s);
+    });
+    frag.appendChild(hdr);
+
+    // Player rows
+    team.players.forEach(p => {
+        const row = document.createElement('div');
+        row.className = 'pd-row';
+
+        const nameEl = document.createElement('span');
+        nameEl.className = 'pd-name';
+        nameEl.textContent = p.name;
+
+        const acsEl = document.createElement('span');
+        acsEl.className = pdValClass(p.acs, 230, 180);
+        acsEl.textContent = Math.round(p.acs);
+
+        const ratingEl = document.createElement('span');
+        ratingEl.className = pdValClass(p.rating, 1.15, 0.95);
+        ratingEl.textContent = (p.rating || 0).toFixed(2);
+
+        const fkfdEl = document.createElement('span');
+        const hasFkfd = p.fkfd > 0;
+        fkfdEl.className = hasFkfd ? pdValClass(p.fkfd, 1.1, 0.9) : 'pd-val dim';
+        fkfdEl.textContent = hasFkfd ? p.fkfd.toFixed(2) : '–';
+
+        row.append(nameEl, acsEl, ratingEl, fkfdEl, document.createElement('span'));
+        frag.appendChild(row);
+    });
+
+    dropdownEl.innerHTML = '';
+    dropdownEl.appendChild(frag);
+    playerHtmlCache[key] = dropdownEl.innerHTML;
 }
 
 // ── Filters ────────────────────────────────────────────────────────────────────
@@ -702,9 +677,17 @@ function render() {
     header.classList.remove('hidden');
 
     teams.forEach((t, i) => {
-        const r   = REGIONS[t.region];
+        const r       = REGIONS[t.region];
+        const teamKey = normName(t.name);
+        const isExp   = expandedTeams.has(teamKey);
+
+        // ── Block wrapper ──────────────────────────────────────────────────────
+        const block = document.createElement('div');
+        block.className = 'team-block';
+
+        // ── Team row ───────────────────────────────────────────────────────────
         const row = document.createElement('div');
-        row.className = 'team-row';
+        row.className = 'team-row' + (isExp ? ' expanded' : '');
         row.style.setProperty('--rc', r.rawColor);
 
         // Rank number
@@ -735,27 +718,52 @@ function render() {
         // Info
         const info = document.createElement('div');
         info.className = 'team-info';
-
         const name = document.createElement('div');
         name.className = 'team-name';
         name.textContent = t.name;
-
         const badge = document.createElement('span');
         badge.className = 'region-badge';
         badge.textContent = r.label;
         badge.style.cssText = `background:${r.bg};color:${r.rawColor}`;
-
         info.append(name, badge);
 
-        // Stats
+        // Team stats
         const stats = document.createElement('div');
         stats.className = 'team-stats';
-
         stats.appendChild(makeStatCol('Match', t.matchW, t.matchL));
         stats.appendChild(makeStatCol('Maps',  t.mapW,   t.mapL));
 
-        row.append(rank, logoEl, info, stats);
-        list.appendChild(row);
+        // Chevron
+        const chev = document.createElement('span');
+        chev.className = 'expand-chevron';
+        chev.textContent = '▾';
+
+        row.append(rank, logoEl, info, stats, chev);
+
+        // ── Player dropdown ────────────────────────────────────────────────────
+        const dropdown = document.createElement('div');
+        dropdown.className = 'player-dropdown' + (isExp ? ' open' : '');
+        dropdown.style.setProperty('--rc', r.rawColor);
+
+        if (isExp) openPlayerDropdown(dropdown, t);
+
+        // Toggle on click
+        row.addEventListener('click', () => {
+            if (expandedTeams.has(teamKey)) {
+                expandedTeams.delete(teamKey);
+                row.classList.remove('expanded');
+                dropdown.classList.remove('open');
+                dropdown.innerHTML = '';
+            } else {
+                expandedTeams.add(teamKey);
+                row.classList.add('expanded');
+                dropdown.classList.add('open');
+                openPlayerDropdown(dropdown, t);
+            }
+        });
+
+        block.append(row, dropdown);
+        list.appendChild(block);
     });
 
     list.classList.remove('hidden');
