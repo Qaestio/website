@@ -105,10 +105,10 @@ ORG_ABBREV = {
     'tl':   'teamliquid',  'ulf': 'ulfesports',   'vit': 'teamvitality',
     # Pacific
     'drx':  'drx',         't1':  't1',            'gen': 'geng',
-    'ns':   'nongshimredforce',                    'prx': 'paperrex',
+    'ns':   'nongshimredforce', 'nrf': 'nongshimredforce', 'prx': 'paperrex',
     'rrq':  'rexregumqeon','ge':  'globalesports', 'fs':  'fullsense',
     'ts':   'teamsecret',  'dfm': 'detonationfocusme',
-    'zeta': 'zetadivision','vrl': 'varrel',
+    'zeta': 'zetadivision','vrl': 'varrel',        'var': 'varrel',
     # China
     'pcf':  'pcificesports',                          # PCIFIC Esports (EMEA)
     'ag':   'allgamers',   'blg': 'bilibiligaming', 'drg': 'dragonrangergaming',
@@ -303,22 +303,38 @@ def _clean_map_name(name: str) -> str:
 
 
 def _resolve_team(raw: str, t1_name: str, t2_name: str) -> str:
-    """Map a raw team string (full name or abbreviation) to t1/t2 name, or '' if unresolved."""
+    """Map a raw team string (full name or abbreviation) to t1/t2 name, or '' if unresolved.
+
+    Priority order (to avoid false-positive substring matches like 'GE' → 'Gen.G'):
+      1. Exact case-insensitive match
+      2. ORG_ABBREV lookup  (explicit, highest confidence)
+      3. Prefix substring fallback  (raw must be a prefix of the team name, ≥ 3 chars)
+    """
     rl = raw.lower().strip()
     if not rl:
         return ''
-    # Full-name substring match
-    if t1_name and (t1_name.lower() in rl or rl in t1_name.lower()):
-        return t1_name
-    if t2_name and (t2_name.lower() in rl or rl in t2_name.lower()):
-        return t2_name
-    # Abbreviation match via ORG_ABBREV
+
+    # 1. Exact full-name match
+    for name in (t1_name, t2_name):
+        if name and name.lower() == rl:
+            return name
+
+    # 2. ORG_ABBREV — checked BEFORE substring to prevent e.g. 'GE' matching 'Gen.G'
     canonical = ORG_ABBREV.get(norm(raw))
     if canonical:
         for name in (t1_name, t2_name):
             if name and (norm(name) == canonical or canonical in norm(name) or norm(name) in canonical):
                 return name
-    return ''  # unresolved — don't pollute with raw text
+        return ''  # abbreviation is known but neither team matches — don't guess
+
+    # 3. Prefix fallback: raw must be a prefix of the team name (≥ 3 chars).
+    #    Handles full-name usage like "CLOUD9" → "Cloud9".
+    #    Avoids false positives like "LOUD" inside "cloud9" or "SENSE" inside "FULL SENSE".
+    for name in (t1_name, t2_name):
+        if name and len(rl) >= 3 and name.lower().startswith(rl):
+            return name
+
+    return ''
 
 
 def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
