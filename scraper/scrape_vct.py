@@ -332,7 +332,39 @@ def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
     """
     veto = []
 
-    # ── Selector-based (primary) ───────────────────────────────────────────────
+    # ── match-header-note (most common vlr.gg format) ─────────────────────────
+    # vlr.gg renders the veto inline as:
+    #   "TS ban Corrode; NS ban Pearl; TS pick Haven; ...; Breeze remains"
+    # inside a .match-header-note element.
+    _NOTE_RE = re.compile(
+        r'(\S+)\s+(ban|pick|decider)\s+(\w+)'   # "ABBR ban/pick Map"
+        r'|(\w+)\s+remains',                     # "Map remains" → decider
+        re.IGNORECASE
+    )
+    note_el = soup.select_one('.match-header-note')
+    if note_el:
+        note_text = note_el.get_text(' ', strip=True)
+        seen: set[str] = set()
+        step = 0
+        for m_obj in _NOTE_RE.finditer(note_text):
+            if m_obj.group(1):  # "ABBR action Map" form
+                abbr, action, map_word = (
+                    m_obj.group(1), m_obj.group(2).lower(), m_obj.group(3).title()
+                )
+                team_name = _resolve_team(abbr, t1_name, t2_name)
+            else:               # "Map remains" form → decider
+                map_word  = m_obj.group(4).title()
+                action    = 'decider'
+                team_name = ''
+            if map_word not in VCT_MAPS or map_word in seen:
+                continue
+            seen.add(map_word)
+            step += 1
+            veto.append({'step': step, 'action': action, 'map': map_word, 'team': team_name})
+        if veto:
+            return veto
+
+    # ── Selector-based (secondary) ─────────────────────────────────────────────
     container = (
         soup.select_one('.match-veto') or
         soup.select_one('[class*="veto"]') or
@@ -383,7 +415,11 @@ def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
     #   "NRF ban Pearl RRQ ban Abyss"
     # so we extract all triples via regex rather than one-map-per-element.
     _NAV_TAB_RE  = re.compile(r'^\S+\s+(?:PICK|BAN|DECIDER)\s+\d+:\d+$', re.IGNORECASE)
-    _STEP_RE     = re.compile(r'(\S+)\s+(ban|pick|decider)\s+(\S+)', re.IGNORECASE)
+    _STEP_RE     = re.compile(
+        r'(\S+)\s+(ban|pick|decider)\s+(\S+)'   # "ABBR action Map"
+        r'|(\S+)\s+remains',                     # "Map remains" → decider
+        re.IGNORECASE
+    )
     seen_maps: set[str] = set()
     step = 0
     for el in soup.find_all(True):
@@ -398,14 +434,19 @@ def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
             continue
 
         for m_obj in _STEP_RE.finditer(text):
-            abbr, act_word, map_word = m_obj.groups()
-            m = map_word.title()
-            if m not in VCT_MAPS or m in seen_maps:
+            if m_obj.group(1):  # "ABBR action Map" form
+                map_word  = m_obj.group(3).title()
+                act_word  = m_obj.group(2).lower()
+                team_name = _resolve_team(m_obj.group(1), t1_name, t2_name)
+            else:               # "Map remains" form
+                map_word  = m_obj.group(4).title()
+                act_word  = 'decider'
+                team_name = ''
+            if map_word not in VCT_MAPS or map_word in seen_maps:
                 continue
-            team_name = _resolve_team(abbr, t1_name, t2_name)
-            seen_maps.add(m)
+            seen_maps.add(map_word)
             step += 1
-            veto.append({'step': step, 'action': act_word.lower(), 'map': m, 'team': team_name})
+            veto.append({'step': step, 'action': act_word, 'map': map_word, 'team': team_name})
 
     return veto
 
