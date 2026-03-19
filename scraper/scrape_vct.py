@@ -209,16 +209,32 @@ def scrape_teams_from_overview(event_id: int, slug: str, region: str, team_map: 
     print(f'    -> {found} teams registered from overview')
 
 
-def scrape_match_detail(match_url: str) -> list[dict]:
+# Known VCT map pool — used for veto text-parsing fallback
+VCT_MAPS = frozenset({
+    'Abyss', 'Ascent', 'Bind', 'Breeze', 'Fracture',
+    'Haven', 'Icebox', 'Lotus', 'Pearl', 'Split', 'Sunset',
+})
+
+
+def scrape_match_detail(match_url: str, t1_name: str = '', t2_name: str = '') -> dict:
     """
-    Visit a single match page and return per-map score info.
-    Returns [{'map': str, 't1_score': int, 't2_score': int}, ...]
-    where t1/t2 match the team order on the match listing page (left team = t1).
+    Visit a single match page and return map scores + veto sequence.
+    Returns {'maps': [...], 'veto': [...]}
+      maps: [{'map': str, 't1_score': int, 't2_score': int}, ...]
+      veto: [{'step': int, 'action': 'ban'|'pick'|'decider', 'map': str, 'team': str}, ...]
+    t1/t2 correspond to the left/right team on the match listing page.
     """
     soup = fetch(match_url)
     if not soup:
-        return []
+        return {'maps': [], 'veto': []}
 
+    return {
+        'maps': _scrape_maps(soup),
+        'veto': _scrape_veto(soup, t1_name, t2_name),
+    }
+
+
+def _scrape_maps(soup) -> list[dict]:
     maps = []
 
     # Primary: parse the game nav tabs — each tab shows map name + score
@@ -227,13 +243,11 @@ def scrape_match_detail(match_url: str) -> list[dict]:
         if gid == 'all':
             continue
 
-        # Map name — prefer the inner span that contains just the map name
         map_el = nav.select_one('.map')
         if not map_el:
             continue
         map_name_el = map_el.select_one('span:not(.mod-side):not(.mod-ver)')
         map_name = (map_name_el or map_el).get_text(strip=True)
-        # Sometimes the text is "Map 1\nAscent" — keep only the last word-group
         map_name = map_name.splitlines()[-1].strip()
         if not map_name or map_name.lower() in ('tbd', ''):
             continue
@@ -243,7 +257,7 @@ def scrape_match_detail(match_url: str) -> list[dict]:
             try:
                 s1 = int(scores[0].get_text(strip=True))
                 s2 = int(scores[-1].get_text(strip=True))
-                maps.append({'map': map_name, 't1_score': s1, 't2_score': s2})
+                maps.append({'map': _clean_map_name(map_name), 't1_score': s1, 't2_score': s2})
             except ValueError:
                 pass
 
@@ -272,11 +286,120 @@ def scrape_match_detail(match_url: str) -> list[dict]:
             try:
                 s1 = int(scores[0].get_text(strip=True))
                 s2 = int(scores[-1].get_text(strip=True))
-                maps.append({'map': map_name, 't1_score': s1, 't2_score': s2})
+                maps.append({'map': _clean_map_name(map_name), 't1_score': s1, 't2_score': s2})
             except ValueError:
                 pass
 
     return maps
+
+
+def _clean_map_name(name: str) -> str:
+    """Strip pick/ban/decider labels that vlr.gg concatenates with map names."""
+    for suffix in ('PICK', 'BAN', 'DECIDER', 'Pick', 'Ban', 'Decider', 'pick', 'ban', 'decider'):
+        if name.endswith(suffix):
+            name = name[:-len(suffix)].strip()
+            break
+    return name
+
+
+def _resolve_team(raw: str, t1_name: str, t2_name: str) -> str:
+    """Map a raw team string to the canonical t1/t2 name, or return raw."""
+    rl = raw.lower()
+    if t1_name and (t1_name.lower() in rl or rl in t1_name.lower()):
+        return t1_name
+    if t2_name and (t2_name.lower() in rl or rl in t2_name.lower()):
+        return t2_name
+    return raw
+
+
+def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
+    """
+    Try to extract the map pick/ban sequence from a vlr.gg match page.
+    Returns a list of steps ordered by step number.
+
+    vlr.gg wraps the veto in elements like .match-veto / .match-header-note.
+    If selector-based parsing finds nothing, falls back to scanning short text
+    nodes that contain a known map name alongside 'ban'/'pick'/'decider'.
+    """
+    veto = []
+
+    # ── Selector-based (primary) ───────────────────────────────────────────────
+    container = (
+        soup.select_one('.match-veto') or
+        soup.select_one('[class*="veto"]') or
+        soup.select_one('.map-picks')
+    )
+    if container:
+        step = 0
+        for item in container.select(
+            '.item, .veto-item, .pick-item, .ban-item, tr, li, .row, div'
+        ):
+            text = item.get_text(' ', strip=True)
+            tl   = text.lower()
+
+            action = (
+                'ban'     if 'ban'      in tl else
+                'pick'    if 'pick'     in tl else
+                'decider' if any(w in tl for w in ('decider', 'remaining', 'left over')) else
+                None
+            )
+            if not action:
+                continue
+
+            # Map name from child element or text search
+            map_el = item.select_one('.map, [class*="map"]')
+            map_name = map_el.get_text(strip=True).splitlines()[-1].strip() if map_el else ''
+            if not map_name or map_name.title() not in VCT_MAPS:
+                for word in text.split():
+                    if word.title() in VCT_MAPS:
+                        map_name = word.title()
+                        break
+            if not map_name:
+                continue
+
+            # Team name
+            team_el = item.select_one('.team, [class*="team"]')
+            raw_team = team_el.get_text(strip=True) if team_el else ''
+            team_name = _resolve_team(raw_team, t1_name, t2_name) if raw_team else ''
+
+            step += 1
+            veto.append({'step': step, 'action': action, 'map': map_name, 'team': team_name})
+
+        if veto:
+            return veto
+
+    # ── Text-scan fallback ─────────────────────────────────────────────────────
+    # Walk every element; short text nodes that contain a map name + action word
+    seen_maps: set[str] = set()
+    step = 0
+    for el in soup.find_all(True):
+        # Skip elements that contain many children (headers, nav, etc.)
+        if len(el.find_all(True)) > 4:
+            continue
+        text = el.get_text(' ', strip=True)
+        if len(text) > 60:
+            continue
+
+        tl = text.lower()
+        action = (
+            'ban'     if 'ban'      in tl else
+            'pick'    if 'pick'     in tl else
+            'decider' if 'decider'  in tl else
+            None
+        )
+        if not action:
+            continue
+
+        found_map = next((w.title() for w in text.split() if w.title() in VCT_MAPS), None)
+        if not found_map or found_map in seen_maps:
+            continue
+
+        team_name = _resolve_team(text, t1_name, t2_name)
+        seen_maps.add(found_map)
+        step += 1
+        veto.append({'step': step, 'action': action, 'map': found_map, 'team': team_name})
+
+    return veto
 
 
 def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label: str):
@@ -347,14 +470,15 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         team_map[k1]['mapW'] += s1;  team_map[k1]['mapL'] += s2
         team_map[k2]['mapW'] += s2;  team_map[k2]['mapL'] += s1
 
-        # Fetch per-map details from the match page
+        # Fetch per-map details + veto sequence from the match page
         match_href = match.get('href', '')
-        map_details = []
+        map_details, veto = [], []
         if match_href:
-            match_url_full = BASE + match_href
-            map_details = scrape_match_detail(match_url_full)
+            detail     = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+            map_details = detail['maps']
+            veto        = detail['veto']
 
-        # Store match history on both teams (flip map scores for t2)
+        # Store match history on both teams (flip map scores for t2; veto is shared)
         team_map[k1].setdefault('matches', []).append({
             'event':      label,
             'opponent':   t2_name,
@@ -364,6 +488,7 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
                 {'map': m['map'], 'score': [m['t1_score'], m['t2_score']]}
                 for m in map_details
             ],
+            'veto': veto,
         })
         team_map[k2].setdefault('matches', []).append({
             'event':      label,
@@ -374,6 +499,7 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
                 {'map': m['map'], 'score': [m['t2_score'], m['t1_score']]}
                 for m in map_details
             ],
+            'veto': veto,
         })
 
         completed += 1

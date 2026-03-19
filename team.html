@@ -65,7 +65,7 @@
         .main::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
 
         .content {
-            max-width: 700px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
@@ -79,7 +79,7 @@
             border: 1px solid var(--border);
             border-left: 4px solid var(--rc, var(--border));
             border-radius: 10px;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
         }
         .hero-logo {
             width: 72px;
@@ -141,6 +141,17 @@
         .record-val .w   { color: var(--win); }
         .record-val .l   { color: var(--loss); }
         .record-val .sep { color: var(--dim); }
+
+        /* ── Two-column page grid ── */
+        .page-grid {
+            display: grid;
+            grid-template-columns: 1fr 272px;
+            gap: 1.25rem;
+            align-items: start;
+        }
+        @media (max-width: 760px) {
+            .page-grid { grid-template-columns: 1fr; }
+        }
 
         /* ── Section title ── */
         .section-title {
@@ -253,6 +264,94 @@
         .map-score.win  { color: var(--win); }
         .map-score.loss { color: var(--loss); }
 
+        /* ── Map stats panel (right column) ── */
+        .map-panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 0.85rem 0.85rem;
+        }
+
+        .map-stat-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+
+        .map-stat-row {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.22rem 0;
+        }
+
+        .map-stat-name {
+            width: 60px;
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            color: var(--muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .map-stat-bar-wrap {
+            flex: 1;
+            height: 7px;
+            border-radius: 3px;
+            overflow: hidden;
+            background: var(--surface2);
+            display: flex;
+        }
+
+        .bar-seg {
+            height: 100%;
+        }
+        .bar-firstban  { background: #e05252; }
+        .bar-firstpick { background: #52c77a; }
+        .bar-secondban { background: #f0923b; }
+        .bar-other     { background: #3d3d3d; }
+        .bar-played    { background: #52c77a; }
+
+        .map-stat-count {
+            width: 20px;
+            flex-shrink: 0;
+            text-align: right;
+            font-size: 0.62rem;
+            color: var(--dim);
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ── Legend ── */
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 0.75rem;
+            margin-top: 0.75rem;
+            padding-top: 0.65rem;
+            border-top: 1px solid var(--border);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.62rem;
+            color: var(--muted);
+        }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .map-note {
+            font-size: 0.62rem;
+            color: var(--dim);
+            margin-top: 0.6rem;
+            line-height: 1.5;
+        }
+
         /* ── Status ── */
         .status {
             text-align: center;
@@ -273,10 +372,10 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         .no-history {
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             color: var(--muted);
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -356,6 +455,185 @@ async function init() {
     renderTeam(team);
 }
 
+// ── Map statistics ─────────────────────────────────────────────────────────────
+
+const MAP_LABEL_SUFFIXES = ['PICK', 'BAN', 'DECIDER'];
+
+function cleanMapName(name) {
+    if (!name) return name;
+    const upper = name.toUpperCase();
+    for (const suf of MAP_LABEL_SUFFIXES) {
+        if (upper.endsWith(suf)) return name.slice(0, -suf.length).trim();
+    }
+    return name;
+}
+
+function computeMapStats(team) {
+    // stats[mapName] = {firstBan, firstPick, secondBan, other, played, wins}
+    const stats = {};
+    let hasVeto = false;
+
+    for (const match of team.matches || []) {
+
+        // Played maps
+        for (const mapData of match.maps || []) {
+            const m = cleanMapName(mapData.map);
+            if (!stats[m]) stats[m] = { firstBan:0, firstPick:0, secondBan:0, other:0, played:0, wins:0 };
+            stats[m].played++;
+            if ((mapData.score || [])[0] > (mapData.score || [])[1]) stats[m].wins++;
+        }
+
+        // Veto sequence — each step categorised from this team's perspective
+        if (match.veto && match.veto.length > 0) {
+            hasVeto = true;
+            let ourBans = 0, ourPicks = 0;
+
+            for (const step of (match.veto || [])) {
+                const m = cleanMapName(step.map);
+                if (!m) continue;
+                if (!stats[m]) stats[m] = { firstBan:0, firstPick:0, secondBan:0, other:0, played:0, wins:0 };
+
+                const byUs = step.team &&
+                    step.team.toLowerCase() === team.name.toLowerCase();
+
+                if (byUs) {
+                    if (step.action === 'ban') {
+                        ourBans++;
+                        if (ourBans === 1) stats[m].firstBan++;
+                        else               stats[m].secondBan++;
+                    } else if (step.action === 'pick') {
+                        ourPicks++;
+                        stats[m].firstPick++;
+                    } else {
+                        stats[m].other++; // decider
+                    }
+                } else {
+                    stats[m].other++;
+                }
+            }
+        }
+    }
+
+    return { stats, hasVeto };
+}
+
+function renderMapStats(team, panel) {
+    const { stats, hasVeto } = computeMapStats(team);
+
+    const title = document.createElement('div');
+    title.className = 'section-title';
+    title.textContent = 'Map Statistics';
+    panel.appendChild(title);
+
+    const inner = document.createElement('div');
+    inner.className = 'map-panel';
+    panel.appendChild(inner);
+
+    // Sort maps by total veto appearances (or played count) descending
+    const mapEntries = Object.entries(stats).sort(([na, a], [nb, b]) => {
+        const ta = hasVeto ? (a.firstBan + a.firstPick + a.secondBan + a.other) : a.played;
+        const tb = hasVeto ? (b.firstBan + b.firstPick + b.secondBan + b.other) : b.played;
+        return tb - ta || na.localeCompare(nb);
+    });
+
+    if (mapEntries.length === 0) {
+        const msg = document.createElement('div');
+        msg.style.cssText = 'font-size:0.8rem;color:var(--muted);padding:0.5rem 0;';
+        msg.textContent = 'No data yet.';
+        inner.appendChild(msg);
+        return;
+    }
+
+    const list = document.createElement('div');
+    list.className = 'map-stat-list';
+
+    for (const [mapName, s] of mapEntries) {
+        const total = hasVeto
+            ? (s.firstBan + s.firstPick + s.secondBan + s.other)
+            : s.played;
+        if (total === 0) continue;
+
+        const row = document.createElement('div');
+        row.className = 'map-stat-row';
+
+        const nameEl = document.createElement('span');
+        nameEl.className = 'map-stat-name';
+        nameEl.textContent = mapName;
+        nameEl.title = mapName;
+
+        const barWrap = document.createElement('div');
+        barWrap.className = 'map-stat-bar-wrap';
+
+        if (hasVeto) {
+            const segs = [
+                { cls: 'bar-firstban',  count: s.firstBan,  tip: '1st Ban'  },
+                { cls: 'bar-firstpick', count: s.firstPick, tip: '1st Pick' },
+                { cls: 'bar-secondban', count: s.secondBan, tip: '2nd Ban'  },
+                { cls: 'bar-other',     count: s.other,     tip: 'Other'    },
+            ];
+            for (const seg of segs) {
+                if (!seg.count) continue;
+                const el = document.createElement('div');
+                el.className = `bar-seg ${seg.cls}`;
+                el.style.width = `${(seg.count / total * 100).toFixed(1)}%`;
+                el.title = `${seg.tip}: ${seg.count}`;
+                barWrap.appendChild(el);
+            }
+        } else {
+            // Fallback: green = wins, background fill shows win rate
+            if (s.played > 0) {
+                const win = document.createElement('div');
+                win.className = 'bar-seg bar-played';
+                win.style.width = `${(s.wins / s.played * 100).toFixed(1)}%`;
+                win.title = `Won ${s.wins} of ${s.played}`;
+                barWrap.appendChild(win);
+            }
+        }
+
+        const countEl = document.createElement('span');
+        countEl.className = 'map-stat-count';
+        countEl.textContent = total;
+        countEl.title = hasVeto ? `${total} match${total !== 1 ? 'es' : ''}` : `${s.wins}W–${s.played - s.wins}L`;
+
+        row.append(nameEl, barWrap, countEl);
+        list.appendChild(row);
+    }
+
+    inner.appendChild(list);
+
+    // Legend
+    const legend = document.createElement('div');
+    legend.className = 'map-legend';
+
+    const legendDefs = hasVeto
+        ? [
+            { cls: 'bar-firstban',  label: '1st Ban'  },
+            { cls: 'bar-firstpick', label: '1st Pick' },
+            { cls: 'bar-secondban', label: '2nd Ban'  },
+            { cls: 'bar-other',     label: 'Other'    },
+          ]
+        : [{ cls: 'bar-played', label: 'Win rate' }];
+
+    for (const { cls, label } of legendDefs) {
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        const dot = document.createElement('span');
+        dot.className = `legend-dot ${cls}`;
+        item.append(dot, document.createTextNode(label));
+        legend.appendChild(item);
+    }
+    inner.appendChild(legend);
+
+    if (!hasVeto) {
+        const note = document.createElement('div');
+        note.className = 'map-note';
+        note.textContent = 'Veto data unavailable — re-run scraper to show pick/ban breakdown.';
+        inner.appendChild(note);
+    }
+}
+
+// ── Main render ───────────────────────────────────────────────────────────────
+
 function renderTeam(team) {
     const r = REGIONS[team.region] || { label: team.region, rawColor: '#888', bg: 'rgba(136,136,136,0.13)' };
 
@@ -365,7 +643,7 @@ function renderTeam(team) {
     const content = document.getElementById('content');
     content.innerHTML = '';
 
-    // ── Hero ────────────────────────────────────────────────────────────────────
+    // ── Hero ──────────────────────────────────────────────────────────────────
     const hero = document.createElement('div');
     hero.className = 'team-hero';
     hero.style.setProperty('--rc', r.rawColor);
@@ -409,26 +687,31 @@ function renderTeam(team) {
     hero.append(logoEl, info);
     content.appendChild(hero);
 
-    // ── Match History ────────────────────────────────────────────────────────────
-    const secTitle = document.createElement('div');
-    secTitle.className = 'section-title';
-    secTitle.textContent = 'Match History';
-    content.appendChild(secTitle);
+    // ── Two-column grid ───────────────────────────────────────────────────────
+    const grid = document.createElement('div');
+    grid.className = 'page-grid';
+
+    // Left: match history
+    const leftCol = document.createElement('div');
+
+    const histTitle = document.createElement('div');
+    histTitle.className = 'section-title';
+    histTitle.textContent = 'Match History';
+    leftCol.appendChild(histTitle);
 
     const matches = team.matches || [];
-
     if (matches.length === 0) {
         const noHistory = document.createElement('div');
         noHistory.className = 'no-history';
         noHistory.innerHTML =
             'No match history available.<br>' +
             'Re-run <code>python scraper/scrape_vct.py</code> to collect match data.';
-        content.appendChild(noHistory);
+        leftCol.appendChild(noHistory);
     } else {
         const matchList = document.createElement('div');
         matchList.className = 'match-list';
 
-        matches.forEach(m => {
+        for (const m of matches) {
             const isWin = m.result === 'W';
             const [ms1, ms2] = m.matchScore || [0, 0];
 
@@ -436,7 +719,6 @@ function renderTeam(team) {
             card.className = 'match-card';
             card.style.setProperty('--mc', isWin ? 'var(--win)' : 'var(--loss)');
 
-            // Header
             const hdr = document.createElement('div');
             hdr.className = 'match-header';
 
@@ -465,13 +747,12 @@ function renderTeam(team) {
 
             hdr.append(resBadge, scoreBadge, vsText, oppEl, eventEl);
 
-            // Map rows
             const maps = m.maps || [];
             if (maps.length > 0) {
                 const mapsEl = document.createElement('div');
                 mapsEl.className = 'match-maps';
 
-                maps.forEach(mapData => {
+                for (const mapData of maps) {
                     const [s1, s2] = mapData.score || [0, 0];
                     const mapWin = s1 > s2;
 
@@ -480,7 +761,7 @@ function renderTeam(team) {
 
                     const mapName = document.createElement('span');
                     mapName.className = 'map-name';
-                    mapName.textContent = mapData.map;
+                    mapName.textContent = cleanMapName(mapData.map);
 
                     const mapScore = document.createElement('span');
                     mapScore.className = `map-score ${mapWin ? 'win' : 'loss'}`;
@@ -488,7 +769,7 @@ function renderTeam(team) {
 
                     mapRow.append(mapName, mapScore);
                     mapsEl.appendChild(mapRow);
-                });
+                }
 
                 card.append(hdr, mapsEl);
             } else {
@@ -496,10 +777,17 @@ function renderTeam(team) {
             }
 
             matchList.appendChild(card);
-        });
+        }
 
-        content.appendChild(matchList);
+        leftCol.appendChild(matchList);
     }
+
+    // Right: map statistics
+    const rightCol = document.createElement('div');
+    renderMapStats(team, rightCol);
+
+    grid.append(leftCol, rightCol);
+    content.appendChild(grid);
 
     clearStatus();
 }
