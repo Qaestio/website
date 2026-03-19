@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team — VCT 2026</title>
+    <style>
+        :root {
+            --bg:       #0f0f0f;
+            --surface:  #161616;
+            --surface2: #1e1e1e;
+            --border:   #272727;
+            --text:     #e0e0e0;
+            --muted:    #888;
+            --dim:      #4a4a4a;
+            --win:      #52c77a;
+            --loss:     #e05252;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            height: 100%;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        body { display: flex; flex-direction: column; overflow: hidden; }
+
+        /* ── Topbar ── */
+        .topbar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0 1.25rem;
+            height: 52px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .back-link {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.15s;
+            flex-shrink: 0;
+        }
+        .back-link:hover { color: var(--text); }
+        .topbar-title {
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ── Main scroll ── */
+        .main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem 1.25rem 3rem;
+        }
+        .main::-webkit-scrollbar       { width: 5px; }
+        .main::-webkit-scrollbar-track { background: transparent; }
+        .main::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ── Team hero ── */
+        .team-hero {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.25rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--rc, var(--border));
+            border-radius: 10px;
+            margin-bottom: 1.75rem;
+        }
+        .hero-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 4px;
+        }
+        .hero-logo-ph {
+            width: 72px;
+            height: 72px;
+            background: var(--surface2);
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dim);
+        }
+        .hero-info { flex: 1; min-width: 0; }
+        .hero-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .region-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.6rem;
+        }
+        .hero-record {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .record-item { text-align: center; }
+        .record-label {
+            font-size: 0.6rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 3px;
+        }
+        .record-val {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .record-val .w   { color: var(--win); }
+        .record-val .l   { color: var(--loss); }
+        .record-val .sep { color: var(--dim); }
+
+        /* ── Section title ── */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 0.65rem;
+        }
+
+        /* ── Match list ── */
+        .match-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        /* ── Match card ── */
+        .match-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--mc, var(--border));
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .match-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 0.9rem;
+        }
+
+        .result-badge {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.68rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .result-badge.win  { background: rgba(82,199,122,0.15); color: var(--win); }
+        .result-badge.loss { background: rgba(224,82,82,0.15);  color: var(--loss); }
+
+        .match-score {
+            font-size: 0.88rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-variant-numeric: tabular-nums;
+            min-width: 2.8rem;
+            text-align: center;
+        }
+        .match-score .w   { color: var(--win); }
+        .match-score .l   { color: var(--loss); }
+        .match-score .sep { color: var(--dim); }
+
+        .vs-text {
+            font-size: 0.68rem;
+            color: var(--dim);
+            flex-shrink: 0;
+        }
+
+        .match-opponent {
+            font-size: 0.88rem;
+            font-weight: 600;
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .match-event-label {
+            font-size: 0.65rem;
+            color: var(--muted);
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        /* ── Map rows ── */
+        .match-maps {
+            border-top: 1px solid var(--border);
+            padding: 0.35rem 0.9rem 0.4rem 2.9rem;
+        }
+        .map-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.17rem 0;
+            font-size: 0.78rem;
+        }
+        .map-name {
+            color: var(--muted);
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 1rem;
+        }
+        .map-score {
+            font-variant-numeric: tabular-nums;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+        .map-score.win  { color: var(--win); }
+        .map-score.loss { color: var(--loss); }
+
+        /* ── Status ── */
+        .status {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+        .spinner {
+            display: inline-block;
+            width: 18px; height: 18px;
+            border: 2px solid var(--border);
+            border-top-color: var(--muted);
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+            vertical-align: middle;
+            margin-right: 0.4rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .no-history {
+            padding: 2rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.84rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        .no-history code {
+            background: var(--surface2);
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 0.82em;
+        }
+
+        @media (max-width: 540px) {
+            .match-event-label { display: none; }
+            .match-maps { padding-left: 0.9rem; }
+            .hero-name  { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <a class="back-link" href="valorant.html">← Teams</a>
+    <span class="topbar-title" id="pageTitle"></span>
+</div>
+
+<div class="main">
+    <div id="statusEl" class="status"><span class="spinner"></span> Loading…</div>
+    <div id="content" class="content" style="display:none"></div>
+</div>
+
+<script>
+const REGIONS = {
+    americas: { label: 'Americas', rawColor: '#f0923b', bg: 'rgba(240,146,59,0.13)'  },
+    emea:     { label: 'EMEA',     rawColor: '#f0c040', bg: 'rgba(240,192,64,0.13)'  },
+    pacific:  { label: 'Pacific',  rawColor: '#5b9cf6', bg: 'rgba(91,156,246,0.13)'  },
+    china:    { label: 'China',    rawColor: '#e05252', bg: 'rgba(224,82,82,0.13)'   },
+};
+
+function setStatus(html) {
+    const el = document.getElementById('statusEl');
+    el.innerHTML = html;
+    el.style.display = '';
+    document.getElementById('content').style.display = 'none';
+}
+
+function clearStatus() {
+    document.getElementById('statusEl').style.display = 'none';
+    document.getElementById('content').style.display = '';
+}
+
+async function init() {
+    const teamName = new URLSearchParams(location.search).get('team');
+    if (!teamName) {
+        setStatus('No team specified. <a href="valorant.html" style="color:var(--muted)">← Go back</a>');
+        return;
+    }
+
+    let data;
+    try {
+        const r = await fetch('./vct_data.json', { cache: 'no-cache' });
+        if (!r.ok) throw new Error('fetch failed');
+        data = await r.json();
+    } catch (e) {
+        setStatus('Could not load data. <a href="valorant.html" style="color:var(--muted)">← Go back</a>');
+        return;
+    }
+
+    const team = (data.teams || []).find(
+        t => t.name.toLowerCase() === teamName.toLowerCase()
+    );
+    if (!team) {
+        setStatus(`Team "${teamName}" not found. <a href="valorant.html" style="color:var(--muted)">← Go back</a>`);
+        return;
+    }
+
+    renderTeam(team);
+}
+
+function renderTeam(team) {
+    const r = REGIONS[team.region] || { label: team.region, rawColor: '#888', bg: 'rgba(136,136,136,0.13)' };
+
+    document.title = `${team.name} — VCT 2026`;
+    document.getElementById('pageTitle').textContent = team.name;
+
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+
+    // ── Hero ────────────────────────────────────────────────────────────────────
+    const hero = document.createElement('div');
+    hero.className = 'team-hero';
+    hero.style.setProperty('--rc', r.rawColor);
+
+    let logoEl;
+    if (team.logo) {
+        logoEl = document.createElement('img');
+        logoEl.className = 'hero-logo';
+        logoEl.src = team.logo;
+        logoEl.alt = team.name;
+        logoEl.onerror = function () {
+            const ph = document.createElement('div');
+            ph.className = 'hero-logo-ph';
+            ph.textContent = team.name.slice(0, 2).toUpperCase();
+            this.replaceWith(ph);
+        };
+    } else {
+        logoEl = document.createElement('div');
+        logoEl.className = 'hero-logo-ph';
+        logoEl.textContent = team.name.slice(0, 2).toUpperCase();
+    }
+
+    const info = document.createElement('div');
+    info.className = 'hero-info';
+
+    const nameEl = document.createElement('div');
+    nameEl.className = 'hero-name';
+    nameEl.textContent = team.name;
+
+    const badge = document.createElement('span');
+    badge.className = 'region-badge';
+    badge.textContent = r.label;
+    badge.style.cssText = `background:${r.bg};color:${r.rawColor}`;
+
+    const recordRow = document.createElement('div');
+    recordRow.className = 'hero-record';
+    recordRow.appendChild(makeRecordItem('Match', team.matchW, team.matchL));
+    recordRow.appendChild(makeRecordItem('Maps',  team.mapW,   team.mapL));
+
+    info.append(nameEl, badge, recordRow);
+    hero.append(logoEl, info);
+    content.appendChild(hero);
+
+    // ── Match History ────────────────────────────────────────────────────────────
+    const secTitle = document.createElement('div');
+    secTitle.className = 'section-title';
+    secTitle.textContent = 'Match History';
+    content.appendChild(secTitle);
+
+    const matches = team.matches || [];
+
+    if (matches.length === 0) {
+        const noHistory = document.createElement('div');
+        noHistory.className = 'no-history';
+        noHistory.innerHTML =
+            'No match history available.<br>' +
+            'Re-run <code>python scraper/scrape_vct.py</code> to collect match data.';
+        content.appendChild(noHistory);
+    } else {
+        const matchList = document.createElement('div');
+        matchList.className = 'match-list';
+
+        matches.forEach(m => {
+            const isWin = m.result === 'W';
+            const [ms1, ms2] = m.matchScore || [0, 0];
+
+            const card = document.createElement('div');
+            card.className = 'match-card';
+            card.style.setProperty('--mc', isWin ? 'var(--win)' : 'var(--loss)');
+
+            // Header
+            const hdr = document.createElement('div');
+            hdr.className = 'match-header';
+
+            const resBadge = document.createElement('div');
+            resBadge.className = `result-badge ${isWin ? 'win' : 'loss'}`;
+            resBadge.textContent = m.result;
+
+            const scoreBadge = document.createElement('div');
+            scoreBadge.className = 'match-score';
+            const swEl  = document.createElement('span'); swEl.className  = isWin ? 'w' : 'l'; swEl.textContent  = ms1;
+            const ssep  = document.createElement('span'); ssep.className  = 'sep'; ssep.textContent  = '–';
+            const slEl  = document.createElement('span'); slEl.className  = isWin ? 'l' : 'w'; slEl.textContent  = ms2;
+            scoreBadge.append(swEl, ssep, slEl);
+
+            const vsText = document.createElement('span');
+            vsText.className = 'vs-text';
+            vsText.textContent = 'vs';
+
+            const oppEl = document.createElement('span');
+            oppEl.className = 'match-opponent';
+            oppEl.textContent = m.opponent;
+
+            const eventEl = document.createElement('span');
+            eventEl.className = 'match-event-label';
+            eventEl.textContent = m.event || '';
+
+            hdr.append(resBadge, scoreBadge, vsText, oppEl, eventEl);
+
+            // Map rows
+            const maps = m.maps || [];
+            if (maps.length > 0) {
+                const mapsEl = document.createElement('div');
+                mapsEl.className = 'match-maps';
+
+                maps.forEach(mapData => {
+                    const [s1, s2] = mapData.score || [0, 0];
+                    const mapWin = s1 > s2;
+
+                    const mapRow = document.createElement('div');
+                    mapRow.className = 'map-row';
+
+                    const mapName = document.createElement('span');
+                    mapName.className = 'map-name';
+                    mapName.textContent = mapData.map;
+
+                    const mapScore = document.createElement('span');
+                    mapScore.className = `map-score ${mapWin ? 'win' : 'loss'}`;
+                    mapScore.textContent = `${s1} – ${s2}`;
+
+                    mapRow.append(mapName, mapScore);
+                    mapsEl.appendChild(mapRow);
+                });
+
+                card.append(hdr, mapsEl);
+            } else {
+                card.appendChild(hdr);
+            }
+
+            matchList.appendChild(card);
+        });
+
+        content.appendChild(matchList);
+    }
+
+    clearStatus();
+}
+
+function makeRecordItem(label, w, l) {
+    const item = document.createElement('div');
+    item.className = 'record-item';
+
+    const lbl = document.createElement('div');
+    lbl.className = 'record-label';
+    lbl.textContent = label;
+
+    const val = document.createElement('div');
+    val.className = 'record-val';
+
+    const wEl  = document.createElement('span'); wEl.className  = 'w'; wEl.textContent  = w;
+    const sep  = document.createElement('span'); sep.className  = 'sep'; sep.textContent = '–';
+    const lEl  = document.createElement('span'); lEl.className  = 'l'; lEl.textContent  = l;
+
+    val.append(wEl, sep, lEl);
+    item.append(lbl, val);
+    return item;
+}
+
+init();
+</script>
+</body>
+</html>

@@ -158,6 +158,10 @@
             border-left: 3px solid var(--rc, var(--border));
             border-radius: 8px;
             transition: background 0.1s;
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+            color: inherit;
         }
         .team-row:hover { background: var(--surface2); }
 
@@ -280,86 +284,6 @@
         .lh-stats  { display: flex; gap: 1.25rem; flex-shrink: 0; }
         .lh-stat   { min-width: 58px; text-align: center; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
 
-        /* ── Team block (row + dropdown wrapper) ── */
-        .team-block { display: flex; flex-direction: column; }
-
-        .team-row {
-            cursor: pointer;
-            user-select: none;
-        }
-        .team-row.expanded {
-            border-radius: 8px 8px 0 0;
-            border-bottom-color: transparent;
-        }
-        .expand-chevron {
-            color: var(--dim);
-            font-size: 0.7rem;
-            flex-shrink: 0;
-            margin-left: 0.3rem;
-            transition: transform 0.18s ease;
-            line-height: 1;
-        }
-        .team-row.expanded .expand-chevron { transform: rotate(180deg); }
-
-        /* ── Player dropdown ── */
-        .player-dropdown {
-            display: none;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-top: none;
-            border-left: 3px solid var(--rc, var(--border));
-            border-radius: 0 0 8px 8px;
-        }
-        .player-dropdown.open { display: block; }
-
-        /* pd-header and pd-row share grid layout aligned with team row content */
-        .pd-header,
-        .pd-row {
-            display: grid;
-            grid-template-columns: 1fr 58px 58px 64px 20px;
-            gap: 0.4rem;
-            align-items: center;
-            padding: 0.28rem 0.9rem;
-            padding-left: calc(0.9rem + 18px + 0.8rem + 34px + 0.8rem);
-        }
-        .pd-header {
-            border-bottom: 1px solid var(--border);
-            padding-top: 0.45rem;
-            padding-bottom: 0.35rem;
-        }
-        .pd-header span {
-            font-size: 0.6rem;
-            color: var(--dim);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            text-align: right;
-        }
-        .pd-header span:first-child { text-align: left; }
-        .pd-row { transition: background 0.1s; }
-        .pd-row:hover { background: var(--surface2); }
-
-        .pd-name {
-            font-size: 0.84rem;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .pd-val {
-            font-size: 0.82rem;
-            text-align: right;
-            font-variant-numeric: tabular-nums;
-        }
-        .pd-val.hi  { color: #52c77a; }
-        .pd-val.lo  { color: #e05252; }
-        .pd-val.dim { color: var(--dim); }
-
-        .pd-msg {
-            padding: 0.75rem 0.9rem 0.75rem calc(0.9rem + 18px + 0.8rem + 34px + 0.8rem);
-            font-size: 0.8rem;
-            color: var(--muted);
-        }
-
         /* ── Responsive ── */
         @media (max-width: 540px) {
             .controls { height: auto; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
@@ -440,9 +364,6 @@ let allTeams  = [];
 let activeReg = new Set(Object.keys(REGIONS));
 let sortMode  = 'alpha';
 
-const expandedTeams   = new Set();
-const playerHtmlCache = {};
-
 // ── Data loading ───────────────────────────────────────────────────────────────
 
 async function loadData() {
@@ -452,8 +373,6 @@ async function loadData() {
     document.getElementById('listHeader').classList.add('hidden');
     document.getElementById('sourceNote').classList.add('hidden');
     allTeams = [];
-    Object.keys(playerHtmlCache).forEach(k => delete playerHtmlCache[k]);
-    expandedTeams.clear();
 
     const ok = await loadViaJson();
     if (!ok) {
@@ -486,14 +405,13 @@ async function loadViaJson() {
     if (!Array.isArray(data?.teams) || data.teams.length < 10) return false;
 
     allTeams = data.teams.map(t => ({
-        name:    t.name,
-        logo:    t.logo   || '',
-        region:  t.region,
-        matchW:  t.matchW || 0,
-        matchL:  t.matchL || 0,
-        mapW:    t.mapW   || 0,
-        mapL:    t.mapL   || 0,
-        players: t.players || [],
+        name:   t.name,
+        logo:   t.logo   || '',
+        region: t.region,
+        matchW: t.matchW || 0,
+        matchL: t.matchL || 0,
+        mapW:   t.mapW   || 0,
+        mapL:   t.mapL   || 0,
     }));
 
     let updatedStr = '';
@@ -530,72 +448,6 @@ function setStatus(html) {
 
 function clearStatus() {
     document.getElementById('statusEl').classList.add('hidden');
-}
-
-// ── Player stats ───────────────────────────────────────────────────────────────
-
-function pdValClass(val, hiThresh, loThresh) {
-    if (val >= hiThresh) return 'pd-val hi';
-    if (val <= loThresh) return 'pd-val lo';
-    return 'pd-val';
-}
-
-async function openPlayerDropdown(dropdownEl, team) {
-    const key = normName(team.name);
-
-    if (playerHtmlCache[key]) {
-        dropdownEl.innerHTML = playerHtmlCache[key];
-        return;
-    }
-
-    if (!team.players || team.players.length === 0) {
-        const msg = '<div class="pd-msg">No player stats available — re-run the scraper to update.</div>';
-        dropdownEl.innerHTML = msg;
-        playerHtmlCache[key] = msg;
-        return;
-    }
-
-    const frag = document.createDocumentFragment();
-
-    // Header row
-    const hdr = document.createElement('div');
-    hdr.className = 'pd-header';
-    ['Player', 'ACS', 'Rating', 'FK/FD', ''].forEach(label => {
-        const s = document.createElement('span');
-        s.textContent = label;
-        hdr.appendChild(s);
-    });
-    frag.appendChild(hdr);
-
-    // Player rows
-    team.players.forEach(p => {
-        const row = document.createElement('div');
-        row.className = 'pd-row';
-
-        const nameEl = document.createElement('span');
-        nameEl.className = 'pd-name';
-        nameEl.textContent = p.name;
-
-        const acsEl = document.createElement('span');
-        acsEl.className = pdValClass(p.acs, 230, 180);
-        acsEl.textContent = Math.round(p.acs);
-
-        const ratingEl = document.createElement('span');
-        ratingEl.className = pdValClass(p.rating, 1.15, 0.95);
-        ratingEl.textContent = (p.rating || 0).toFixed(2);
-
-        const fkfdEl = document.createElement('span');
-        const hasFkfd = p.fkfd > 0;
-        fkfdEl.className = hasFkfd ? pdValClass(p.fkfd, 1.1, 0.9) : 'pd-val dim';
-        fkfdEl.textContent = hasFkfd ? p.fkfd.toFixed(2) : '–';
-
-        row.append(nameEl, acsEl, ratingEl, fkfdEl, document.createElement('span'));
-        frag.appendChild(row);
-    });
-
-    dropdownEl.innerHTML = '';
-    dropdownEl.appendChild(frag);
-    playerHtmlCache[key] = dropdownEl.innerHTML;
 }
 
 // ── Filters ────────────────────────────────────────────────────────────────────
@@ -677,17 +529,12 @@ function render() {
     header.classList.remove('hidden');
 
     teams.forEach((t, i) => {
-        const r       = REGIONS[t.region];
-        const teamKey = normName(t.name);
-        const isExp   = expandedTeams.has(teamKey);
+        const r = REGIONS[t.region];
 
-        // ── Block wrapper ──────────────────────────────────────────────────────
-        const block = document.createElement('div');
-        block.className = 'team-block';
-
-        // ── Team row ───────────────────────────────────────────────────────────
-        const row = document.createElement('div');
-        row.className = 'team-row' + (isExp ? ' expanded' : '');
+        // ── Team row (anchor → team page) ──────────────────────────────────────
+        const row = document.createElement('a');
+        row.className = 'team-row';
+        row.href = `team.html?team=${encodeURIComponent(t.name)}`;
         row.style.setProperty('--rc', r.rawColor);
 
         // Rank number
@@ -733,37 +580,8 @@ function render() {
         stats.appendChild(makeStatCol('Match', t.matchW, t.matchL));
         stats.appendChild(makeStatCol('Maps',  t.mapW,   t.mapL));
 
-        // Chevron
-        const chev = document.createElement('span');
-        chev.className = 'expand-chevron';
-        chev.textContent = '▾';
-
-        row.append(rank, logoEl, info, stats, chev);
-
-        // ── Player dropdown ────────────────────────────────────────────────────
-        const dropdown = document.createElement('div');
-        dropdown.className = 'player-dropdown' + (isExp ? ' open' : '');
-        dropdown.style.setProperty('--rc', r.rawColor);
-
-        if (isExp) openPlayerDropdown(dropdown, t);
-
-        // Toggle on click
-        row.addEventListener('click', () => {
-            if (expandedTeams.has(teamKey)) {
-                expandedTeams.delete(teamKey);
-                row.classList.remove('expanded');
-                dropdown.classList.remove('open');
-                dropdown.innerHTML = '';
-            } else {
-                expandedTeams.add(teamKey);
-                row.classList.add('expanded');
-                dropdown.classList.add('open');
-                openPlayerDropdown(dropdown, t);
-            }
-        });
-
-        block.append(row, dropdown);
-        list.appendChild(block);
+        row.append(rank, logoEl, info, stats);
+        list.appendChild(row);
     });
 
     list.classList.remove('hidden');

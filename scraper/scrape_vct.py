@@ -196,6 +196,7 @@ def scrape_teams_from_overview(event_id: int, slug: str, region: str, team_map: 
                 'matchW': 0, 'matchL': 0,
                 'mapW':   0, 'mapL':   0,
                 'players':       [],
+                'matches':       [],
                 'franchise':     True,   # confirmed franchise team from event overview
             }
         else:
@@ -208,11 +209,82 @@ def scrape_teams_from_overview(event_id: int, slug: str, region: str, team_map: 
     print(f'    -> {found} teams registered from overview')
 
 
-def scrape_matches(event_id: int, slug: str, region: str, team_map: dict):
+def scrape_match_detail(match_url: str) -> list[dict]:
+    """
+    Visit a single match page and return per-map score info.
+    Returns [{'map': str, 't1_score': int, 't2_score': int}, ...]
+    where t1/t2 match the team order on the match listing page (left team = t1).
+    """
+    soup = fetch(match_url)
+    if not soup:
+        return []
+
+    maps = []
+
+    # Primary: parse the game nav tabs — each tab shows map name + score
+    for nav in soup.select('.vm-stats-gamesnav-item[data-game-id]'):
+        gid = nav.get('data-game-id', 'all')
+        if gid == 'all':
+            continue
+
+        # Map name — prefer the inner span that contains just the map name
+        map_el = nav.select_one('.map')
+        if not map_el:
+            continue
+        map_name_el = map_el.select_one('span:not(.mod-side):not(.mod-ver)')
+        map_name = (map_name_el or map_el).get_text(strip=True)
+        # Sometimes the text is "Map 1\nAscent" — keep only the last word-group
+        map_name = map_name.splitlines()[-1].strip()
+        if not map_name or map_name.lower() in ('tbd', ''):
+            continue
+
+        scores = nav.select('.score')
+        if len(scores) >= 2:
+            try:
+                s1 = int(scores[0].get_text(strip=True))
+                s2 = int(scores[-1].get_text(strip=True))
+                maps.append({'map': map_name, 't1_score': s1, 't2_score': s2})
+            except ValueError:
+                pass
+
+    if maps:
+        return maps
+
+    # Fallback: parse individual vm-stats-game blocks
+    for game in soup.select('.vm-stats-game[data-game-id]'):
+        gid = game.get('data-game-id', 'all')
+        if gid == 'all':
+            continue
+
+        map_el = (
+            game.select_one('.map span:not(.mod-ver):not(.mod-side)') or
+            game.select_one('.map-name') or
+            game.select_one('.map')
+        )
+        if not map_el:
+            continue
+        map_name = map_el.get_text(strip=True).splitlines()[-1].strip()
+        if not map_name or map_name.lower() == 'tbd':
+            continue
+
+        scores = game.select('.score')
+        if len(scores) >= 2:
+            try:
+                s1 = int(scores[0].get_text(strip=True))
+                s2 = int(scores[-1].get_text(strip=True))
+                maps.append({'map': map_name, 't1_score': s1, 't2_score': s2})
+            except ValueError:
+                pass
+
+    return maps
+
+
+def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label: str):
     """
     Scrape the event matches page.
     • Registers any new teams (with correct region).
     • Accumulates match W/L and map W/L for completed matches.
+    • Stores per-match history (opponent, result, map scores) on each team.
     """
     url  = f'{BASE}/event/matches/{event_id}/{slug}/'
     soup = fetch(url)
@@ -251,7 +323,7 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict):
                 team_map[k] = {
                     'name': name, 'region': region, 'logo': '',
                     'matchW': 0, 'matchL': 0, 'mapW': 0, 'mapL': 0,
-                    'players': [],
+                    'players': [], 'matches': [],
                 }
 
         # Upcoming match — no score to process
@@ -274,6 +346,36 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict):
 
         team_map[k1]['mapW'] += s1;  team_map[k1]['mapL'] += s2
         team_map[k2]['mapW'] += s2;  team_map[k2]['mapL'] += s1
+
+        # Fetch per-map details from the match page
+        match_href = match.get('href', '')
+        map_details = []
+        if match_href:
+            match_url_full = BASE + match_href
+            map_details = scrape_match_detail(match_url_full)
+
+        # Store match history on both teams (flip map scores for t2)
+        team_map[k1].setdefault('matches', []).append({
+            'event':      label,
+            'opponent':   t2_name,
+            'result':     'W' if s1 > s2 else 'L',
+            'matchScore': [s1, s2],
+            'maps': [
+                {'map': m['map'], 'score': [m['t1_score'], m['t2_score']]}
+                for m in map_details
+            ],
+        })
+        team_map[k2].setdefault('matches', []).append({
+            'event':      label,
+            'opponent':   t1_name,
+            'result':     'W' if s2 > s1 else 'L',
+            'matchScore': [s2, s1],
+            'maps': [
+                {'map': m['map'], 'score': [m['t2_score'], m['t1_score']]}
+                for m in map_details
+            ],
+        })
+
         completed += 1
 
     print(f'    -> {completed} completed matches, {upcoming} upcoming')
@@ -337,8 +439,6 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
         # Find team in team_map by org abbreviation
         team_key = find_team_key(org_abbr, team_map)
         if not team_key:
-            # Uncomment to debug unmatched orgs:
-            # print(f'      ? unmatched org: {org_abbr!r}  player: {player_name}')
             continue  # player's team not a VCT franchise team
 
         # Parse stats
@@ -432,7 +532,7 @@ def main():
             scrape_teams_from_overview(event_id, slug, region, team_map)
 
         print('  Matches …')
-        scrape_matches(event_id, slug, region or 'americas', team_map)
+        scrape_matches(event_id, slug, region or 'americas', team_map, label)
 
         print('  Stats …')
         scrape_stats(event_id, slug, team_map, player_map)
@@ -450,14 +550,15 @@ def main():
         if t['region'] not in REGION_META:
             continue
         teams_out.append({
-            'name':   t['name'],
-            'region': t['region'],
-            'logo':   t['logo'],
-            'matchW': t['matchW'],
-            'matchL': t['matchL'],
-            'mapW':   t['mapW'],
-            'mapL':   t['mapL'],
+            'name':    t['name'],
+            'region':  t['region'],
+            'logo':    t['logo'],
+            'matchW':  t['matchW'],
+            'matchL':  t['matchL'],
+            'mapW':    t['mapW'],
+            'mapL':    t['mapL'],
             'players': t['players'],
+            'matches': t.get('matches', []),
         })
 
     output = {
@@ -479,7 +580,12 @@ def main():
         print(f'   {REGION_META[r]["label"]:12s}  {n} teams')
 
     players_with_stats = sum(1 for t in teams_out if t['players'])
+    matches_with_maps  = sum(
+        1 for t in teams_out
+        for m in t['matches'] if m.get('maps')
+    )
     print(f'   {players_with_stats} / {len(teams_out)} teams have player stats')
+    print(f'   {matches_with_maps} match entries have map detail')
     print('-' * 60)
 
 
