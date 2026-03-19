@@ -16,7 +16,8 @@
       "Bash(python scrape_vct.py)",
       "Bash(set PYTHONIOENCODING=utf-8)",
       "Bash(python -c \":*)",
-      "Bash(python -c \"import json; data=json.load\\(open\\(''../vct_data.json'', encoding=''utf-8''\\)\\); [print\\(t[''name''], t[''region'']\\) for t in data[''teams''] if ''envy'' in t[''name''].lower\\(\\) or ''nrg'' in t[''name''].lower\\(\\)]\")"
+      "Bash(python -c \"import json; data=json.load\\(open\\(''../vct_data.json'', encoding=''utf-8''\\)\\); [print\\(t[''name''], t[''region'']\\) for t in data[''teams''] if ''envy'' in t[''name''].lower\\(\\) or ''nrg'' in t[''name''].lower\\(\\)]\")",
+      "Bash(python scraper/scrape_vct.py)"
     ]
   }
 }

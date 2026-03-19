@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T13:06:09.651279+00:00",
+  "lastUpdated": "2026-03-19T19:22:30.301698+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -52,6 +52,236 @@
           "rating": 0.93,
           "fkfd": 1.0
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LEVIATÁN",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LOUD",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Sentinels",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Evil Geniuses",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -92,6 +322,197 @@
           "acs": 225,
           "rating": 1.06,
           "fkfd": 1.24
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LOUD",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LEVIATÁN",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "ENVY",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                20,
+                18
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LEVIATÁN",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -134,6 +555,140 @@
           "rating": 0.88,
           "fkfd": 0.82
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "ENVY",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Sentinels",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LOUD",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "ENVY",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                16,
+                14
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                15
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -174,6 +729,207 @@
           "acs": 169,
           "rating": 0.91,
           "fkfd": 1.07
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "KRÜ Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Sentinels",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "G2 Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "MIBR",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "BBL Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -216,6 +972,97 @@
           "rating": 0.71,
           "fkfd": 0.42
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "FURIA",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "ENVY",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LEVIATÁN",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -256,6 +1103,140 @@
           "acs": 212,
           "rating": 1.14,
           "fkfd": 2.44
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "KRÜ Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Sentinels",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -298,6 +1279,90 @@
           "rating": 0.75,
           "fkfd": 0.53
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Evil Geniuses",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -338,6 +1403,189 @@
           "acs": 165,
           "rating": 0.82,
           "fkfd": 0.82
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "ENVY",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "FURIA",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            3
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -380,6 +1628,389 @@
           "rating": 0.88,
           "fkfd": 0.82
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "MIBR",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "MIBR",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Xi Lai Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Team Liquid",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "BBL Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                17,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            3
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -420,6 +2051,108 @@
           "acs": 187,
           "rating": 0.8,
           "fkfd": 1.0
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "FURIA",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Evil Geniuses",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "LEVIATÁN",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
         }
       ]
     },
@@ -462,6 +2195,343 @@
           "rating": 0.96,
           "fkfd": 0.94
         }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "100 Thieves",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "FURIA",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "MIBR",
+          "result": "W",
+          "matchScore": [
+            3,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Xi Lai Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "T1",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "All Gamers",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "BBL Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -502,6 +2572,154 @@
           "acs": 200,
           "rating": 1.09,
           "fkfd": 0.89
+        }
+      ],
+      "matches": [
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Evil Geniuses",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "MIBR",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "KRÜ Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Cloud9",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                18,
+                20
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Americas Kickoff",
+          "opponent": "Evil Geniuses",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                16
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -544,6 +2762,197 @@
           "rating": 0.87,
           "fkfd": 0.85
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Gen.G",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Rex Regum Qeon",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Team Secret",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -584,6 +2993,186 @@
           "acs": 173,
           "rating": 0.85,
           "fkfd": 0.86
+        }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "VARREL",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "ZETA DIVISION",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -626,6 +3215,147 @@
           "rating": 0.78,
           "fkfd": 0.73
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "ZETA DIVISION",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -666,6 +3396,129 @@
           "acs": 170,
           "rating": 0.86,
           "fkfd": 0.86
+        }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "VARREL",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                18,
+                20
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                15,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -708,6 +3561,186 @@
           "rating": 0.97,
           "fkfd": 0.71
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "VARREL",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "ZETA DIVISION",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Gen.G",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                15
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -748,6 +3781,474 @@
           "acs": 197,
           "rating": 1.01,
           "fkfd": 1.36
+        }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Rex Regum Qeon",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Rex Regum Qeon",
+          "result": "W",
+          "matchScore": [
+            3,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "FURIA",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "All Gamers",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            3,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            0,
+            3
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -790,6 +4291,175 @@
           "rating": 0.85,
           "fkfd": 0.42
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            0,
+            3
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                17,
+                19
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            3
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -830,6 +4500,261 @@
           "acs": 167,
           "rating": 0.96,
           "fkfd": 1.11
+        }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Gen.G",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Rex Regum Qeon",
+          "result": "W",
+          "matchScore": [
+            3,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                19,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "EDward Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                1
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ]
         }
       ]
     },
@@ -872,6 +4797,90 @@
           "rating": 0.75,
           "fkfd": 0.58
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DetonatioN FocusMe",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "ZETA DIVISION",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -913,6 +4922,122 @@
           "rating": 0.8,
           "fkfd": 0.75
         }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Team Secret",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -923,7 +5048,98 @@
       "matchL": 3,
       "mapW": 2,
       "mapL": 6,
-      "players": []
+      "players": [],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Global Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "DRX",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Gen.G",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                20,
+                18
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Nongshim RedForce",
@@ -963,6 +5179,250 @@
           "acs": 217,
           "rating": 1.0,
           "fkfd": 1.14
+        }
+      ],
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Team Secret",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Rex Regum Qeon",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Gentle Mates",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "W",
+          "matchScore": [
+            3,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1005,6 +5465,225 @@
           "rating": 0.87,
           "fkfd": 0.75
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "PCIFIC Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Gentle Mates",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                15,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                16,
+                14
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                15,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "FURIA",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1045,6 +5724,225 @@
           "acs": 134,
           "rating": 0.77,
           "fkfd": 0.5
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "BBL Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FUT Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                16,
+                18
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Natus Vincere",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                17,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                16,
+                14
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            0,
+            3
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                16,
+                18
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1087,6 +5985,97 @@
           "rating": 0.68,
           "fkfd": 0.56
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                18,
+                16
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Karmine Corp",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1127,6 +6116,282 @@
           "acs": 163,
           "rating": 0.92,
           "fkfd": 1.12
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FUT Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "GIANTX",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Natus Vincere",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "BBL Esports",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                15
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                16
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                14,
+                16
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "EDward Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Team Liquid",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Nongshim RedForce",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1169,6 +6434,147 @@
           "rating": 0.9,
           "fkfd": 0.94
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "PCIFIC Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                0,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1209,6 +6615,129 @@
           "acs": 157,
           "rating": 0.86,
           "fkfd": 0.8
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Natus Vincere",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FUT Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1251,6 +6780,147 @@
           "rating": 0.78,
           "fkfd": 1.0
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Karmine Corp",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                15,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1291,6 +6961,172 @@
           "acs": 189,
           "rating": 0.96,
           "fkfd": 1.33
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Natus Vincere",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "ULF Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "GIANTX",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Karmine Corp",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Natus Vincere",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1333,6 +7169,325 @@
           "rating": 1.03,
           "fkfd": 0.92
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Karmine Corp",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "ULF Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "GIANTX",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "W",
+          "matchScore": [
+            3,
+            0
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                18,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "T1",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1373,6 +7528,172 @@
           "acs": 149,
           "rating": 0.83,
           "fkfd": 0.71
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "ULF Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "BBL Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "GIANTX",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                0
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "FNATIC",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1415,6 +7736,115 @@
           "rating": 0.72,
           "fkfd": 0.58
         }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                1,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "PCIFIC Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1455,6 +7885,97 @@
           "acs": 160,
           "rating": 0.78,
           "fkfd": 0.72
+        }
+      ],
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "BBL Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "GIANTX",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "ULF Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1497,6 +8018,225 @@
           "rating": 0.89,
           "fkfd": 0.95
         }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                15,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Xi Lai Gaming",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Gentle Mates",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1538,7 +8278,8 @@
           "rating": 1.02,
           "fkfd": 0.67
         }
-      ]
+      ],
+      "matches": []
     },
     {
       "name": "EDward Gaming",
@@ -1578,6 +8319,275 @@
           "acs": 174,
           "rating": 0.86,
           "fkfd": 0.97
+        }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Xi Lai Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "JDG Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "W",
+          "matchScore": [
+            3,
+            1
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                1,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1620,6 +8630,90 @@
           "rating": 0.65,
           "fkfd": 0.57
         }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                15,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "JDG Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1661,7 +8755,8 @@
           "rating": 0.91,
           "fkfd": 0.76
         }
-      ]
+      ],
+      "matches": []
     },
     {
       "name": "Nova Esports",
@@ -1701,6 +8796,90 @@
           "acs": 158,
           "rating": 0.74,
           "fkfd": 0.14
+        }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Wolves Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1743,7 +8922,8 @@
           "rating": 0.91,
           "fkfd": 1.42
         }
-      ]
+      ],
+      "matches": []
     },
     {
       "name": "Trace Esports",
@@ -1783,6 +8963,154 @@
           "acs": 196,
           "rating": 0.93,
           "fkfd": 0.73
+        }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "Wolves Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "JDG Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Wolves Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1825,6 +9153,204 @@
           "rating": 0.96,
           "fkfd": 0.71
         }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "FunPlus Phoenix",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                12,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Trace Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                14,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1865,6 +9391,161 @@
           "acs": 183,
           "rating": 0.83,
           "fkfd": 0.69
+        }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "Trace Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Xi Lai Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Titan Esports Club",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Trace Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1907,6 +9588,200 @@
           "rating": 0.87,
           "fkfd": 0.99
         }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "Wolves Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "PearlPICK",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "W",
+          "matchScore": [
+            3,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                14,
+                16
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "NRG",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "HavenPICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "Masters Santiago",
+          "opponent": "G2 Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "HavenPICK",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1947,6 +9822,161 @@
           "acs": 186,
           "rating": 0.82,
           "fkfd": 0.94
+        }
+      ],
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "JDG Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "AbyssPICK",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "BreezePICK",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "BindPICK",
+              "score": [
+                13,
+                15
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "CorrodePICK",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "AbyssPICK",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "SplitPICK",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "PearlPICK",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ]
         }
       ]
     }
