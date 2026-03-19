@@ -310,7 +310,7 @@
         .bar-firstban  { background: #e05252; }
         .bar-firstpick { background: #52c77a; }
         .bar-secondban { background: #f0923b; }
-        .bar-other     { background: #3d3d3d; }
+        .bar-other     { background: #555; }
         .bar-played    { background: #52c77a; }
 
         .map-stat-count {
@@ -510,6 +510,17 @@ function computeMapStats(team) {
                 } else {
                     stats[m].other++;
                 }
+            }
+        }
+    }
+
+    // When veto data exists, maps that were played but never appeared in any
+    // veto entry (e.g. scraper missed them) would otherwise get total=0 and
+    // be hidden. Treat their played count as "other" so they still show.
+    if (hasVeto) {
+        for (const s of Object.values(stats)) {
+            if (s.firstBan + s.firstPick + s.secondBan + s.other === 0 && s.played > 0) {
+                s.other += s.played;
             }
         }
     }

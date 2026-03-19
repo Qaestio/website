@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T19:56:07.973461+00:00",
+  "lastUpdated": "2026-03-19T20:12:01.985734+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -85,20 +85,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:02:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 58:37"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -131,14 +118,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:06:42"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -174,15 +154,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:04:38"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 37:22"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             }
           ]
         },
@@ -210,14 +184,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:20:18"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -243,32 +210,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:01:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -294,20 +236,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 57:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:07:08"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -343,27 +272,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:11:57"
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Cloud9"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 55:19"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "100 Thieves"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "C9 ban Corrode 100T ban Abyss"
+              "action": "pick",
+              "map": "Haven",
+              "team": "Cloud9"
             },
             {
               "step": 4,
               "action": "pick",
-              "map": "Haven",
-              "team": "C9 pick Haven 100T pick Bind"
+              "map": "Bind",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Cloud9"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "100 Thieves"
             }
           ]
         },
@@ -394,27 +335,45 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 50:13"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 50:26"
-            },
-            {
-              "step": 3,
               "action": "ban",
               "map": "Bind",
               "team": "NRG"
             },
             {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "NRG"
+            },
+            {
               "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 5,
               "action": "ban",
               "map": "Breeze",
               "team": "NRG"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 7,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "100 Thieves"
             }
           ]
         }
@@ -485,20 +444,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:56"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 49:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -527,21 +473,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Pearl",
-              "team": "Pearl PICK 45:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "team": ""
             }
           ]
         },
@@ -572,21 +506,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 39:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 50:12"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Breeze",
-              "team": "Maps could be Breeze Abyss decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -625,14 +547,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:23:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:13:34"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -663,27 +579,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 45:31"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "G2 bans Breeze C9 bans Corrode"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "G2 picks Abyss C9 picks Pearl"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Split",
-              "team": "Decider Split"
+              "team": ""
             }
           ]
         },
@@ -714,27 +612,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 43:35"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:31"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Lev bans Abyss C9 bans Corrode"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Pearl",
-              "team": "Decider Pearl"
+              "team": ""
             }
           ]
         },
@@ -772,27 +652,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:11:57"
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Cloud9"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 55:19"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "100 Thieves"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "C9 ban Corrode 100T ban Abyss"
+              "action": "pick",
+              "map": "Haven",
+              "team": "Cloud9"
             },
             {
               "step": 4,
               "action": "pick",
-              "map": "Haven",
-              "team": "C9 pick Haven 100T pick Bind"
+              "map": "Bind",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Cloud9"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "100 Thieves"
             }
           ]
         }
@@ -873,15 +765,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:34"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Haven",
-              "team": "Maps should be Haven Abyss decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -912,21 +798,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:04:50"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Split",
-              "team": "maps should be Corrode Split decider Abyss"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -954,20 +828,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 51:14"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:21:33"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -996,15 +857,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:14:37"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Abyss",
-              "team": "Abyss Corrode decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -1032,20 +887,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 57:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:07:08"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -1124,21 +966,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:01:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:31"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Bind",
-              "team": "Maps should be Bind Corrode decider Breeze"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -1169,21 +999,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 48:35"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 57:51"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Abyss",
-              "team": "Maps might be Abyss Pearl decider Split"
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -1221,27 +1039,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Abyss",
-              "team": "Abyss PICK 1:06:46"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "FURIA"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Haven",
-              "team": "FURIA"
+              "team": ""
             }
           ]
         },
@@ -1293,33 +1093,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:02:19"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:40"
-            },
-            {
-              "step": 3,
-              "action": "pick",
+              "action": "decider",
               "map": "Haven",
-              "team": "Haven PICK 1:03:54"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 31:58"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Split",
-              "team": "MIBR"
+              "team": ""
             }
           ]
         },
@@ -1358,32 +1134,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 47:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
               "map": "Breeze",
-              "team": "Breeze PICK 37:20"
-            },
-            {
-              "step": 3,
-              "action": "decider",
-              "map": "Split",
-              "team": "Amd decider will be split"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "FURIA"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Bind",
-              "team": "FURIA"
+              "team": ""
             }
           ]
         },
@@ -1421,21 +1173,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 49:43"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 48:37"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "FURIA"
+              "action": "decider",
+              "map": "Corrode",
+              "team": ""
             }
           ]
         }
@@ -1516,21 +1256,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:01:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:31"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Bind",
-              "team": "Maps should be Bind Corrode decider Breeze"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -1565,20 +1293,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 38:33"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -1604,20 +1319,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:08"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 57:56"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -1693,20 +1395,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:02:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 58:37"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -1735,21 +1424,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 39:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 50:12"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Breeze",
-              "team": "Maps could be Breeze Abyss decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -1777,20 +1454,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:08"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 57:56"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -1819,15 +1483,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 57:25"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Split",
-              "team": "How did 2 teams ban split"
+              "team": ""
             }
           ]
         },
@@ -1858,27 +1516,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 43:35"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:31"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Lev bans Abyss C9 bans Corrode"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Pearl",
-              "team": "Decider Pearl"
+              "team": ""
             }
           ]
         }
@@ -1949,20 +1589,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:56"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 49:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -1998,15 +1625,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:04:38"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 37:22"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             }
           ]
         },
@@ -2034,20 +1655,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 51:14"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:21:33"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -2119,33 +1727,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 49:31"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Bind",
-              "team": "MIBR"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "MIBR"
-            },
-            {
-              "step": 5,
               "action": "decider",
               "map": "Split",
-              "team": "Decider Split"
+              "team": ""
             }
           ]
         },
@@ -2180,32 +1764,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:10:21"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:11:35"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Decider should be Pearl"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -2255,33 +1814,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:02:19"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:40"
-            },
-            {
-              "step": 3,
-              "action": "pick",
+              "action": "decider",
               "map": "Haven",
-              "team": "Haven PICK 1:03:54"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 31:58"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Split",
-              "team": "MIBR"
+              "team": ""
             }
           ]
         },
@@ -2319,27 +1854,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 52:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
+              "action": "decider",
               "map": "Haven",
-              "team": "Haven PICK 40:55"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "MIBR"
+              "team": ""
             }
           ]
         },
@@ -2388,44 +1905,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:03:44"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 52:45"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 31:57"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "MIBR"
-            },
-            {
-              "step": 6,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Haven Decider"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -2497,21 +1977,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Pearl",
-              "team": "Pearl PICK 45:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "team": ""
             }
           ]
         },
@@ -2546,32 +2014,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:10:21"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:11:35"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Decider should be Pearl"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -2597,32 +2040,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:01:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -2651,33 +2069,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 36:27"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 42:10"
-            },
-            {
-              "step": 3,
               "action": "ban",
               "map": "Bind",
               "team": "NRG"
             },
             {
-              "step": 4,
+              "step": 2,
               "action": "pick",
-              "map": "Breeze",
+              "map": "Pearl",
               "team": "NRG"
             },
             {
-              "step": 5,
+              "step": 3,
               "action": "ban",
               "map": "Haven",
               "team": "NRG"
+            },
+            {
+              "step": 4,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -2708,27 +2120,45 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 50:13"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 50:26"
-            },
-            {
-              "step": 3,
               "action": "ban",
               "map": "Bind",
               "team": "NRG"
             },
             {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "NRG"
+            },
+            {
               "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 5,
               "action": "ban",
               "map": "Breeze",
               "team": "NRG"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "100 Thieves"
+            },
+            {
+              "step": 7,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "100 Thieves"
             }
           ]
         },
@@ -2777,44 +2207,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:03:44"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 52:45"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 31:57"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "MIBR"
-            },
-            {
-              "step": 6,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Haven Decider"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -2843,27 +2236,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 35:28"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 50:40"
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Xi Lai Gaming"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Split",
-              "team": "Decider Split"
+              "action": "ban",
+              "map": "Haven",
+              "team": "Xi Lai Gaming"
             }
           ]
         },
@@ -2902,38 +2295,20 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 49:53"
+              "map": "Corrode",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 52:48"
+              "action": "ban",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Haven",
-              "team": "PRX picks Haven M8 picks Pearl Split decider"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Abyss is prx perma ban bruh"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "PRX bans Bind Mates ban Corrode"
-            },
-            {
-              "step": 6,
-              "action": "decider",
-              "map": "Breeze",
-              "team": "Breeze Decider."
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -2964,33 +2339,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 50:03"
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
             },
             {
               "step": 2,
               "action": "pick",
               "map": "Abyss",
-              "team": "Abyss PICK 39:31"
+              "team": "NRG"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Pearl",
+              "map": "Split",
               "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "NRG"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
             }
           ]
         },
@@ -3028,33 +2391,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Pearl",
-              "team": "Pearl PICK 42:19"
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Abyss",
-              "team": "Abyss PICK 41:16"
+              "team": "BBL Esports"
             },
             {
               "step": 3,
-              "action": "ban",
+              "action": "pick",
               "map": "Haven",
-              "team": "NRG"
+              "team": "BBL Esports"
             },
             {
               "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 5,
               "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "map": "Corrode",
+              "team": "BBL Esports"
             }
           ]
         },
@@ -3085,27 +2442,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:22"
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 58:09"
+              "map": "Pearl",
+              "team": ""
             },
             {
               "step": 3,
               "action": "ban",
               "map": "Abyss",
-              "team": "NRG"
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Breeze",
-              "team": "Decider Breeze"
+              "action": "pick",
+              "map": "Haven",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Paper Rex"
             }
           ]
         },
@@ -3136,39 +2499,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 47:58"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:24"
+              "map": "Corrode",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Haven",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "ban",
               "map": "Breeze",
-              "team": "why would ns ban breeze? Their breeze looked good vs rrq"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NRG"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "NRG"
+              "team": "Nongshim RedForce"
             }
           ]
         },
@@ -3213,33 +2558,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 48:07"
+              "action": "ban",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Split",
-              "team": "Split PICK 43:12"
+              "team": ""
             },
             {
               "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 48:28"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Haven",
-              "team": "NRG"
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Paper Rex"
             },
             {
               "step": 5,
               "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "map": "Corrode",
+              "team": ""
             }
           ]
         }
@@ -3313,21 +2658,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 48:35"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 57:51"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Abyss",
-              "team": "Maps might be Abyss Pearl decider Split"
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -3358,21 +2691,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:04:50"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Split",
-              "team": "maps should be Corrode Split decider Abyss"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -3400,14 +2721,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:20:18"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -3436,15 +2750,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 57:25"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Split",
-              "team": "How did 2 teams ban split"
+              "team": ""
             }
           ]
         }
@@ -3522,14 +2830,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:06:42"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -3565,27 +2866,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Abyss",
-              "team": "Abyss PICK 1:06:46"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "FURIA"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Haven",
-              "team": "FURIA"
+              "team": ""
             }
           ]
         },
@@ -3616,27 +2899,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 45:31"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "G2 bans Breeze C9 bans Corrode"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "G2 picks Abyss C9 picks Pearl"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Split",
-              "team": "Decider Split"
+              "team": ""
             }
           ]
         },
@@ -3667,33 +2932,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 36:27"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 42:10"
-            },
-            {
-              "step": 3,
               "action": "ban",
               "map": "Bind",
               "team": "NRG"
             },
             {
-              "step": 4,
+              "step": 2,
               "action": "pick",
-              "map": "Breeze",
+              "map": "Pearl",
               "team": "NRG"
             },
             {
-              "step": 5,
+              "step": 3,
               "action": "ban",
               "map": "Haven",
               "team": "NRG"
+            },
+            {
+              "step": 4,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -3731,27 +2990,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 52:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
+              "action": "decider",
               "map": "Haven",
-              "team": "Haven PICK 40:55"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "MIBR"
+              "team": ""
             }
           ]
         },
@@ -3782,27 +3023,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 43:53"
+              "action": "ban",
+              "map": "Corrode",
+              "team": ""
             },
             {
               "step": 2,
               "action": "ban",
-              "map": "Abyss",
-              "team": "PRX bans Abyss G2 bans Bind"
-            },
-            {
-              "step": 3,
-              "action": "pick",
               "map": "Haven",
-              "team": "PRX picks Haven G2 picks Breeze"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "PRX bans Corrode G2 bans Pearl"
+              "team": "G2 Esports"
             }
           ]
         },
@@ -3833,27 +3062,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 42:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 36:54"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "XLG picks Split G2 picks Haven"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Breeze",
-              "team": "Decider Breeze"
+              "team": ""
             }
           ]
         },
@@ -3881,38 +3092,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 42:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:08:59"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "T1"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "T1"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -3941,33 +3121,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 44:37"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 37:59"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "All Gamers"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "AG bans Breeze G2 bans Bind"
+              "map": "Split",
+              "team": "G2 Esports"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "AG bans Pearl G2 bans Abyss"
+              "action": "pick",
+              "map": "Corrode",
+              "team": "All Gamers"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
+              "action": "ban",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "G2 Esports"
             }
           ]
         },
@@ -4005,21 +3191,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 43:15"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Bind",
-              "team": "G2 bans Bind NS bans Pearl"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "G2 picks Split NS picks Haven"
+              "team": "G2 Esports"
             }
           ]
         },
@@ -4050,15 +3224,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 40:29"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:58"
+              "action": "decider",
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -4096,33 +3264,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 50:27"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Paper Rex"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 47:35"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "G2 Esports"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "PRX ban Abyss G2 ban Pearl"
+              "action": "pick",
+              "map": "Split",
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Split",
-              "team": "PRX bans Corrode G2 bans Split"
+              "action": "pick",
+              "map": "Haven",
+              "team": "G2 Esports"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind decider"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "G2 Esports"
             }
           ]
         }
@@ -4203,15 +3377,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:34"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Haven",
-              "team": "Maps should be Haven Abyss decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -4242,33 +3410,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 49:31"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Bind",
-              "team": "MIBR"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "MIBR"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "MIBR"
-            },
-            {
-              "step": 5,
               "action": "decider",
               "map": "Split",
-              "team": "Decider Split"
+              "team": ""
             }
           ]
         },
@@ -4303,20 +3447,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 38:33"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Americas Kickoff",
@@ -4353,14 +3484,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:23:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:13:34"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -4391,15 +3516,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:14:37"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Abyss",
-              "team": "Abyss Corrode decider Bind"
+              "map": "Bind",
+              "team": ""
             }
           ]
         }
@@ -4470,20 +3589,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 56:07"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4512,15 +3618,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:54"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "if RRQ ban Pearl ez 2-0"
+              "team": "Rex Regum Qeon"
             }
           ]
         },
@@ -4548,20 +3648,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4594,20 +3681,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 51:57"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 49:34"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4640,20 +3714,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:04:18"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 47:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4679,20 +3740,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:02:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 52:16"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4718,20 +3766,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:05:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 28:31"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -4807,20 +3842,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:00:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 46:43"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4853,14 +3875,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 55:58"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4886,20 +3901,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 59:30"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 50:16"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4932,20 +3934,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 56:44"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:12"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -4971,14 +3960,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5014,15 +3996,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:03:51"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "DRX"
             },
             {
               "step": 2,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Why isn't PRX banning Breeze man"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         }
@@ -5093,14 +4075,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 28:44"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5133,20 +4108,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:00:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 46:43"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5172,20 +4134,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:17:22"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 31:56"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5218,20 +4167,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:04:18"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 47:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5257,14 +4193,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:48"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -5333,20 +4262,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 56:07"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5384,13 +4300,7 @@
               "step": 1,
               "action": "pick",
               "map": "Breeze",
-              "team": "Breeze PICK 53:32"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:37"
+              "team": ""
             }
           ]
         },
@@ -5425,20 +4335,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 59:47"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:27:38"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5471,20 +4368,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:09:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:30"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -5553,20 +4437,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 44:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:04:03"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5603,14 +4474,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:12:19"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:40"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -5638,20 +4503,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:12"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 43:56"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5684,20 +4536,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 51:57"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 49:34"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5730,20 +4569,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:09:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:30"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5776,14 +4602,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 41:51"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -5863,14 +4682,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:12:19"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:40"
+              "map": "Bind",
+              "team": ""
             }
           ]
         },
@@ -5898,20 +4711,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 48:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 41:58"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5944,20 +4744,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 58:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 46:45"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -5990,14 +4777,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 41:51"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -6033,15 +4813,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:03:51"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "DRX"
             },
             {
               "step": 2,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Why isn't PRX banning Breeze man"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -6069,20 +4849,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:05:04"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 28:31"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -6127,37 +4894,19 @@
               "step": 1,
               "action": "pick",
               "map": "Haven",
-              "team": "Haven PICK 1:04:45"
+              "team": "Paper Rex"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 49:02"
+              "map": "Corrode",
+              "team": "Rex Regum Qeon"
             },
             {
               "step": 3,
               "action": "pick",
               "map": "Pearl",
-              "team": "Pearl PICK 53:10"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "PRX bans Abyss RRQ bans Split"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Bind",
-              "team": "PRX picks Bind RRQ picks Haven"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "Split banned by RRQ Abyss banned by PRX"
+              "team": "Rex Regum Qeon"
             }
           ]
         },
@@ -6188,27 +4937,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 43:53"
+              "action": "ban",
+              "map": "Corrode",
+              "team": ""
             },
             {
               "step": 2,
               "action": "ban",
-              "map": "Abyss",
-              "team": "PRX bans Abyss G2 bans Bind"
-            },
-            {
-              "step": 3,
-              "action": "pick",
               "map": "Haven",
-              "team": "PRX picks Haven G2 picks Breeze"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "PRX bans Corrode G2 bans Pearl"
+              "team": "G2 Esports"
             }
           ]
         },
@@ -6247,38 +4984,20 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 49:53"
+              "map": "Corrode",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 52:48"
+              "action": "ban",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Haven",
-              "team": "PRX picks Haven M8 picks Pearl Split decider"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Abyss is prx perma ban bruh"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "PRX bans Bind Mates ban Corrode"
-            },
-            {
-              "step": 6,
-              "action": "decider",
-              "map": "Breeze",
-              "team": "Breeze Decider."
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -6317,32 +5036,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 47:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
               "map": "Breeze",
-              "team": "Breeze PICK 37:20"
-            },
-            {
-              "step": 3,
-              "action": "decider",
-              "map": "Split",
-              "team": "Amd decider will be split"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "FURIA"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Bind",
-              "team": "FURIA"
+              "team": ""
             }
           ]
         },
@@ -6373,27 +5068,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:22"
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 58:09"
+              "map": "Pearl",
+              "team": ""
             },
             {
               "step": 3,
               "action": "ban",
               "map": "Abyss",
-              "team": "NRG"
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Breeze",
-              "team": "Decider Breeze"
+              "action": "pick",
+              "map": "Haven",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Paper Rex"
             }
           ]
         },
@@ -6431,21 +5132,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 42:30"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Breeze",
-              "team": "maps should be Breeze Corrode decider Split"
-            },
-            {
-              "step": 3,
-              "action": "ban",
               "map": "Split",
-              "team": "will this be a banger split OT again?"
+              "team": ""
             }
           ]
         },
@@ -6483,33 +5172,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 50:27"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Paper Rex"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 47:35"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "G2 Esports"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "PRX ban Abyss G2 ban Pearl"
+              "action": "pick",
+              "map": "Split",
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Split",
-              "team": "PRX bans Corrode G2 bans Split"
+              "action": "pick",
+              "map": "Haven",
+              "team": "G2 Esports"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind decider"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "G2 Esports"
             }
           ]
         },
@@ -6554,33 +5249,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 48:07"
+              "action": "ban",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Split",
-              "team": "Split PICK 43:12"
+              "team": ""
             },
             {
               "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 48:28"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Paper Rex"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Haven",
-              "team": "NRG"
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Paper Rex"
             },
             {
               "step": 5,
               "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "map": "Corrode",
+              "team": ""
             }
           ]
         },
@@ -6618,33 +5313,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 31:52"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 30:41"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Pearl is NS permaban"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NS picks Corrode PRX picks Breeze"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind Decider"
+              "map": "Corrode",
+              "team": "Nongshim RedForce"
             }
           ]
         }
@@ -6718,15 +5395,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:54"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "if RRQ ban Pearl ez 2-0"
+              "team": "Rex Regum Qeon"
             }
           ]
         },
@@ -6754,20 +5425,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 48:03"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 41:58"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -6817,27 +5475,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:45"
+              "action": "ban",
+              "map": "Pearl",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 39:55"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Rex Regum Qeon"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 48:01"
+              "map": "Split",
+              "team": ""
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NRF ban Pearl RRQ ban Abyss"
+              "action": "pick",
+              "map": "Bind",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 5,
+              "action": "pick",
+              "map": "Haven",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Rex Regum Qeon"
             }
           ]
         },
@@ -6875,21 +5545,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Breeze",
-              "team": "Breeze PICK 29:08"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:19:38"
+              "team": ""
             }
           ]
         },
@@ -6936,37 +5594,19 @@
               "step": 1,
               "action": "pick",
               "map": "Haven",
-              "team": "Haven PICK 1:04:45"
+              "team": "Paper Rex"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 49:02"
+              "map": "Corrode",
+              "team": "Rex Regum Qeon"
             },
             {
               "step": 3,
               "action": "pick",
               "map": "Pearl",
-              "team": "Pearl PICK 53:10"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "PRX bans Abyss RRQ bans Split"
-            },
-            {
-              "step": 5,
-              "action": "pick",
-              "map": "Bind",
-              "team": "PRX picks Bind RRQ picks Haven"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "Split banned by RRQ Abyss banned by PRX"
+              "team": "Rex Regum Qeon"
             }
           ]
         }
@@ -7044,20 +5684,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 34:13"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:05:50"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7095,13 +5722,7 @@
               "step": 1,
               "action": "pick",
               "map": "Breeze",
-              "team": "Breeze PICK 53:32"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:37"
+              "team": ""
             }
           ]
         },
@@ -7129,20 +5750,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 59:30"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 50:16"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7175,20 +5783,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 58:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 46:45"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7214,20 +5809,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:02:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 52:16"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7263,21 +5845,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:37"
-            },
-            {
-              "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Breeze",
-              "team": "Breeze PICK 29:08"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:19:38"
+              "team": ""
             }
           ]
         },
@@ -7305,32 +5875,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 41:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 56:37"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "T1"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -7360,32 +5905,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 30:50"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 50:03"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "ban",
               "map": "Abyss",
-              "team": "T1"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Pearl decider"
+              "team": ""
             }
           ]
         },
@@ -7413,38 +5934,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 42:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 1:08:59"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "T1"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "T1"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -7513,20 +6003,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 46:20"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7552,20 +6029,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:48"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7598,20 +6062,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:51"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -7680,14 +6131,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 28:44"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7713,20 +6157,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:12"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 43:56"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7759,20 +6190,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:51"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7805,20 +6223,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 56:44"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:12"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -7856,20 +6261,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 44:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:04:03"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7902,14 +6294,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 55:58"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -7942,20 +6327,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 59:47"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:27:38"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -8024,20 +6396,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 46:20"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -8070,20 +6429,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 34:13"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:05:50"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -8109,20 +6455,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:17:22"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 31:56"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Pacific Kickoff",
@@ -8172,27 +6505,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:45"
+              "action": "ban",
+              "map": "Pearl",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 39:55"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Rex Regum Qeon"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 48:01"
+              "map": "Split",
+              "team": ""
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NRF ban Pearl RRQ ban Abyss"
+              "action": "pick",
+              "map": "Bind",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 5,
+              "action": "pick",
+              "map": "Haven",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Rex Regum Qeon"
             }
           ]
         },
@@ -8223,27 +6568,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 41:12"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NS bans Pearl Mates ban Breeze"
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Bind",
-              "team": "NS bans Bind Mates ban Corrode"
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Split",
-              "team": "Decider Split"
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Nongshim RedForce"
             }
           ]
         },
@@ -8281,21 +6632,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 43:15"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Bind",
-              "team": "G2 bans Bind NS bans Pearl"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "G2 picks Split NS picks Haven"
+              "team": "G2 Esports"
             }
           ]
         },
@@ -8326,39 +6665,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 47:58"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:24"
+              "map": "Corrode",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Haven",
-              "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "ban",
               "map": "Breeze",
-              "team": "why would ns ban breeze? Their breeze looked good vs rrq"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NRG"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "NRG"
+              "team": "Nongshim RedForce"
             }
           ]
         },
@@ -8396,33 +6717,15 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 31:52"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Nongshim RedForce"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 30:41"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Pearl is NS permaban"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NS picks Corrode PRX picks Breeze"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind Decider"
+              "map": "Corrode",
+              "team": "Nongshim RedForce"
             }
           ]
         }
@@ -8500,20 +6803,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 55:42"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 46:52"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -8539,20 +6829,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 54:38"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 48:13"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -8578,20 +6855,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:10"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 52:12"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -8641,39 +6905,45 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 54:02"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:08:11"
+              "action": "ban",
+              "map": "Bind",
+              "team": "BBL Esports"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:12:08"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:46"
+              "map": "Haven",
+              "team": "BBL Esports"
             },
             {
               "step": 5,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "M8 ban Breeze BBL ban Bind"
+              "action": "pick",
+              "map": "Split",
+              "team": "Gentle Mates"
             },
             {
               "step": 6,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "BBL Esports"
+            },
+            {
+              "step": 7,
               "action": "ban",
-              "map": "Bind",
-              "team": "I thnk BBL will ban Corrode over Bind"
+              "map": "Corrode",
+              "team": ""
             }
           ]
         },
@@ -8711,33 +6981,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Pearl",
-              "team": "Pearl PICK 42:19"
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
+              "action": "ban",
               "map": "Abyss",
-              "team": "Abyss PICK 41:16"
+              "team": "BBL Esports"
             },
             {
               "step": 3,
-              "action": "ban",
+              "action": "pick",
               "map": "Haven",
-              "team": "NRG"
+              "team": "BBL Esports"
             },
             {
               "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "NRG"
-            },
-            {
-              "step": 5,
               "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "map": "Corrode",
+              "team": "BBL Esports"
             }
           ]
         },
@@ -8775,21 +7039,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 49:43"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 48:37"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "FURIA"
+              "action": "decider",
+              "map": "Corrode",
+              "team": ""
             }
           ]
         },
@@ -8820,15 +7072,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 40:29"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:58"
+              "action": "decider",
+              "map": "Abyss",
+              "team": ""
             }
           ]
         }
@@ -8899,20 +7145,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 54:38"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 48:13"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -8948,15 +7181,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 39:06"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Haven",
-              "team": "Haven Abyss decider Breeze"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -8987,15 +7214,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:05"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Haven",
-              "team": "Liquid will ban haven"
+              "team": ""
             }
           ]
         },
@@ -9033,33 +7254,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Split",
-              "team": "Split PICK 57:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 43:55"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Fnc bans Pearl Navi bans Corrode"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Haven",
-              "team": "FNC picks Haven Navi picks Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "FNC bans Abyss Navi bans Breeze"
+              "team": ""
             }
           ]
         },
@@ -9090,33 +7287,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Abyss",
-              "team": "Abyss PICK 41:08"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "FNATIC"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "FNATIC"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "FNATIC"
+              "team": ""
             }
           ]
         },
@@ -9168,33 +7341,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:05"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 44:28"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "FNATIC"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:03:26"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "Mates ban Breeze FNC ban Pearl"
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 5,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Mates pick Corrode FNC picks Haven"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -9229,32 +7402,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:28"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:11:49"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven FNC bans Pearl"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "TL picks Breeze FNC picks Abyss"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -9323,20 +7471,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 45:40"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 39:09"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -9372,15 +7507,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 39:06"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Haven",
-              "team": "Haven Abyss decider Breeze"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -9415,20 +7544,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:42"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -9497,20 +7613,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 45:40"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 39:09"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -9536,20 +7639,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 51:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:52"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -9578,21 +7668,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 41:17"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 50:46"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Pearl",
-              "team": "Maps should be Pearl Split decider Abyss"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -9644,39 +7722,45 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 54:02"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:08:11"
+              "action": "ban",
+              "map": "Bind",
+              "team": "BBL Esports"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:12:08"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 37:46"
+              "map": "Haven",
+              "team": "BBL Esports"
             },
             {
               "step": 5,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "M8 ban Breeze BBL ban Bind"
+              "action": "pick",
+              "map": "Split",
+              "team": "Gentle Mates"
             },
             {
               "step": 6,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "BBL Esports"
+            },
+            {
+              "step": 7,
               "action": "ban",
-              "map": "Bind",
-              "team": "I thnk BBL will ban Corrode over Bind"
+              "map": "Corrode",
+              "team": ""
             }
           ]
         },
@@ -9728,33 +7812,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 53:05"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 44:28"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "FNATIC"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:03:26"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "Mates ban Breeze FNC ban Pearl"
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 5,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Mates pick Corrode FNC picks Haven"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -9785,33 +7869,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 54:30"
+              "action": "ban",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 45:24"
+              "action": "ban",
+              "map": "Bind",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Note that both EDG and GentleMates ban Breeze first."
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "EDG bans Abyss M8 bans Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "why would m8 ban bind ?"
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -9842,39 +7914,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 48:24"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 32:57"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Breeze",
-              "team": "NRG picks Corrode TL picks Breeze"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
               "action": "ban",
-              "map": "Split",
-              "team": "NRG bans Split TL bans Abyss"
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
+              "action": "ban",
+              "map": "Split",
+              "team": "Gentle Mates"
             },
             {
               "step": 6,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Mates pick Abyss TL picks Bind"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Gentle Mates"
             }
           ]
         },
@@ -9905,27 +7977,33 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 41:12"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "NS bans Pearl Mates ban Breeze"
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Bind",
-              "team": "NS bans Bind Mates ban Corrode"
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Split",
-              "team": "Decider Split"
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Nongshim RedForce"
             }
           ]
         },
@@ -9963,33 +8041,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 39:41"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 39:18"
+              "map": "Bind",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Mates ban Breeze AG bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Mates pick Bind AG picks Corrode"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Abyss",
-              "team": "Abyss decider"
+              "map": "Split",
+              "team": "Gentle Mates"
             }
           ]
         }
@@ -10060,20 +8126,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 51:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:52"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10109,21 +8162,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 47:21"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 59:21"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "I forgot PCF bans Haven first. It would have been a 3/3"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -10154,33 +8195,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:54"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 46:25"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "GX bans Corrode TH bans Pearl"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "GX bans Breeze TH bans Split"
-            },
-            {
-              "step": 5,
               "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -10208,20 +8225,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 32:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 51:49"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10257,39 +8261,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 34:07"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 40:45"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "GX bans Corrode TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "GX picks Split TL picks Breeze"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "GX bans Abyss TL bans Pearl"
-            },
-            {
-              "step": 6,
               "action": "decider",
               "map": "Bind",
-              "team": "Decider Bind"
+              "team": ""
             }
           ]
         }
@@ -10360,20 +8334,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:01:27"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 45:01"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10409,15 +8370,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 35:55"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 48:16"
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
             }
           ]
         },
@@ -10452,20 +8407,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:42"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10501,33 +8443,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 47:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 32:38"
-            },
-            {
-              "step": 3,
               "action": "ban",
-              "map": "Pearl",
-              "team": "TH bans Pearl KC bans Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Split",
-              "team": "TH bans Split KC bans Breeze"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind decider"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         }
@@ -10598,20 +8516,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:01:27"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 45:01"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10644,20 +8549,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 56:24"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:18"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10686,21 +8578,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 41:17"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 50:46"
-            },
-            {
-              "step": 3,
               "action": "decider",
-              "map": "Pearl",
-              "team": "Maps should be Pearl Split decider Abyss"
+              "map": "Abyss",
+              "team": ""
             }
           ]
         },
@@ -10738,33 +8618,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Split",
-              "team": "Split PICK 57:26"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 43:55"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Fnc bans Pearl Navi bans Corrode"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Haven",
-              "team": "FNC picks Haven Navi picks Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "FNC bans Abyss Navi bans Breeze"
+              "team": ""
             }
           ]
         },
@@ -10797,37 +8653,19 @@
               "step": 1,
               "action": "pick",
               "map": "Haven",
-              "team": "Haven PICK 39:58"
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 42:31"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Team Heretics"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Navi still bans Corrode TH still bans Pearl"
-            },
-            {
-              "step": 4,
               "action": "pick",
-              "map": "Split",
-              "team": "Navi picks Split instead of Bind TH will still pick Haven 😂"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "TH ban abyss is so much needed. worst map for this org"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         }
@@ -10905,20 +8743,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 56:24"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 58:18"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -10947,15 +8772,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 45:40"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:03"
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -10986,33 +8805,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:54"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 46:25"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "GX bans Corrode TH bans Pearl"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "GX bans Breeze TH bans Split"
-            },
-            {
-              "step": 5,
               "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -11050,33 +8845,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 47:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 32:38"
-            },
-            {
-              "step": 3,
               "action": "ban",
-              "map": "Pearl",
-              "team": "TH bans Pearl KC bans Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Split",
-              "team": "TH bans Split KC bans Breeze"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Bind decider"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -11109,37 +8880,19 @@
               "step": 1,
               "action": "pick",
               "map": "Haven",
-              "team": "Haven PICK 39:58"
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 42:31"
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Team Heretics"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Navi still bans Corrode TH still bans Pearl"
-            },
-            {
-              "step": 4,
               "action": "pick",
-              "map": "Split",
-              "team": "Navi picks Split instead of Bind TH will still pick Haven 😂"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Bind",
-              "team": "Decider Bind"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "TH ban abyss is so much needed. worst map for this org"
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -11171,32 +8924,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 55:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 32:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "TH bans Split TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "TH picks Corrode TL picks Pearl"
-            },
-            {
-              "step": 5,
-              "action": "pick",
               "map": "Breeze",
-              "team": "Nah TL will pick Breeze"
+              "team": ""
             }
           ]
         }
@@ -11274,32 +9003,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 55:30"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:46"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Bind",
-              "team": "TL picks Bind Vit picks Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven Vit bans Abyss"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -11335,15 +9039,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 35:55"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 48:16"
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
             }
           ]
         },
@@ -11374,15 +9072,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:05"
-            },
-            {
-              "step": 2,
               "action": "ban",
               "map": "Haven",
-              "team": "Liquid will ban haven"
+              "team": ""
             }
           ]
         },
@@ -11417,38 +9109,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 49:17"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 35:57"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "ULF bans Corrode TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "ULF picks Abyss TL picks Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "ULF bans Pearl TL bans Split"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -11484,39 +9145,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 34:07"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 40:45"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "GX bans Corrode TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "GX picks Split TL picks Breeze"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "GX bans Abyss TL bans Pearl"
-            },
-            {
-              "step": 6,
               "action": "decider",
               "map": "Bind",
-              "team": "Decider Bind"
+              "team": ""
             }
           ]
         },
@@ -11548,32 +9179,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 55:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 32:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "TH bans Split TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "TH picks Corrode TL picks Pearl"
-            },
-            {
-              "step": 5,
-              "action": "pick",
               "map": "Breeze",
-              "team": "Nah TL will pick Breeze"
+              "team": ""
             }
           ]
         },
@@ -11608,38 +9215,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 34:44"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven Vit bans Split"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "TL picks Breeze Vit picks Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "TL bans Abyss Vit bans Bind"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Decider Pearl"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -11672,32 +9248,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:28"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:11:49"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven FNC bans Pearl"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "TL picks Breeze FNC picks Abyss"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -11723,32 +9274,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 41:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 56:37"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "T1"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -11777,39 +9303,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 48:24"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 32:57"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "pick",
-              "map": "Breeze",
-              "team": "NRG picks Corrode TL picks Breeze"
+              "map": "Abyss",
+              "team": "Gentle Mates"
             },
             {
               "step": 4,
               "action": "ban",
-              "map": "Split",
-              "team": "NRG bans Split TL bans Abyss"
+              "map": "Corrode",
+              "team": "Gentle Mates"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
+              "action": "ban",
+              "map": "Split",
+              "team": "Gentle Mates"
             },
             {
               "step": 6,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Mates pick Abyss TL picks Bind"
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Gentle Mates"
             }
           ]
         },
@@ -11840,33 +9366,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 50:03"
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
             },
             {
               "step": 2,
               "action": "pick",
               "map": "Abyss",
-              "team": "Abyss PICK 39:31"
+              "team": "NRG"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Pearl",
+              "map": "Split",
               "team": "NRG"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "NRG"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
             }
           ]
         }
@@ -11937,14 +9451,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 32:38"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -11977,32 +9484,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 55:30"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:00:46"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Bind",
-              "team": "TL picks Bind Vit picks Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven Vit bans Abyss"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12028,20 +9510,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:10"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 52:12"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12067,20 +9536,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 32:20"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 51:49"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12109,33 +9565,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
+              "action": "decider",
               "map": "Abyss",
-              "team": "Abyss PICK 41:08"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 46:54"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "FNATIC"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "FNATIC"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "FNATIC"
+              "team": ""
             }
           ]
         },
@@ -12170,38 +9602,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 34:44"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "TL bans Haven Vit bans Split"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "TL picks Breeze Vit picks Corrode"
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "TL bans Abyss Vit bans Bind"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Decider Pearl"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -12270,14 +9671,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 32:38"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12306,15 +9700,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 45:40"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:03"
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
             }
           ]
         },
@@ -12342,26 +9730,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 59:56"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 41:15"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "ULF bans Corrode PCFIC bans Haven"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12394,38 +9763,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 49:17"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 35:57"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "ULF bans Corrode TL bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "ULF picks Abyss TL picks Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "ULF bans Pearl TL bans Split"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -12501,20 +9839,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 55:42"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 46:52"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "EMEA Kickoff",
@@ -12550,21 +9875,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 47:21"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 59:21"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "I forgot PCF bans Haven first. It would have been a 3/3"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -12592,26 +9905,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 59:56"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 41:15"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Haven",
-              "team": "ULF bans Corrode PCFIC bans Haven"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -12680,20 +9974,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -12719,20 +10000,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:18:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 38:03"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -12765,14 +10033,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:09:45"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -12819,32 +10080,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:15:59"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:06"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:25"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 44:30"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -12873,33 +10109,39 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 44:37"
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 37:59"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "All Gamers"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "AG bans Breeze G2 bans Bind"
+              "map": "Split",
+              "team": "G2 Esports"
             },
             {
               "step": 4,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "AG bans Pearl G2 bans Abyss"
+              "action": "pick",
+              "map": "Corrode",
+              "team": "All Gamers"
             },
             {
               "step": 5,
-              "action": "decider",
-              "map": "Haven",
-              "team": "Decider Haven"
+              "action": "ban",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "G2 Esports"
             }
           ]
         },
@@ -12937,33 +10179,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 39:41"
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
             },
             {
               "step": 2,
               "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 39:18"
+              "map": "Bind",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Mates ban Breeze AG bans Haven"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Mates pick Bind AG picks Corrode"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Abyss",
-              "team": "Abyss decider"
+              "map": "Split",
+              "team": "Gentle Mates"
             }
           ]
         },
@@ -13001,21 +10231,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 42:30"
-            },
-            {
-              "step": 2,
               "action": "decider",
-              "map": "Breeze",
-              "team": "maps should be Breeze Corrode decider Split"
-            },
-            {
-              "step": 3,
-              "action": "ban",
               "map": "Split",
-              "team": "will this be a banger split OT again?"
+              "team": ""
             }
           ]
         }
@@ -13128,20 +10346,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 48:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 56:22"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13167,20 +10372,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 57:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 45:12"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13213,20 +10405,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:02:55"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 43:30"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13259,26 +10438,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK -"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Edg now bans Pearl and Split lol"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13311,20 +10471,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:59"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13357,20 +10504,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:09:02"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 38:31"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13410,32 +10544,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:15:10"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 46:22"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 51:47"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 36:17"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -13464,33 +10573,21 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 54:30"
+              "action": "ban",
+              "map": "Breeze",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 45:24"
+              "action": "ban",
+              "map": "Bind",
+              "team": "Gentle Mates"
             },
             {
               "step": 3,
               "action": "ban",
-              "map": "Breeze",
-              "team": "Note that both EDG and GentleMates ban Breeze first."
-            },
-            {
-              "step": 4,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "EDG bans Abyss M8 bans Bind"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "why would m8 ban bind ?"
+              "map": "Split",
+              "team": ""
             }
           ]
         },
@@ -13522,32 +10619,8 @@
             {
               "step": 1,
               "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 30:50"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 50:03"
-            },
-            {
-              "step": 3,
-              "action": "ban",
-              "map": "Split",
-              "team": "T1"
-            },
-            {
-              "step": 4,
-              "action": "ban",
               "map": "Abyss",
-              "team": "T1"
-            },
-            {
-              "step": 5,
-              "action": "decider",
-              "map": "Pearl",
-              "team": "Pearl decider"
+              "team": ""
             }
           ]
         }
@@ -13618,20 +10691,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13657,20 +10717,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:01:14"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:14:19"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13703,20 +10750,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 55:16"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 38:47"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -13827,20 +10861,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13866,14 +10887,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:01:19"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -13906,20 +10920,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:29"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 34:27"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -14037,20 +11038,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14083,20 +11071,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:08:22"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 37:18"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14122,20 +11097,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:05:47"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 50:08"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14168,20 +11130,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:13:12"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:19"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14207,20 +11156,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK -"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -14289,20 +11225,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14328,20 +11251,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 48:48"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 56:22"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14367,14 +11277,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:01:19"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14407,14 +11310,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 50:44"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14447,14 +11343,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 42:02"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14480,20 +11369,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 59:05"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14526,20 +11402,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 51:51"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 52:59"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -14615,20 +11478,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK -"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK -"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14654,20 +11504,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:13:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 42:49"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14700,20 +11537,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:02:33"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 44:09"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14746,20 +11570,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 54:29"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 34:27"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14792,20 +11603,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:13:12"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:19"
-            }
-          ]
+          "veto": []
         }
       ]
     },
@@ -14874,20 +11672,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 1:13:39"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 42:49"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14913,20 +11698,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 57:25"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 45:12"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -14973,32 +11745,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 1:15:59"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 54:06"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 49:25"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 44:30"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -15045,32 +11792,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:34:23"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 38:25"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 59:37"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 55:21"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "Masters Santiago",
@@ -15099,27 +11821,27 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 35:28"
+              "action": "decider",
+              "map": "Split",
+              "team": ""
             },
             {
               "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 50:40"
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Xi Lai Gaming"
             },
             {
               "step": 3,
-              "action": "ban",
-              "map": "Bind",
-              "team": "NRG"
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
             },
             {
               "step": 4,
-              "action": "decider",
-              "map": "Split",
-              "team": "Decider Split"
+              "action": "ban",
+              "map": "Haven",
+              "team": "Xi Lai Gaming"
             }
           ]
         },
@@ -15150,27 +11872,9 @@
           "veto": [
             {
               "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 42:01"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Haven PICK 36:54"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "XLG picks Split G2 picks Haven"
-            },
-            {
-              "step": 4,
               "action": "decider",
               "map": "Breeze",
-              "team": "Decider Breeze"
+              "team": ""
             }
           ]
         }
@@ -15248,20 +11952,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 1:12:45"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Breeze PICK 44:06"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -15294,14 +11985,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Bind PICK 1:09:45"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -15334,14 +12018,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 42:02"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -15367,20 +12044,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 58:10"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Abyss PICK 35:43"
-            }
-          ]
+          "veto": []
         },
         {
           "event": "China Kickoff",
@@ -15413,20 +12077,7 @@
               ]
             }
           ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "pick",
-              "map": "Split",
-              "team": "Split PICK 1:09:02"
-            },
-            {
-              "step": 2,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Pearl PICK 38:31"
-            }
-          ]
+          "veto": []
         }
       ]
     }

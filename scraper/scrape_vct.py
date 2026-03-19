@@ -211,7 +211,7 @@ def scrape_teams_from_overview(event_id: int, slug: str, region: str, team_map: 
 
 # Known VCT map pool — used for veto text-parsing fallback
 VCT_MAPS = frozenset({
-    'Abyss', 'Ascent', 'Bind', 'Breeze', 'Fracture',
+    'Abyss', 'Ascent', 'Bind', 'Breeze', 'Corrode', 'Fracture',
     'Haven', 'Icebox', 'Lotus', 'Pearl', 'Split', 'Sunset',
 })
 
@@ -303,13 +303,22 @@ def _clean_map_name(name: str) -> str:
 
 
 def _resolve_team(raw: str, t1_name: str, t2_name: str) -> str:
-    """Map a raw team string to the canonical t1/t2 name, or return raw."""
-    rl = raw.lower()
+    """Map a raw team string (full name or abbreviation) to t1/t2 name, or '' if unresolved."""
+    rl = raw.lower().strip()
+    if not rl:
+        return ''
+    # Full-name substring match
     if t1_name and (t1_name.lower() in rl or rl in t1_name.lower()):
         return t1_name
     if t2_name and (t2_name.lower() in rl or rl in t2_name.lower()):
         return t2_name
-    return raw
+    # Abbreviation match via ORG_ABBREV
+    canonical = ORG_ABBREV.get(norm(raw))
+    if canonical:
+        for name in (t1_name, t2_name):
+            if name and (norm(name) == canonical or canonical in norm(name) or norm(name) in canonical):
+                return name
+    return ''  # unresolved — don't pollute with raw text
 
 
 def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
@@ -369,35 +378,34 @@ def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
             return veto
 
     # ── Text-scan fallback ─────────────────────────────────────────────────────
-    # Walk every element; short text nodes that contain a map name + action word
+    # Walk every element; look for "ABBR ban/pick MapName" patterns.
+    # vlr.gg sometimes packs multiple steps into one text node, e.g.:
+    #   "NRF ban Pearl RRQ ban Abyss"
+    # so we extract all triples via regex rather than one-map-per-element.
+    _NAV_TAB_RE  = re.compile(r'^\S+\s+(?:PICK|BAN|DECIDER)\s+\d+:\d+$', re.IGNORECASE)
+    _STEP_RE     = re.compile(r'(\S+)\s+(ban|pick|decider)\s+(\S+)', re.IGNORECASE)
     seen_maps: set[str] = set()
     step = 0
     for el in soup.find_all(True):
-        # Skip elements that contain many children (headers, nav, etc.)
         if len(el.find_all(True)) > 4:
             continue
         text = el.get_text(' ', strip=True)
-        if len(text) > 60:
+        if len(text) > 120 or not text:
             continue
 
-        tl = text.lower()
-        action = (
-            'ban'     if 'ban'      in tl else
-            'pick'    if 'pick'     in tl else
-            'decider' if 'decider'  in tl else
-            None
-        )
-        if not action:
+        # Skip map navigation tab elements: "MapName PICK/BAN mm:ss"
+        if _NAV_TAB_RE.match(text):
             continue
 
-        found_map = next((w.title() for w in text.split() if w.title() in VCT_MAPS), None)
-        if not found_map or found_map in seen_maps:
-            continue
-
-        team_name = _resolve_team(text, t1_name, t2_name)
-        seen_maps.add(found_map)
-        step += 1
-        veto.append({'step': step, 'action': action, 'map': found_map, 'team': team_name})
+        for m_obj in _STEP_RE.finditer(text):
+            abbr, act_word, map_word = m_obj.groups()
+            m = map_word.title()
+            if m not in VCT_MAPS or m in seen_maps:
+                continue
+            team_name = _resolve_team(abbr, t1_name, t2_name)
+            seen_maps.add(m)
+            step += 1
+            veto.append({'step': step, 'action': act_word.lower(), 'map': m, 'team': team_name})
 
     return veto
 
