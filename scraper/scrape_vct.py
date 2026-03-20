@@ -771,7 +771,7 @@ def main():
         else:
             entry['franchise'] = True  # all explicitly renamed teams are franchise
             team_map[new_key] = entry
-        print(f'    -> Renamed "{old_key}" → "{new_name}"')
+        print(f'    -> Renamed "{old_key}" -> "{new_name}"')
 
     # Also rename the team name in any opponent/veto references inside match history
     rename_map = {old: new for old, new in TEAM_RENAMES.items()}

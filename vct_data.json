@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T12:14:19.148481+00:00",
+  "lastUpdated": "2026-03-20T13:45:22.904193+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -6589,491 +6589,6 @@
               "step": 7,
               "action": "decider",
               "map": "Bind",
-              "team": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Kiwoom DRX",
-      "region": "pacific",
-      "logo": "https://owcdn.net/img/63b17abd77fc0.png",
-      "matchW": 3,
-      "matchL": 3,
-      "mapW": 8,
-      "mapL": 8,
-      "players": [
-        {
-          "name": "MaKo",
-          "acs": 203,
-          "rating": 1.05,
-          "fkfd": 1.12
-        },
-        {
-          "name": "HYUNMIN",
-          "acs": 235,
-          "rating": 1.05,
-          "fkfd": 1.15
-        },
-        {
-          "name": "free1ng",
-          "acs": 192,
-          "rating": 1.03,
-          "fkfd": 1.0
-        },
-        {
-          "name": "BeYN",
-          "acs": 182,
-          "rating": 0.98,
-          "fkfd": 1.2
-        },
-        {
-          "name": "Hermes",
-          "acs": 173,
-          "rating": 0.85,
-          "fkfd": 0.86
-        }
-      ],
-      "matches": [
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "FULL SENSE",
-          "result": "L",
-          "matchScore": [
-            1,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Breeze",
-              "score": [
-                13,
-                10
-              ]
-            },
-            {
-              "map": "Pearl",
-              "score": [
-                8,
-                13
-              ]
-            },
-            {
-              "map": "Split",
-              "score": [
-                8,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Split",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "VARREL",
-          "result": "W",
-          "matchScore": [
-            2,
-            1
-          ],
-          "maps": [
-            {
-              "map": "Corrode",
-              "score": [
-                10,
-                13
-              ]
-            },
-            {
-              "map": "Split",
-              "score": [
-                13,
-                10
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                13,
-                5
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Abyss",
-              "team": ""
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Corrode",
-              "team": ""
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Split",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Breeze",
-              "team": ""
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Haven",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Bind",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "T1",
-          "result": "L",
-          "matchScore": [
-            0,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Split",
-              "score": [
-                8,
-                13
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                8,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "T1"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "T1"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "T1"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "ZETA DIVISION",
-          "result": "W",
-          "matchScore": [
-            2,
-            1
-          ],
-          "maps": [
-            {
-              "map": "Haven",
-              "score": [
-                13,
-                7
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                7,
-                13
-              ]
-            },
-            {
-              "map": "Split",
-              "score": [
-                13,
-                9
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "ZETA DIVISION"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Haven",
-              "team": "ZETA DIVISION"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "ZETA DIVISION"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Split",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "FULL SENSE",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Corrode",
-              "score": [
-                13,
-                3
-              ]
-            },
-            {
-              "map": "Abyss",
-              "score": [
-                13,
-                9
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Haven",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Corrode",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "FULL SENSE"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Split",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "Pacific Kickoff",
-          "opponent": "Paper Rex",
-          "result": "L",
-          "matchScore": [
-            1,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Haven",
-              "score": [
-                11,
-                13
-              ]
-            },
-            {
-              "map": "Corrode",
-              "score": [
-                13,
-                8
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                10,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Paper Rex"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Paper Rex"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Corrode",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Paper Rex"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "Kiwoom DRX"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
               "team": ""
             }
           ]
@@ -15461,7 +14976,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 2,
@@ -15473,7 +14988,7 @@
               "step": 3,
               "action": "pick",
               "map": "Haven",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 4,
@@ -15485,7 +15000,7 @@
               "step": 5,
               "action": "ban",
               "map": "Abyss",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 6,
@@ -16084,7 +15599,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 2,
@@ -16096,7 +15611,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 4,
@@ -16108,7 +15623,7 @@
               "step": 5,
               "action": "ban",
               "map": "Bind",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 6,
@@ -16706,7 +16221,7 @@
               "step": 2,
               "action": "ban",
               "map": "Bind",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 3,
@@ -16718,7 +16233,7 @@
               "step": 4,
               "action": "pick",
               "map": "Corrode",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 5,
@@ -16730,7 +16245,7 @@
               "step": 6,
               "action": "ban",
               "map": "Pearl",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 7,
@@ -17102,332 +16617,6 @@
       ]
     },
     {
-      "name": "Eternal Fire",
-      "region": "emea",
-      "logo": "https://owcdn.net/img/67d59bfc9eb2a.png",
-      "matchW": 1,
-      "matchL": 3,
-      "mapW": 3,
-      "mapL": 6,
-      "players": [
-        {
-          "name": "audaz",
-          "acs": 185,
-          "rating": 0.98,
-          "fkfd": 1.33
-        },
-        {
-          "name": "nekky",
-          "acs": 190,
-          "rating": 0.9,
-          "fkfd": 1.0
-        },
-        {
-          "name": "Favian",
-          "acs": 191,
-          "rating": 0.85,
-          "fkfd": 0.91
-        },
-        {
-          "name": "d3mur",
-          "acs": 181,
-          "rating": 0.8,
-          "fkfd": 0.5
-        },
-        {
-          "name": "sturNN",
-          "acs": 162,
-          "rating": 0.72,
-          "fkfd": 0.58
-        }
-      ],
-      "matches": [
-        {
-          "event": "EMEA Kickoff",
-          "opponent": "Team Vitality",
-          "result": "L",
-          "matchScore": [
-            0,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Breeze",
-              "score": [
-                3,
-                13
-              ]
-            },
-            {
-              "map": "Corrode",
-              "score": [
-                1,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Split",
-              "team": "Team Vitality"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Team Vitality"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Corrode",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "Team Vitality"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Abyss",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "EMEA Kickoff",
-          "opponent": "Team Heretics",
-          "result": "L",
-          "matchScore": [
-            0,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Haven",
-              "score": [
-                7,
-                13
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                8,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Team Heretics"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Team Heretics"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "Team Heretics"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "EMEA Kickoff",
-          "opponent": "PCIFIC Esports",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Split",
-              "score": [
-                13,
-                5
-              ]
-            },
-            {
-              "map": "Abyss",
-              "score": [
-                13,
-                8
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "PCIFIC Esports"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Abyss",
-              "team": "PCIFIC Esports"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Bind",
-              "team": "PCIFIC Esports"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ]
-        },
-        {
-          "event": "EMEA Kickoff",
-          "opponent": "Team Liquid",
-          "result": "L",
-          "matchScore": [
-            1,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Split",
-              "score": [
-                13,
-                8
-              ]
-            },
-            {
-              "map": "Pearl",
-              "score": [
-                12,
-                14
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                5,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Corrode",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Split",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Eternal Fire"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Abyss",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Pearl",
-              "team": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "PCIFIC Esports",
       "region": "emea",
       "logo": "https://owcdn.net/img/656e2ae2b8a48.png",
@@ -17649,7 +16838,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 2,
@@ -17661,7 +16850,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 4,
@@ -17673,7 +16862,7 @@
               "step": 5,
               "action": "ban",
               "map": "Pearl",
-              "team": "Eternal Fire"
+              "team": ""
             },
             {
               "step": 6,
@@ -17803,7 +16992,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
             2,
@@ -17836,7 +17025,7 @@
               "step": 2,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 3,
@@ -17848,7 +17037,7 @@
               "step": 4,
               "action": "pick",
               "map": "Abyss",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 5,
@@ -17860,7 +17049,7 @@
               "step": 6,
               "action": "ban",
               "map": "Pearl",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 7,
@@ -18263,10 +17452,10 @@
       "name": "Guangzhou Huadu Bilibili Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/63f25d72216c1.png",
-      "matchW": 0,
-      "matchL": 0,
-      "mapW": 0,
-      "mapL": 0,
+      "matchW": 4,
+      "matchL": 3,
+      "mapW": 11,
+      "mapL": 9,
       "players": [
         {
           "name": "whzy",
@@ -18299,7 +17488,533 @@
           "fkfd": 0.67
         }
       ],
-      "matches": []
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "All Gamers"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "All Gamers"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "All Gamers"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "FunPlus Phoenix",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                17,
+                15
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Trace Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Xi Lai Gaming",
+          "result": "L",
+          "matchScore": [
+            2,
+            3
+          ],
+          "maps": [
+            {
+              "map": "Abyss",
+              "score": [
+                16,
+                14
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                14,
+                12
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            3
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 5,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "pick",
+              "map": "Split",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "EDward Gaming",
@@ -18482,7 +18197,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
             1,
@@ -18516,7 +18231,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 2,
@@ -18528,7 +18243,7 @@
               "step": 3,
               "action": "pick",
               "map": "Abyss",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 4,
@@ -18540,7 +18255,7 @@
               "step": 5,
               "action": "ban",
               "map": "Bind",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 6,
@@ -18558,7 +18273,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "JDG Esports",
+          "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
             2,
@@ -18592,7 +18307,7 @@
               "step": 1,
               "action": "ban",
               "map": "Breeze",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 2,
@@ -18604,7 +18319,7 @@
               "step": 3,
               "action": "pick",
               "map": "Abyss",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 4,
@@ -18616,7 +18331,7 @@
               "step": 5,
               "action": "ban",
               "map": "Bind",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 6,
@@ -18786,7 +18501,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
             3,
@@ -18827,7 +18542,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 2,
@@ -18839,7 +18554,7 @@
               "step": 3,
               "action": "pick",
               "map": "Pearl",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 4,
@@ -18851,7 +18566,7 @@
               "step": 5,
               "action": "pick",
               "map": "Abyss",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 6,
@@ -19119,7 +18834,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
             0,
@@ -19146,7 +18861,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 2,
@@ -19158,7 +18873,7 @@
               "step": 3,
               "action": "pick",
               "map": "Pearl",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 4,
@@ -19170,7 +18885,7 @@
               "step": 5,
               "action": "ban",
               "map": "Haven",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 6,
@@ -19188,7 +18903,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "JDG Esports",
+          "opponent": "JD Mall JDG Esports",
           "result": "L",
           "matchScore": [
             1,
@@ -19222,7 +18937,7 @@
               "step": 1,
               "action": "ban",
               "map": "Breeze",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 2,
@@ -19234,7 +18949,7 @@
               "step": 3,
               "action": "pick",
               "map": "Pearl",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 4,
@@ -19246,7 +18961,7 @@
               "step": 5,
               "action": "ban",
               "map": "Corrode",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 6,
@@ -19268,10 +18983,10 @@
       "name": "JD Mall JDG Esports",
       "region": "china",
       "logo": "https://owcdn.net/img/64f9825408326.png",
-      "matchW": 0,
-      "matchL": 0,
-      "mapW": 0,
-      "mapL": 0,
+      "matchW": 3,
+      "matchL": 3,
+      "mapW": 9,
+      "mapL": 9,
       "players": [
         {
           "name": "Yuicaw",
@@ -19304,7 +19019,464 @@
           "fkfd": 0.76
         }
       ],
-      "matches": []
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "Wuxi Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Abyss",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Split",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Corrode",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Trace Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                4,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Corrode",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "FunPlus Phoenix",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Wuxi Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Bind",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Abyss",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Corrode",
+              "team": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Nova Esports",
@@ -19567,10 +19739,10 @@
       "name": "Wuxi Titan Esports Club",
       "region": "china",
       "logo": "https://owcdn.net/img/65487414b8562.png",
-      "matchW": 0,
-      "matchL": 0,
-      "mapW": 0,
-      "mapL": 0,
+      "matchW": 1,
+      "matchL": 3,
+      "mapW": 5,
+      "mapL": 7,
       "players": [
         {
           "name": "Haodong",
@@ -19603,7 +19775,312 @@
           "fkfd": 1.42
         }
       ],
-      "matches": []
+      "matches": [
+        {
+          "event": "China Kickoff",
+          "opponent": "JD Mall JDG Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Corrode",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Abyss",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "Wolves Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Wolves Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Wolves Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Wolves Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "TYLOO",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "TYLOO"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "TYLOO"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "TYLOO"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "China Kickoff",
+          "opponent": "JD Mall JDG Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Bind",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Trace Esports",
@@ -19724,7 +20201,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "JDG Esports",
+          "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
             2,
@@ -19764,7 +20241,7 @@
               "step": 2,
               "action": "ban",
               "map": "Abyss",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 3,
@@ -19776,7 +20253,7 @@
               "step": 4,
               "action": "pick",
               "map": "Pearl",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 5,
@@ -19788,7 +20265,7 @@
               "step": 6,
               "action": "ban",
               "map": "Haven",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 7,
@@ -19800,7 +20277,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
             0,
@@ -19833,7 +20310,7 @@
               "step": 2,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 3,
@@ -19845,7 +20322,7 @@
               "step": 4,
               "action": "pick",
               "map": "Breeze",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 5,
@@ -19857,7 +20334,7 @@
               "step": 6,
               "action": "ban",
               "map": "Split",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 7,
@@ -20264,7 +20741,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Titan Esports Club",
+          "opponent": "Wuxi Titan Esports Club",
           "result": "W",
           "matchScore": [
             2,
@@ -20304,7 +20781,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 3,
@@ -20316,7 +20793,7 @@
               "step": 4,
               "action": "pick",
               "map": "Breeze",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 5,
@@ -20328,7 +20805,7 @@
               "step": 6,
               "action": "ban",
               "map": "Abyss",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 7,
@@ -20749,7 +21226,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Titan Esports Club",
+          "opponent": "Wuxi Titan Esports Club",
           "result": "L",
           "matchScore": [
             1,
@@ -20783,7 +21260,7 @@
               "step": 1,
               "action": "ban",
               "map": "Pearl",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 2,
@@ -20795,7 +21272,7 @@
               "step": 3,
               "action": "pick",
               "map": "Breeze",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 4,
@@ -20807,7 +21284,7 @@
               "step": 5,
               "action": "ban",
               "map": "Abyss",
-              "team": "Titan Esports Club"
+              "team": "Wuxi Titan Esports Club"
             },
             {
               "step": 6,
@@ -21248,7 +21725,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
             3,
@@ -21296,7 +21773,7 @@
               "step": 1,
               "action": "ban",
               "map": "Haven",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 2,
@@ -21308,7 +21785,7 @@
               "step": 3,
               "action": "pick",
               "map": "Abyss",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 4,
@@ -21320,7 +21797,7 @@
               "step": 5,
               "action": "pick",
               "map": "Breeze",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 6,
@@ -21519,7 +21996,7 @@
       "matches": [
         {
           "event": "China Kickoff",
-          "opponent": "JDG Esports",
+          "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
             2,
@@ -21559,7 +22036,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 3,
@@ -21571,7 +22048,7 @@
               "step": 4,
               "action": "pick",
               "map": "Breeze",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 5,
@@ -21583,7 +22060,7 @@
               "step": 6,
               "action": "ban",
               "map": "Bind",
-              "team": "JDG Esports"
+              "team": "JD Mall JDG Esports"
             },
             {
               "step": 7,
@@ -21747,7 +22224,7 @@
         },
         {
           "event": "China Kickoff",
-          "opponent": "Bilibili Gaming",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
             0,
@@ -21780,7 +22257,7 @@
               "step": 2,
               "action": "ban",
               "map": "Corrode",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 3,
@@ -21792,7 +22269,7 @@
               "step": 4,
               "action": "pick",
               "map": "Abyss",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 5,
@@ -21804,7 +22281,7 @@
               "step": 6,
               "action": "ban",
               "map": "Pearl",
-              "team": "Bilibili Gaming"
+              "team": "Guangzhou Huadu Bilibili Gaming"
             },
             {
               "step": 7,
@@ -21896,23 +22373,750 @@
       "name": "KIWOOM DRX",
       "region": "pacific",
       "logo": "https://owcdn.net/img/63b17abd77fc0.png",
-      "matchW": 0,
-      "matchL": 0,
-      "mapW": 0,
-      "mapL": 0,
+      "matchW": 3,
+      "matchL": 3,
+      "mapW": 8,
+      "mapL": 8,
       "players": [],
-      "matches": []
+      "matches": [
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "VARREL",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Corrode",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Abyss",
+              "team": ""
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Corrode",
+              "team": ""
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "T1",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "T1"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "T1"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "T1"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "ZETA DIVISION",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Corrode",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "FULL SENSE",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                3
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "FULL SENSE"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "Pacific Kickoff",
+          "opponent": "Paper Rex",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Corrode",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Paper Rex"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Eternal Fire",
       "region": "emea",
       "logo": "https://owcdn.net/img/6628980dcdaea.png",
-      "matchW": 0,
-      "matchL": 0,
-      "mapW": 0,
-      "mapL": 0,
+      "matchW": 1,
+      "matchL": 3,
+      "mapW": 3,
+      "mapL": 6,
       "players": [],
-      "matches": []
+      "matches": [
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Vitality",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Breeze",
+              "score": [
+                3,
+                13
+              ]
+            },
+            {
+              "map": "Corrode",
+              "score": [
+                1,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Corrode",
+              "team": ""
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": ""
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Abyss",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Heretics",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": ""
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Team Heretics"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": ""
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Team Heretics"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Abyss",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Team Heretics"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "PCIFIC Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Abyss",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": ""
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "PCIFIC Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": ""
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Abyss",
+              "team": "PCIFIC Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "PCIFIC Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
+        },
+        {
+          "event": "EMEA Kickoff",
+          "opponent": "Team Liquid",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                12,
+                14
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Corrode",
+              "team": ""
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": ""
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": ""
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Abyss",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
+            }
+          ]
+        }
+      ]
     }
   ],
   "source": "vlr.gg scraper"
