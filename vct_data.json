@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T21:45:17.356111+00:00",
+  "lastUpdated": "2026-03-20T12:14:19.148481+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -21891,6 +21891,28 @@
           ]
         }
       ]
+    },
+    {
+      "name": "KIWOOM DRX",
+      "region": "pacific",
+      "logo": "https://owcdn.net/img/63b17abd77fc0.png",
+      "matchW": 0,
+      "matchL": 0,
+      "mapW": 0,
+      "mapL": 0,
+      "players": [],
+      "matches": []
+    },
+    {
+      "name": "Eternal Fire",
+      "region": "emea",
+      "logo": "https://owcdn.net/img/6628980dcdaea.png",
+      "matchW": 0,
+      "matchL": 0,
+      "mapW": 0,
+      "mapL": 0,
+      "players": [],
+      "matches": []
     }
   ],
   "source": "vlr.gg scraper"
