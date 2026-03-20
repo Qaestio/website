@@ -41,6 +41,12 @@ DELAY = 1.1   # seconds between requests — be polite to vlr.gg
 TEAM_RENAMES = {
     'drx':        'Kiwoom DRX',
     'ulf esports': 'Eternal Fire',
+    # China: Kickoff uses short names, Stage 1 overview uses sponsor-prefixed names.
+    # The short-name entries get registered without franchise=True (overview selector
+    # fails on the Kickoff page), so we rename them into the franchise entries here.
+    'bilibili gaming':   'Guangzhou Huadu Bilibili Gaming',
+    'jdg esports':       'JD Mall JDG Esports',
+    'titan esports club': 'Wuxi Titan Esports Club',
 }
 
 # vlr.gg abbreviations for renamed teams (add new abbrevs if needed)
@@ -763,6 +769,7 @@ def main():
             if not existing['logo'] and entry['logo']:
                 existing['logo'] = entry['logo']
         else:
+            entry['franchise'] = True  # all explicitly renamed teams are franchise
             team_map[new_key] = entry
         print(f'    -> Renamed "{old_key}" → "{new_name}"')
 
