@@ -119,13 +119,15 @@ ORG_ABBREV = {
     'bbl':  'bblesports',  'fnc': 'fnatic',       'fut': 'futesports',
     'gx':   'giantx',      'gm':  'gentlemates',  'm8': 'gentlemates',
     'navi': 'natusvincere','kc':  'karminecorp',  'th': 'teamheretics',
-    'tl':   'teamliquid',  'ulf': 'eternalfire',  'ef':  'eternalfire',  'vit': 'teamvitality',
+    'tl':   'teamliquid',  'ulf': 'ulfesports',   'ef':  'eternalfire',  'vit': 'teamvitality',
     # Pacific
     'drx':  'kiwoomdrx',   'kdrx': 'kiwoomdrx',   't1':  't1',            'gen': 'geng',
     'ns':   'nongshimredforce', 'nrf': 'nongshimredforce', 'prx': 'paperrex',
     'rrq':  'rexregumqeon','ge':  'globalesports', 'fs':  'fullsense',
     'ts':   'teamsecret',  'dfm': 'detonationfocusme',
-    'zeta': 'zetadivision','vrl': 'varrel',        'var': 'varrel',
+    'zeta': 'zetadivision','vl':  'varrel',        'vrl': 'varrel',   'var': 'varrel',
+    # Americas (international)
+    'g2':   'g2esports',
     # China
     'pcf':  'pcificesports',                          # PCIFIC Esports (EMEA)
     'ag':   'allgamers',   'blg': 'bilibiligaming', 'drg': 'dragonrangergaming',
