@@ -35,6 +35,17 @@ DELAY = 1.1   # seconds between requests — be polite to vlr.gg
 # Format: (event_id, slug, region_key, display_label)
 # region_key = None for international events (Masters / Champions)
 # Add new events here as the season progresses.
+# Teams that have rebranded mid-season.
+# Maps old lowercase team name → new display name.
+# The scraper merges historical data from the old entry into the new name.
+TEAM_RENAMES = {
+    'drx':        'Kiwoom DRX',
+    'ulf esports': 'Eternal Fire',
+}
+
+# vlr.gg abbreviations for renamed teams (add new abbrevs if needed)
+# 'kdrx' or 'ef' may be used once vlr.gg updates their pages.
+
 VCT_EVENTS = [
     # -- Kickoffs --------------------------------------------------------------
     (2682, 'vct-2026-americas-kickoff',  'americas', 'Americas Kickoff'),
@@ -102,9 +113,9 @@ ORG_ABBREV = {
     'bbl':  'bblesports',  'fnc': 'fnatic',       'fut': 'futesports',
     'gx':   'giantx',      'gm':  'gentlemates',  'm8': 'gentlemates',
     'navi': 'natusvincere','kc':  'karminecorp',  'th': 'teamheretics',
-    'tl':   'teamliquid',  'ulf': 'ulfesports',   'vit': 'teamvitality',
+    'tl':   'teamliquid',  'ulf': 'eternalfire',  'ef':  'eternalfire',  'vit': 'teamvitality',
     # Pacific
-    'drx':  'drx',         't1':  't1',            'gen': 'geng',
+    'drx':  'kiwoomdrx',   'kdrx': 'kiwoomdrx',   't1':  't1',            'gen': 'geng',
     'ns':   'nongshimredforce', 'nrf': 'nongshimredforce', 'prx': 'paperrex',
     'rrq':  'rexregumqeon','ge':  'globalesports', 'fs':  'fullsense',
     'ts':   'teamsecret',  'dfm': 'detonationfocusme',
@@ -732,6 +743,39 @@ def main():
 
     # Attach player stats to teams
     assign_players(team_map, player_map)
+
+    # Apply mid-season team renames (e.g. DRX → Kiwoom DRX).
+    # Merges old entry into new name, preserving all historical stats/matches.
+    for old_key, new_name in TEAM_RENAMES.items():
+        if old_key not in team_map:
+            continue
+        entry = team_map.pop(old_key)
+        entry['name'] = new_name
+        new_key = new_name.lower()
+        if new_key in team_map:
+            # New-name entry already exists (scraped under new name) — merge
+            existing = team_map[new_key]
+            existing['matchW'] += entry['matchW']
+            existing['matchL'] += entry['matchL']
+            existing['mapW']   += entry['mapW']
+            existing['mapL']   += entry['mapL']
+            existing['matches'] = entry['matches'] + existing['matches']
+            if not existing['logo'] and entry['logo']:
+                existing['logo'] = entry['logo']
+        else:
+            team_map[new_key] = entry
+        print(f'    -> Renamed "{old_key}" → "{new_name}"')
+
+    # Also rename the team name in any opponent/veto references inside match history
+    rename_map = {old: new for old, new in TEAM_RENAMES.items()}
+    for t in team_map.values():
+        for m in t.get('matches', []):
+            opp_l = m.get('opponent', '').lower()
+            if opp_l in rename_map:
+                m['opponent'] = rename_map[opp_l]
+            for step in m.get('veto', []):
+                if step.get('team', '').lower() in rename_map:
+                    step['team'] = rename_map[step['team'].lower()]
 
     # Build output — only confirmed franchise teams in known regions
     teams_out = []

@@ -6596,7 +6596,7 @@
       ]
     },
     {
-      "name": "DRX",
+      "name": "Kiwoom DRX",
       "region": "pacific",
       "logo": "https://owcdn.net/img/63b17abd77fc0.png",
       "matchW": 3,
@@ -6678,7 +6678,7 @@
               "step": 2,
               "action": "ban",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -6690,7 +6690,7 @@
               "step": 4,
               "action": "pick",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -6702,7 +6702,7 @@
               "step": 6,
               "action": "ban",
               "map": "Bind",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -6754,7 +6754,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -6766,7 +6766,7 @@
               "step": 4,
               "action": "pick",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -6778,7 +6778,7 @@
               "step": 6,
               "action": "ban",
               "map": "Haven",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -6817,7 +6817,7 @@
               "step": 1,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 2,
@@ -6829,7 +6829,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 4,
@@ -6841,7 +6841,7 @@
               "step": 5,
               "action": "ban",
               "map": "Haven",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 6,
@@ -6899,7 +6899,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -6911,7 +6911,7 @@
               "step": 4,
               "action": "pick",
               "map": "Bind",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -6923,7 +6923,7 @@
               "step": 6,
               "action": "ban",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -6968,7 +6968,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -6980,7 +6980,7 @@
               "step": 4,
               "action": "pick",
               "map": "Abyss",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -6992,7 +6992,7 @@
               "step": 6,
               "action": "ban",
               "map": "Breeze",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -7044,7 +7044,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -7056,7 +7056,7 @@
               "step": 4,
               "action": "pick",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -7068,7 +7068,7 @@
               "step": 6,
               "action": "ban",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -7192,7 +7192,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
             2,
@@ -7232,7 +7232,7 @@
               "step": 2,
               "action": "ban",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -7244,7 +7244,7 @@
               "step": 4,
               "action": "pick",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -7256,7 +7256,7 @@
               "step": 6,
               "action": "ban",
               "map": "Bind",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -7413,7 +7413,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
             0,
@@ -7446,7 +7446,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -7458,7 +7458,7 @@
               "step": 4,
               "action": "pick",
               "map": "Abyss",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -7470,7 +7470,7 @@
               "step": 6,
               "action": "ban",
               "map": "Breeze",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -8647,7 +8647,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
             2,
@@ -8687,7 +8687,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -8699,7 +8699,7 @@
               "step": 4,
               "action": "pick",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -8711,7 +8711,7 @@
               "step": 6,
               "action": "ban",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -10101,7 +10101,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
             2,
@@ -10128,7 +10128,7 @@
               "step": 1,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 2,
@@ -10140,7 +10140,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 4,
@@ -10152,7 +10152,7 @@
               "step": 5,
               "action": "ban",
               "map": "Haven",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 6,
@@ -11112,7 +11112,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
             1,
@@ -11152,7 +11152,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -11164,7 +11164,7 @@
               "step": 4,
               "action": "pick",
               "map": "Bind",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -11176,7 +11176,7 @@
               "step": 6,
               "action": "ban",
               "map": "Corrode",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -11269,7 +11269,7 @@
         },
         {
           "event": "Pacific Kickoff",
-          "opponent": "DRX",
+          "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
             1,
@@ -11309,7 +11309,7 @@
               "step": 2,
               "action": "ban",
               "map": "Pearl",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 3,
@@ -11321,7 +11321,7 @@
               "step": 4,
               "action": "pick",
               "map": "Split",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 5,
@@ -11333,7 +11333,7 @@
               "step": 6,
               "action": "ban",
               "map": "Haven",
-              "team": "DRX"
+              "team": "Kiwoom DRX"
             },
             {
               "step": 7,
@@ -15434,7 +15434,7 @@
         },
         {
           "event": "EMEA Kickoff",
-          "opponent": "ULF Esports",
+          "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
             2,
@@ -15461,7 +15461,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -15473,7 +15473,7 @@
               "step": 3,
               "action": "pick",
               "map": "Haven",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -15485,7 +15485,7 @@
               "step": 5,
               "action": "ban",
               "map": "Abyss",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
@@ -16050,7 +16050,7 @@
         },
         {
           "event": "EMEA Kickoff",
-          "opponent": "ULF Esports",
+          "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
             2,
@@ -16084,7 +16084,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -16096,7 +16096,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -16108,7 +16108,7 @@
               "step": 5,
               "action": "ban",
               "map": "Bind",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
@@ -16673,7 +16673,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
-          "opponent": "ULF Esports",
+          "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
             2,
@@ -16706,7 +16706,7 @@
               "step": 2,
               "action": "ban",
               "map": "Bind",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 3,
@@ -16718,7 +16718,7 @@
               "step": 4,
               "action": "pick",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 5,
@@ -16730,7 +16730,7 @@
               "step": 6,
               "action": "ban",
               "map": "Pearl",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 7,
@@ -17102,7 +17102,7 @@
       ]
     },
     {
-      "name": "ULF Esports",
+      "name": "Eternal Fire",
       "region": "emea",
       "logo": "https://owcdn.net/img/67d59bfc9eb2a.png",
       "matchW": 1,
@@ -17177,7 +17177,7 @@
               "step": 2,
               "action": "ban",
               "map": "Bind",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 3,
@@ -17189,7 +17189,7 @@
               "step": 4,
               "action": "pick",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 5,
@@ -17201,7 +17201,7 @@
               "step": 6,
               "action": "ban",
               "map": "Pearl",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 7,
@@ -17240,7 +17240,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -17252,7 +17252,7 @@
               "step": 3,
               "action": "pick",
               "map": "Haven",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -17264,7 +17264,7 @@
               "step": 5,
               "action": "ban",
               "map": "Abyss",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
@@ -17309,7 +17309,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -17321,7 +17321,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -17333,7 +17333,7 @@
               "step": 5,
               "action": "ban",
               "map": "Pearl",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
@@ -17385,7 +17385,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -17397,7 +17397,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -17409,7 +17409,7 @@
               "step": 5,
               "action": "ban",
               "map": "Bind",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
@@ -17622,7 +17622,7 @@
         },
         {
           "event": "EMEA Kickoff",
-          "opponent": "ULF Esports",
+          "opponent": "Eternal Fire",
           "result": "L",
           "matchScore": [
             0,
@@ -17649,7 +17649,7 @@
               "step": 1,
               "action": "ban",
               "map": "Corrode",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 2,
@@ -17661,7 +17661,7 @@
               "step": 3,
               "action": "pick",
               "map": "Split",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 4,
@@ -17673,7 +17673,7 @@
               "step": 5,
               "action": "ban",
               "map": "Pearl",
-              "team": "ULF Esports"
+              "team": "Eternal Fire"
             },
             {
               "step": 6,
