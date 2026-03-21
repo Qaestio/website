@@ -23,7 +23,9 @@
       "Bash(python calc_ratings.py)",
       "Bash(python scraper/calc_ratings.py)",
       "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")",
-      "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json'', encoding=''utf-8''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")"
+      "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json'', encoding=''utf-8''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")",
+      "Bash(for floor:*)",
+      "Bash(do sed:*)"
     ]
   }
 }

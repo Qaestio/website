@@ -5,7 +5,7 @@ with open('vct_data.json', encoding='utf-8') as f:
     data = json.load(f)
 
 NAME_MAP = {
-    'DRX':                'Kiwoom DRX',
+    'DRX':                'KIWOOM DRX',
     'ULF Esports':        'Eternal Fire',
     'JDG Esports':        'JD Mall JDG Esports',
     'Titan Esports Club': 'Wuxi Titan Esports Club',
@@ -34,8 +34,10 @@ def get_match(ta, tb, ev):
             return m
     return None
 
-X   = 200   # rating_diff divisor (upset scaling)
-CAP = 175   # base delta cap (before round multipliers)
+X         = 200   # rating_diff divisor (upset scaling)
+CAP       = 175   # base delta cap (before round multipliers)
+WIN_FLOOR = 70    # minimum rating gain per win — prevents tiny-upset or
+                  # weak-opponent wins from being offset by a single larger loss
 
 # Deep rounds use a flat base (not map-diff) so a 3-2 series is equal to a 3-0 sweep
 # in terms of "you won this stage". Map margin still matters in earlier rounds.
@@ -75,7 +77,10 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
 
     # Advance the other team's cursor in sync so neither team re-uses this
     # match entry if the two teams meet again later in the same event.
-    get_match(tb, ta, ev)
+    # Guard with `in cursors` in case a NAME_MAP alias doesn't match the stored
+    # team name exactly (the look-up would be a silent no-op, which is safe).
+    if tb in cursors:
+        get_match(tb, ta, ev)
 
     ms       = m['matchScore']
     # Use the stored result flag (from ta's perspective) rather than comparing
@@ -109,10 +114,14 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
 
     delta = max(0, min(CAP, delta))
 
-    win_mult  = ROUND_WIN_MULT.get(rnd, 1.0)
-    loss_mult = ROUND_LOSS_MULT.get(rnd, 1.0)
+    # Default 1.2/0.85 for rounds not explicitly listed (early/mid rounds such as
+    # UR1-3, MR1-2, LR1-2, SR1-2).  This ensures wins always give a systematic
+    # advantage over losses, so a team with more wins can't end up below a team
+    # with zero wins in the same region.
+    win_mult  = ROUND_WIN_MULT.get(rnd, 1.2)
+    loss_mult = ROUND_LOSS_MULT.get(rnd, 0.85)
 
-    ratings[w] += delta * win_mult
+    ratings[w] += max(delta * win_mult, WIN_FLOOR)
     ratings[l] -= delta * loss_mult
 
     return w, l, max(ms), min(ms)
@@ -129,7 +138,7 @@ SHORT = {
     'Nongshim RedForce':'NRF','Team Secret':'TS','ZETA DIVISION':'ZETA',
     'FULL SENSE':'FS',    'VARREL':'VRL',   'Global Esports':'GE',
     'DetonatioN FocusMe':'DFM','Gen.G':'GEN','T1':'T1',
-    'Kiwoom DRX':'DRX',   'Paper Rex':'PRX','Rex Regum Qeon':'RRQ',
+    'KIWOOM DRX':'DRX',   'Paper Rex':'PRX','Rex Regum Qeon':'RRQ',
     'Trace Esports':'TRC','Wolves Esports':'WLV','FunPlus Phoenix':'FPX',
     'TYLOO':'TYL',        'All Gamers':'AG', 'Nova Esports':'NOV',
     'JD Mall JDG Esports':'JDG','Wuxi Titan Esports Club':'TEC',
