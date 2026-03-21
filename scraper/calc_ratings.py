@@ -73,9 +73,17 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
     if not m or not m.get('maps'):
         return None
 
+    # Advance the other team's cursor in sync so neither team re-uses this
+    # match entry if the two teams meet again later in the same event.
+    get_match(tb, ta, ev)
+
     ms       = m['matchScore']
-    w        = ta if ms[0] > ms[1] else tb
-    l        = tb if ms[0] > ms[1] else ta
+    # Use the stored result flag (from ta's perspective) rather than comparing
+    # matchScore — avoids wrong winner when the cursor lands on the wrong entry.
+    if m.get('result') == 'W':
+        w, l = ta, tb
+    else:
+        w, l = tb, ta
     map_diff = abs(ms[0] - ms[1])
 
     rating_diff = ratings[l] - ratings[w]   # positive = upset

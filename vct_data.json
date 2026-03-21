@@ -3759,7 +3759,7 @@
           ]
         }
       ],
-      "eloRating": 1820,
+      "eloRating": 1447,
       "ratingHistory": [
         {
           "event": "Start",
@@ -3800,8 +3800,8 @@
           "event": "Americas Kickoff",
           "rnd": "LF",
           "opp": "NRG",
-          "result": "W",
-          "rating": 1820
+          "result": "L",
+          "rating": 1447
         }
       ]
     },
@@ -4800,7 +4800,7 @@
           ]
         }
       ],
-      "eloRating": 2091,
+      "eloRating": 2345,
       "ratingHistory": [
         {
           "event": "Start",
@@ -4848,57 +4848,57 @@
           "event": "Americas Kickoff",
           "rnd": "LF",
           "opp": "MIBR",
-          "result": "L",
-          "rating": 1707
+          "result": "W",
+          "rating": 1996
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "XLG",
           "result": "W",
-          "rating": 1819
+          "rating": 2108
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 1785
+          "rating": 2088
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "TL",
           "result": "W",
-          "rating": 1904
+          "rating": 2096
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "BBL",
           "result": "W",
-          "rating": 1983
+          "rating": 2175
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "PRX",
           "result": "W",
-          "rating": 2157
+          "rating": 2380
         },
         {
           "event": "Masters Santiago",
           "rnd": "UF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2116
+          "rating": 2366
         },
         {
           "event": "Masters Santiago",
           "rnd": "LF",
           "opp": "PRX",
           "result": "L",
-          "rating": 2091
+          "rating": 2345
         }
       ]
     },
@@ -6158,7 +6158,7 @@
           ]
         }
       ],
-      "eloRating": 1936,
+      "eloRating": 1954,
       "ratingHistory": [
         {
           "event": "Start",
@@ -6207,49 +6207,49 @@
           "rnd": "SR1",
           "opp": "PRX",
           "result": "L",
-          "rating": 1684
+          "rating": 1619
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "XLG",
           "result": "W",
-          "rating": 1788
+          "rating": 1724
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "T1",
           "result": "W",
-          "rating": 1819
+          "rating": 1771
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "AG",
           "result": "W",
-          "rating": 1961
+          "rating": 1944
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "NRF",
           "result": "L",
-          "rating": 1909
+          "rating": 1892
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "BBL",
           "result": "W",
-          "rating": 2031
+          "rating": 2014
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "PRX",
           "result": "L",
-          "rating": 1936
+          "rating": 1954
         }
       ]
     },
@@ -7246,7 +7246,7 @@
           ]
         }
       ],
-      "eloRating": 1628,
+      "eloRating": 1629,
       "ratingHistory": [
         {
           "event": "Start",
@@ -7302,7 +7302,7 @@
           "rnd": "LR5",
           "opp": "PRX",
           "result": "L",
-          "rating": 1628
+          "rating": 1629
         }
       ]
     },
@@ -7707,7 +7707,7 @@
           ]
         }
       ],
-      "eloRating": 1549,
+      "eloRating": 1472,
       "ratingHistory": [
         {
           "event": "Start",
@@ -7748,8 +7748,8 @@
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "DRX",
-          "result": "W",
-          "rating": 1549
+          "result": "L",
+          "rating": 1472
         }
       ]
     },
@@ -9836,7 +9836,7 @@
           ]
         }
       ],
-      "eloRating": 2138,
+      "eloRating": 2375,
       "ratingHistory": [
         {
           "event": "Start",
@@ -9878,77 +9878,77 @@
           "rnd": "LR4",
           "opp": "DRX",
           "result": "W",
-          "rating": 1529
+          "rating": 1531
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR5",
           "opp": "DFM",
           "result": "W",
-          "rating": 1639
+          "rating": 1640
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LF",
           "opp": "RRQ",
-          "result": "L",
-          "rating": 1633
+          "result": "W",
+          "rating": 1912
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "G2",
           "result": "W",
-          "rating": 1684
+          "rating": 2027
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "NRG",
           "result": "W",
-          "rating": 1718
+          "rating": 2048
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "FUR",
           "result": "W",
-          "rating": 1805
+          "rating": 2134
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "NRG",
           "result": "L",
-          "rating": 1757
+          "rating": 2077
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "AG",
           "result": "W",
-          "rating": 1819
+          "rating": 2143
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "G2",
           "result": "W",
-          "rating": 1936
+          "rating": 2217
         },
         {
           "event": "Masters Santiago",
           "rnd": "LF",
           "opp": "NRG",
           "result": "W",
-          "rating": 2167
+          "rating": 2407
         },
         {
           "event": "Masters Santiago",
           "rnd": "GF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2138
+          "rating": 2375
         }
       ]
     },
@@ -10381,7 +10381,7 @@
           ]
         }
       ],
-      "eloRating": 1653,
+      "eloRating": 1561,
       "ratingHistory": [
         {
           "event": "Start",
@@ -10422,8 +10422,8 @@
           "event": "Pacific Kickoff",
           "rnd": "LF",
           "opp": "PRX",
-          "result": "W",
-          "rating": 1653
+          "result": "L",
+          "rating": 1561
         }
       ]
     },
@@ -11118,7 +11118,7 @@
           ]
         }
       ],
-      "eloRating": 1819,
+      "eloRating": 1771,
       "ratingHistory": [
         {
           "event": "Start",
@@ -11174,21 +11174,21 @@
           "rnd": "SR1",
           "opp": "TL",
           "result": "L",
-          "rating": 1738
+          "rating": 1700
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "EDG",
           "result": "W",
-          "rating": 1844
+          "rating": 1810
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "G2",
           "result": "L",
-          "rating": 1819
+          "rating": 1771
         }
       ]
     },
@@ -12751,7 +12751,7 @@
           ]
         }
       ],
-      "eloRating": 3181,
+      "eloRating": 2935,
       "ratingHistory": [
         {
           "event": "Start",
@@ -12793,28 +12793,28 @@
           "rnd": "QF",
           "opp": "GM",
           "result": "W",
-          "rating": 2128
+          "rating": 2091
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "G2",
           "result": "W",
-          "rating": 2316
+          "rating": 2277
         },
         {
           "event": "Masters Santiago",
           "rnd": "UF",
           "opp": "NRG",
           "result": "W",
-          "rating": 2719
+          "rating": 2421
         },
         {
           "event": "Masters Santiago",
           "rnd": "GF",
           "opp": "PRX",
           "result": "W",
-          "rating": 3181
+          "rating": 2935
         }
       ]
     },
@@ -13434,7 +13434,7 @@
           "rnd": "LR1",
           "opp": "FUR",
           "result": "W",
-          "rating": 1828
+          "rating": 1829
         },
         {
           "event": "Masters Santiago",
@@ -14012,7 +14012,7 @@
           ]
         }
       ],
-      "eloRating": 1696,
+      "eloRating": 1545,
       "ratingHistory": [
         {
           "event": "Start",
@@ -14067,8 +14067,8 @@
           "event": "EMEA Kickoff",
           "rnd": "LF",
           "opp": "TL",
-          "result": "W",
-          "rating": 1696
+          "result": "L",
+          "rating": 1545
         }
       ]
     },
@@ -15079,7 +15079,7 @@
           ]
         }
       ],
-      "eloRating": 2089,
+      "eloRating": 2056,
       "ratingHistory": [
         {
           "event": "Start",
@@ -15128,28 +15128,28 @@
           "rnd": "SR1",
           "opp": "EDG",
           "result": "W",
-          "rating": 2044
+          "rating": 2050
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "TL",
           "result": "W",
-          "rating": 2160
+          "rating": 2103
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2130
+          "rating": 2091
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "AG",
           "result": "L",
-          "rating": 2089
+          "rating": 2056
         }
       ]
     },
@@ -16379,7 +16379,7 @@
           ]
         }
       ],
-      "eloRating": 1581,
+      "eloRating": 1525,
       "ratingHistory": [
         {
           "event": "Start",
@@ -16420,8 +16420,8 @@
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "TH",
-          "result": "W",
-          "rating": 1581
+          "result": "L",
+          "rating": 1525
         }
       ]
     },
@@ -16895,7 +16895,7 @@
           ]
         }
       ],
-      "eloRating": 1398,
+      "eloRating": 1442,
       "ratingHistory": [
         {
           "event": "Start",
@@ -16936,15 +16936,15 @@
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "NAVI",
-          "result": "L",
-          "rating": 1479
+          "result": "W",
+          "rating": 1525
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR4",
           "opp": "TL",
           "result": "L",
-          "rating": 1398
+          "rating": 1442
         }
       ]
     },
@@ -17791,7 +17791,7 @@
           ]
         }
       ],
-      "eloRating": 1525,
+      "eloRating": 2096,
       "ratingHistory": [
         {
           "event": "Start",
@@ -17840,42 +17840,42 @@
           "rnd": "LR4",
           "opp": "TH",
           "result": "W",
-          "rating": 1687
+          "rating": 1691
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR5",
           "opp": "VIT",
-          "result": "L",
-          "rating": 1669
+          "result": "W",
+          "rating": 1765
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LF",
           "opp": "FNC",
-          "result": "L",
-          "rating": 1656
+          "result": "W",
+          "rating": 2034
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "T1",
           "result": "W",
-          "rating": 1738
+          "rating": 2155
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "GM",
           "result": "L",
-          "rating": 1623
+          "rating": 2103
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "NRG",
           "result": "L",
-          "rating": 1525
+          "rating": 2096
         }
       ]
     },
@@ -18349,7 +18349,7 @@
           ]
         }
       ],
-      "eloRating": 1626,
+      "eloRating": 1553,
       "ratingHistory": [
         {
           "event": "Start",
@@ -18397,8 +18397,8 @@
           "event": "EMEA Kickoff",
           "rnd": "LR5",
           "opp": "TL",
-          "result": "W",
-          "rating": 1626
+          "result": "L",
+          "rating": 1553
         }
       ]
     },
@@ -19264,7 +19264,7 @@
           ]
         }
       ],
-      "eloRating": 1945,
+      "eloRating": 1920,
       "ratingHistory": [
         {
           "event": "Start",
@@ -19306,21 +19306,21 @@
           "rnd": "QF",
           "opp": "G2",
           "result": "L",
-          "rating": 1966
+          "rating": 1951
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "GM",
           "result": "W",
-          "rating": 2007
+          "rating": 1986
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 1945
+          "rating": 1920
         }
       ]
     },
@@ -19891,7 +19891,7 @@
           ]
         }
       ],
-      "eloRating": 2048,
+      "eloRating": 1740,
       "ratingHistory": [
         {
           "event": "Start",
@@ -19946,8 +19946,8 @@
           "event": "China Kickoff",
           "rnd": "LF",
           "opp": "EDG",
-          "result": "W",
-          "rating": 2048
+          "result": "L",
+          "rating": 1740
         }
       ]
     },
@@ -20656,7 +20656,7 @@
           ]
         }
       ],
-      "eloRating": 1476,
+      "eloRating": 1550,
       "ratingHistory": [
         {
           "event": "Start",
@@ -20698,35 +20698,35 @@
           "rnd": "LR4",
           "opp": "TYL",
           "result": "W",
-          "rating": 1658
+          "rating": 1592
         },
         {
           "event": "China Kickoff",
           "rnd": "LR5",
           "opp": "DRG",
           "result": "W",
-          "rating": 1726
+          "rating": 1659
         },
         {
           "event": "China Kickoff",
           "rnd": "LF",
           "opp": "BLG",
-          "result": "L",
-          "rating": 1694
+          "result": "W",
+          "rating": 1780
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "GM",
           "result": "L",
-          "rating": 1581
+          "rating": 1661
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "T1",
           "result": "L",
-          "rating": 1476
+          "rating": 1550
         }
       ]
     },
@@ -23242,7 +23242,7 @@
           ]
         }
       ],
-      "eloRating": 1656,
+      "eloRating": 1702,
       "ratingHistory": [
         {
           "event": "Start",
@@ -23298,7 +23298,7 @@
           "rnd": "LR4",
           "opp": "EDG",
           "result": "L",
-          "rating": 1656
+          "rating": 1702
         }
       ]
     },
@@ -25228,7 +25228,7 @@
           ]
         }
       ],
-      "eloRating": 1360,
+      "eloRating": 1432,
       "ratingHistory": [
         {
           "event": "Start",
@@ -25269,15 +25269,15 @@
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "FS",
-          "result": "L",
-          "rating": 1399
+          "result": "W",
+          "rating": 1472
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR4",
           "opp": "PRX",
           "result": "L",
-          "rating": 1360
+          "rating": 1432
         }
       ]
     },
