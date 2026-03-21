@@ -352,6 +352,41 @@
             line-height: 1.5;
         }
 
+        /* ── Rating chart ── */
+        .rating-chart-wrap {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 0.85rem 0.65rem;
+            margin-bottom: 0.75rem;
+        }
+        .rating-chart-wrap canvas {
+            display: block;
+            width: 100%;
+        }
+        .rating-chart-tooltip {
+            position: absolute;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.35rem 0.55rem;
+            font-size: 0.68rem;
+            color: var(--text);
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            z-index: 10;
+            line-height: 1.55;
+        }
+        .rating-chart-tooltip .tt-rating {
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+        .rating-chart-tooltip .tt-sub {
+            color: var(--muted);
+        }
+
         /* ── Status ── */
         .status {
             text-align: center;
@@ -643,6 +678,213 @@ function renderMapStats(team, panel) {
     }
 }
 
+// ── Rating chart ──────────────────────────────────────────────────────────────
+
+function renderRatingChart(team, panel) {
+    const history = team.ratingHistory || [];
+    // Need at least 2 points to draw a line
+    if (history.length < 2) return;
+
+    const r = REGIONS[team.region] || { rawColor: '#888' };
+    const lineColor = r.rawColor;
+
+    // Outer wrapper
+    const wrap = document.createElement('div');
+    wrap.className = 'rating-chart-wrap';
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'section-title';
+    titleEl.style.marginBottom = '0.55rem';
+    titleEl.textContent = 'Rating Progression';
+    wrap.appendChild(titleEl);
+
+    const canvas = document.createElement('canvas');
+    wrap.appendChild(canvas);
+
+    // Tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.className = 'rating-chart-tooltip';
+    tooltip.style.display = 'none';
+    wrap.appendChild(tooltip);
+
+    panel.appendChild(wrap);
+
+    // We draw after the element is in the DOM so clientWidth is available
+    requestAnimationFrame(() => drawChart(canvas, tooltip, history, lineColor));
+}
+
+function drawChart(canvas, tooltip, history, lineColor) {
+    const dpr   = window.devicePixelRatio || 1;
+    const W_CSS = canvas.parentElement.clientWidth
+                  - parseFloat(getComputedStyle(canvas.parentElement).paddingLeft)
+                  - parseFloat(getComputedStyle(canvas.parentElement).paddingRight);
+    const H_CSS = 120;
+
+    canvas.style.width  = W_CSS + 'px';
+    canvas.style.height = H_CSS + 'px';
+    canvas.width  = Math.round(W_CSS * dpr);
+    canvas.height = Math.round(H_CSS * dpr);
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // Layout margins
+    const PAD_LEFT = 38, PAD_RIGHT = 8, PAD_TOP = 8, PAD_BOTTOM = 18;
+    const cW = W_CSS - PAD_LEFT - PAD_RIGHT;
+    const cH = H_CSS - PAD_TOP  - PAD_BOTTOM;
+
+    // Y scale: snap to 50-unit grid, extend 5% beyond data range
+    const ratings = history.map(p => p.rating);
+    const rawMin  = Math.min(...ratings);
+    const rawMax  = Math.max(...ratings);
+    const pad     = Math.max((rawMax - rawMin) * 0.08, 40);
+    const yMin    = Math.floor((rawMin - pad) / 50) * 50;
+    const yMax    = Math.ceil ((rawMax + pad) / 50) * 50;
+    const yRange  = yMax - yMin;
+
+    // Helper: data-space → canvas-space
+    const xOf = i => PAD_LEFT + (i / (history.length - 1)) * cW;
+    const yOf = v => PAD_TOP  + (1 - (v - yMin) / yRange) * cH;
+
+    // ── Grid lines + Y labels ──
+    ctx.font = `${9 * (dpr > 1 ? 1 : 1)}px system-ui, sans-serif`;
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+
+    const step = yRange <= 300 ? 50 : yRange <= 600 ? 100 : 200;
+    const firstTick = Math.ceil(yMin / step) * step;
+    for (let v = firstTick; v <= yMax; v += step) {
+        const y = yOf(v);
+        ctx.strokeStyle = '#242424';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(PAD_LEFT, y);
+        ctx.lineTo(PAD_LEFT + cW, y);
+        ctx.stroke();
+        ctx.fillStyle = '#666';
+        ctx.fillText(v, PAD_LEFT - 4, y);
+    }
+
+    // ── Gradient fill under line ──
+    const grad = ctx.createLinearGradient(0, PAD_TOP, 0, PAD_TOP + cH);
+    // Parse line color for gradient
+    grad.addColorStop(0, hexToRgba(lineColor, 0.22));
+    grad.addColorStop(1, hexToRgba(lineColor, 0.02));
+
+    ctx.beginPath();
+    ctx.moveTo(xOf(0), yOf(history[0].rating));
+    for (let i = 1; i < history.length; i++) {
+        ctx.lineTo(xOf(i), yOf(history[i].rating));
+    }
+    ctx.lineTo(xOf(history.length - 1), PAD_TOP + cH);
+    ctx.lineTo(xOf(0), PAD_TOP + cH);
+    ctx.closePath();
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // ── Main line ──
+    ctx.beginPath();
+    ctx.moveTo(xOf(0), yOf(history[0].rating));
+    for (let i = 1; i < history.length; i++) {
+        ctx.lineTo(xOf(i), yOf(history[i].rating));
+    }
+    ctx.strokeStyle = lineColor;
+    ctx.lineWidth   = 1.75;
+    ctx.lineJoin    = 'round';
+    ctx.stroke();
+
+    // ── Dots ──
+    const DOT_R = 3;
+    for (let i = 0; i < history.length; i++) {
+        const p = history[i];
+        const x = xOf(i);
+        const y = yOf(p.rating);
+        const isStart = p.event === 'Start';
+        const color = isStart ? '#555'
+                    : p.result === 'W' ? '#52c77a'
+                    : p.result === 'L' ? '#e05252'
+                    : lineColor;
+        ctx.beginPath();
+        ctx.arc(x, y, DOT_R, 0, Math.PI * 2);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.strokeStyle = '#0f0f0f';
+        ctx.lineWidth   = 1;
+        ctx.stroke();
+    }
+
+    // ── Hover interaction ──
+    const WRAP = canvas.parentElement;
+    const canvasRect = () => canvas.getBoundingClientRect();
+    const wrapRect   = () => WRAP.getBoundingClientRect();
+
+    canvas.addEventListener('mousemove', e => {
+        const cr = canvasRect();
+        const mx = e.clientX - cr.left;
+        const my = e.clientY - cr.top;
+
+        // Find closest point
+        let best = -1, bestDist = Infinity;
+        for (let i = 0; i < history.length; i++) {
+            const dx = xOf(i) - mx;
+            const dy = yOf(history[i].rating) - my;
+            const d  = Math.sqrt(dx * dx + dy * dy);
+            if (d < bestDist) { bestDist = d; best = i; }
+        }
+        if (best < 0 || bestDist > 22) {
+            tooltip.style.display = 'none';
+            return;
+        }
+
+        const p = history[best];
+        let html = `<div class="tt-rating">${p.rating.toLocaleString()}</div>`;
+        if (p.event === 'Start') {
+            html += `<div class="tt-sub">Starting rating</div>`;
+        } else {
+            const res    = p.result === 'W' ? '✓ Win' : p.result === 'L' ? '✗ Loss' : '';
+            const resCol = p.result === 'W' ? 'var(--win)' : p.result === 'L' ? 'var(--loss)' : 'var(--muted)';
+            if (res) html += `<div style="color:${resCol}">${res} vs ${p.opp}</div>`;
+            const sub = [p.event, p.rnd].filter(Boolean).join(' · ');
+            if (sub) html += `<div class="tt-sub">${sub}</div>`;
+        }
+        tooltip.innerHTML = html;
+        tooltip.style.display = 'block';
+
+        // Position tooltip (keep inside wrapper)
+        const wr = wrapRect();
+        const cr2 = canvasRect();
+        const relX = (cr2.left - wr.left) + xOf(best);
+        const relY = (cr2.top  - wr.top)  + yOf(history[best].rating);
+
+        let tx = relX + 10;
+        let ty = relY - tooltip.offsetHeight / 2;
+
+        // Flip left if too close to right edge
+        if (tx + tooltip.offsetWidth + 12 > wr.width) {
+            tx = relX - tooltip.offsetWidth - 10;
+        }
+        // Clamp vertically
+        ty = Math.max(4, Math.min(ty, wr.height - tooltip.offsetHeight - 4));
+
+        tooltip.style.left = tx + 'px';
+        tooltip.style.top  = ty + 'px';
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+    });
+}
+
+function hexToRgba(hex, alpha) {
+    // Accepts #rgb or #rrggbb
+    let h = hex.replace('#', '');
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    const r = parseInt(h.slice(0,2), 16);
+    const g = parseInt(h.slice(2,4), 16);
+    const b = parseInt(h.slice(4,6), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+}
+
 // ── Main render ───────────────────────────────────────────────────────────────
 
 function renderTeam(team) {
@@ -793,8 +1035,9 @@ function renderTeam(team) {
         leftCol.appendChild(matchList);
     }
 
-    // Right: map statistics
+    // Right: rating chart + map statistics
     const rightCol = document.createElement('div');
+    renderRatingChart(team, rightCol);
     renderMapStats(team, rightCol);
 
     grid.append(leftCol, rightCol);

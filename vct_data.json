@@ -635,7 +635,72 @@
           ]
         }
       ],
-      "eloRating": 1731
+      "eloRating": 1731,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "LEV",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1538
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "LOUD",
+          "result": "W",
+          "rating": 1584
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR2",
+          "opp": "SEN",
+          "result": "W",
+          "rating": 1679
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR3",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1622
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR3",
+          "opp": "EG",
+          "result": "W",
+          "rating": 1733
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR4",
+          "opp": "C9",
+          "result": "W",
+          "rating": 1801
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR5",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1731
+        }
+      ]
     },
     {
       "name": "Cloud9",
@@ -1176,7 +1241,65 @@
           ]
         }
       ],
-      "eloRating": 1659
+      "eloRating": 1659,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "LOUD",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1550
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "LEV",
+          "result": "W",
+          "rating": 1647
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR2",
+          "opp": "ENVY",
+          "result": "W",
+          "rating": 1699
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR3",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1598
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR3",
+          "opp": "LEV",
+          "result": "W",
+          "rating": 1706
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR4",
+          "opp": "100T",
+          "result": "L",
+          "rating": 1659
+        }
+      ]
     },
     {
       "name": "Evil Geniuses",
@@ -1572,7 +1695,51 @@
           ]
         }
       ],
-      "eloRating": 1427
+      "eloRating": 1427,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "ENVY",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "SEN",
+          "result": "L",
+          "rating": 1425
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR1",
+          "opp": "LOUD",
+          "result": "W",
+          "rating": 1515
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR2",
+          "opp": "ENVY",
+          "result": "W",
+          "rating": 1518
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR3",
+          "opp": "100T",
+          "result": "L",
+          "rating": 1427
+        }
+      ]
     },
     {
       "name": "FURIA",
@@ -2079,7 +2246,58 @@
           ]
         }
       ],
-      "eloRating": 1905
+      "eloRating": 1905,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "KRU",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "SEN",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR3",
+          "opp": "G2",
+          "result": "W",
+          "rating": 1700
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UF",
+          "opp": "MIBR",
+          "result": "W",
+          "rating": 1986
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1943
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR1",
+          "opp": "BBL",
+          "result": "L",
+          "rating": 1905
+        }
+      ]
     },
     {
       "name": "KRÜ Esports",
@@ -2344,7 +2562,37 @@
           ]
         }
       ],
-      "eloRating": 1378
+      "eloRating": 1378,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "FUR",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "ENVY",
+          "result": "L",
+          "rating": 1402
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR1",
+          "opp": "LEV",
+          "result": "L",
+          "rating": 1378
+        }
+      ]
     },
     {
       "name": "LEVIATÁN",
@@ -2734,7 +2982,51 @@
           ]
         }
       ],
-      "eloRating": 1378
+      "eloRating": 1378,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "100T",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "C9",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR1",
+          "opp": "KRU",
+          "result": "W",
+          "rating": 1378
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR2",
+          "opp": "SEN",
+          "result": "W",
+          "rating": 1466
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR3",
+          "opp": "C9",
+          "result": "L",
+          "rating": 1378
+        }
+      ]
     },
     {
       "name": "LOUD",
@@ -2992,7 +3284,37 @@
           ]
         }
       ],
-      "eloRating": 1263
+      "eloRating": 1263,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "C9",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "100T",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR1",
+          "opp": "EG",
+          "result": "L",
+          "rating": 1263
+        }
+      ]
     },
     {
       "name": "MIBR",
@@ -3437,7 +3759,51 @@
           ]
         }
       ],
-      "eloRating": 1820
+      "eloRating": 1820,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "ENVY",
+          "result": "W",
+          "rating": 1525
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR3",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 1531
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UF",
+          "opp": "FUR",
+          "result": "L",
+          "rating": 1503
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MF",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1475
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LF",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 1820
+        }
+      ]
     },
     {
       "name": "NRG",
@@ -4434,7 +4800,107 @@
           ]
         }
       ],
-      "eloRating": 2091
+      "eloRating": 2091,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "C9",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR3",
+          "opp": "MIBR",
+          "result": "L",
+          "rating": 1544
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR3",
+          "opp": "100T",
+          "result": "W",
+          "rating": 1622
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR4",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1613
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR5",
+          "opp": "100T",
+          "result": "W",
+          "rating": 1745
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LF",
+          "opp": "MIBR",
+          "result": "L",
+          "rating": 1707
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "XLG",
+          "result": "W",
+          "rating": 1819
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1785
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR3",
+          "opp": "TL",
+          "result": "W",
+          "rating": 1904
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "BBL",
+          "result": "W",
+          "rating": 1983
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SF",
+          "opp": "PRX",
+          "result": "W",
+          "rating": 2157
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "UF",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 2116
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LF",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 2091
+        }
+      ]
     },
     {
       "name": "Sentinels",
@@ -4748,7 +5214,44 @@
           ]
         }
       ],
-      "eloRating": 1241
+      "eloRating": 1241,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "FUR",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "EG",
+          "result": "W",
+          "rating": 1425
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR2",
+          "opp": "100T",
+          "result": "L",
+          "rating": 1330
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR2",
+          "opp": "LEV",
+          "result": "L",
+          "rating": 1241
+        }
+      ]
     },
     {
       "name": "G2 Esports",
@@ -5655,7 +6158,100 @@
           ]
         }
       ],
-      "eloRating": 1936
+      "eloRating": 1936,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "100T",
+          "result": "W",
+          "rating": 1512
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR3",
+          "opp": "FUR",
+          "result": "L",
+          "rating": 1462
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR3",
+          "opp": "C9",
+          "result": "W",
+          "rating": 1598
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR4",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 1615
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MF",
+          "opp": "MIBR",
+          "result": "W",
+          "rating": 1735
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1684
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "XLG",
+          "result": "W",
+          "rating": 1788
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR3",
+          "opp": "T1",
+          "result": "W",
+          "rating": 1819
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "AG",
+          "result": "W",
+          "rating": 1961
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SF",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 1909
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR2",
+          "opp": "BBL",
+          "result": "W",
+          "rating": 2031
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR3",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1936
+        }
+      ]
     },
     {
       "name": "ENVY",
@@ -6065,7 +6661,51 @@
           ]
         }
       ],
-      "eloRating": 1518
+      "eloRating": 1518,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR1",
+          "opp": "EG",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "UR2",
+          "opp": "MIBR",
+          "result": "L",
+          "rating": 1525
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR1",
+          "opp": "KRU",
+          "result": "W",
+          "rating": 1573
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "MR2",
+          "opp": "C9",
+          "result": "L",
+          "rating": 1521
+        },
+        {
+          "event": "Americas Kickoff",
+          "rnd": "LR2",
+          "opp": "EG",
+          "result": "L",
+          "rating": 1518
+        }
+      ]
     },
     {
       "name": "DetonatioN FocusMe",
@@ -6606,7 +7246,65 @@
           ]
         }
       ],
-      "eloRating": 1628
+      "eloRating": 1628,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "GEN",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "RRQ",
+          "result": "L",
+          "rating": 1550
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "TS",
+          "result": "W",
+          "rating": 1643
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR2",
+          "opp": "GE",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR3",
+          "opp": "FS",
+          "result": "W",
+          "rating": 1709
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR4",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1687
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR5",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1628
+        }
+      ]
     },
     {
       "name": "FULL SENSE",
@@ -7009,7 +7707,51 @@
           ]
         }
       ],
-      "eloRating": 1549
+      "eloRating": 1549,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "ZETA",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "DRX",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR3",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 1540
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR3",
+          "opp": "DFM",
+          "result": "L",
+          "rating": 1496
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR3",
+          "opp": "DRX",
+          "result": "W",
+          "rating": 1549
+        }
+      ]
     },
     {
       "name": "Gen.G",
@@ -7350,7 +8092,44 @@
           ]
         }
       ],
-      "eloRating": 1352
+      "eloRating": 1352,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "DFM",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR1",
+          "opp": "VRL",
+          "result": "W",
+          "rating": 1398
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR2",
+          "opp": "GE",
+          "result": "L",
+          "rating": 1352
+        }
+      ]
     },
     {
       "name": "Global Esports",
@@ -7836,7 +8615,58 @@
           ]
         }
       ],
-      "eloRating": 1635
+      "eloRating": 1635,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "VRL",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1575
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "ZETA",
+          "result": "W",
+          "rating": 1668
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR2",
+          "opp": "DFM",
+          "result": "L",
+          "rating": 1662
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR2",
+          "opp": "GEN",
+          "result": "W",
+          "rating": 1709
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR3",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1635
+        }
+      ]
     },
     {
       "name": "Paper Rex",
@@ -9006,7 +9836,121 @@
           ]
         }
       ],
-      "eloRating": 2138
+      "eloRating": 2138,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "GE",
+          "result": "W",
+          "rating": 1525
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR3",
+          "opp": "RRQ",
+          "result": "L",
+          "rating": 1423
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR3",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1383
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR3",
+          "opp": "GE",
+          "result": "W",
+          "rating": 1473
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR4",
+          "opp": "DRX",
+          "result": "W",
+          "rating": 1529
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR5",
+          "opp": "DFM",
+          "result": "W",
+          "rating": 1639
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LF",
+          "opp": "RRQ",
+          "result": "L",
+          "rating": 1633
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "G2",
+          "result": "W",
+          "rating": 1684
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 1718
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "FUR",
+          "result": "W",
+          "rating": 1805
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SF",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1757
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR2",
+          "opp": "AG",
+          "result": "W",
+          "rating": 1819
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR3",
+          "opp": "G2",
+          "result": "W",
+          "rating": 1936
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LF",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 2167
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "GF",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 2138
+        }
+      ]
     },
     {
       "name": "Rex Regum Qeon",
@@ -9437,7 +10381,51 @@
           ]
         }
       ],
-      "eloRating": 1653
+      "eloRating": 1653,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "DFM",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR3",
+          "opp": "PRX",
+          "result": "W",
+          "rating": 1652
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UF",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 1621
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MF",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1591
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LF",
+          "opp": "PRX",
+          "result": "W",
+          "rating": 1653
+        }
+      ]
     },
     {
       "name": "T1",
@@ -10130,7 +11118,79 @@
           ]
         }
       ],
-      "eloRating": 1819
+      "eloRating": 1819,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "GEN",
+          "result": "W",
+          "rating": 1497
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR2",
+          "opp": "DRX",
+          "result": "W",
+          "rating": 1596
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR3",
+          "opp": "PRX",
+          "result": "W",
+          "rating": 1651
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR4",
+          "opp": "DFM",
+          "result": "W",
+          "rating": 1691
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MF",
+          "opp": "RRQ",
+          "result": "W",
+          "rating": 1821
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1738
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "EDG",
+          "result": "W",
+          "rating": 1844
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR3",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1819
+        }
+      ]
     },
     {
       "name": "Team Secret",
@@ -10388,7 +11448,37 @@
           ]
         }
       ],
-      "eloRating": 1263
+      "eloRating": 1263,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "DFM",
+          "result": "L",
+          "rating": 1307
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR1",
+          "opp": "ZETA",
+          "result": "L",
+          "rating": 1263
+        }
+      ]
     },
     {
       "name": "ZETA DIVISION",
@@ -10722,7 +11812,44 @@
           ]
         }
       ],
-      "eloRating": 1305
+      "eloRating": 1305,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "FS",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "GE",
+          "result": "L",
+          "rating": 1307
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR1",
+          "opp": "TS",
+          "result": "W",
+          "rating": 1350
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR2",
+          "opp": "DRX",
+          "result": "L",
+          "rating": 1305
+        }
+      ]
     },
     {
       "name": "VARREL",
@@ -10956,7 +12083,37 @@
           ]
         }
       ],
-      "eloRating": 1308
+      "eloRating": 1308,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "GE",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "DRX",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR1",
+          "opp": "GEN",
+          "result": "L",
+          "rating": 1308
+        }
+      ]
     },
     {
       "name": "Nongshim RedForce",
@@ -11594,7 +12751,72 @@
           ]
         }
       ],
-      "eloRating": 3181
+      "eloRating": 3181,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR1",
+          "opp": "TS",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "T1",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR3",
+          "opp": "FS",
+          "result": "W",
+          "rating": 1760
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UF",
+          "opp": "RRQ",
+          "result": "W",
+          "rating": 2068
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "GM",
+          "result": "W",
+          "rating": 2128
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SF",
+          "opp": "G2",
+          "result": "W",
+          "rating": 2316
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "UF",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 2719
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "GF",
+          "opp": "PRX",
+          "result": "W",
+          "rating": 3181
+        }
+      ]
     },
     {
       "name": "BBL Esports",
@@ -12163,7 +13385,65 @@
           ]
         }
       ],
-      "eloRating": 1707
+      "eloRating": 1707,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "PCF",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "FNC",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR3",
+          "opp": "VIT",
+          "result": "W",
+          "rating": 1760
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UF",
+          "opp": "GM",
+          "result": "W",
+          "rating": 1830
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1790
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR1",
+          "opp": "FUR",
+          "result": "W",
+          "rating": 1828
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR2",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1707
+        }
+      ]
     },
     {
       "name": "FNATIC",
@@ -12732,7 +14012,65 @@
           ]
         }
       ],
-      "eloRating": 1696
+      "eloRating": 1696,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "BBL",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "FUT",
+          "result": "W",
+          "rating": 1447
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR2",
+          "opp": "TL",
+          "result": "W",
+          "rating": 1472
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR3",
+          "opp": "NAVI",
+          "result": "W",
+          "rating": 1491
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR4",
+          "opp": "VIT",
+          "result": "W",
+          "rating": 1605
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MF",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1575
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LF",
+          "opp": "TL",
+          "result": "W",
+          "rating": 1696
+        }
+      ]
     },
     {
       "name": "FUT Esports",
@@ -12997,7 +14335,37 @@
           ]
         }
       ],
-      "eloRating": 1308
+      "eloRating": 1308,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR1",
+          "opp": "KC",
+          "result": "L",
+          "rating": 1308
+        }
+      ]
     },
     {
       "name": "Gentle Mates",
@@ -13711,7 +15079,79 @@
           ]
         }
       ],
-      "eloRating": 2089
+      "eloRating": 2089,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "FUT",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "GX",
+          "result": "W",
+          "rating": 1700
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR3",
+          "opp": "NAVI",
+          "result": "W",
+          "rating": 1810
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UF",
+          "opp": "BBL",
+          "result": "L",
+          "rating": 1803
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MF",
+          "opp": "FNC",
+          "result": "W",
+          "rating": 1931
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "EDG",
+          "result": "W",
+          "rating": 2044
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "TL",
+          "result": "W",
+          "rating": 2160
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "NRF",
+          "result": "L",
+          "rating": 2130
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR1",
+          "opp": "AG",
+          "result": "L",
+          "rating": 2089
+        }
+      ]
     },
     {
       "name": "GIANTX",
@@ -14114,7 +15554,51 @@
           ]
         }
       ],
-      "eloRating": 1352
+      "eloRating": 1352,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "PCF",
+          "result": "W",
+          "rating": 1412
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR2",
+          "opp": "TH",
+          "result": "W",
+          "rating": 1478
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR3",
+          "opp": "VIT",
+          "result": "L",
+          "rating": 1394
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR3",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1352
+        }
+      ]
     },
     {
       "name": "Karmine Corp",
@@ -14455,7 +15939,44 @@
           ]
         }
       ],
-      "eloRating": 1352
+      "eloRating": 1352,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "NAVI",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1353
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR1",
+          "opp": "FUT",
+          "result": "W",
+          "rating": 1398
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR2",
+          "opp": "TH",
+          "result": "L",
+          "rating": 1352
+        }
+      ]
     },
     {
       "name": "Natus Vincere",
@@ -14858,7 +16379,51 @@
           ]
         }
       ],
-      "eloRating": 1581
+      "eloRating": 1581,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "KC",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "TH",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR3",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1540
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR3",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1525
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR3",
+          "opp": "TH",
+          "result": "W",
+          "rating": 1581
+        }
+      ]
     },
     {
       "name": "Team Heretics",
@@ -15330,7 +16895,58 @@
           ]
         }
       ],
-      "eloRating": 1398
+      "eloRating": 1398,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "NAVI",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "EF",
+          "result": "W",
+          "rating": 1543
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR2",
+          "opp": "GX",
+          "result": "L",
+          "rating": 1478
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR2",
+          "opp": "KC",
+          "result": "W",
+          "rating": 1525
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR3",
+          "opp": "NAVI",
+          "result": "L",
+          "rating": 1479
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR4",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1398
+        }
+      ]
     },
     {
       "name": "Team Liquid",
@@ -16175,7 +17791,93 @@
           ]
         }
       ],
-      "eloRating": 1525
+      "eloRating": 1525,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "VIT",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "KC",
+          "result": "W",
+          "rating": 1497
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR2",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1472
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR2",
+          "opp": "EF",
+          "result": "W",
+          "rating": 1517
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR3",
+          "opp": "GX",
+          "result": "W",
+          "rating": 1569
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR4",
+          "opp": "TH",
+          "result": "W",
+          "rating": 1687
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR5",
+          "opp": "VIT",
+          "result": "L",
+          "rating": 1669
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LF",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1656
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "T1",
+          "result": "W",
+          "rating": 1738
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1623
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR3",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1525
+        }
+      ]
     },
     {
       "name": "Team Vitality",
@@ -16647,7 +18349,58 @@
           ]
         }
       ],
-      "eloRating": 1626
+      "eloRating": 1626,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "EF",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR2",
+          "opp": "TL",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR3",
+          "opp": "BBL",
+          "result": "L",
+          "rating": 1540
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR3",
+          "opp": "GX",
+          "result": "W",
+          "rating": 1653
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR4",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1593
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR5",
+          "opp": "TL",
+          "result": "W",
+          "rating": 1626
+        }
+      ]
     },
     {
       "name": "PCIFIC Esports",
@@ -16912,7 +18665,37 @@
           ]
         }
       ],
-      "eloRating": 1372
+      "eloRating": 1372,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "BBL",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "GX",
+          "result": "L",
+          "rating": 1438
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR1",
+          "opp": "EF",
+          "result": "L",
+          "rating": 1372
+        }
+      ]
     },
     {
       "name": "All Gamers",
@@ -17481,7 +19264,65 @@
           ]
         }
       ],
-      "eloRating": 1945
+      "eloRating": 1945,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "NOV",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "BLG",
+          "result": "W",
+          "rating": 1700
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR3",
+          "opp": "DRG",
+          "result": "W",
+          "rating": 1750
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UF",
+          "opp": "XLG",
+          "result": "W",
+          "rating": 2037
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "QF",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1966
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR1",
+          "opp": "GM",
+          "result": "W",
+          "rating": 2007
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "LR2",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1945
+        }
+      ]
     },
     {
       "name": "Guangzhou Huadu Bilibili Gaming",
@@ -18050,7 +19891,65 @@
           ]
         }
       ],
-      "eloRating": 2048
+      "eloRating": 2048,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "AG",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "FPX",
+          "result": "W",
+          "rating": 1493
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR2",
+          "opp": "TRC",
+          "result": "W",
+          "rating": 1591
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR3",
+          "opp": "EDG",
+          "result": "W",
+          "rating": 1650
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR4",
+          "opp": "DRG",
+          "result": "W",
+          "rating": 1793
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MF",
+          "opp": "XLG",
+          "result": "L",
+          "rating": 1753
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LF",
+          "opp": "EDG",
+          "result": "W",
+          "rating": 2048
+        }
+      ]
     },
     {
       "name": "EDward Gaming",
@@ -18757,7 +20656,79 @@
           ]
         }
       ],
-      "eloRating": 1476
+      "eloRating": 1476,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "TYL",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR3",
+          "opp": "XLG",
+          "result": "L",
+          "rating": 1538
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR3",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1494
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR3",
+          "opp": "JDG",
+          "result": "W",
+          "rating": 1525
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR4",
+          "opp": "TYL",
+          "result": "W",
+          "rating": 1658
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR5",
+          "opp": "DRG",
+          "result": "W",
+          "rating": 1726
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LF",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1694
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1581
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1476
+        }
+      ]
     },
     {
       "name": "FunPlus Phoenix",
@@ -19015,7 +20986,37 @@
           ]
         }
       ],
-      "eloRating": 1263
+      "eloRating": 1263,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "TYL",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1307
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR1",
+          "opp": "JDG",
+          "result": "L",
+          "rating": 1263
+        }
+      ]
     },
     {
       "name": "JD Mall JDG Esports",
@@ -19515,7 +21516,58 @@
           ]
         }
       ],
-      "eloRating": 1581
+      "eloRating": 1581,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "TEC",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "DRG",
+          "result": "L",
+          "rating": 1538
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "TRC",
+          "result": "L",
+          "rating": 1516
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR1",
+          "opp": "FPX",
+          "result": "W",
+          "rating": 1559
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR2",
+          "opp": "TEC",
+          "result": "W",
+          "rating": 1607
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR3",
+          "opp": "EDG",
+          "result": "L",
+          "rating": 1581
+        }
+      ]
     },
     {
       "name": "Nova Esports",
@@ -19773,7 +21825,37 @@
           ]
         }
       ],
-      "eloRating": 1263
+      "eloRating": 1263,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "AG",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "TYL",
+          "result": "L",
+          "rating": 1307
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR1",
+          "opp": "WLV",
+          "result": "L",
+          "rating": 1263
+        }
+      ]
     },
     {
       "name": "Wuxi Titan Esports Club",
@@ -20121,7 +22203,44 @@
           ]
         }
       ],
-      "eloRating": 1372
+      "eloRating": 1372,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "JDG",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "WLV",
+          "result": "W",
+          "rating": 1469
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR2",
+          "opp": "TYL",
+          "result": "L",
+          "rating": 1420
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR2",
+          "opp": "JDG",
+          "result": "L",
+          "rating": 1372
+        }
+      ]
     },
     {
       "name": "Trace Esports",
@@ -20531,7 +22650,51 @@
           ]
         }
       ],
-      "eloRating": 1333
+      "eloRating": 1333,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "WLV",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "JDG",
+          "result": "W",
+          "rating": 1472
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR2",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1374
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR2",
+          "opp": "WLV",
+          "result": "W",
+          "rating": 1418
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR3",
+          "opp": "TYL",
+          "result": "L",
+          "rating": 1333
+        }
+      ]
     },
     {
       "name": "TYLOO",
@@ -21079,7 +23242,65 @@
           ]
         }
       ],
-      "eloRating": 1656
+      "eloRating": 1656,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "FPX",
+          "result": "W",
+          "rating": 1600
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "EDG",
+          "result": "L",
+          "rating": 1550
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "NOV",
+          "result": "W",
+          "rating": 1643
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR2",
+          "opp": "TEC",
+          "result": "W",
+          "rating": 1692
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR3",
+          "opp": "DRG",
+          "result": "L",
+          "rating": 1643
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR3",
+          "opp": "TRC",
+          "result": "W",
+          "rating": 1747
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR4",
+          "opp": "EDG",
+          "result": "L",
+          "rating": 1656
+        }
+      ]
     },
     {
       "name": "Wolves Esports",
@@ -21496,7 +23717,51 @@
           ]
         }
       ],
-      "eloRating": 1506
+      "eloRating": 1506,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR1",
+          "opp": "TRC",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "XLG",
+          "result": "L",
+          "rating": 1525
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR1",
+          "opp": "TEC",
+          "result": "L",
+          "rating": 1506
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR1",
+          "opp": "NOV",
+          "result": "W",
+          "rating": 1550
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR2",
+          "opp": "TRC",
+          "result": "L",
+          "rating": 1506
+        }
+      ]
     },
     {
       "name": "Xi Lai Gaming",
@@ -21996,7 +24261,58 @@
           ]
         }
       ],
-      "eloRating": 1463
+      "eloRating": 1463,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "WLV",
+          "result": "W",
+          "rating": 1525
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR3",
+          "opp": "EDG",
+          "result": "W",
+          "rating": 1538
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UF",
+          "opp": "AG",
+          "result": "L",
+          "rating": 1509
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MF",
+          "opp": "BLG",
+          "result": "W",
+          "rating": 1679
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR1",
+          "opp": "NRG",
+          "result": "L",
+          "rating": 1567
+        },
+        {
+          "event": "Masters Santiago",
+          "rnd": "SR2",
+          "opp": "G2",
+          "result": "L",
+          "rating": 1463
+        }
+      ]
     },
     {
       "name": "Dragon Ranger Gaming",
@@ -22413,7 +24729,51 @@
           ]
         }
       ],
-      "eloRating": 1416
+      "eloRating": 1416,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR2",
+          "opp": "JDG",
+          "result": "W",
+          "rating": 1512
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "UR3",
+          "opp": "AG",
+          "result": "L",
+          "rating": 1462
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR3",
+          "opp": "TYL",
+          "result": "W",
+          "rating": 1528
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "MR4",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1452
+        },
+        {
+          "event": "China Kickoff",
+          "rnd": "LR5",
+          "opp": "EDG",
+          "result": "L",
+          "rating": 1416
+        }
+      ]
     },
     {
       "name": "Kiwoom DRX",
@@ -22868,7 +25228,58 @@
           ]
         }
       ],
-      "eloRating": 1360
+      "eloRating": 1360,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "UR2",
+          "opp": "FS",
+          "result": "L",
+          "rating": 1450
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR1",
+          "opp": "VRL",
+          "result": "W",
+          "rating": 1497
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "MR2",
+          "opp": "T1",
+          "result": "L",
+          "rating": 1397
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR2",
+          "opp": "ZETA",
+          "result": "W",
+          "rating": 1442
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR3",
+          "opp": "FS",
+          "result": "L",
+          "rating": 1399
+        },
+        {
+          "event": "Pacific Kickoff",
+          "rnd": "LR4",
+          "opp": "PRX",
+          "result": "L",
+          "rating": 1360
+        }
+      ]
     },
     {
       "name": "Eternal Fire",
@@ -23164,7 +25575,44 @@
           ]
         }
       ],
-      "eloRating": 1326
+      "eloRating": 1326,
+      "ratingHistory": [
+        {
+          "event": "Start",
+          "rnd": "",
+          "opp": "",
+          "result": "",
+          "rating": 1500
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "UR1",
+          "opp": "VIT",
+          "result": "L",
+          "rating": 1400
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "MR1",
+          "opp": "TH",
+          "result": "L",
+          "rating": 1307
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR1",
+          "opp": "PCF",
+          "result": "W",
+          "rating": 1372
+        },
+        {
+          "event": "EMEA Kickoff",
+          "rnd": "LR2",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1326
+        }
+      ]
     }
   ],
   "source": "vlr.gg scraper"

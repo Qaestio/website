@@ -17,6 +17,8 @@ all_teams = [t['name'] for t in data['teams']]
 ratings   = {n: 1500.0 for n in all_teams}
 tm_global = {t['name']: t.get('matches', []) for t in data['teams']}
 cursors   = {n: {} for n in all_teams}
+history   = {n: [{'event': 'Start', 'rnd': '', 'opp': '', 'result': '', 'rating': 1500}]
+             for n in all_teams}
 
 kru = next(k for k in all_teams if k.startswith('KR'))
 lev = next(k for k in all_teams if 'LEVIAT' in k)
@@ -260,6 +262,9 @@ def run_event(ev_name, flat_rnd, schedule):
         for ta_r, tb_r in pairs:
             res = apply_match(ta_r, tb_r, ev_name, flat=(rnd == flat_rnd), rnd=rnd)
             if res:
+                w, l, ws, ls = res
+                history[w].append({'event': ev_name, 'rnd': rnd, 'opp': sn(l), 'result': 'W', 'rating': round(ratings[w])})
+                history[l].append({'event': ev_name, 'rnd': rnd, 'opp': sn(w), 'result': 'L', 'rating': round(ratings[l])})
                 results.append((ta_r, tb_r, res))
 
         print(f'\n  -- {rnd} --')
@@ -276,7 +281,8 @@ for ev_name, flat_rnd, schedule in events:
 
 # ── Write ratings back to vct_data.json ───────────────────────
 for team in data['teams']:
-    team['eloRating'] = round(ratings.get(team['name'], 1500))
+    team['eloRating']     = round(ratings.get(team['name'], 1500))
+    team['ratingHistory'] = history.get(team['name'], [])
 
 with open('vct_data.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
