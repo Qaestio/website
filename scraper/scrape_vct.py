@@ -10,7 +10,7 @@ Usage:
 Requirements:  pip install requests beautifulsoup4
 """
 
-import json, time, re, sys
+import json, time, re, sys, subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -835,3 +835,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print('\nRunning calc_ratings.py …')
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'calc_ratings.py')], check=True)
