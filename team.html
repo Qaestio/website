@@ -170,6 +170,34 @@
             gap: 0.45rem;
         }
 
+        .older-matches {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .older-matches-list {
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .older-matches-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 0.78rem;
+            padding: 0.4rem 0.8rem;
+            text-align: left;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .older-matches-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
         /* ── Match card ── */
         .match-card {
             background: var(--surface);
@@ -964,7 +992,11 @@ function renderTeam(team) {
         const matchList = document.createElement('div');
         matchList.className = 'match-list';
 
-        for (const m of matches) {
+        const reversedMatches = [...matches].reverse();
+        const visibleMatches = reversedMatches.slice(0, 3);
+        const hiddenMatches = reversedMatches.slice(3);
+
+        function buildMatchCard(m) {
             const isWin = m.result === 'W';
             const [ms1, ms2] = m.matchScore || [0, 0];
 
@@ -1029,7 +1061,37 @@ function renderTeam(team) {
                 card.appendChild(hdr);
             }
 
-            matchList.appendChild(card);
+            return card;
+        }
+
+        for (const m of visibleMatches) {
+            matchList.appendChild(buildMatchCard(m));
+        }
+
+        if (hiddenMatches.length > 0) {
+            const olderSection = document.createElement('div');
+            olderSection.className = 'older-matches';
+
+            const olderList = document.createElement('div');
+            olderList.className = 'older-matches-list';
+            olderList.style.display = 'none';
+            for (const m of hiddenMatches) {
+                olderList.appendChild(buildMatchCard(m));
+            }
+
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'older-matches-toggle';
+            toggleBtn.textContent = `Show ${hiddenMatches.length} older match${hiddenMatches.length === 1 ? '' : 'es'}`;
+            toggleBtn.addEventListener('click', () => {
+                const isHidden = olderList.style.display === 'none';
+                olderList.style.display = isHidden ? 'flex' : 'none';
+                toggleBtn.textContent = isHidden
+                    ? `Hide older match${hiddenMatches.length === 1 ? '' : 'es'}`
+                    : `Show ${hiddenMatches.length} older match${hiddenMatches.length === 1 ? '' : 'es'}`;
+            });
+
+            olderSection.append(toggleBtn, olderList);
+            matchList.appendChild(olderSection);
         }
 
         leftCol.appendChild(matchList);
