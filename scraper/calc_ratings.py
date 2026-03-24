@@ -14,10 +14,25 @@ NAME_MAP = {
 def R(n): return NAME_MAP.get(n, n)
 
 all_teams = [t['name'] for t in data['teams']]
-ratings   = {n: 1500.0 for n in all_teams}
+
+# Regional starting ratings — derived from finishing positions across the
+# four most recent international tournaments (Bangkok, Toronto, Champs, Santiago).
+# Pacific dominated (3 wins), Americas consistent top-3, EMEA consistent 4th,
+# China strong in 2024 but fell off in 2025.
+REGION_RATINGS = {
+    'pacific':  1600.0,
+    'americas': 1550.0,
+    'emea':     1475.0,
+    'china':    1450.0,
+}
+region_map   = {t['name']: t.get('region', 'americas') for t in data['teams']}
+start_rating = {n: REGION_RATINGS.get(region_map.get(n, 'americas'), 1500.0)
+                for n in all_teams}
+
+ratings   = dict(start_rating)
 tm_global = {t['name']: t.get('matches', []) for t in data['teams']}
 cursors   = {n: {} for n in all_teams}
-history   = {n: [{'event': 'Start', 'rnd': '', 'opp': '', 'result': '', 'rating': 1500}]
+history   = {n: [{'event': 'Start', 'rnd': '', 'opp': '', 'result': '', 'rating': round(start_rating[n])}]
              for n in all_teams}
 
 kru = next(k for k in all_teams if k.startswith('KR'))
@@ -35,36 +50,18 @@ def get_match(ta, tb, ev):
     return None
 
 X         = 200   # rating_diff divisor (upset scaling)
-CAP       = 175   # base delta cap (before round multipliers)
-WIN_FLOOR = 70    # minimum rating gain per win — prevents tiny-upset or
-                  # weak-opponent wins from being offset by a single larger loss
+CAP       = 175   # base delta cap (before round multiplier)
+WIN_FLOOR = 35    # minimum transfer per match (symmetric — winner gains, loser loses same)
 
 # Deep rounds use a flat base (not map-diff) so a 3-2 series is equal to a 3-0 sweep
 # in terms of "you won this stage". Map margin still matters in earlier rounds.
 FINALS_ROUNDS = {'UF', 'MF', 'LF', 'GF', 'SF'}
 FINALS_BASE   = 80   # flat base for finals-stage matches
 
-# Per-round win multiplier: upper-bracket finals (UF) worth more than lower-bracket (MF)
-ROUND_WIN_MULT = {
-    'GF':4.0,
-    'UF':3.5, 'LF':3.2,
-    'MF':1.5,
-    'SF':1.8,
-    'QF':1.3,
-    'MR4':1.4, 'LR5':1.4,
-    'LR4':1.2, 'MR3':1.15,
-    'LR3':1.1,
-    'SR3':1.1,
-}
-
-# Per-round loss multiplier: deep rounds hurt less — reaching the GF is an achievement
-ROUND_LOSS_MULT = {
-    'GF':0.25, 'LF':0.35, 'UF':0.35, 'MF':0.35,
-    'SF':0.5,  'QF':0.65,
-    'MR4':0.75, 'LR5':0.75,
-    'LR4':0.82, 'MR3':0.85,
-    'LR3':0.9,  'SR3':0.9,
-}
+# All rounds use a flat 1.0 multiplier; Bo5 matches get a small bonus
+# detected dynamically from the match score (winner reached 3 maps).
+ROUND_MULT = {}
+BO5_MULT   = 1.5   # applied on top of ROUND_MULT for Bo5 series
 
 def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
     ta, tb = R(ta_r), R(tb_r)
@@ -79,8 +76,7 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
     # match entry if the two teams meet again later in the same event.
     # Guard with `in cursors` in case a NAME_MAP alias doesn't match the stored
     # team name exactly (the look-up would be a silent no-op, which is safe).
-    if tb in cursors:
-        get_match(tb, ta, ev)
+    m_tb = get_match(tb, ta, ev) if tb in cursors else None
 
     ms       = m['matchScore']
     # Use the stored result flag (from ta's perspective) rather than comparing
@@ -114,15 +110,17 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
 
     delta = max(0, min(CAP, delta))
 
-    # Default 1.2/0.85 for rounds not explicitly listed (early/mid rounds such as
-    # UR1-3, MR1-2, LR1-2, SR1-2).  This ensures wins always give a systematic
-    # advantage over losses, so a team with more wins can't end up below a team
-    # with zero wins in the same region.
-    win_mult  = ROUND_WIN_MULT.get(rnd, 1.2)
-    loss_mult = ROUND_LOSS_MULT.get(rnd, 0.85)
+    bo5      = max(ms) >= 3   # winner needed 3 maps → Bo5 series
+    mult     = ROUND_MULT.get(rnd, 1.0) * (BO5_MULT if bo5 else 1.0)
+    transfer = max(delta * mult, WIN_FLOOR)
 
-    ratings[w] += max(delta * win_mult, WIN_FLOOR)
-    ratings[l] -= delta * loss_mult
+    # Store each team's pre-match opponent rating before the transfer
+    m['oppRating'] = round(ratings[tb])
+    if m_tb:
+        m_tb['oppRating'] = round(ratings[ta])
+
+    ratings[w] += transfer
+    ratings[l] -= transfer
 
     return w, l, max(ms), min(ms)
 

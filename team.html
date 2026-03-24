@@ -249,11 +249,16 @@
         .match-opponent {
             font-size: 0.88rem;
             font-weight: 600;
-            flex: 1;
-            min-width: 0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .opp-rating {
+            font-size: 0.72rem;
+            color: var(--dim);
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .match-event-label {
@@ -1026,11 +1031,15 @@ function renderTeam(team) {
             oppEl.className = 'match-opponent';
             oppEl.textContent = m.opponent;
 
+            const oppRatingEl = document.createElement('span');
+            oppRatingEl.className = 'opp-rating';
+            oppRatingEl.textContent = m.oppRating != null ? `(${m.oppRating})` : '';
+
             const eventEl = document.createElement('span');
             eventEl.className = 'match-event-label';
             eventEl.textContent = m.event || '';
 
-            hdr.append(resBadge, scoreBadge, vsText, oppEl, eventEl);
+            hdr.append(resBadge, scoreBadge, vsText, oppEl, oppRatingEl, eventEl);
 
             const maps = m.maps || [];
             if (maps.length > 0) {

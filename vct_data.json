@@ -128,7 +128,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -204,7 +205,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -280,7 +282,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "Americas Kickoff",
@@ -349,7 +352,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1482
         },
         {
           "event": "Americas Kickoff",
@@ -418,7 +422,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1565
         },
         {
           "event": "Americas Kickoff",
@@ -487,7 +492,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1593
         },
         {
           "event": "Americas Kickoff",
@@ -563,7 +569,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1745
         },
         {
           "event": "Americas Kickoff",
@@ -632,73 +639,74 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1529
         }
       ],
-      "eloRating": 1787,
+      "eloRating": 1655,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "LEV",
           "result": "W",
-          "rating": 1570
+          "rating": 1600
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "G2",
           "result": "L",
-          "rating": 1555
+          "rating": 1565
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "LOUD",
           "result": "W",
-          "rating": 1625
+          "rating": 1613
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR2",
           "opp": "SEN",
           "result": "W",
-          "rating": 1744
+          "rating": 1712
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR3",
           "opp": "NRG",
           "result": "L",
-          "rating": 1671
+          "rating": 1639
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR3",
           "opp": "EG",
           "result": "W",
-          "rating": 1789
+          "rating": 1745
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR4",
           "opp": "C9",
           "result": "W",
-          "rating": 1860
+          "rating": 1780
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR5",
           "opp": "NRG",
           "result": "L",
-          "rating": 1787
+          "rating": 1655
         }
       ]
     },
@@ -810,7 +818,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -879,7 +888,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -948,7 +958,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Americas Kickoff",
@@ -1024,7 +1035,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1615
         },
         {
           "event": "Americas Kickoff",
@@ -1093,7 +1105,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1532
         },
         {
           "event": "Americas Kickoff",
@@ -1162,7 +1175,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1527
         },
         {
           "event": "Americas Kickoff",
@@ -1238,66 +1252,67 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1745
         }
       ],
-      "eloRating": 1724,
+      "eloRating": 1710,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "LOUD",
           "result": "W",
-          "rating": 1620
+          "rating": 1650
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "NRG",
           "result": "L",
-          "rating": 1569
+          "rating": 1600
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "LEV",
           "result": "W",
-          "rating": 1686
+          "rating": 1700
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR2",
           "opp": "ENVY",
           "result": "W",
-          "rating": 1756
+          "rating": 1754
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR3",
           "opp": "G2",
           "result": "L",
-          "rating": 1658
+          "rating": 1643
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR3",
           "opp": "LEV",
           "result": "W",
-          "rating": 1772
+          "rating": 1745
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR4",
           "opp": "100T",
           "result": "L",
-          "rating": 1724
+          "rating": 1710
         }
       ]
     },
@@ -1416,7 +1431,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -1485,7 +1501,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1447
         },
         {
           "event": "Americas Kickoff",
@@ -1554,7 +1571,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1402
         },
         {
           "event": "Americas Kickoff",
@@ -1623,7 +1641,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1561
         },
         {
           "event": "Americas Kickoff",
@@ -1692,52 +1711,53 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1639
         }
       ],
-      "eloRating": 1522,
+      "eloRating": 1487,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "ENVY",
           "result": "L",
-          "rating": 1458
+          "rating": 1500
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "SEN",
           "result": "L",
-          "rating": 1439
+          "rating": 1465
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR1",
           "opp": "LOUD",
           "result": "W",
-          "rating": 1549
+          "rating": 1558
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR2",
           "opp": "ENVY",
           "result": "W",
-          "rating": 1619
+          "rating": 1593
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR3",
           "opp": "100T",
           "result": "L",
-          "rating": 1522
+          "rating": 1487
         }
       ]
     },
@@ -1856,7 +1876,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -1925,7 +1946,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -2001,7 +2023,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1585
         },
         {
           "event": "Americas Kickoff",
@@ -2091,7 +2114,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1620
         },
         {
           "event": "Masters Santiago",
@@ -2167,7 +2191,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1881
         },
         {
           "event": "Masters Santiago",
@@ -2243,59 +2268,60 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1675
         }
       ],
-      "eloRating": 1986,
+      "eloRating": 1807,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "KRU",
           "result": "W",
-          "rating": 1570
+          "rating": 1600
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "SEN",
           "result": "W",
-          "rating": 1690
+          "rating": 1703
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR3",
           "opp": "G2",
           "result": "W",
-          "rating": 1760
+          "rating": 1756
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UF",
           "opp": "MIBR",
           "result": "W",
-          "rating": 2066
+          "rating": 1886
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "PRX",
           "result": "L",
-          "rating": 2021
+          "rating": 1851
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "BBL",
           "result": "L",
-          "rating": 1986
+          "rating": 1807
         }
       ]
     },
@@ -2414,7 +2440,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -2490,7 +2517,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1565
         },
         {
           "event": "Americas Kickoff",
@@ -2559,38 +2587,39 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1400
         }
       ],
-      "eloRating": 1399,
+      "eloRating": 1415,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "FUR",
           "result": "L",
-          "rating": 1458
+          "rating": 1500
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "ENVY",
           "result": "L",
-          "rating": 1416
+          "rating": 1450
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR1",
           "opp": "LEV",
           "result": "L",
-          "rating": 1399
+          "rating": 1415
         }
       ]
     },
@@ -2709,7 +2738,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -2778,7 +2808,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Americas Kickoff",
@@ -2847,7 +2878,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "Americas Kickoff",
@@ -2910,7 +2942,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1383
         },
         {
           "event": "Americas Kickoff",
@@ -2979,52 +3012,53 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1643
         }
       ],
-      "eloRating": 1464,
+      "eloRating": 1425,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "100T",
           "result": "L",
-          "rating": 1458
+          "rating": 1500
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "C9",
           "result": "L",
-          "rating": 1375
+          "rating": 1400
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR1",
           "opp": "KRU",
           "result": "W",
-          "rating": 1445
+          "rating": 1435
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR2",
           "opp": "SEN",
           "result": "W",
-          "rating": 1557
+          "rating": 1527
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR3",
           "opp": "C9",
           "result": "L",
-          "rating": 1464
+          "rating": 1425
         }
       ]
     },
@@ -3136,7 +3170,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -3212,7 +3247,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1565
         },
         {
           "event": "Americas Kickoff",
@@ -3281,38 +3317,39 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         }
       ],
-      "eloRating": 1297,
+      "eloRating": 1308,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "C9",
           "result": "L",
-          "rating": 1415
+          "rating": 1450
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "100T",
           "result": "L",
-          "rating": 1375
+          "rating": 1402
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR1",
           "opp": "EG",
           "result": "L",
-          "rating": 1297
+          "rating": 1308
         }
       ]
     },
@@ -3424,7 +3461,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Americas Kickoff",
@@ -3500,7 +3538,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Americas Kickoff",
@@ -3590,7 +3629,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1756
         },
         {
           "event": "Americas Kickoff",
@@ -3666,7 +3706,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1752
         },
         {
           "event": "Americas Kickoff",
@@ -3756,52 +3797,53 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1655
         }
       ],
-      "eloRating": 1550,
+      "eloRating": 1261,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "ENVY",
           "result": "W",
-          "rating": 1570
+          "rating": 1585
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR3",
           "opp": "NRG",
           "result": "W",
-          "rating": 1640
+          "rating": 1620
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UF",
           "opp": "FUR",
           "result": "L",
-          "rating": 1609
+          "rating": 1490
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MF",
           "opp": "G2",
           "result": "L",
-          "rating": 1579
+          "rating": 1371
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LF",
           "opp": "NRG",
           "result": "L",
-          "rating": 1550
+          "rating": 1261
         }
       ]
     },
@@ -3913,7 +3955,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1650
         },
         {
           "event": "Americas Kickoff",
@@ -3989,7 +4032,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1585
         },
         {
           "event": "Americas Kickoff",
@@ -4058,7 +4102,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1712
         },
         {
           "event": "Americas Kickoff",
@@ -4127,7 +4172,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1643
         },
         {
           "event": "Americas Kickoff",
@@ -4196,7 +4242,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1780
         },
         {
           "event": "Americas Kickoff",
@@ -4286,7 +4333,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1371
         },
         {
           "event": "Masters Santiago",
@@ -4355,7 +4403,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1572
         },
         {
           "event": "Masters Santiago",
@@ -4431,7 +4480,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1846
         },
         {
           "event": "Masters Santiago",
@@ -4500,7 +4550,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1702
         },
         {
           "event": "Masters Santiago",
@@ -4576,7 +4627,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1732
         },
         {
           "event": "Masters Santiago",
@@ -4645,7 +4697,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1916
         },
         {
           "event": "Masters Santiago",
@@ -4714,7 +4767,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2101
         },
         {
           "event": "Masters Santiago",
@@ -4797,108 +4851,109 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1965
         }
       ],
-      "eloRating": 2601,
+      "eloRating": 2008,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "C9",
           "result": "W",
-          "rating": 1572
+          "rating": 1600
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR3",
           "opp": "MIBR",
           "result": "L",
-          "rating": 1572
+          "rating": 1565
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR3",
           "opp": "100T",
           "result": "W",
-          "rating": 1671
+          "rating": 1639
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR4",
           "opp": "G2",
           "result": "L",
-          "rating": 1666
+          "rating": 1529
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR5",
           "opp": "100T",
           "result": "W",
-          "rating": 1802
+          "rating": 1655
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LF",
           "opp": "MIBR",
           "result": "W",
-          "rating": 2072
+          "rating": 1764
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "XLG",
           "result": "W",
-          "rating": 2213
+          "rating": 1869
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 2201
+          "rating": 1834
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "TL",
           "result": "W",
-          "rating": 2362
+          "rating": 1947
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "BBL",
           "result": "W",
-          "rating": 2444
+          "rating": 2005
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "PRX",
           "result": "W",
-          "rating": 2667
+          "rating": 2107
         },
         {
           "event": "Masters Santiago",
           "rnd": "UF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2631
+          "rating": 2072
         },
         {
           "event": "Masters Santiago",
           "rnd": "LF",
           "opp": "PRX",
           "result": "L",
-          "rating": 2601
+          "rating": 2008
         }
       ]
     },
@@ -5010,7 +5065,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Americas Kickoff",
@@ -5079,7 +5135,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Americas Kickoff",
@@ -5148,7 +5205,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1613
         },
         {
           "event": "Americas Kickoff",
@@ -5211,45 +5269,46 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1435
         }
       ],
-      "eloRating": 1321,
+      "eloRating": 1291,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "FUR",
           "result": "L",
-          "rating": 1415
+          "rating": 1447
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "EG",
           "result": "W",
-          "rating": 1485
+          "rating": 1482
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR2",
           "opp": "100T",
           "result": "L",
-          "rating": 1401
+          "rating": 1383
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR2",
           "opp": "LEV",
           "result": "L",
-          "rating": 1321
+          "rating": 1291
         }
       ]
     },
@@ -5368,7 +5427,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Americas Kickoff",
@@ -5444,7 +5504,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1703
         },
         {
           "event": "Americas Kickoff",
@@ -5513,7 +5574,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1754
         },
         {
           "event": "Americas Kickoff",
@@ -5582,7 +5644,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1639
         },
         {
           "event": "Americas Kickoff",
@@ -5658,7 +5721,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1490
         },
         {
           "event": "Masters Santiago",
@@ -5727,7 +5791,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1811
         },
         {
           "event": "Masters Santiago",
@@ -5796,7 +5861,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1467
         },
         {
           "event": "Masters Santiago",
@@ -5865,7 +5931,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1927
         },
         {
           "event": "Masters Santiago",
@@ -5934,7 +6001,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1818
         },
         {
           "event": "Masters Santiago",
@@ -6010,7 +6078,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2046
         },
         {
           "event": "Masters Santiago",
@@ -6079,7 +6148,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1719
         },
         {
           "event": "Masters Santiago",
@@ -6155,101 +6225,102 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1873
         }
       ],
-      "eloRating": 2094,
+      "eloRating": 2151,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "100T",
           "result": "W",
-          "rating": 1570
+          "rating": 1585
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR3",
           "opp": "FUR",
           "result": "L",
-          "rating": 1526
+          "rating": 1532
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR3",
           "opp": "C9",
           "result": "W",
-          "rating": 1658
+          "rating": 1643
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR4",
           "opp": "NRG",
           "result": "W",
-          "rating": 1728
+          "rating": 1752
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MF",
           "opp": "MIBR",
           "result": "W",
-          "rating": 1857
+          "rating": 1871
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "PRX",
           "result": "L",
-          "rating": 1751
+          "rating": 1836
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "XLG",
           "result": "W",
-          "rating": 1885
+          "rating": 1934
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "T1",
           "result": "W",
-          "rating": 1955
+          "rating": 2063
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "AG",
           "result": "W",
-          "rating": 2060
+          "rating": 2184
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2005
+          "rating": 2129
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "BBL",
           "result": "W",
-          "rating": 2159
+          "rating": 2243
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "PRX",
           "result": "L",
-          "rating": 2094
+          "rating": 2151
         }
       ]
     },
@@ -6368,7 +6439,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -6437,7 +6509,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "Americas Kickoff",
@@ -6513,7 +6586,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Americas Kickoff",
@@ -6589,7 +6663,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         },
         {
           "event": "Americas Kickoff",
@@ -6658,52 +6733,53 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1558
         }
       ],
-      "eloRating": 1558,
+      "eloRating": 1526,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1550
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR1",
           "opp": "EG",
           "result": "W",
-          "rating": 1570
+          "rating": 1600
         },
         {
           "event": "Americas Kickoff",
           "rnd": "UR2",
           "opp": "MIBR",
           "result": "L",
-          "rating": 1540
+          "rating": 1565
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR1",
           "opp": "KRU",
           "result": "W",
-          "rating": 1610
+          "rating": 1615
         },
         {
           "event": "Americas Kickoff",
           "rnd": "MR2",
           "opp": "C9",
           "result": "L",
-          "rating": 1565
+          "rating": 1561
         },
         {
           "event": "Americas Kickoff",
           "rnd": "LR2",
           "opp": "EG",
           "result": "L",
-          "rating": 1558
+          "rating": 1526
         }
       ]
     },
@@ -6815,7 +6891,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -6884,7 +6961,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -6953,7 +7031,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Pacific Kickoff",
@@ -7029,7 +7108,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1765
         },
         {
           "event": "Pacific Kickoff",
@@ -7105,7 +7185,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1636
         },
         {
           "event": "Pacific Kickoff",
@@ -7174,7 +7255,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1754
         },
         {
           "event": "Pacific Kickoff",
@@ -7243,66 +7325,67 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1586
         }
       ],
-      "eloRating": 1715,
+      "eloRating": 1692,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "GEN",
           "result": "W",
-          "rating": 1620
+          "rating": 1700
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "RRQ",
           "result": "L",
-          "rating": 1569
+          "rating": 1650
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "TS",
           "result": "W",
-          "rating": 1682
+          "rating": 1750
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR2",
           "opp": "GE",
           "result": "W",
-          "rating": 1752
+          "rating": 1785
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR3",
           "opp": "FS",
           "result": "W",
-          "rating": 1822
+          "rating": 1840
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR4",
           "opp": "T1",
           "result": "L",
-          "rating": 1784
+          "rating": 1797
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR5",
           "opp": "PRX",
           "result": "L",
-          "rating": 1715
+          "rating": 1692
         }
       ]
     },
@@ -7414,7 +7497,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -7559,7 +7643,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1753
         },
         {
           "event": "Pacific Kickoff",
@@ -7635,7 +7720,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1785
         },
         {
           "event": "Pacific Kickoff",
@@ -7707,49 +7793,49 @@
           ]
         }
       ],
-      "eloRating": 1532,
+      "eloRating": 1547,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "ZETA",
           "result": "W",
-          "rating": 1620
+          "rating": 1700
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "DRX",
           "result": "W",
-          "rating": 1690
+          "rating": 1753
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR3",
           "opp": "NRF",
           "result": "L",
-          "rating": 1594
+          "rating": 1636
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR3",
           "opp": "DFM",
           "result": "L",
-          "rating": 1549
+          "rating": 1582
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "DRX",
           "result": "L",
-          "rating": 1532
+          "rating": 1547
         }
       ]
     },
@@ -7861,7 +7947,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -7937,7 +8024,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1547
         },
         {
           "event": "Pacific Kickoff",
@@ -8013,7 +8101,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "Pacific Kickoff",
@@ -8089,45 +8178,46 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1730
         }
       ],
-      "eloRating": 1404,
+      "eloRating": 1448,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "DFM",
           "result": "L",
-          "rating": 1415
+          "rating": 1500
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "T1",
           "result": "L",
-          "rating": 1375
+          "rating": 1450
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR1",
           "opp": "VRL",
           "result": "W",
-          "rating": 1445
+          "rating": 1498
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR2",
           "opp": "GE",
           "result": "L",
-          "rating": 1404
+          "rating": 1448
         }
       ]
     },
@@ -8239,7 +8329,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -8315,7 +8406,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -8384,7 +8476,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Pacific Kickoff",
@@ -8460,7 +8553,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1750
         },
         {
           "event": "Pacific Kickoff",
@@ -8536,7 +8630,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1498
         },
         {
           "event": "Pacific Kickoff",
@@ -8612,59 +8707,60 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         }
       ],
-      "eloRating": 1697,
+      "eloRating": 1704,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "VRL",
           "result": "W",
-          "rating": 1620
+          "rating": 1700
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 1594
+          "rating": 1665
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "ZETA",
           "result": "W",
-          "rating": 1708
+          "rating": 1765
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR2",
           "opp": "DFM",
           "result": "L",
-          "rating": 1702
+          "rating": 1730
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR2",
           "opp": "GEN",
           "result": "W",
-          "rating": 1772
+          "rating": 1780
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "PRX",
           "result": "L",
-          "rating": 1697
+          "rating": 1704
         }
       ]
     },
@@ -8783,7 +8879,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         },
         {
           "event": "Pacific Kickoff",
@@ -8852,7 +8949,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1650
         },
         {
           "event": "Pacific Kickoff",
@@ -8928,7 +9026,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1703
         },
         {
           "event": "Pacific Kickoff",
@@ -9004,7 +9103,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1780
         },
         {
           "event": "Pacific Kickoff",
@@ -9149,7 +9249,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1797
         },
         {
           "event": "Pacific Kickoff",
@@ -9232,7 +9333,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1489
         },
         {
           "event": "Masters Santiago",
@@ -9301,7 +9403,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1871
         },
         {
           "event": "Masters Santiago",
@@ -9377,7 +9480,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1869
         },
         {
           "event": "Masters Santiago",
@@ -9453,7 +9557,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1886
         },
         {
           "event": "Masters Santiago",
@@ -9522,7 +9627,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2005
         },
         {
           "event": "Masters Santiago",
@@ -9598,7 +9704,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1781
         },
         {
           "event": "Masters Santiago",
@@ -9674,7 +9781,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2243
         },
         {
           "event": "Masters Santiago",
@@ -9757,7 +9865,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2072
         },
         {
           "event": "Masters Santiago",
@@ -9833,122 +9942,123 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2136
         }
       ],
-      "eloRating": 2654,
+      "eloRating": 1867,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "GE",
           "result": "W",
-          "rating": 1570
+          "rating": 1635
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR3",
           "opp": "RRQ",
           "result": "L",
-          "rating": 1481
+          "rating": 1526
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR3",
           "opp": "T1",
           "result": "L",
-          "rating": 1439
+          "rating": 1475
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "GE",
           "result": "W",
-          "rating": 1531
+          "rating": 1551
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR4",
           "opp": "DRX",
           "result": "W",
-          "rating": 1601
+          "rating": 1586
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR5",
           "opp": "DFM",
           "result": "W",
-          "rating": 1729
+          "rating": 1692
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LF",
           "opp": "RRQ",
           "result": "W",
-          "rating": 2008
+          "rating": 1811
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "G2",
           "result": "W",
-          "rating": 2156
+          "rating": 1846
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "NRG",
           "result": "W",
-          "rating": 2226
+          "rating": 1881
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "FUR",
           "result": "W",
-          "rating": 2316
+          "rating": 1916
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "NRG",
           "result": "L",
-          "rating": 2254
+          "rating": 1813
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "AG",
           "result": "W",
-          "rating": 2339
+          "rating": 1873
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "G2",
           "result": "W",
-          "rating": 2419
+          "rating": 1965
         },
         {
           "event": "Masters Santiago",
           "rnd": "LF",
           "opp": "NRG",
           "result": "W",
-          "rating": 2690
+          "rating": 2030
         },
         {
           "event": "Masters Santiago",
           "rnd": "GF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2654
+          "rating": 1867
         }
       ]
     },
@@ -10060,7 +10170,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         },
         {
           "event": "Pacific Kickoff",
@@ -10129,7 +10240,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1635
         },
         {
           "event": "Pacific Kickoff",
@@ -10219,7 +10331,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1870
         },
         {
           "event": "Pacific Kickoff",
@@ -10295,7 +10408,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1797
         },
         {
           "event": "Pacific Kickoff",
@@ -10378,52 +10492,53 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1692
         }
       ],
-      "eloRating": 1604,
+      "eloRating": 1370,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "DFM",
           "result": "W",
-          "rating": 1572
+          "rating": 1650
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR3",
           "opp": "PRX",
           "result": "W",
-          "rating": 1698
+          "rating": 1759
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UF",
           "opp": "NRF",
           "result": "L",
-          "rating": 1666
+          "rating": 1618
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MF",
           "opp": "T1",
           "result": "L",
-          "rating": 1635
+          "rating": 1489
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LF",
           "opp": "PRX",
           "result": "L",
-          "rating": 1604
+          "rating": 1370
         }
       ]
     },
@@ -10542,7 +10657,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         },
         {
           "event": "Pacific Kickoff",
@@ -10618,7 +10734,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Pacific Kickoff",
@@ -10763,7 +10880,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1526
         },
         {
           "event": "Pacific Kickoff",
@@ -10832,7 +10950,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1840
         },
         {
           "event": "Pacific Kickoff",
@@ -10908,7 +11027,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1618
         },
         {
           "event": "Masters Santiago",
@@ -10977,7 +11097,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1720
         },
         {
           "event": "Masters Santiago",
@@ -11046,7 +11167,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1564
         },
         {
           "event": "Masters Santiago",
@@ -11115,80 +11237,81 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1934
         }
       ],
-      "eloRating": 1924,
+      "eloRating": 1799,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "NRF",
           "result": "L",
-          "rating": 1458
+          "rating": 1547
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "GEN",
           "result": "W",
-          "rating": 1528
+          "rating": 1597
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR2",
           "opp": "DRX",
           "result": "W",
-          "rating": 1650
+          "rating": 1703
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR3",
           "opp": "PRX",
           "result": "W",
-          "rating": 1720
+          "rating": 1754
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR4",
           "opp": "DFM",
           "result": "W",
-          "rating": 1791
+          "rating": 1797
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MF",
           "opp": "RRQ",
           "result": "W",
-          "rating": 1925
+          "rating": 1926
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "TL",
           "result": "L",
-          "rating": 1816
+          "rating": 1823
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "EDG",
           "result": "W",
-          "rating": 1956
+          "rating": 1927
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "G2",
           "result": "L",
-          "rating": 1924
+          "rating": 1799
         }
       ]
     },
@@ -11300,7 +11423,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -11369,7 +11493,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1650
         },
         {
           "event": "Pacific Kickoff",
@@ -11445,38 +11570,39 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1400
         }
       ],
-      "eloRating": 1297,
+      "eloRating": 1353,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "NRF",
           "result": "L",
-          "rating": 1415
+          "rating": 1500
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "DFM",
           "result": "L",
-          "rating": 1335
+          "rating": 1400
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR1",
           "opp": "ZETA",
           "result": "L",
-          "rating": 1297
+          "rating": 1353
         }
       ]
     },
@@ -11588,7 +11714,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -11657,7 +11784,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1665
         },
         {
           "event": "Pacific Kickoff",
@@ -11733,7 +11861,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1400
         },
         {
           "event": "Pacific Kickoff",
@@ -11812,42 +11941,42 @@
           ]
         }
       ],
-      "eloRating": 1365,
+      "eloRating": 1398,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "FS",
           "result": "L",
-          "rating": 1415
+          "rating": 1500
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "GE",
           "result": "L",
-          "rating": 1335
+          "rating": 1400
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR1",
           "opp": "TS",
           "result": "W",
-          "rating": 1405
+          "rating": 1447
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR2",
           "opp": "DRX",
           "result": "L",
-          "rating": 1365
+          "rating": 1398
         }
       ]
     },
@@ -11959,7 +12088,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -12111,38 +12241,39 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         }
       ],
-      "eloRating": 1336,
+      "eloRating": 1402,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "GE",
           "result": "L",
-          "rating": 1415
+          "rating": 1500
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "DRX",
           "result": "L",
-          "rating": 1375
+          "rating": 1450
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR1",
           "opp": "GEN",
           "result": "L",
-          "rating": 1336
+          "rating": 1402
         }
       ]
     },
@@ -12254,7 +12385,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -12330,7 +12462,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1600
         },
         {
           "event": "Pacific Kickoff",
@@ -12399,7 +12532,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1753
         },
         {
           "event": "Pacific Kickoff",
@@ -12489,7 +12623,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1759
         },
         {
           "event": "Masters Santiago",
@@ -12558,7 +12693,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2068
         },
         {
           "event": "Masters Santiago",
@@ -12634,7 +12770,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2184
         },
         {
           "event": "Masters Santiago",
@@ -12703,7 +12840,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2107
         },
         {
           "event": "Masters Santiago",
@@ -12779,73 +12917,74 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2030
         }
       ],
-      "eloRating": 3343,
+      "eloRating": 2299,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR1",
           "opp": "TS",
           "result": "W",
-          "rating": 1620
+          "rating": 1700
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "T1",
           "result": "W",
-          "rating": 1690
+          "rating": 1753
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR3",
           "opp": "FS",
           "result": "W",
-          "rating": 1825
+          "rating": 1870
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UF",
           "opp": "RRQ",
           "result": "W",
-          "rating": 2142
+          "rating": 2011
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "GM",
           "result": "W",
-          "rating": 2212
+          "rating": 2046
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "G2",
           "result": "W",
-          "rating": 2410
+          "rating": 2101
         },
         {
           "event": "Masters Santiago",
           "rnd": "UF",
           "opp": "NRG",
           "result": "W",
-          "rating": 2769
+          "rating": 2136
         },
         {
           "event": "Masters Santiago",
           "rnd": "GF",
           "opp": "PRX",
           "result": "W",
-          "rating": 3343
+          "rating": 2299
         }
       ]
     },
@@ -12964,7 +13103,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -13033,7 +13173,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -13102,7 +13243,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1624
         },
         {
           "event": "EMEA Kickoff",
@@ -13192,7 +13334,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1782
         },
         {
           "event": "Masters Santiago",
@@ -13268,7 +13411,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1947
         },
         {
           "event": "Masters Santiago",
@@ -13344,7 +13488,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1851
         },
         {
           "event": "Masters Santiago",
@@ -13413,66 +13558,67 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2129
         }
       ],
-      "eloRating": 1815,
+      "eloRating": 1604,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "PCF",
           "result": "W",
-          "rating": 1570
+          "rating": 1525
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "FNC",
           "result": "W",
-          "rating": 1690
+          "rating": 1623
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR3",
           "opp": "VIT",
           "result": "W",
-          "rating": 1825
+          "rating": 1658
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UF",
           "opp": "GM",
           "result": "W",
-          "rating": 1895
+          "rating": 1732
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "NRG",
           "result": "L",
-          "rating": 1854
+          "rating": 1675
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "FUR",
           "result": "W",
-          "rating": 1924
+          "rating": 1719
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "G2",
           "result": "L",
-          "rating": 1815
+          "rating": 1604
         }
       ]
     },
@@ -13584,7 +13730,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1525
         },
         {
           "event": "EMEA Kickoff",
@@ -13660,7 +13807,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1375
         },
         {
           "event": "EMEA Kickoff",
@@ -13729,7 +13877,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1472
         },
         {
           "event": "EMEA Kickoff",
@@ -13805,7 +13954,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1516
         },
         {
           "event": "EMEA Kickoff",
@@ -13874,7 +14024,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1687
         },
         {
           "event": "EMEA Kickoff",
@@ -13964,7 +14115,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1708
         },
         {
           "event": "EMEA Kickoff",
@@ -14040,66 +14192,67 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1603
         }
       ],
-      "eloRating": 1632,
+      "eloRating": 1345,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "BBL",
           "result": "L",
-          "rating": 1415
+          "rating": 1377
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "FUT",
           "result": "W",
-          "rating": 1485
+          "rating": 1422
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR2",
           "opp": "TL",
           "result": "W",
-          "rating": 1555
+          "rating": 1458
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR3",
           "opp": "NAVI",
           "result": "W",
-          "rating": 1625
+          "rating": 1492
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR4",
           "opp": "VIT",
           "result": "W",
-          "rating": 1695
+          "rating": 1590
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MF",
           "opp": "GM",
           "result": "L",
-          "rating": 1663
+          "rating": 1462
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LF",
           "opp": "TL",
           "result": "L",
-          "rating": 1632
+          "rating": 1345
         }
       ]
     },
@@ -14211,7 +14364,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -14287,7 +14441,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1377
         },
         {
           "event": "EMEA Kickoff",
@@ -14363,38 +14518,39 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1329
         }
       ],
-      "eloRating": 1336,
+      "eloRating": 1285,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "GM",
           "result": "L",
-          "rating": 1415
+          "rating": 1375
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "FNC",
           "result": "L",
-          "rating": 1375
+          "rating": 1329
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR1",
           "opp": "KC",
           "result": "L",
-          "rating": 1336
+          "rating": 1285
         }
       ]
     },
@@ -14506,7 +14662,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -14575,7 +14732,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -14644,7 +14802,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1624
         },
         {
           "event": "EMEA Kickoff",
@@ -14734,7 +14893,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1658
         },
         {
           "event": "EMEA Kickoff",
@@ -14824,7 +14984,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1590
         },
         {
           "event": "Masters Santiago",
@@ -14893,7 +15054,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1675
         },
         {
           "event": "Masters Santiago",
@@ -14962,7 +15124,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1823
         },
         {
           "event": "Masters Santiago",
@@ -15031,7 +15194,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2011
         },
         {
           "event": "Masters Santiago",
@@ -15107,80 +15271,81 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1697
         }
       ],
-      "eloRating": 2168,
+      "eloRating": 1949,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "FUT",
           "result": "W",
-          "rating": 1620
+          "rating": 1575
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "GX",
           "result": "W",
-          "rating": 1740
+          "rating": 1673
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR3",
           "opp": "NAVI",
           "result": "W",
-          "rating": 1875
+          "rating": 1782
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UF",
           "opp": "BBL",
           "result": "L",
-          "rating": 1868
+          "rating": 1708
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MF",
           "opp": "FNC",
           "result": "W",
-          "rating": 2004
+          "rating": 1835
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "EDG",
           "result": "W",
-          "rating": 2153
+          "rating": 1947
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "TL",
           "result": "W",
-          "rating": 2223
+          "rating": 2068
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2196
+          "rating": 2033
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "AG",
           "result": "L",
-          "rating": 2168
+          "rating": 1949
         }
       ]
     },
@@ -15292,7 +15457,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1575
         },
         {
           "event": "EMEA Kickoff",
@@ -15368,7 +15534,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1425
         },
         {
           "event": "EMEA Kickoff",
@@ -15437,7 +15604,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1518
         },
         {
           "event": "EMEA Kickoff",
@@ -15506,7 +15674,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1589
         },
         {
           "event": "EMEA Kickoff",
@@ -15582,52 +15751,53 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1481
         }
       ],
-      "eloRating": 1423,
+      "eloRating": 1321,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "GM",
           "result": "L",
-          "rating": 1415
+          "rating": 1377
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "PCF",
           "result": "W",
-          "rating": 1485
+          "rating": 1412
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR2",
           "opp": "TH",
           "result": "W",
-          "rating": 1555
+          "rating": 1465
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR3",
           "opp": "VIT",
           "result": "L",
-          "rating": 1467
+          "rating": 1367
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "TL",
           "result": "L",
-          "rating": 1423
+          "rating": 1321
         }
       ]
     },
@@ -15739,7 +15909,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -15815,7 +15986,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1426
         },
         {
           "event": "EMEA Kickoff",
@@ -15891,7 +16063,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1329
         },
         {
           "event": "EMEA Kickoff",
@@ -15967,45 +16140,46 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         }
       ],
-      "eloRating": 1404,
+      "eloRating": 1328,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "NAVI",
           "result": "L",
-          "rating": 1415
+          "rating": 1375
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "TL",
           "result": "L",
-          "rating": 1375
+          "rating": 1329
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR1",
           "opp": "FUT",
           "result": "W",
-          "rating": 1445
+          "rating": 1373
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR2",
           "opp": "TH",
           "result": "L",
-          "rating": 1404
+          "rating": 1328
         }
       ]
     },
@@ -16117,7 +16291,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -16193,7 +16368,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -16262,7 +16438,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1673
         },
         {
           "event": "EMEA Kickoff",
@@ -16338,7 +16515,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1458
         },
         {
           "event": "EMEA Kickoff",
@@ -16407,52 +16585,53 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1510
         }
       ],
-      "eloRating": 1491,
+      "eloRating": 1382,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "KC",
           "result": "W",
-          "rating": 1620
+          "rating": 1575
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "TH",
           "result": "W",
-          "rating": 1690
+          "rating": 1624
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR3",
           "opp": "GM",
           "result": "L",
-          "rating": 1594
+          "rating": 1516
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR3",
           "opp": "FNC",
           "result": "L",
-          "rating": 1586
+          "rating": 1481
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "TH",
           "result": "L",
-          "rating": 1491
+          "rating": 1382
         }
       ]
     },
@@ -16571,7 +16750,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1575
         },
         {
           "event": "EMEA Kickoff",
@@ -16640,7 +16820,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1375
         },
         {
           "event": "EMEA Kickoff",
@@ -16709,7 +16890,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1412
         },
         {
           "event": "EMEA Kickoff",
@@ -16785,7 +16967,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1373
         },
         {
           "event": "EMEA Kickoff",
@@ -16854,7 +17037,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1481
         },
         {
           "event": "EMEA Kickoff",
@@ -16923,59 +17107,60 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1527
         }
       ],
-      "eloRating": 1691,
+      "eloRating": 1568,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "NAVI",
           "result": "L",
-          "rating": 1458
+          "rating": 1426
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "EF",
           "result": "W",
-          "rating": 1571
+          "rating": 1518
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR2",
           "opp": "GX",
           "result": "L",
-          "rating": 1534
+          "rating": 1465
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR2",
           "opp": "KC",
           "result": "W",
-          "rating": 1604
+          "rating": 1510
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "NAVI",
           "result": "W",
-          "rating": 1721
+          "rating": 1609
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR4",
           "opp": "TL",
           "result": "L",
-          "rating": 1691
+          "rating": 1568
         }
       ]
     },
@@ -17094,7 +17279,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1575
         },
         {
           "event": "EMEA Kickoff",
@@ -17170,7 +17356,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1375
         },
         {
           "event": "EMEA Kickoff",
@@ -17239,7 +17426,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1422
         },
         {
           "event": "EMEA Kickoff",
@@ -17315,7 +17503,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1337
         },
         {
           "event": "EMEA Kickoff",
@@ -17391,7 +17580,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1367
         },
         {
           "event": "EMEA Kickoff",
@@ -17460,7 +17650,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1609
         },
         {
           "event": "EMEA Kickoff",
@@ -17536,7 +17727,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1590
         },
         {
           "event": "EMEA Kickoff",
@@ -17612,7 +17804,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1462
         },
         {
           "event": "Masters Santiago",
@@ -17681,7 +17874,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1926
         },
         {
           "event": "Masters Santiago",
@@ -17750,7 +17944,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1947
         },
         {
           "event": "Masters Santiago",
@@ -17819,94 +18014,95 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1834
         }
       ],
-      "eloRating": 2068,
+      "eloRating": 1588,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "VIT",
           "result": "L",
-          "rating": 1458
+          "rating": 1426
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "KC",
           "result": "W",
-          "rating": 1528
+          "rating": 1472
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR2",
           "opp": "FNC",
           "result": "L",
-          "rating": 1509
+          "rating": 1437
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR2",
           "opp": "EF",
           "result": "W",
-          "rating": 1579
+          "rating": 1481
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR3",
           "opp": "GX",
           "result": "W",
-          "rating": 1649
+          "rating": 1527
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR4",
           "opp": "TH",
           "result": "W",
-          "rating": 1719
+          "rating": 1568
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR5",
           "opp": "VIT",
           "result": "W",
-          "rating": 1798
+          "rating": 1603
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LF",
           "opp": "FNC",
           "result": "W",
-          "rating": 2082
+          "rating": 1720
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "T1",
           "result": "W",
-          "rating": 2236
+          "rating": 1823
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "GM",
           "result": "L",
-          "rating": 2200
+          "rating": 1702
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "NRG",
           "result": "L",
-          "rating": 2068
+          "rating": 1588
         }
       ]
     },
@@ -18018,7 +18214,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -18094,7 +18291,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -18163,7 +18361,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1623
         },
         {
           "event": "EMEA Kickoff",
@@ -18232,7 +18431,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         },
         {
           "event": "EMEA Kickoff",
@@ -18301,7 +18501,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1492
         },
         {
           "event": "EMEA Kickoff",
@@ -18377,59 +18578,60 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1568
         }
       ],
-      "eloRating": 1638,
+      "eloRating": 1555,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "EF",
           "result": "W",
-          "rating": 1620
+          "rating": 1575
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR2",
           "opp": "TL",
           "result": "W",
-          "rating": 1690
+          "rating": 1624
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR3",
           "opp": "BBL",
           "result": "L",
-          "rating": 1594
+          "rating": 1589
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR3",
           "opp": "GX",
           "result": "W",
-          "rating": 1713
+          "rating": 1687
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR4",
           "opp": "FNC",
           "result": "L",
-          "rating": 1680
+          "rating": 1590
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR5",
           "opp": "TL",
           "result": "L",
-          "rating": 1638
+          "rating": 1555
         }
       ]
     },
@@ -18548,7 +18750,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -18624,7 +18827,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1377
         },
         {
           "event": "EMEA Kickoff",
@@ -18693,38 +18897,39 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1283
         }
       ],
-      "eloRating": 1400,
+      "eloRating": 1337,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "BBL",
           "result": "L",
-          "rating": 1458
+          "rating": 1425
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "GX",
           "result": "L",
-          "rating": 1448
+          "rating": 1390
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR1",
           "opp": "EF",
           "result": "L",
-          "rating": 1400
+          "rating": 1337
         }
       ]
     },
@@ -18836,7 +19041,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -18905,7 +19111,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -18981,7 +19188,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1485
         },
         {
           "event": "China Kickoff",
@@ -19071,7 +19279,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1520
         },
         {
           "event": "Masters Santiago",
@@ -19140,7 +19349,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2063
         },
         {
           "event": "Masters Santiago",
@@ -19216,7 +19426,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 2033
         },
         {
           "event": "Masters Santiago",
@@ -19292,66 +19503,67 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1813
         }
       ],
-      "eloRating": 2073,
+      "eloRating": 1721,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "NOV",
           "result": "W",
-          "rating": 1620
+          "rating": 1550
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "BLG",
           "result": "W",
-          "rating": 1740
+          "rating": 1647
         },
         {
           "event": "China Kickoff",
           "rnd": "UR3",
           "opp": "DRG",
           "result": "W",
-          "rating": 1810
+          "rating": 1696
         },
         {
           "event": "China Kickoff",
           "rnd": "UF",
           "opp": "XLG",
           "result": "W",
-          "rating": 2116
+          "rating": 1818
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "G2",
           "result": "L",
-          "rating": 2064
+          "rating": 1697
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "GM",
           "result": "W",
-          "rating": 2134
+          "rating": 1781
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 2073
+          "rating": 1721
         }
       ]
     },
@@ -19463,7 +19675,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "China Kickoff",
@@ -19532,7 +19745,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1350
         },
         {
           "event": "China Kickoff",
@@ -19601,7 +19815,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1435
         },
         {
           "event": "China Kickoff",
@@ -19677,7 +19892,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         },
         {
           "event": "China Kickoff",
@@ -19746,7 +19962,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1486
         },
         {
           "event": "China Kickoff",
@@ -19836,7 +20053,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1398
         },
         {
           "event": "China Kickoff",
@@ -19919,66 +20137,67 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1554
         }
       ],
-      "eloRating": 1820,
+      "eloRating": 1393,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "AG",
           "result": "L",
-          "rating": 1415
+          "rating": 1353
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "FPX",
           "result": "W",
-          "rating": 1528
+          "rating": 1443
         },
         {
           "event": "China Kickoff",
           "rnd": "MR2",
           "opp": "TRC",
           "result": "W",
-          "rating": 1650
+          "rating": 1539
         },
         {
           "event": "China Kickoff",
           "rnd": "MR3",
           "opp": "EDG",
           "result": "W",
-          "rating": 1720
+          "rating": 1588
         },
         {
           "event": "China Kickoff",
           "rnd": "MR4",
           "opp": "DRG",
           "result": "W",
-          "rating": 1869
+          "rating": 1687
         },
         {
           "event": "China Kickoff",
           "rnd": "MF",
           "opp": "XLG",
           "result": "L",
-          "rating": 1833
+          "rating": 1514
         },
         {
           "event": "China Kickoff",
           "rnd": "LF",
           "opp": "EDG",
           "result": "L",
-          "rating": 1820
+          "rating": 1393
         }
       ]
     },
@@ -20090,7 +20309,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1550
         },
         {
           "event": "China Kickoff",
@@ -20159,7 +20379,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1485
         },
         {
           "event": "China Kickoff",
@@ -20235,7 +20456,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1539
         },
         {
           "event": "China Kickoff",
@@ -20311,7 +20533,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1518
         },
         {
           "event": "China Kickoff",
@@ -20387,7 +20610,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1679
         },
         {
           "event": "China Kickoff",
@@ -20463,7 +20687,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1387
         },
         {
           "event": "China Kickoff",
@@ -20546,7 +20771,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1514
         },
         {
           "event": "Masters Santiago",
@@ -20615,7 +20841,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1835
         },
         {
           "event": "Masters Santiago",
@@ -20684,80 +20911,81 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1823
         }
       ],
-      "eloRating": 1655,
+      "eloRating": 1459,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "TYL",
           "result": "W",
-          "rating": 1572
+          "rating": 1500
         },
         {
           "event": "China Kickoff",
           "rnd": "UR3",
           "opp": "XLG",
           "result": "L",
-          "rating": 1571
+          "rating": 1465
         },
         {
           "event": "China Kickoff",
           "rnd": "MR3",
           "opp": "BLG",
           "result": "L",
-          "rating": 1527
+          "rating": 1416
         },
         {
           "event": "China Kickoff",
           "rnd": "LR3",
           "opp": "JDG",
           "result": "W",
-          "rating": 1597
+          "rating": 1451
         },
         {
           "event": "China Kickoff",
           "rnd": "LR4",
           "opp": "TYL",
           "result": "W",
-          "rating": 1667
+          "rating": 1508
         },
         {
           "event": "China Kickoff",
           "rnd": "LR5",
           "opp": "DRG",
           "result": "W",
-          "rating": 1737
+          "rating": 1554
         },
         {
           "event": "China Kickoff",
           "rnd": "LF",
           "opp": "BLG",
           "result": "W",
-          "rating": 1860
+          "rating": 1675
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "GM",
           "result": "L",
-          "rating": 1754
+          "rating": 1564
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "T1",
           "result": "L",
-          "rating": 1655
+          "rating": 1459
         }
       ]
     },
@@ -20869,7 +21097,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -20938,7 +21167,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1353
         },
         {
           "event": "China Kickoff",
@@ -21014,38 +21244,39 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1430
         }
       ],
-      "eloRating": 1297,
+      "eloRating": 1218,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "TYL",
           "result": "L",
-          "rating": 1415
+          "rating": 1350
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "BLG",
           "result": "L",
-          "rating": 1335
+          "rating": 1260
         },
         {
           "event": "China Kickoff",
           "rnd": "LR1",
           "opp": "JDG",
           "result": "L",
-          "rating": 1297
+          "rating": 1218
         }
       ]
     },
@@ -21164,7 +21395,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -21240,7 +21472,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -21316,7 +21549,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1400
         },
         {
           "event": "China Kickoff",
@@ -21392,7 +21626,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1260
         },
         {
           "event": "China Kickoff",
@@ -21468,7 +21703,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1387
         },
         {
           "event": "China Kickoff",
@@ -21544,59 +21780,60 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1416
         }
       ],
-      "eloRating": 1641,
+      "eloRating": 1483,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "TEC",
           "result": "W",
-          "rating": 1570
+          "rating": 1500
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "DRG",
           "result": "L",
-          "rating": 1555
+          "rating": 1465
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "TRC",
           "result": "L",
-          "rating": 1534
+          "rating": 1430
         },
         {
           "event": "China Kickoff",
           "rnd": "LR1",
           "opp": "FPX",
           "result": "W",
-          "rating": 1604
+          "rating": 1472
         },
         {
           "event": "China Kickoff",
           "rnd": "LR2",
           "opp": "TEC",
           "result": "W",
-          "rating": 1674
+          "rating": 1518
         },
         {
           "event": "China Kickoff",
           "rnd": "LR3",
           "opp": "EDG",
           "result": "L",
-          "rating": 1641
+          "rating": 1483
         }
       ]
     },
@@ -21708,7 +21945,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -21777,7 +22015,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "China Kickoff",
@@ -21853,38 +22092,39 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1430
         }
       ],
-      "eloRating": 1297,
+      "eloRating": 1218,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "AG",
           "result": "L",
-          "rating": 1415
+          "rating": 1350
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "TYL",
           "result": "L",
-          "rating": 1335
+          "rating": 1260
         },
         {
           "event": "China Kickoff",
           "rnd": "LR1",
           "opp": "WLV",
           "result": "L",
-          "rating": 1297
+          "rating": 1218
         }
       ]
     },
@@ -22003,7 +22243,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -22079,7 +22320,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         },
         {
           "event": "China Kickoff",
@@ -22155,7 +22397,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1590
         },
         {
           "event": "China Kickoff",
@@ -22231,45 +22474,46 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1472
         }
       ],
-      "eloRating": 1442,
+      "eloRating": 1341,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "JDG",
           "result": "L",
-          "rating": 1458
+          "rating": 1400
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "WLV",
           "result": "W",
-          "rating": 1528
+          "rating": 1435
         },
         {
           "event": "China Kickoff",
           "rnd": "MR2",
           "opp": "TYL",
           "result": "L",
-          "rating": 1484
+          "rating": 1387
         },
         {
           "event": "China Kickoff",
           "rnd": "LR2",
           "opp": "JDG",
           "result": "L",
-          "rating": 1442
+          "rating": 1341
         }
       ]
     },
@@ -22388,7 +22632,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -22464,7 +22709,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1465
         },
         {
           "event": "China Kickoff",
@@ -22533,7 +22779,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1443
         },
         {
           "event": "China Kickoff",
@@ -22609,7 +22856,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1472
         },
         {
           "event": "China Kickoff",
@@ -22678,52 +22926,53 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1587
         }
       ],
-      "eloRating": 1420,
+      "eloRating": 1283,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "WLV",
           "result": "L",
-          "rating": 1458
+          "rating": 1400
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "JDG",
           "result": "W",
-          "rating": 1528
+          "rating": 1435
         },
         {
           "event": "China Kickoff",
           "rnd": "MR2",
           "opp": "BLG",
           "result": "L",
-          "rating": 1441
+          "rating": 1339
         },
         {
           "event": "China Kickoff",
           "rnd": "LR2",
           "opp": "WLV",
           "result": "W",
-          "rating": 1511
+          "rating": 1374
         },
         {
           "event": "China Kickoff",
           "rnd": "LR3",
           "opp": "TYL",
           "result": "L",
-          "rating": 1420
+          "rating": 1283
         }
       ]
     },
@@ -22835,7 +23084,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -22904,7 +23154,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -22973,7 +23224,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1350
         },
         {
           "event": "China Kickoff",
@@ -23049,7 +23301,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1435
         },
         {
           "event": "China Kickoff",
@@ -23125,7 +23378,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1436
         },
         {
           "event": "China Kickoff",
@@ -23194,7 +23448,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1374
         },
         {
           "event": "China Kickoff",
@@ -23270,66 +23525,67 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1451
         }
       ],
-      "eloRating": 1770,
+      "eloRating": 1622,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "FPX",
           "result": "W",
-          "rating": 1620
+          "rating": 1550
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "EDG",
           "result": "L",
-          "rating": 1569
+          "rating": 1500
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "NOV",
           "result": "W",
-          "rating": 1682
+          "rating": 1590
         },
         {
           "event": "China Kickoff",
           "rnd": "MR2",
           "opp": "TEC",
           "result": "W",
-          "rating": 1752
+          "rating": 1638
         },
         {
           "event": "China Kickoff",
           "rnd": "MR3",
           "opp": "DRG",
           "result": "L",
-          "rating": 1704
+          "rating": 1587
         },
         {
           "event": "China Kickoff",
           "rnd": "LR3",
           "opp": "TRC",
           "result": "W",
-          "rating": 1815
+          "rating": 1679
         },
         {
           "event": "China Kickoff",
           "rnd": "LR4",
           "opp": "EDG",
           "result": "L",
-          "rating": 1770
+          "rating": 1622
         }
       ]
     },
@@ -23448,7 +23704,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -23517,7 +23774,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1450
         },
         {
           "event": "China Kickoff",
@@ -23593,7 +23851,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1400
         },
         {
           "event": "China Kickoff",
@@ -23669,7 +23928,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1260
         },
         {
           "event": "China Kickoff",
@@ -23745,52 +24005,53 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1339
         }
       ],
-      "eloRating": 1560,
+      "eloRating": 1437,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
           "opp": "TRC",
           "result": "W",
-          "rating": 1570
+          "rating": 1500
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "XLG",
           "result": "L",
-          "rating": 1540
+          "rating": 1465
         },
         {
           "event": "China Kickoff",
           "rnd": "MR1",
           "opp": "TEC",
           "result": "L",
-          "rating": 1523
+          "rating": 1430
         },
         {
           "event": "China Kickoff",
           "rnd": "LR1",
           "opp": "NOV",
           "result": "W",
-          "rating": 1593
+          "rating": 1472
         },
         {
           "event": "China Kickoff",
           "rnd": "LR2",
           "opp": "TRC",
           "result": "L",
-          "rating": 1560
+          "rating": 1437
         }
       ]
     },
@@ -23902,7 +24163,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "China Kickoff",
@@ -23971,7 +24233,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "China Kickoff",
@@ -24061,7 +24324,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1696
         },
         {
           "event": "China Kickoff",
@@ -24151,7 +24415,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1687
         },
         {
           "event": "Masters Santiago",
@@ -24220,7 +24485,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1764
         },
         {
           "event": "Masters Santiago",
@@ -24289,59 +24555,60 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1836
         }
       ],
-      "eloRating": 1571,
+      "eloRating": 1369,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "WLV",
           "result": "W",
-          "rating": 1570
+          "rating": 1485
         },
         {
           "event": "China Kickoff",
           "rnd": "UR3",
           "opp": "EDG",
           "result": "W",
-          "rating": 1640
+          "rating": 1520
         },
         {
           "event": "China Kickoff",
           "rnd": "UF",
           "opp": "AG",
           "result": "L",
-          "rating": 1609
+          "rating": 1398
         },
         {
           "event": "China Kickoff",
           "rnd": "MF",
           "opp": "BLG",
           "result": "W",
-          "rating": 1765
+          "rating": 1572
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "NRG",
           "result": "L",
-          "rating": 1665
+          "rating": 1467
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "G2",
           "result": "L",
-          "rating": 1571
+          "rating": 1369
         }
       ]
     },
@@ -24460,7 +24727,8 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "China Kickoff",
@@ -24536,7 +24804,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1647
         },
         {
           "event": "China Kickoff",
@@ -24612,7 +24881,8 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1638
         },
         {
           "event": "China Kickoff",
@@ -24681,7 +24951,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1588
         },
         {
           "event": "China Kickoff",
@@ -24757,52 +25028,53 @@
               "map": "Corrode",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1508
         }
       ],
-      "eloRating": 1478,
+      "eloRating": 1341,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1450
         },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
           "opp": "JDG",
           "result": "W",
-          "rating": 1570
+          "rating": 1485
         },
         {
           "event": "China Kickoff",
           "rnd": "UR3",
           "opp": "AG",
           "result": "L",
-          "rating": 1526
+          "rating": 1436
         },
         {
           "event": "China Kickoff",
           "rnd": "MR3",
           "opp": "TYL",
           "result": "W",
-          "rating": 1596
+          "rating": 1486
         },
         {
           "event": "China Kickoff",
           "rnd": "MR4",
           "opp": "BLG",
           "result": "L",
-          "rating": 1516
+          "rating": 1387
         },
         {
           "event": "China Kickoff",
           "rnd": "LR5",
           "opp": "EDG",
           "result": "L",
-          "rating": 1478
+          "rating": 1341
         }
       ]
     },
@@ -24890,7 +25162,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         },
         {
           "event": "Pacific Kickoff",
@@ -24966,7 +25239,8 @@
               "map": "Bind",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1500
         },
         {
           "event": "Pacific Kickoff",
@@ -25035,7 +25309,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1597
         },
         {
           "event": "Pacific Kickoff",
@@ -25111,7 +25386,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1447
         },
         {
           "event": "Pacific Kickoff",
@@ -25180,7 +25456,8 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1582
         },
         {
           "event": "Pacific Kickoff",
@@ -25256,59 +25533,60 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1551
         }
       ],
-      "eloRating": 1571,
+      "eloRating": 1538,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1600
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
           "opp": "FS",
           "result": "L",
-          "rating": 1458
+          "rating": 1547
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR1",
           "opp": "VRL",
           "result": "W",
-          "rating": 1528
+          "rating": 1597
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "MR2",
           "opp": "T1",
           "result": "L",
-          "rating": 1441
+          "rating": 1490
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR2",
           "opp": "ZETA",
           "result": "W",
-          "rating": 1511
+          "rating": 1538
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR3",
           "opp": "FS",
           "result": "W",
-          "rating": 1581
+          "rating": 1573
         },
         {
           "event": "Pacific Kickoff",
           "rnd": "LR4",
           "opp": "PRX",
           "result": "L",
-          "rating": 1571
+          "rating": 1538
         }
       ]
     },
@@ -25389,7 +25667,8 @@
               "map": "Abyss",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1475
         },
         {
           "event": "EMEA Kickoff",
@@ -25458,7 +25737,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1426
         },
         {
           "event": "EMEA Kickoff",
@@ -25527,7 +25807,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1390
         },
         {
           "event": "EMEA Kickoff",
@@ -25603,45 +25884,46 @@
               "map": "Pearl",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1437
         }
       ],
-      "eloRating": 1365,
+      "eloRating": 1292,
       "ratingHistory": [
         {
           "event": "Start",
           "rnd": "",
           "opp": "",
           "result": "",
-          "rating": 1500
+          "rating": 1475
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "UR1",
           "opp": "VIT",
           "result": "L",
-          "rating": 1415
+          "rating": 1375
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "MR1",
           "opp": "TH",
           "result": "L",
-          "rating": 1335
+          "rating": 1283
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR1",
           "opp": "PCF",
           "result": "W",
-          "rating": 1405
+          "rating": 1337
         },
         {
           "event": "EMEA Kickoff",
           "rnd": "LR2",
           "opp": "TL",
           "result": "L",
-          "rating": 1365
+          "rating": 1292
         }
       ]
     }

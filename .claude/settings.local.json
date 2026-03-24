@@ -25,7 +25,8 @@
       "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")",
       "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json'', encoding=''utf-8''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")",
       "Bash(for floor:*)",
-      "Bash(do sed:*)"
+      "Bash(do sed:*)",
+      "Bash(find C:UsersbearmOneDriveDocumentsGitHubwebsite -type f -name *.py)"
     ]
   }
 }
