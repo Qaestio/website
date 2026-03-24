@@ -26,7 +26,9 @@
       "Bash(python -c \"import json; d=json.load\\(open\\(''vct_data.json'', encoding=''utf-8''\\)\\); print\\([\\(t[''name''], t.get\\(''eloRating''\\)\\) for t in d[''teams''][:5]]\\)\")",
       "Bash(for floor:*)",
       "Bash(do sed:*)",
-      "Bash(find C:UsersbearmOneDriveDocumentsGitHubwebsite -type f -name *.py)"
+      "Bash(find C:UsersbearmOneDriveDocumentsGitHubwebsite -type f -name *.py)",
+      "Bash(python scraper/_test_map_mult.py)",
+      "Bash(del \"C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\_test_map_mult.py\")"
     ]
   }
 }

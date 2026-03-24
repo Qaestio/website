@@ -98,15 +98,18 @@ def apply_match(ta_r, tb_r, ev, flat=False, rnd=''):
     elif use_flat_base:
         base = FINALS_BASE
         if rating_diff <= 0:
+            # Favourite wins: reward scales with opponent quality
             delta = base * (ratings[l] / 1500)
         else:
-            delta = base * (rating_diff / X)
+            # Upset: same quality base + bonus proportional to gap size
+            delta = base * (ratings[l] / 1500) * (1 + rating_diff / X)
     elif rating_diff <= 0:
         # Favourite wins: scale by opponent quality (weaker opp = less reward)
         delta = 50 * map_diff * (ratings[l] / 1500)
     else:
-        # Upset: scale by magnitude of upset
-        delta = 50 * map_diff * (rating_diff / X)
+        # Upset: same quality base + bonus proportional to gap size
+        # Ensures underdog always earns more than the favourite would have
+        delta = 50 * map_diff * (ratings[l] / 1500) * (1 + rating_diff / X)
 
     delta = max(0, min(CAP, delta))
 
