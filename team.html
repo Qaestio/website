@@ -520,7 +520,7 @@ async function init() {
         return;
     }
 
-    renderTeam(team);
+    renderTeam(team, data.teams || []);
 }
 
 // ── Map statistics ─────────────────────────────────────────────────────────────
@@ -920,7 +920,7 @@ function hexToRgba(hex, alpha) {
 
 // ── Main render ───────────────────────────────────────────────────────────────
 
-function renderTeam(team) {
+function renderTeam(team, allTeams) {
     const r = REGIONS[team.region] || { label: team.region, rawColor: '#888', bg: 'rgba(136,136,136,0.13)' };
 
     document.title = `${team.name} — VCT 2026`;
@@ -968,6 +968,13 @@ function renderTeam(team) {
     recordRow.className = 'hero-record';
     recordRow.appendChild(makeRecordItem('Match', team.matchW, team.matchL));
     recordRow.appendChild(makeRecordItem('Maps',  team.mapW,   team.mapL));
+
+    if (team.eloRating) {
+        const sorted = [...allTeams].sort((a, b) => (b.eloRating || 0) - (a.eloRating || 0));
+        const worldRank = sorted.findIndex(t => t.name === team.name) + 1;
+        recordRow.appendChild(makeStatItem('Rating', Math.round(team.eloRating)));
+        recordRow.appendChild(makeStatItem('World Rank', worldRank ? `#${worldRank}` : '—'));
+    }
 
     info.append(nameEl, badge, recordRow);
     hero.append(logoEl, info);
@@ -1115,6 +1122,23 @@ function renderTeam(team) {
     content.appendChild(grid);
 
     clearStatus();
+}
+
+function makeStatItem(label, value) {
+    const item = document.createElement('div');
+    item.className = 'record-item';
+
+    const lbl = document.createElement('div');
+    lbl.className = 'record-label';
+    lbl.textContent = label;
+
+    const val = document.createElement('div');
+    val.className = 'record-val';
+    val.style.fontVariantNumeric = 'tabular-nums';
+    val.textContent = value;
+
+    item.append(lbl, val);
+    return item;
 }
 
 function makeRecordItem(label, w, l) {
