@@ -850,6 +850,8 @@ def main():
             existing['matches'] = entry['matches'] + existing['matches']
             if not existing['logo'] and entry['logo']:
                 existing['logo'] = entry['logo']
+            if not existing.get('players') and entry.get('players'):
+                existing['players'] = entry['players']
         else:
             entry['franchise'] = True  # all explicitly renamed teams are franchise
             team_map[new_key] = entry

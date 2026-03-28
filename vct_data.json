@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-28T23:34:33.064032+00:00",
+  "lastUpdated": "2026-03-28T23:58:43.620321+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -25316,7 +25316,43 @@
       "matchL": 3,
       "mapW": 8,
       "mapL": 8,
-      "players": [],
+      "players": [
+        {
+          "name": "MaKo",
+          "acs": 203,
+          "rating": 1.05,
+          "fkfd": 1.12,
+          "kpm": 15.8
+        },
+        {
+          "name": "HYUNMIN",
+          "acs": 235,
+          "rating": 1.05,
+          "fkfd": 1.15,
+          "kpm": 17.8
+        },
+        {
+          "name": "free1ng",
+          "acs": 192,
+          "rating": 1.03,
+          "fkfd": 1.0,
+          "kpm": 15.0
+        },
+        {
+          "name": "BeYN",
+          "acs": 182,
+          "rating": 0.98,
+          "fkfd": 1.2,
+          "kpm": 14.1
+        },
+        {
+          "name": "Hermes",
+          "acs": 173,
+          "rating": 0.85,
+          "fkfd": 0.86,
+          "kpm": 13.4
+        }
+      ],
       "matches": [
         {
           "event": "Pacific Kickoff",
@@ -25828,7 +25864,43 @@
       "matchL": 3,
       "mapW": 3,
       "mapL": 6,
-      "players": [],
+      "players": [
+        {
+          "name": "audaz",
+          "acs": 185,
+          "rating": 0.98,
+          "fkfd": 1.33,
+          "kpm": 14.3
+        },
+        {
+          "name": "nekky",
+          "acs": 190,
+          "rating": 0.9,
+          "fkfd": 1.0,
+          "kpm": 14.5
+        },
+        {
+          "name": "Favian",
+          "acs": 191,
+          "rating": 0.85,
+          "fkfd": 0.91,
+          "kpm": 15.2
+        },
+        {
+          "name": "d3mur",
+          "acs": 181,
+          "rating": 0.8,
+          "fkfd": 0.5,
+          "kpm": 14.1
+        },
+        {
+          "name": "sturNN",
+          "acs": 162,
+          "rating": 0.72,
+          "fkfd": 0.58,
+          "kpm": 13.0
+        }
+      ],
       "matches": [
         {
           "event": "EMEA Kickoff",
