@@ -237,19 +237,51 @@ VCT_MAPS = frozenset({
 
 def scrape_match_detail(match_url: str, t1_name: str = '', t2_name: str = '') -> dict:
     """
-    Visit a single match page and return map scores + veto sequence.
-    Returns {'maps': [...], 'veto': [...]}
+    Visit a single match page and return map scores + veto sequence + player rosters.
+    Returns {'maps': [...], 'veto': [...], 't1_players': [...], 't2_players': [...]}
       maps: [{'map': str, 't1_score': int, 't2_score': int}, ...]
       veto: [{'step': int, 'action': 'ban'|'pick'|'decider', 'map': str, 'team': str}, ...]
+      t1_players / t2_players: list of player name strings (up to 5 each)
     t1/t2 correspond to the left/right team on the match listing page.
     """
     soup = fetch(match_url)
     if not soup:
-        return {'maps': [], 'veto': []}
+        return {'maps': [], 'veto': [], 't1_players': [], 't2_players': []}
+
+    roster = _scrape_roster(soup)
+    return {
+        'maps':       _scrape_maps(soup),
+        'veto':       _scrape_veto(soup, t1_name, t2_name),
+        't1_players': roster['t1_players'],
+        't2_players': roster['t2_players'],
+    }
+
+
+def _scrape_roster(soup) -> dict:
+    """
+    Extract the 5-player lineup for each team from a vlr.gg match page.
+    Uses the 'all' (overall) stats game block; falls back to the first map block.
+    Returns {'t1_players': [name, ...], 't2_players': [name, ...]}.
+    The first 5 player names encountered are t1; the next 5 are t2.
+    """
+    game_block = (
+        soup.select_one('.vm-stats-game[data-game-id="all"]') or
+        next(iter(soup.select('.vm-stats-game[data-game-id]')), None)
+    )
+    if not game_block:
+        return {'t1_players': [], 't2_players': []}
+
+    names = []
+    for td in game_block.select('td.mod-player'):
+        name_el = td.select_one('div.text-of')
+        if name_el:
+            name = name_el.get_text(strip=True)
+            if name:
+                names.append(name)
 
     return {
-        'maps': _scrape_maps(soup),
-        'veto': _scrape_veto(soup, t1_name, t2_name),
+        't1_players': names[:5],
+        't2_players': names[5:10],
     }
 
 
@@ -554,13 +586,21 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         team_map[k1]['mapW'] += s1;  team_map[k1]['mapL'] += s2
         team_map[k2]['mapW'] += s2;  team_map[k2]['mapL'] += s1
 
-        # Fetch per-map details + veto sequence from the match page
+        # Fetch per-map details + veto sequence + rosters from the match page
         match_href = match.get('href', '')
-        map_details, veto = [], []
+        map_details, veto, t1_players, t2_players = [], [], [], []
         if match_href:
-            detail     = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+            detail      = scrape_match_detail(BASE + match_href, t1_name, t2_name)
             map_details = detail['maps']
             veto        = detail['veto']
+            t1_players  = detail.get('t1_players', [])
+            t2_players  = detail.get('t2_players', [])
+
+        # Track the most recent lineup for each team (later matches overwrite earlier)
+        if t1_players:
+            team_map[k1]['last_lineup'] = t1_players
+        if t2_players:
+            team_map[k2]['last_lineup'] = t2_players
 
         # Store match history on both teams (flip map scores for t2; veto is shared)
         team_map[k1].setdefault('matches', []).append({
@@ -620,6 +660,8 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
     i_acs    = ci('ACS')
     i_fkpr   = ci('FKPR', 'FK%')
     i_fdpr   = ci('FDPR', 'FD%')
+    i_kpr    = ci('KPR')          # kills per round — optional
+    i_k      = ci('K')            # total kills    — fallback for kpr
 
     if None in (i_rnd, i_rating, i_acs, i_fkpr, i_fdpr):
         print(f'    !  Could not find all required stat columns in: {list(cols.keys())}')
@@ -665,6 +707,14 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
         fkpr   = floatval(i_fkpr)
         fdpr   = floatval(i_fdpr)
 
+        # Kills per round: prefer KPR column; derive from K/Rnd if available
+        if i_kpr is not None:
+            kpr = floatval(i_kpr)
+        elif i_k is not None and rnd > 0:
+            kpr = floatval(i_k) / rnd
+        else:
+            kpr = 0.0
+
         if rnd == 0:
             continue
 
@@ -678,6 +728,7 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
             ex['rating'] = wavg(ex['rating'], rating)
             ex['fkpr']   = wavg(ex['fkpr'],   fkpr)
             ex['fdpr']   = wavg(ex['fdpr'],   fdpr)
+            ex['kpr']    = wavg(ex['kpr'],    kpr)
             ex['rounds'] = total
         else:
             player_map[composite_key] = {
@@ -687,6 +738,7 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
                 'rating':   rating,
                 'fkpr':     fkpr,
                 'fdpr':     fdpr,
+                'kpr':      kpr,
                 'rounds':   rnd,
             }
         rows_added += 1
@@ -698,8 +750,12 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
 
 def assign_players(team_map: dict, player_map: dict):
     """
-    Attach the top-5 players (by rounds played) to each team in team_map.
-    Computes fkfd = fkpr / fdpr.
+    Attach the top-5 players to each team in team_map.
+    If a 'last_lineup' exists (scraped from the most recent match page) only
+    players in that lineup are included — this handles mid-season roster changes
+    such as benchings and substitutions.  Players from the lineup who have no
+    aggregate stats (brand-new signings) are appended with null stats.
+    Computes fkfd = fkpr / fdpr and kpm = kills per map (kpr × 22 rounds avg).
     """
     from collections import defaultdict
     by_team = defaultdict(list)
@@ -709,15 +765,39 @@ def assign_players(team_map: dict, player_map: dict):
     for key, players in by_team.items():
         if key not in team_map:
             continue
-        players.sort(key=lambda p: p['rounds'], reverse=True)
+
+        last_lineup = team_map[key].get('last_lineup', [])
+
+        if last_lineup:
+            # Only keep players who appeared in the most recent match
+            lineup_norm = {norm(n) for n in last_lineup}
+            active = [p for p in players if norm(p['name']) in lineup_norm]
+
+            # Append any lineup players with no recorded stats (e.g. new signings)
+            known_norm = {norm(p['name']) for p in active}
+            for player_name in last_lineup:
+                if norm(player_name) not in known_norm:
+                    active.append({
+                        'name': player_name, 'team_key': key,
+                        'acs': 0.0, 'rating': 0.0,
+                        'fkpr': 0.0, 'fdpr': 0.0, 'kpr': 0.0, 'rounds': 0,
+                    })
+        else:
+            active = players
+
+        active.sort(key=lambda p: p['rounds'], reverse=True)
+
         team_map[key]['players'] = [
             {
                 'name':   p['name'],
-                'acs':    round(p['acs']),
-                'rating': round(p['rating'], 2),
-                'fkfd':   round(p['fkpr'] / p['fdpr'], 2) if p['fdpr'] > 0 else 0.0,
+                'acs':    round(p['acs'])          if p['rounds'] > 0 else None,
+                'rating': round(p['rating'], 2)    if p['rounds'] > 0 else None,
+                'fkfd':   round(p['fkpr'] / p['fdpr'], 2)
+                          if p.get('fdpr', 0) > 0 else None,
+                'kpm':    round(p.get('kpr', 0.0) * 22, 1)
+                          if p['rounds'] > 0 and p.get('kpr', 0.0) > 0 else None,
             }
-            for p in players[:5]
+            for p in active[:5]
         ]
 
 

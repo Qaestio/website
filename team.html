@@ -1203,9 +1203,10 @@ function renderTeam(team, allTeams) {
                 return row;
             }
 
-            statsEl.appendChild(makePlayerStat('ACS', p.acs != null ? p.acs : '—'));
+            statsEl.appendChild(makePlayerStat('ACS',    p.acs    != null ? p.acs              : '—'));
             statsEl.appendChild(makePlayerStat('Rating', p.rating != null ? p.rating.toFixed(2) : '—'));
-            statsEl.appendChild(makePlayerStat('FK/FD', p.fkfd != null ? p.fkfd.toFixed(2) : '—'));
+            statsEl.appendChild(makePlayerStat('FK/FD',  p.fkfd   != null ? p.fkfd.toFixed(2)   : '—'));
+            statsEl.appendChild(makePlayerStat('K/Map',  p.kpm    != null ? p.kpm               : '—'));
 
             card.append(nameEl, statsEl);
             playersGrid.appendChild(card);
