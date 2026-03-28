@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players — VCT 2026</title>
+    <style>
+        :root {
+            --bg:       #0f0f0f;
+            --surface:  #161616;
+            --surface2: #1e1e1e;
+            --border:   #272727;
+            --text:     #e0e0e0;
+            --muted:    #888;
+            --dim:      #4a4a4a;
+
+            --americas-c:  #f0923b;
+            --americas-bg: rgba(240,146,59,0.13);
+            --emea-c:      #f0c040;
+            --emea-bg:     rgba(240,192,64,0.13);
+            --pacific-c:   #5b9cf6;
+            --pacific-bg:  rgba(91,156,246,0.13);
+            --china-c:     #e05252;
+            --china-bg:    rgba(224,82,82,0.13);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            height: 100%;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        body { display: flex; flex-direction: column; overflow: hidden; }
+
+        .hidden { display: none !important; }
+
+        /* ── Topbar ── */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+            height: 52px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+            gap: 1rem;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 0.75rem; }
+        .back-link {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.15s;
+        }
+        .back-link:hover { color: var(--text); }
+        .topbar-title { font-weight: 600; font-size: 1rem; }
+
+        /* ── Controls ── */
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+            height: 48px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+            gap: 0.75rem;
+        }
+
+        .sort-group {
+            display: flex;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .sbtn {
+            background: none;
+            border: none;
+            padding: 0.45rem 0.9rem;
+            font-size: 0.82rem;
+            font-family: inherit;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .sbtn + .sbtn            { border-left: 1px solid var(--border); }
+        .sbtn.active             { background: var(--surface2); color: var(--text); }
+        .sbtn:hover:not(.active) { color: var(--text); }
+
+        /* ── Region filter chips ── */
+        .filters {
+            display: flex;
+            gap: 0.4rem;
+            padding: 0.5rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .chip {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            font-size: 0.78rem;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.15s;
+        }
+        .chip .cdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+        .chip.off   { opacity: 0.3; }
+
+        /* ── Main scroll area ── */
+        .main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 1.25rem 2rem;
+        }
+        .main::-webkit-scrollbar       { width: 5px; }
+        .main::-webkit-scrollbar-track { background: transparent; }
+        .main::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+
+        /* ── Player list ── */
+        .player-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ── Column header ── */
+        .list-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0 0.9rem 0.4rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .lh-rank  { width: 22px; flex-shrink: 0; }
+        .lh-name  { flex: 1.2; min-width: 0; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
+        .lh-team  { flex: 1.4; min-width: 0; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
+        .lh-stats { display: flex; gap: 0.75rem; flex-shrink: 0; }
+        .lh-stat  { width: 62px; text-align: center; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
+        .lh-stat.sort-active { color: var(--text); }
+
+        /* ── Player row ── */
+        .player-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.55rem 0.9rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--rc, var(--border));
+            border-radius: 8px;
+            transition: background 0.1s;
+        }
+        .player-row:hover { background: var(--surface2); }
+
+        .player-rank {
+            font-size: 0.7rem;
+            color: var(--dim);
+            width: 22px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .player-name-col {
+            flex: 1.2;
+            min-width: 0;
+        }
+        .player-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-team-col {
+            flex: 1.4;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .team-logo {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+        .team-logo-ph {
+            width: 22px;
+            height: 22px;
+            background: var(--surface2);
+            border-radius: 2px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55rem;
+            color: var(--dim);
+        }
+        .team-name-text {
+            font-size: 0.82rem;
+            color: var(--muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .player-stats {
+            display: flex;
+            gap: 0.75rem;
+            flex-shrink: 0;
+            align-items: center;
+        }
+        .stat-col {
+            width: 62px;
+            text-align: center;
+        }
+        .stat-val {
+            font-size: 0.87rem;
+            font-weight: 600;
+        }
+        .stat-val.sort-active { color: var(--text); }
+        .stat-val.dim-val     { color: var(--muted); font-weight: 400; }
+
+        /* ── Status ── */
+        .status {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: var(--muted);
+            font-size: 0.88rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .spinner {
+            display: inline-block;
+            width: 18px; height: 18px;
+            border: 2px solid var(--border);
+            border-top-color: var(--muted);
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+            vertical-align: middle;
+            margin-right: 0.4rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .source-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--dim);
+            margin-top: 1.5rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .controls { height: auto; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
+            .player-rank { display: none; }
+            .lh-rank     { display: none; }
+            .player-team-col { display: none; }
+            .lh-team         { display: none; }
+            .stat-col  { width: 50px; }
+            .lh-stat   { width: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+    <div class="topbar-left">
+        <a class="back-link" href="valorant.html">← Teams</a>
+        <span class="topbar-title">VCT 2026 Players</span>
+    </div>
+    <span id="playerCount" style="font-size:0.78rem;color:var(--dim)"></span>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+    <div style="display:flex;align-items:center;gap:0.5rem">
+        <span style="font-size:0.78rem;color:var(--muted)">Sort:</span>
+        <div class="sort-group">
+            <button class="sbtn active" id="sRating" onclick="setSort('rating')">VLR Rating</button>
+            <button class="sbtn"        id="sKpm"    onclick="setSort('kpm')">K / Map</button>
+            <button class="sbtn"        id="sAcs"    onclick="setSort('acs')">ACS</button>
+        </div>
+    </div>
+</div>
+
+<!-- Region filter chips -->
+<div class="filters" id="filters"></div>
+
+<!-- Content -->
+<div class="main">
+    <div id="statusEl" class="status"><span class="spinner"></span> Loading players…</div>
+
+    <div id="listHeader" class="list-header hidden">
+        <div class="lh-rank"></div>
+        <div class="lh-name">Player</div>
+        <div class="lh-team">Team</div>
+        <div class="lh-stats">
+            <div class="lh-stat" id="hRating">Rating</div>
+            <div class="lh-stat" id="hKpm">K / Map</div>
+            <div class="lh-stat" id="hAcs">ACS</div>
+            <div class="lh-stat">FK / FD</div>
+        </div>
+    </div>
+
+    <div id="playerList" class="player-list hidden"></div>
+
+    <div id="sourceNote" class="source-note hidden">
+        Data scraped from <a href="https://vlr.gg" target="_blank" rel="noopener"
+            style="color:var(--muted);text-decoration:none">vlr.gg</a>
+        · <span id="dataMode"></span>
+    </div>
+</div>
+
+<script>
+const REGIONS = {
+    americas: { label: 'Americas', color: 'var(--americas-c)', rawColor: '#f0923b', bg: 'var(--americas-bg)' },
+    emea:     { label: 'EMEA',     color: 'var(--emea-c)',     rawColor: '#f0c040', bg: 'var(--emea-bg)'     },
+    pacific:  { label: 'Pacific',  color: 'var(--pacific-c)',  rawColor: '#5b9cf6', bg: 'var(--pacific-bg)'  },
+    china:    { label: 'China',    color: 'var(--china-c)',    rawColor: '#e05252', bg: 'var(--china-bg)'    },
+};
+
+let allPlayers = [];
+let activeReg  = new Set(Object.keys(REGIONS));
+let sortMode   = 'rating';
+
+// ── Data loading ──────────────────────────────────────────────────────────────
+
+async function loadData() {
+    setStatus('<span class="spinner"></span> Loading players…');
+    document.getElementById('playerList').classList.add('hidden');
+    document.getElementById('listHeader').classList.add('hidden');
+    document.getElementById('sourceNote').classList.add('hidden');
+    allPlayers = [];
+
+    let data;
+    try {
+        const r = await fetch('./vct_data.json', { cache: 'no-cache' });
+        if (!r.ok) throw new Error();
+        data = await r.json();
+    } catch (_) {
+        setStatus(`<div style="color:#e05252">
+            Could not load <code style="font-size:0.85em">vct_data.json</code>.<br>
+            Run <code style="font-size:0.85em">python scraper/scrape_vct.py</code> to generate it, then refresh.
+        </div>`);
+        return;
+    }
+
+    if (!Array.isArray(data?.teams) || data.teams.length < 10) {
+        setStatus('<div style="color:#e05252">Data file is empty or invalid.</div>');
+        return;
+    }
+
+    // Flatten players from all teams
+    for (const team of data.teams) {
+        if (!Array.isArray(team.players)) continue;
+        for (const p of team.players) {
+            allPlayers.push({
+                name:    p.name,
+                acs:     p.acs    ?? null,
+                rating:  p.rating ?? null,
+                fkfd:    p.fkfd   ?? null,
+                kpm:     p.kpm    ?? null,
+                team:    team.name,
+                region:  team.region,
+                logo:    team.logo || '',
+            });
+        }
+    }
+
+    let updatedStr = '';
+    if (data.lastUpdated) {
+        try {
+            const d = new Date(data.lastUpdated);
+            updatedStr = ` · updated ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+        } catch (_) {}
+    }
+    document.getElementById('dataMode').innerHTML = `player stats${updatedStr}`;
+    document.getElementById('sourceNote').classList.remove('hidden');
+
+    buildFilters();
+    render();
+    clearStatus();
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────────
+
+function buildFilters() {
+    const cont = document.getElementById('filters');
+    cont.innerHTML = '';
+    Object.entries(REGIONS).forEach(([k, r]) => {
+        const on   = activeReg.has(k);
+        const chip = document.createElement('div');
+        chip.className = `chip${on ? '' : ' off'}`;
+        chip.style.cssText = on
+            ? `background:${r.bg};border-color:${r.rawColor}44;color:${r.rawColor}`
+            : `background:transparent;border-color:var(--border);color:var(--muted)`;
+
+        const dot = document.createElement('span');
+        dot.className = 'cdot';
+        dot.style.background = r.rawColor;
+
+        chip.appendChild(dot);
+        chip.appendChild(document.createTextNode(r.label));
+        chip.addEventListener('click', () => {
+            if (activeReg.has(k) && activeReg.size > 1) activeReg.delete(k);
+            else activeReg.add(k);
+            buildFilters();
+            render();
+        });
+        cont.appendChild(chip);
+    });
+}
+
+// ── Sort ──────────────────────────────────────────────────────────────────────
+
+function setSort(mode) {
+    sortMode = mode;
+    document.getElementById('sRating').classList.toggle('active', mode === 'rating');
+    document.getElementById('sKpm').classList.toggle('active',    mode === 'kpm');
+    document.getElementById('sAcs').classList.toggle('active',    mode === 'acs');
+    document.getElementById('hRating').classList.toggle('sort-active', mode === 'rating');
+    document.getElementById('hKpm').classList.toggle('sort-active',    mode === 'kpm');
+    document.getElementById('hAcs').classList.toggle('sort-active',    mode === 'acs');
+    render();
+}
+
+function sortedPlayers() {
+    const visible = allPlayers.filter(p => activeReg.has(p.region));
+    const key = sortMode === 'rating' ? 'rating' : sortMode === 'kpm' ? 'kpm' : 'acs';
+    return [...visible].sort((a, b) => (b[key] ?? -Infinity) - (a[key] ?? -Infinity));
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+
+function render() {
+    const list   = document.getElementById('playerList');
+    const header = document.getElementById('listHeader');
+    list.innerHTML = '';
+
+    const players = sortedPlayers();
+    document.getElementById('playerCount').textContent =
+        `${players.length} player${players.length !== 1 ? 's' : ''}`;
+
+    if (players.length === 0) {
+        list.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--muted)">No players to display.</div>';
+        list.classList.remove('hidden');
+        header.classList.add('hidden');
+        return;
+    }
+
+    // Update header highlight
+    document.getElementById('hRating').classList.toggle('sort-active', sortMode === 'rating');
+    document.getElementById('hKpm').classList.toggle('sort-active',    sortMode === 'kpm');
+    document.getElementById('hAcs').classList.toggle('sort-active',    sortMode === 'acs');
+
+    header.classList.remove('hidden');
+
+    players.forEach((p, i) => {
+        const r = REGIONS[p.region];
+
+        const row = document.createElement('div');
+        row.className = 'player-row';
+        row.style.setProperty('--rc', r.rawColor);
+
+        // Rank
+        const rank = document.createElement('span');
+        rank.className = 'player-rank';
+        rank.textContent = `${i + 1}`;
+
+        // Player name
+        const nameCol = document.createElement('div');
+        nameCol.className = 'player-name-col';
+        const nameEl = document.createElement('div');
+        nameEl.className = 'player-name';
+        nameEl.textContent = p.name;
+        nameCol.appendChild(nameEl);
+
+        // Team column
+        const teamCol = document.createElement('div');
+        teamCol.className = 'player-team-col';
+
+        let logoEl;
+        if (p.logo) {
+            logoEl = document.createElement('img');
+            logoEl.className = 'team-logo';
+            logoEl.src = p.logo;
+            logoEl.alt = p.team;
+            logoEl.loading = 'lazy';
+            logoEl.onerror = function () {
+                const ph = document.createElement('div');
+                ph.className = 'team-logo-ph';
+                ph.textContent = p.team.slice(0, 2).toUpperCase();
+                this.replaceWith(ph);
+            };
+        } else {
+            logoEl = document.createElement('div');
+            logoEl.className = 'team-logo-ph';
+            logoEl.textContent = p.team.slice(0, 2).toUpperCase();
+        }
+
+        const teamName = document.createElement('span');
+        teamName.className = 'team-name-text';
+        teamName.textContent = p.team;
+
+        teamCol.append(logoEl, teamName);
+
+        // Stats
+        const stats = document.createElement('div');
+        stats.className = 'player-stats';
+        stats.appendChild(makeStatVal(p.rating, sortMode === 'rating', 2));
+        stats.appendChild(makeStatVal(p.kpm,    sortMode === 'kpm',    1));
+        stats.appendChild(makeStatVal(p.acs,    sortMode === 'acs',    0));
+        stats.appendChild(makeStatVal(p.fkfd,   false,                 2));
+
+        row.append(rank, nameCol, teamCol, stats);
+        list.appendChild(row);
+    });
+
+    list.classList.remove('hidden');
+}
+
+function makeStatVal(value, isActive, decimals) {
+    const col = document.createElement('div');
+    col.className = 'stat-col';
+
+    const val = document.createElement('div');
+    if (value != null) {
+        val.className = `stat-val${isActive ? ' sort-active' : ''}`;
+        val.textContent = decimals === 0 ? Math.round(value) : value.toFixed(decimals);
+    } else {
+        val.className = 'stat-val dim-val';
+        val.textContent = '–';
+    }
+
+    col.appendChild(val);
+    return col;
+}
+
+// ── Status helpers ────────────────────────────────────────────────────────────
+
+function setStatus(html) {
+    const el = document.getElementById('statusEl');
+    el.innerHTML = html;
+    el.classList.remove('hidden');
+}
+
+function clearStatus() {
+    document.getElementById('statusEl').classList.add('hidden');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+
+buildFilters();
+loadData();
+</script>
+</body>
+</html>
