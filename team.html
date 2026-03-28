@@ -297,6 +297,58 @@
         .map-score.win  { color: var(--win); }
         .map-score.loss { color: var(--loss); }
 
+        /* ── Player cards ── */
+        .players-section {
+            margin-top: 1.1rem;
+        }
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.45rem;
+        }
+        @media (max-width: 760px) {
+            .players-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .player-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.65rem 0.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+        .player-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .player-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.22rem;
+        }
+        .player-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.3rem;
+        }
+        .player-stat-label {
+            font-size: 0.58rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+        }
+        .player-stat-val {
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
         /* ── Map stats panel (right column) ── */
         .map-panel {
             background: var(--surface);
@@ -1111,6 +1163,56 @@ function renderTeam(team, allTeams) {
         }
 
         leftCol.appendChild(matchList);
+    }
+
+    // ── Player cards ──────────────────────────────────────────────────────────
+    const players = team.players || [];
+    if (players.length > 0) {
+        const playersSection = document.createElement('div');
+        playersSection.className = 'players-section';
+
+        const playersTitle = document.createElement('div');
+        playersTitle.className = 'section-title';
+        playersTitle.textContent = 'Players';
+        playersSection.appendChild(playersTitle);
+
+        const playersGrid = document.createElement('div');
+        playersGrid.className = 'players-grid';
+
+        for (const p of players) {
+            const card = document.createElement('div');
+            card.className = 'player-card';
+
+            const nameEl = document.createElement('div');
+            nameEl.className = 'player-name';
+            nameEl.textContent = p.name;
+
+            const statsEl = document.createElement('div');
+            statsEl.className = 'player-stats';
+
+            function makePlayerStat(label, value) {
+                const row = document.createElement('div');
+                row.className = 'player-stat';
+                const lbl = document.createElement('span');
+                lbl.className = 'player-stat-label';
+                lbl.textContent = label;
+                const val = document.createElement('span');
+                val.className = 'player-stat-val';
+                val.textContent = value;
+                row.append(lbl, val);
+                return row;
+            }
+
+            statsEl.appendChild(makePlayerStat('ACS', p.acs != null ? p.acs : '—'));
+            statsEl.appendChild(makePlayerStat('Rating', p.rating != null ? p.rating.toFixed(2) : '—'));
+            statsEl.appendChild(makePlayerStat('FK/FD', p.fkfd != null ? p.fkfd.toFixed(2) : '—'));
+
+            card.append(nameEl, statsEl);
+            playersGrid.appendChild(card);
+        }
+
+        playersSection.appendChild(playersGrid);
+        leftCol.appendChild(playersSection);
     }
 
     // Right: rating chart + map statistics
