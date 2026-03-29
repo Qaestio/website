@@ -2375,44 +2375,44 @@
       "mapL": 6,
       "players": [
         {
-          "name": "NagZ",
-          "acs": 158,
-          "rating": 0.95,
-          "fkfd": 0.5,
-          "kpm": 12.3,
-          "vflPts": 1.12
+          "name": "saadhak",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 3.33
         },
         {
-          "name": "mta",
-          "acs": 185,
-          "rating": 0.94,
-          "fkfd": 1.1,
-          "kpm": 14.5,
-          "vflPts": 1.5
+          "name": "mwzera",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 3.33
         },
         {
-          "name": "benG",
-          "acs": 164,
-          "rating": 0.89,
-          "fkfd": 1.17,
-          "kpm": 12.5,
-          "vflPts": 1.25
+          "name": "silentzz",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 5.33
         },
         {
-          "name": "infiltrator",
-          "acs": 206,
-          "rating": 0.86,
-          "fkfd": 0.74,
-          "kpm": 15.4,
-          "vflPts": 1.88
+          "name": "Less",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 3.0
         },
         {
-          "name": "Governor",
-          "acs": 148,
-          "rating": 0.71,
-          "fkfd": 0.42,
-          "kpm": 11.2,
-          "vflPts": 1.0
+          "name": "Dantedeu5",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 6.0
         }
       ],
       "matches": [
@@ -3148,14 +3148,6 @@
           "vflPts": 1.43
         },
         {
-          "name": "pANcada",
-          "acs": 157,
-          "rating": 0.87,
-          "fkfd": 1.67,
-          "kpm": 11.7,
-          "vflPts": 0.71
-        },
-        {
           "name": "cauanzin",
           "acs": 163,
           "rating": 0.79,
@@ -3170,6 +3162,14 @@
           "fkfd": 0.53,
           "kpm": 14.1,
           "vflPts": 1.14
+        },
+        {
+          "name": "erde",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -5073,14 +5073,6 @@
           "vflPts": 2.62
         },
         {
-          "name": "Kyu",
-          "acs": 177,
-          "rating": 0.9,
-          "fkfd": 0.56,
-          "kpm": 13.2,
-          "vflPts": 2.12
-        },
-        {
           "name": "cortezia",
           "acs": 176,
           "rating": 0.85,
@@ -5089,12 +5081,20 @@
           "vflPts": 2.0
         },
         {
-          "name": "N4RRATE",
-          "acs": 187,
-          "rating": 0.8,
-          "fkfd": 1.0,
-          "kpm": 13.6,
-          "vflPts": 2.5
+          "name": "JonahP",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
+        },
+        {
+          "name": "Jerrwin",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -7561,12 +7561,12 @@
           "vflPts": 1.67
         },
         {
-          "name": "thyy",
-          "acs": 169,
-          "rating": 0.78,
-          "fkfd": 0.73,
-          "kpm": 12.5,
-          "vflPts": 1.83
+          "name": "Crws",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -11539,20 +11539,20 @@
           "vflPts": 1.14
         },
         {
-          "name": "TenTen",
-          "acs": 171,
-          "rating": 0.79,
-          "fkfd": 0.7,
-          "kpm": 13.2,
-          "vflPts": 1.0
-        },
-        {
           "name": "Sylvan",
           "acs": 142,
           "rating": 0.75,
           "fkfd": 0.58,
           "kpm": 10.3,
           "vflPts": 0.71
+        },
+        {
+          "name": "Rimuru",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -14548,12 +14548,12 @@
           "vflPts": 1.62
         },
         {
-          "name": "baha",
-          "acs": 159,
-          "rating": 0.68,
-          "fkfd": 0.56,
-          "kpm": 12.1,
-          "vflPts": 1.5
+          "name": "s0pp",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -16123,12 +16123,12 @@
           "vflPts": 2.27
         },
         {
-          "name": "sheydos",
-          "acs": 157,
-          "rating": 0.86,
-          "fkfd": 0.8,
-          "kpm": 12.1,
-          "vflPts": 1.64
+          "name": "N4RRATE",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": 6.67
         }
       ],
       "matches": [
@@ -16499,14 +16499,6 @@
           "vflPts": 3.08
         },
         {
-          "name": "sociablEE",
-          "acs": 172,
-          "rating": 0.85,
-          "fkfd": 0.45,
-          "kpm": 13.4,
-          "vflPts": 2.0
-        },
-        {
           "name": "Filu",
           "acs": 194,
           "rating": 0.84,
@@ -16515,12 +16507,20 @@
           "vflPts": 2.5
         },
         {
-          "name": "Shao",
-          "acs": 150,
-          "rating": 0.78,
-          "fkfd": 1.0,
-          "kpm": 11.2,
-          "vflPts": 1.75
+          "name": "ExiT",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
+        },
+        {
+          "name": "chloric",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -18468,12 +18468,12 @@
           "vflPts": 2.79
         },
         {
-          "name": "UNFAKE",
-          "acs": 149,
-          "rating": 0.83,
-          "fkfd": 0.71,
-          "kpm": 11.2,
-          "vflPts": 2.29
+          "name": "Sayonara",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -26125,20 +26125,20 @@
           "vflPts": 2.11
         },
         {
-          "name": "d3mur",
-          "acs": 181,
-          "rating": 0.8,
-          "fkfd": 0.5,
-          "kpm": 14.1,
-          "vflPts": 2.0
+          "name": "Izzy",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         },
         {
-          "name": "sturNN",
-          "acs": 162,
-          "rating": 0.72,
-          "fkfd": 0.58,
-          "kpm": 13.0,
-          "vflPts": 1.67
+          "name": "echo",
+          "acs": null,
+          "rating": null,
+          "fkfd": null,
+          "kpm": null,
+          "vflPts": null
         }
       ],
       "matches": [

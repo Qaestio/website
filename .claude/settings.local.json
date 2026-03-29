@@ -32,7 +32,18 @@
       "Bash(grep -n '\"\"name\"\": \"\"Cloud9\"\"' vct_data.json)",
       "Bash(grep -o '\"\"status\"\"\\\\|\"\"active\"\"\\\\|\"\"bench\"\"\\\\|\"\"sub\"\"\\\\|\"\"roster\"\"' vct_data.json)",
       "WebFetch(domain:valorantfantasyleague.net)",
-      "WebFetch(domain:www.valorantfantasyleague.net)"
+      "WebFetch(domain:www.valorantfantasyleague.net)",
+      "Bash(curl -s https://api.valorantfantasyleague.net/api/Player/allplayers?eventId=8)",
+      "Bash(python /c/Python314/python.exe -c \":*)",
+      "Bash(/c/Python314/python.exe -c \":*)",
+      "Bash(ls /tmp/)",
+      "Read(//c/Users/bearm/OneDrive/Documents/GitHub/website/**)",
+      "Bash(echo \"TEMP is: $TEMP\")",
+      "Read(//c/Users/bearm/OneDrive/Documents/GitHub/website/$TEMP/**)",
+      "Bash(/c/Python314/python.exe:*)",
+      "Bash(\"C:/Users/bearm/AppData/Local/Temp/vfl_players.json\")",
+      "Bash(\"C:/Users/bearm/AppData/Local/Temp/extract_json.py\":*)",
+      "Bash(\"C:/Users/bearm/AppData/Local/Temp/compare.py\":*)"
     ]
   }
 }
