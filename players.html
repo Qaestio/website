@@ -310,7 +310,7 @@
         <div class="lh-name">Player</div>
         <div class="lh-team">Team</div>
         <div class="lh-stats">
-            <div class="lh-stat" id="hVfl"    title="VFL Pts/map: kill pts + map win rate + VLR rating threshold bonus. Excludes multi-kill, win margin &amp; series bonuses (no per-map data).">VFL Pts</div>
+            <div class="lh-stat" id="hVfl"    title="VFL Pts/map: scored per map from actual match data. Includes kill pts, map win/loss, win margin, series bonuses, VLR rating rank &amp; threshold bonuses. Excludes multi-kill round bonuses (4K/5K/6K/7K — no per-round data available).">VFL Pts</div>
             <div class="lh-stat" id="hRating">VLR Rtg</div>
             <div class="lh-stat" id="hKpm">K / Map</div>
             <div class="lh-stat" id="hAcs">ACS</div>
@@ -337,38 +337,6 @@ const REGIONS = {
 let allPlayers = [];
 let activeReg  = new Set(Object.keys(REGIONS));
 let sortMode   = 'vfl';
-
-// ── VFL rating (per-map average) ─────────────────────────────────────────────
-// Computable from aggregate stats:
-//   • Kill points (from kills/map)
-//   • Map win pts (team map win rate)
-//   • VLR rating threshold bonus (+1/+2/+3 for 1.5+/1.75+/2.0+), amortised per map
-// Not computable without per-map data:
-//   • Multi-kill round bonuses, win-margin bonuses, series win bonuses,
-//     per-match highest-rated bonuses
-function calcVflRating(player, team) {
-    // 1. Kill points per map
-    const kpm = player.kpm ?? 0;
-    let killPts;
-    if (kpm === 0)       killPts = -3;
-    else if (kpm < 5)   killPts = -1;
-    else if (kpm < 10)  killPts = 0;
-    else                killPts = 1 + Math.floor((kpm - 10) / 5);
-
-    // 2. Map win points (+1 per map won, weighted by team win rate)
-    const totalMaps = (team.mapW ?? 0) + (team.mapL ?? 0);
-    const mapWinPts = totalMaps > 0 ? team.mapW / totalMaps : 0;
-
-    // 3. VLR rating threshold bonus (awarded per series, amortised per map)
-    const rating = player.rating ?? 0;
-    const ratingBonus = rating >= 2.0 ? 3 : rating >= 1.75 ? 2 : rating >= 1.5 ? 1 : 0;
-    const totalMatches = (team.matchW ?? 0) + (team.matchL ?? 0);
-    const avgMapsPerSeries = totalMaps > 0 && totalMatches > 0
-        ? totalMaps / totalMatches : 2.2;
-    const ratingPtsPerMap = ratingBonus / avgMapsPerSeries;
-
-    return killPts + mapWinPts + ratingPtsPerMap;
-}
 
 // ── Data loading ──────────────────────────────────────────────────────────────
 
@@ -401,23 +369,16 @@ async function loadData() {
     for (const team of data.teams) {
         if (!Array.isArray(team.players)) continue;
         for (const p of team.players) {
-            const playerObj = {
+            allPlayers.push({
                 name:   p.name,
                 acs:    p.acs    ?? null,
                 rating: p.rating ?? null,
                 kpm:    p.kpm    ?? null,
+                vfl:    p.vflPts ?? null,
                 team:   team.name,
                 region: team.region,
                 logo:   team.logo || '',
-                mapW:   team.mapW  ?? 0,
-                mapL:   team.mapL  ?? 0,
-                matchW: team.matchW ?? 0,
-                matchL: team.matchL ?? 0,
-            };
-            playerObj.vfl = (p.rating != null && p.kpm != null)
-                ? Math.round(calcVflRating(playerObj, team) * 10) / 10
-                : null;
-            allPlayers.push(playerObj);
+            });
         }
     }
 

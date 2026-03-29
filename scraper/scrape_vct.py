@@ -237,23 +237,23 @@ VCT_MAPS = frozenset({
 
 def scrape_match_detail(match_url: str, t1_name: str = '', t2_name: str = '') -> dict:
     """
-    Visit a single match page and return map scores + veto sequence + player rosters.
-    Returns {'maps': [...], 'veto': [...], 't1_players': [...], 't2_players': [...]}
-      maps: [{'map': str, 't1_score': int, 't2_score': int}, ...]
-      veto: [{'step': int, 'action': 'ban'|'pick'|'decider', 'map': str, 'team': str}, ...]
-      t1_players / t2_players: list of player name strings (up to 5 each)
+    Visit a single match page and return map scores + veto sequence + player rosters
+    + per-map per-player kill/rating stats.
+    Returns {'maps': [...], 'veto': [...], 't1_players': [...], 't2_players': [...],
+             'map_player_stats': [[{name, kills, rating}, ...], ...]}
     t1/t2 correspond to the left/right team on the match listing page.
     """
     soup = fetch(match_url)
     if not soup:
-        return {'maps': [], 'veto': [], 't1_players': [], 't2_players': []}
+        return {'maps': [], 'veto': [], 't1_players': [], 't2_players': [], 'map_player_stats': []}
 
     roster = _scrape_roster(soup)
     return {
-        'maps':       _scrape_maps(soup),
-        'veto':       _scrape_veto(soup, t1_name, t2_name),
-        't1_players': roster['t1_players'],
-        't2_players': roster['t2_players'],
+        'maps':             _scrape_maps(soup),
+        'veto':             _scrape_veto(soup, t1_name, t2_name),
+        't1_players':       roster['t1_players'],
+        't2_players':       roster['t2_players'],
+        'map_player_stats': _scrape_map_player_stats(soup),
     }
 
 
@@ -283,6 +283,65 @@ def _scrape_roster(soup) -> dict:
         't1_players': names[:5],
         't2_players': names[5:10],
     }
+
+
+def _scrape_map_player_stats(soup) -> list[list[dict]]:
+    """
+    Return per-map per-player kills and VLR rating, in map order (excluding the 'all' block).
+    Result: [ [{'name': str, 'kills': int, 'rating': float|None}, ...], ... ]
+    One inner list per map played.
+    """
+    result = []
+    for game in soup.select('.vm-stats-game[data-game-id]'):
+        if game.get('data-game-id') == 'all':
+            continue
+        table = game.select_one('table')
+        if not table:
+            result.append([])
+            continue
+
+        headers = [th.get_text(strip=True) for th in table.select('thead th')]
+        cols    = {h: i for i, h in enumerate(headers)}
+        k_col   = cols.get('K')
+        r_col   = next((cols[h] for h in ('R2.0', 'Rating', 'R', 'Rtg') if h in cols), None)
+
+        if k_col is None:
+            result.append([])
+            continue
+
+        players = []
+        for row in table.select('tbody tr'):
+            tds       = row.select('td')
+            player_td = row.select_one('td.mod-player')
+            if not player_td:
+                continue
+            name_el = player_td.select_one('div.text-of')
+            if not name_el:
+                continue
+            name = name_el.get_text(strip=True)
+            if not name:
+                continue
+
+            try:
+                k_td = tds[k_col]
+                both = k_td.select_one('.mod-both')
+                kills = int((both or k_td).get_text(strip=True))
+            except (ValueError, IndexError):
+                kills = 0
+
+            rating = None
+            if r_col is not None and r_col < len(tds):
+                try:
+                    r_td = tds[r_col]
+                    both_r = r_td.select_one('.mod-both')
+                    rating = float((both_r or r_td).get_text(strip=True))
+                except (ValueError, IndexError):
+                    pass
+
+            players.append({'name': name, 'kills': kills, 'rating': rating})
+
+        result.append(players)
+    return result
 
 
 def _scrape_maps(soup) -> list[dict]:
@@ -518,12 +577,130 @@ def _scrape_veto(soup, t1_name: str, t2_name: str) -> list[dict]:
     return veto
 
 
-def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label: str):
+def calc_vfl_for_match(match_score, map_details, map_player_stats, t1_players, t2_players):
+    """
+    Compute VFL fantasy points per player for a single match.
+
+    Scoring implemented:
+      Kills per map: 0k=-3, 1-4k=-1, 5-9k=0, 10k=+1 (+1 per 5 above 10)
+      Map win: +1; 13-0 win: +5; 0-13 loss: -5
+      Win margin: +2 (10+), +1 (5-9); Loss margin: -1 (10+)
+      Series win bonus: 2-0=+2, 3-0=+4, 3-1=+1
+      VLR rating rank: #1=+3, #2=+2, #3=+1 (avg across match)
+      VLR rating threshold: 1.5+=+1, 1.75+=+2, 2.0+=+3
+    Not scored (no per-round data): multi-kill round bonuses (4K/5K/6K/7K).
+
+    Returns: {player_name_lower: {'vfl': float, 'maps': int}}
+    """
+    if not map_player_stats or not t1_players or not t2_players:
+        return {}
+
+    t1_lower = {n.lower() for n in t1_players}
+    t2_lower = {n.lower() for n in t2_players}
+    name_canon = {n.lower(): n for n in t1_players + t2_players}
+
+    vfl        = {}   # canonical_name -> vfl total
+    maps_count = {}   # canonical_name -> maps played
+    rating_sum = {}   # canonical_name -> sum of per-map ratings
+    rating_cnt = {}   # canonical_name -> maps with a rating value
+
+    def add(name, pts):
+        vfl[name] = vfl.get(name, 0.0) + pts
+
+    t1_map_wins, t2_map_wins = match_score
+
+    # ── Per-map scoring ───────────────────────────────────────────────────────
+    for i, players in enumerate(map_player_stats):
+        if i >= len(map_details):
+            break
+        md   = map_details[i]
+        t1s  = md['t1_score']
+        t2s  = md['t2_score']
+        t1_won = t1s > t2s
+        margin = abs(t1s - t2s)
+
+        for p in players:
+            nl = p['name'].lower()
+            if nl not in name_canon:
+                continue
+            canon = name_canon[nl]
+            maps_count[canon] = maps_count.get(canon, 0) + 1
+
+            # Kill points
+            k = p['kills']
+            if k == 0:      kpts = -3
+            elif k <= 4:    kpts = -1
+            elif k < 10:    kpts =  0
+            else:           kpts =  1 + (k - 10) // 5
+            add(canon, kpts)
+
+            p_t1  = nl in t1_lower
+            p_won = (p_t1 and t1_won) or (not p_t1 and not t1_won)
+
+            if p_won:
+                add(canon, 1)   # map win
+                # Perfect-map bonus
+                own_s, opp_s = (t1s, t2s) if p_t1 else (t2s, t1s)
+                if own_s == 13 and opp_s == 0:
+                    add(canon, 5)
+                # Win margin
+                if margin >= 10:   add(canon,  2)
+                elif margin >= 5:  add(canon,  1)
+            else:
+                # Perfect-map loss penalty
+                own_s, opp_s = (t1s, t2s) if p_t1 else (t2s, t1s)
+                if own_s == 0 and opp_s == 13:
+                    add(canon, -5)
+                # Loss margin
+                if margin >= 10:   add(canon, -1)
+
+            r = p.get('rating')
+            if r is not None:
+                rating_sum[canon] = rating_sum.get(canon, 0.0) + r
+                rating_cnt[canon] = rating_cnt.get(canon, 0)  + 1
+
+    if not vfl:
+        return {}
+
+    # ── Series win bonus ──────────────────────────────────────────────────────
+    def series_bonus(won, lost):
+        if won == 2 and lost == 0: return 2
+        if won == 3 and lost == 0: return 4
+        if won == 3 and lost == 1: return 1
+        return 0
+
+    t1_bonus = series_bonus(t1_map_wins, t2_map_wins)
+    t2_bonus = series_bonus(t2_map_wins, t1_map_wins)
+
+    for canon in list(vfl):
+        add(canon, t1_bonus if canon.lower() in t1_lower else t2_bonus)
+
+    # ── Rating-based bonuses ──────────────────────────────────────────────────
+    avg_ratings = {n: rating_sum[n] / rating_cnt[n]
+                   for n in rating_sum if rating_cnt.get(n, 0) > 0}
+
+    # Rank bonuses: #1=+3, #2=+2, #3=+1
+    for rank, (canon, _) in enumerate(
+            sorted(avg_ratings.items(), key=lambda x: x[1], reverse=True)[:3], 1):
+        add(canon, 4 - rank)
+
+    # Threshold bonuses
+    for canon, avg_r in avg_ratings.items():
+        if avg_r >= 2.0:       add(canon, 3)
+        elif avg_r >= 1.75:    add(canon, 2)
+        elif avg_r >= 1.5:     add(canon, 1)
+
+    return {n: {'vfl': vfl[n], 'maps': maps_count.get(n, 0)} for n in vfl}
+
+
+def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label: str,
+                   vfl_map: dict):
     """
     Scrape the event matches page.
     • Registers any new teams (with correct region).
     • Accumulates match W/L and map W/L for completed matches.
     • Stores per-match history (opponent, result, map scores) on each team.
+    • Accumulates per-player VFL points into vfl_map.
     """
     url  = f'{BASE}/event/matches/{event_id}/{slug}/'
     soup = fetch(url)
@@ -588,19 +765,36 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
 
         # Fetch per-map details + veto sequence + rosters from the match page
         match_href = match.get('href', '')
-        map_details, veto, t1_players, t2_players = [], [], [], []
+        map_details, veto, t1_players, t2_players, map_player_stats = [], [], [], [], []
         if match_href:
-            detail      = scrape_match_detail(BASE + match_href, t1_name, t2_name)
-            map_details = detail['maps']
-            veto        = detail['veto']
-            t1_players  = detail.get('t1_players', [])
-            t2_players  = detail.get('t2_players', [])
+            detail           = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+            map_details      = detail['maps']
+            veto             = detail['veto']
+            t1_players       = detail.get('t1_players', [])
+            t2_players       = detail.get('t2_players', [])
+            map_player_stats = detail.get('map_player_stats', [])
 
         # Track the most recent lineup for each team (later matches overwrite earlier)
         if t1_players:
             team_map[k1]['last_lineup'] = t1_players
         if t2_players:
             team_map[k2]['last_lineup'] = t2_players
+
+        # Accumulate per-player VFL points (keyed by lowercase player name)
+        match_vfl = calc_vfl_for_match(
+            match_score      = [s1, s2],
+            map_details      = map_details,
+            map_player_stats = map_player_stats,
+            t1_players       = t1_players,
+            t2_players       = t2_players,
+        )
+        for canon, stats in match_vfl.items():
+            key = canon.lower()
+            if key in vfl_map:
+                vfl_map[key]['vfl_total']  += stats['vfl']
+                vfl_map[key]['maps_total'] += stats['maps']
+            else:
+                vfl_map[key] = {'vfl_total': stats['vfl'], 'maps_total': stats['maps']}
 
         # Store match history on both teams (flip map scores for t2; veto is shared)
         team_map[k1].setdefault('matches', []).append({
@@ -748,14 +942,15 @@ def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
 
 # -- Assembly ------------------------------------------------------------------
 
-def assign_players(team_map: dict, player_map: dict):
+def assign_players(team_map: dict, player_map: dict, vfl_map: dict):
     """
     Attach the top-5 players to each team in team_map.
     If a 'last_lineup' exists (scraped from the most recent match page) only
     players in that lineup are included — this handles mid-season roster changes
     such as benchings and substitutions.  Players from the lineup who have no
     aggregate stats (brand-new signings) are appended with null stats.
-    Computes fkfd = fkpr / fdpr and kpm = kills per map (kpr × 22 rounds avg).
+    Computes fkfd = fkpr / fdpr, kpm = kills per map (kpr × 22 rounds avg),
+    and vflPts = total VFL pts / maps played from per-match data.
     """
     from collections import defaultdict
     by_team = defaultdict(list)
@@ -787,8 +982,12 @@ def assign_players(team_map: dict, player_map: dict):
 
         active.sort(key=lambda p: p['rounds'], reverse=True)
 
-        team_map[key]['players'] = [
-            {
+        player_list = []
+        for p in active[:5]:
+            vfl_data = vfl_map.get(p['name'].lower())
+            vfl_pts  = (round(vfl_data['vfl_total'] / vfl_data['maps_total'], 2)
+                        if vfl_data and vfl_data['maps_total'] > 0 else None)
+            player_list.append({
                 'name':   p['name'],
                 'acs':    round(p['acs'])          if p['rounds'] > 0 else None,
                 'rating': round(p['rating'], 2)    if p['rounds'] > 0 else None,
@@ -796,9 +995,9 @@ def assign_players(team_map: dict, player_map: dict):
                           if p.get('fdpr', 0) > 0 else None,
                 'kpm':    round(p.get('kpr', 0.0) * 22, 1)
                           if p['rounds'] > 0 and p.get('kpr', 0.0) > 0 else None,
-            }
-            for p in active[:5]
-        ]
+                'vflPts': vfl_pts,
+            })
+        team_map[key]['players'] = player_list
 
 
 # -- Main ----------------------------------------------------------------------
@@ -810,6 +1009,7 @@ def main():
 
     team_map   = {}   # lower-case name -> team dict
     player_map = {}   # 'PlayerName|team_key' -> stat dict
+    vfl_map    = {}   # player_name_lower -> {'vfl_total': float, 'maps_total': int}
 
     events_scraped = []
 
@@ -822,7 +1022,7 @@ def main():
             scrape_teams_from_overview(event_id, slug, region, team_map)
 
         print('  Matches …')
-        scrape_matches(event_id, slug, region or 'americas', team_map, label)
+        scrape_matches(event_id, slug, region or 'americas', team_map, label, vfl_map)
 
         print('  Stats …')
         scrape_stats(event_id, slug, team_map, player_map)
@@ -830,7 +1030,7 @@ def main():
         events_scraped.append(label)
 
     # Attach player stats to teams
-    assign_players(team_map, player_map)
+    assign_players(team_map, player_map, vfl_map)
 
     # Apply mid-season team renames (e.g. DRX → Kiwoom DRX).
     # Merges old entry into new name, preserving all historical stats/matches.
