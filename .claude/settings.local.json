@@ -30,7 +30,8 @@
       "Bash(python scraper/_test_map_mult.py)",
       "Bash(del \"C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\_test_map_mult.py\")",
       "Bash(grep -n '\"\"name\"\": \"\"Cloud9\"\"' vct_data.json)",
-      "Bash(grep -o '\"\"status\"\"\\\\|\"\"active\"\"\\\\|\"\"bench\"\"\\\\|\"\"sub\"\"\\\\|\"\"roster\"\"' vct_data.json)"
+      "Bash(grep -o '\"\"status\"\"\\\\|\"\"active\"\"\\\\|\"\"bench\"\"\\\\|\"\"sub\"\"\\\\|\"\"roster\"\"' vct_data.json)",
+      "WebFetch(domain:valorantfantasyleague.net)"
     ]
   }
 }
