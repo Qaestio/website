@@ -295,50 +295,50 @@ def _scrape_map_player_stats(soup) -> list[list[dict]]:
     for game in soup.select('.vm-stats-game[data-game-id]'):
         if game.get('data-game-id') == 'all':
             continue
-        table = game.select_one('table')
-        if not table:
-            result.append([])
-            continue
-
-        headers = [th.get_text(strip=True) for th in table.select('thead th')]
-        cols    = {h: i for i, h in enumerate(headers)}
-        k_col   = cols.get('K')
-        r_col   = next((cols[h] for h in ('R2.0', 'Rating', 'R', 'Rtg') if h in cols), None)
-
-        if k_col is None:
+        tables = game.select('table')
+        if not tables:
             result.append([])
             continue
 
         players = []
-        for row in table.select('tbody tr'):
-            tds       = row.select('td')
-            player_td = row.select_one('td.mod-player')
-            if not player_td:
-                continue
-            name_el = player_td.select_one('div.text-of')
-            if not name_el:
-                continue
-            name = name_el.get_text(strip=True)
-            if not name:
+        for table in tables:
+            headers = [th.get_text(strip=True) for th in table.select('thead th')]
+            cols    = {h: i for i, h in enumerate(headers)}
+            k_col   = cols.get('K')
+            r_col   = next((cols[h] for h in ('R2.0', 'Rating', 'R', 'Rtg') if h in cols), None)
+
+            if k_col is None:
                 continue
 
-            try:
-                k_td = tds[k_col]
-                both = k_td.select_one('.mod-both')
-                kills = int((both or k_td).get_text(strip=True))
-            except (ValueError, IndexError):
-                kills = 0
+            for row in table.select('tbody tr'):
+                tds       = row.select('td')
+                player_td = row.select_one('td.mod-player')
+                if not player_td:
+                    continue
+                name_el = player_td.select_one('div.text-of')
+                if not name_el:
+                    continue
+                name = name_el.get_text(strip=True)
+                if not name:
+                    continue
 
-            rating = None
-            if r_col is not None and r_col < len(tds):
                 try:
-                    r_td = tds[r_col]
-                    both_r = r_td.select_one('.mod-both')
-                    rating = float((both_r or r_td).get_text(strip=True))
+                    k_td = tds[k_col]
+                    both = k_td.select_one('.mod-both')
+                    kills = int((both or k_td).get_text(strip=True))
                 except (ValueError, IndexError):
-                    pass
+                    kills = 0
 
-            players.append({'name': name, 'kills': kills, 'rating': rating})
+                rating = None
+                if r_col is not None and r_col < len(tds):
+                    try:
+                        r_td = tds[r_col]
+                        both_r = r_td.select_one('.mod-both')
+                        rating = float((both_r or r_td).get_text(strip=True))
+                    except (ValueError, IndexError):
+                        pass
+
+                players.append({'name': name, 'kills': kills, 'rating': rating})
 
         result.append(players)
     return result

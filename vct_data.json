@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-29T00:57:13.375203+00:00",
+  "lastUpdated": "2026-03-29T03:44:46.415972+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -28,7 +28,7 @@
           "rating": 1.1,
           "fkfd": 1.4,
           "kpm": 17.6,
-          "vflPts": 4.2
+          "vflPts": 3.55
         },
         {
           "name": "bang",
@@ -36,7 +36,7 @@
           "rating": 1.1,
           "fkfd": 0.83,
           "kpm": 15.0,
-          "vflPts": 4.1
+          "vflPts": 3.1
         },
         {
           "name": "vora",
@@ -44,7 +44,7 @@
           "rating": 0.99,
           "fkfd": 1.0,
           "kpm": 14.3,
-          "vflPts": 3.7
+          "vflPts": 2.75
         },
         {
           "name": "Asuna",
@@ -52,7 +52,7 @@
           "rating": 0.97,
           "fkfd": 0.62,
           "kpm": 12.8,
-          "vflPts": 3.0
+          "vflPts": 2.15
         },
         {
           "name": "Timotino",
@@ -60,7 +60,7 @@
           "rating": 0.93,
           "fkfd": 1.0,
           "kpm": 16.5,
-          "vflPts": 3.9
+          "vflPts": 3.05
         }
       ],
       "matches": [
@@ -735,7 +735,7 @@
           "rating": 1.08,
           "fkfd": 1.0,
           "kpm": 15.4,
-          "vflPts": 7.5
+          "vflPts": 3.12
         },
         {
           "name": "Xeppaa",
@@ -743,7 +743,7 @@
           "rating": 1.04,
           "fkfd": 1.0,
           "kpm": 15.0,
-          "vflPts": 3.5
+          "vflPts": 3.06
         },
         {
           "name": "penny",
@@ -751,7 +751,7 @@
           "rating": 0.95,
           "fkfd": 0.69,
           "kpm": 15.2,
-          "vflPts": 3.5
+          "vflPts": 3.06
         },
         {
           "name": "Zellsis",
@@ -759,7 +759,7 @@
           "rating": 0.83,
           "fkfd": 0.62,
           "kpm": 10.8,
-          "vflPts": 5.0
+          "vflPts": 2.0
         },
         {
           "name": "OXY",
@@ -767,7 +767,7 @@
           "rating": 1.06,
           "fkfd": 1.24,
           "kpm": 18.7,
-          "vflPts": 6.0
+          "vflPts": 3.55
         }
       ],
       "matches": [
@@ -1351,7 +1351,7 @@
           "rating": 1.22,
           "fkfd": 1.62,
           "kpm": 19.6,
-          "vflPts": 2.5
+          "vflPts": 4.45
         },
         {
           "name": "supamen",
@@ -1359,7 +1359,7 @@
           "rating": 1.04,
           "fkfd": 1.8,
           "kpm": 14.1,
-          "vflPts": 0.0
+          "vflPts": 3.0
         },
         {
           "name": "bao",
@@ -1367,7 +1367,7 @@
           "rating": 0.96,
           "fkfd": 0.7,
           "kpm": 14.5,
-          "vflPts": 3.5
+          "vflPts": 2.73
         },
         {
           "name": "C0M",
@@ -1375,7 +1375,7 @@
           "rating": 0.9,
           "fkfd": 0.75,
           "kpm": 12.1,
-          "vflPts": 1.0
+          "vflPts": 2.09
         },
         {
           "name": "Okeanos",
@@ -1383,7 +1383,7 @@
           "rating": 0.88,
           "fkfd": 0.82,
           "kpm": 14.1,
-          "vflPts": 1.0
+          "vflPts": 2.55
         }
       ],
       "matches": [
@@ -1806,7 +1806,7 @@
           "rating": 1.08,
           "fkfd": 1.25,
           "kpm": 17.6,
-          "vflPts": 2.44
+          "vflPts": 3.21
         },
         {
           "name": "artzin",
@@ -1814,7 +1814,7 @@
           "rating": 1.0,
           "fkfd": 0.81,
           "kpm": 14.9,
-          "vflPts": 2.11
+          "vflPts": 2.58
         },
         {
           "name": "eeiu",
@@ -1822,7 +1822,7 @@
           "rating": 1.11,
           "fkfd": 1.33,
           "kpm": 15.9,
-          "vflPts": 3.67
+          "vflPts": 2.89
         },
         {
           "name": "alym",
@@ -1830,7 +1830,7 @@
           "rating": 0.87,
           "fkfd": 1.07,
           "kpm": 14.7,
-          "vflPts": 2.44
+          "vflPts": 2.53
         },
         {
           "name": "nerve",
@@ -1838,7 +1838,7 @@
           "rating": 0.91,
           "fkfd": 1.07,
           "kpm": 12.8,
-          "vflPts": 2.11
+          "vflPts": 2.0
         }
       ],
       "matches": [
@@ -2380,7 +2380,7 @@
           "rating": 0.95,
           "fkfd": 0.5,
           "kpm": 12.3,
-          "vflPts": 1.75
+          "vflPts": 1.12
         },
         {
           "name": "mta",
@@ -2388,7 +2388,7 @@
           "rating": 0.94,
           "fkfd": 1.1,
           "kpm": 14.5,
-          "vflPts": 2.25
+          "vflPts": 1.5
         },
         {
           "name": "benG",
@@ -2396,7 +2396,7 @@
           "rating": 0.89,
           "fkfd": 1.17,
           "kpm": 12.5,
-          "vflPts": 1.5
+          "vflPts": 1.25
         },
         {
           "name": "infiltrator",
@@ -2404,7 +2404,7 @@
           "rating": 0.86,
           "fkfd": 0.74,
           "kpm": 15.4,
-          "vflPts": 2.25
+          "vflPts": 1.88
         },
         {
           "name": "Governor",
@@ -2412,7 +2412,7 @@
           "rating": 0.71,
           "fkfd": 0.42,
           "kpm": 11.2,
-          "vflPts": 1.25
+          "vflPts": 1.0
         }
       ],
       "matches": [
@@ -2688,7 +2688,7 @@
           "rating": 1.01,
           "fkfd": 0.75,
           "kpm": 15.0,
-          "vflPts": -0.5
+          "vflPts": 2.55
         },
         {
           "name": "blowz",
@@ -2696,7 +2696,7 @@
           "rating": 0.93,
           "fkfd": 0.6,
           "kpm": 13.4,
-          "vflPts": 2.5
+          "vflPts": 2.09
         },
         {
           "name": "Sato",
@@ -2704,7 +2704,7 @@
           "rating": 0.9,
           "fkfd": 0.65,
           "kpm": 15.2,
-          "vflPts": 1.0
+          "vflPts": 2.82
         },
         {
           "name": "spike",
@@ -2712,7 +2712,7 @@
           "rating": 0.81,
           "fkfd": 1.0,
           "kpm": 13.0,
-          "vflPts": -0.5
+          "vflPts": 2.0
         },
         {
           "name": "Neon",
@@ -2720,7 +2720,7 @@
           "rating": 1.14,
           "fkfd": 2.44,
           "kpm": 16.7,
-          "vflPts": null
+          "vflPts": 3.83
         }
       ],
       "matches": [
@@ -3137,7 +3137,7 @@
           "rating": 1.13,
           "fkfd": 0.72,
           "kpm": 18.3,
-          "vflPts": 3.29
+          "vflPts": 2.29
         },
         {
           "name": "Darker",
@@ -3145,7 +3145,7 @@
           "rating": 0.92,
           "fkfd": 1.11,
           "kpm": 14.7,
-          "vflPts": 2.0
+          "vflPts": 1.43
         },
         {
           "name": "pANcada",
@@ -3153,7 +3153,7 @@
           "rating": 0.87,
           "fkfd": 1.67,
           "kpm": 11.7,
-          "vflPts": 1.14
+          "vflPts": 0.71
         },
         {
           "name": "cauanzin",
@@ -3161,7 +3161,7 @@
           "rating": 0.79,
           "fkfd": 0.45,
           "kpm": 12.8,
-          "vflPts": 1.14
+          "vflPts": 1.0
         },
         {
           "name": "Virtyy",
@@ -3169,7 +3169,7 @@
           "rating": 0.75,
           "fkfd": 0.53,
           "kpm": 14.1,
-          "vflPts": 1.29
+          "vflPts": 1.14
         }
       ],
       "matches": [
@@ -3438,7 +3438,7 @@
           "rating": 1.09,
           "fkfd": 1.4,
           "kpm": 15.6,
-          "vflPts": 2.6
+          "vflPts": 2.56
         },
         {
           "name": "zekken",
@@ -3446,7 +3446,7 @@
           "rating": 1.03,
           "fkfd": 1.27,
           "kpm": 15.2,
-          "vflPts": 2.6
+          "vflPts": 2.67
         },
         {
           "name": "aspas",
@@ -3454,7 +3454,7 @@
           "rating": 0.98,
           "fkfd": 1.0,
           "kpm": 15.8,
-          "vflPts": 3.0
+          "vflPts": 2.78
         },
         {
           "name": "Mazino",
@@ -3462,7 +3462,7 @@
           "rating": 0.97,
           "fkfd": 0.78,
           "kpm": 15.2,
-          "vflPts": 2.4
+          "vflPts": 2.39
         },
         {
           "name": "tex",
@@ -3470,7 +3470,7 @@
           "rating": 0.82,
           "fkfd": 0.82,
           "kpm": 13.2,
-          "vflPts": 1.93
+          "vflPts": 1.83
         }
       ],
       "matches": [
@@ -3942,7 +3942,7 @@
           "rating": 1.01,
           "fkfd": 0.89,
           "kpm": 13.6,
-          "vflPts": 3.29
+          "vflPts": 2.91
         },
         {
           "name": "mada",
@@ -3950,7 +3950,7 @@
           "rating": 1.04,
           "fkfd": 1.21,
           "kpm": 16.7,
-          "vflPts": 3.65
+          "vflPts": 3.26
         },
         {
           "name": "keiko",
@@ -3958,7 +3958,7 @@
           "rating": 1.09,
           "fkfd": 1.21,
           "kpm": 16.8,
-          "vflPts": 3.82
+          "vflPts": 3.53
         },
         {
           "name": "skuba",
@@ -3966,7 +3966,7 @@
           "rating": 1.09,
           "fkfd": 1.19,
           "kpm": 15.7,
-          "vflPts": 3.65
+          "vflPts": 3.35
         },
         {
           "name": "Ethan",
@@ -3974,7 +3974,7 @@
           "rating": 0.88,
           "fkfd": 0.82,
           "kpm": 12.8,
-          "vflPts": 2.41
+          "vflPts": 2.38
         }
       ],
       "matches": [
@@ -5062,7 +5062,7 @@
           "rating": 1.28,
           "fkfd": 1.33,
           "kpm": 17.4,
-          "vflPts": 2.0
+          "vflPts": 4.25
         },
         {
           "name": "Reduxx",
@@ -5070,7 +5070,7 @@
           "rating": 0.95,
           "fkfd": 1.06,
           "kpm": 15.0,
-          "vflPts": 1.5
+          "vflPts": 2.62
         },
         {
           "name": "Kyu",
@@ -5078,7 +5078,7 @@
           "rating": 0.9,
           "fkfd": 0.56,
           "kpm": 13.2,
-          "vflPts": 2.25
+          "vflPts": 2.12
         },
         {
           "name": "cortezia",
@@ -5086,7 +5086,7 @@
           "rating": 0.85,
           "fkfd": 0.88,
           "kpm": 13.0,
-          "vflPts": 1.75
+          "vflPts": 2.0
         },
         {
           "name": "N4RRATE",
@@ -5094,7 +5094,7 @@
           "rating": 0.8,
           "fkfd": 1.0,
           "kpm": 13.6,
-          "vflPts": 3.0
+          "vflPts": 2.5
         }
       ],
       "matches": [
@@ -5427,7 +5427,7 @@
           "rating": 1.1,
           "fkfd": 1.53,
           "kpm": 16.0,
-          "vflPts": 3.45
+          "vflPts": 3.66
         },
         {
           "name": "BABYBAY",
@@ -5435,7 +5435,7 @@
           "rating": 0.97,
           "fkfd": 1.05,
           "kpm": 15.1,
-          "vflPts": 3.18
+          "vflPts": 3.45
         },
         {
           "name": "trent",
@@ -5443,7 +5443,7 @@
           "rating": 1.12,
           "fkfd": 1.13,
           "kpm": 15.2,
-          "vflPts": 3.91
+          "vflPts": 3.52
         },
         {
           "name": "leaf",
@@ -5451,7 +5451,7 @@
           "rating": 1.01,
           "fkfd": 0.91,
           "kpm": 15.9,
-          "vflPts": 4.18
+          "vflPts": 3.59
         },
         {
           "name": "jawgemo",
@@ -5459,7 +5459,7 @@
           "rating": 0.96,
           "fkfd": 0.94,
           "kpm": 16.7,
-          "vflPts": 3.73
+          "vflPts": 3.69
         }
       ],
       "matches": [
@@ -6457,7 +6457,7 @@
           "rating": 1.01,
           "fkfd": 1.0,
           "kpm": 16.5,
-          "vflPts": 3.12
+          "vflPts": 2.92
         },
         {
           "name": "Eggsterr",
@@ -6465,7 +6465,7 @@
           "rating": 0.85,
           "fkfd": 0.79,
           "kpm": 14.1,
-          "vflPts": 3.12
+          "vflPts": 2.46
         },
         {
           "name": "P0PPIN",
@@ -6473,7 +6473,7 @@
           "rating": 0.83,
           "fkfd": 1.22,
           "kpm": 13.6,
-          "vflPts": 1.88
+          "vflPts": 1.92
         },
         {
           "name": "Demon1",
@@ -6481,7 +6481,7 @@
           "rating": 1.13,
           "fkfd": 1.0,
           "kpm": 18.7,
-          "vflPts": 4.0
+          "vflPts": 4.57
         }
       ],
       "matches": [
@@ -6918,7 +6918,7 @@
           "rating": 1.09,
           "fkfd": 0.87,
           "kpm": 18.7,
-          "vflPts": 4.0
+          "vflPts": 3.38
         },
         {
           "name": "Akame",
@@ -6926,7 +6926,7 @@
           "rating": 0.96,
           "fkfd": 0.83,
           "kpm": 13.6,
-          "vflPts": 2.33
+          "vflPts": 2.5
         },
         {
           "name": "yatsuka",
@@ -6934,7 +6934,7 @@
           "rating": 0.93,
           "fkfd": 1.07,
           "kpm": 14.7,
-          "vflPts": 1.67
+          "vflPts": 2.5
         },
         {
           "name": "SSeeS",
@@ -6942,7 +6942,7 @@
           "rating": 0.91,
           "fkfd": 0.5,
           "kpm": 12.5,
-          "vflPts": 1.89
+          "vflPts": 2.0
         },
         {
           "name": "Caedye",
@@ -6950,7 +6950,7 @@
           "rating": 0.87,
           "fkfd": 0.85,
           "kpm": 15.2,
-          "vflPts": 2.78
+          "vflPts": 2.56
         }
       ],
       "matches": [
@@ -7534,7 +7534,7 @@
           "rating": 1.23,
           "fkfd": 1.42,
           "kpm": 20.9,
-          "vflPts": 2.4
+          "vflPts": 4.08
         },
         {
           "name": "Killua",
@@ -7542,7 +7542,7 @@
           "rating": 1.05,
           "fkfd": 1.14,
           "kpm": 16.1,
-          "vflPts": 2.8
+          "vflPts": 2.75
         },
         {
           "name": "Leviathan",
@@ -7550,7 +7550,7 @@
           "rating": 0.96,
           "fkfd": 0.62,
           "kpm": 14.5,
-          "vflPts": 2.2
+          "vflPts": 2.17
         },
         {
           "name": "JitBoyS",
@@ -7558,7 +7558,7 @@
           "rating": 0.87,
           "fkfd": 0.85,
           "kpm": 12.8,
-          "vflPts": 0.8
+          "vflPts": 1.67
         },
         {
           "name": "thyy",
@@ -7566,7 +7566,7 @@
           "rating": 0.78,
           "fkfd": 0.73,
           "kpm": 12.5,
-          "vflPts": 1.2
+          "vflPts": 1.83
         }
       ],
       "matches": [
@@ -7994,7 +7994,7 @@
           "rating": 1.15,
           "fkfd": 1.6,
           "kpm": 16.7,
-          "vflPts": 3.0
+          "vflPts": 3.27
         },
         {
           "name": "t3xture",
@@ -8002,7 +8002,7 @@
           "rating": 0.98,
           "fkfd": 0.84,
           "kpm": 17.2,
-          "vflPts": 4.0
+          "vflPts": 3.0
         },
         {
           "name": "Ash",
@@ -8010,7 +8010,7 @@
           "rating": 0.95,
           "fkfd": 0.62,
           "kpm": 12.1,
-          "vflPts": 1.67
+          "vflPts": 2.09
         },
         {
           "name": "ZynX",
@@ -8018,7 +8018,7 @@
           "rating": 0.94,
           "fkfd": 0.93,
           "kpm": 16.7,
-          "vflPts": 1.67
+          "vflPts": 2.91
         },
         {
           "name": "Lakia",
@@ -8026,7 +8026,7 @@
           "rating": 0.86,
           "fkfd": 0.86,
           "kpm": 11.9,
-          "vflPts": 2.0
+          "vflPts": 1.64
         }
       ],
       "matches": [
@@ -8386,7 +8386,7 @@
           "rating": 1.14,
           "fkfd": 1.3,
           "kpm": 18.3,
-          "vflPts": 2.33
+          "vflPts": 4.06
         },
         {
           "name": "Autumn",
@@ -8394,7 +8394,7 @@
           "rating": 1.1,
           "fkfd": 1.07,
           "kpm": 17.6,
-          "vflPts": 5.0
+          "vflPts": 3.75
         },
         {
           "name": "xavi8k",
@@ -8402,7 +8402,7 @@
           "rating": 1.03,
           "fkfd": 1.17,
           "kpm": 15.4,
-          "vflPts": 3.0
+          "vflPts": 3.19
         },
         {
           "name": "UdoTan",
@@ -8410,7 +8410,7 @@
           "rating": 0.99,
           "fkfd": 1.62,
           "kpm": 16.3,
-          "vflPts": 4.67
+          "vflPts": 3.19
         },
         {
           "name": "Kr1stal",
@@ -8418,7 +8418,7 @@
           "rating": 0.97,
           "fkfd": 0.71,
           "kpm": 13.2,
-          "vflPts": 1.67
+          "vflPts": 2.62
         }
       ],
       "matches": [
@@ -8939,7 +8939,7 @@
           "rating": 1.02,
           "fkfd": 0.99,
           "kpm": 16.6,
-          "vflPts": 2.59
+          "vflPts": 2.93
         },
         {
           "name": "invy",
@@ -8947,7 +8947,7 @@
           "rating": 1.06,
           "fkfd": 0.86,
           "kpm": 15.2,
-          "vflPts": 2.82
+          "vflPts": 2.79
         },
         {
           "name": "Jinggg",
@@ -8955,7 +8955,7 @@
           "rating": 1.03,
           "fkfd": 1.17,
           "kpm": 16.3,
-          "vflPts": 2.91
+          "vflPts": 2.79
         },
         {
           "name": "something",
@@ -8963,7 +8963,7 @@
           "rating": 0.99,
           "fkfd": 0.93,
           "kpm": 15.4,
-          "vflPts": 2.55
+          "vflPts": 2.81
         },
         {
           "name": "d4v41",
@@ -8971,7 +8971,7 @@
           "rating": 1.01,
           "fkfd": 1.36,
           "kpm": 15.8,
-          "vflPts": 2.41
+          "vflPts": 2.81
         }
       ],
       "matches": [
@@ -10247,7 +10247,7 @@
           "rating": 1.13,
           "fkfd": 1.73,
           "kpm": 18.0,
-          "vflPts": 3.33
+          "vflPts": 3.44
         },
         {
           "name": "xffero",
@@ -10255,7 +10255,7 @@
           "rating": 1.07,
           "fkfd": 1.5,
           "kpm": 15.4,
-          "vflPts": 2.89
+          "vflPts": 2.62
         },
         {
           "name": "Kushy",
@@ -10263,7 +10263,7 @@
           "rating": 0.97,
           "fkfd": 1.4,
           "kpm": 13.9,
-          "vflPts": 2.56
+          "vflPts": 2.44
         },
         {
           "name": "Monyet",
@@ -10271,7 +10271,7 @@
           "rating": 0.87,
           "fkfd": 0.52,
           "kpm": 14.3,
-          "vflPts": 2.22
+          "vflPts": 2.31
         },
         {
           "name": "crazyguy",
@@ -10279,7 +10279,7 @@
           "rating": 0.85,
           "fkfd": 0.42,
           "kpm": 12.5,
-          "vflPts": 1.78
+          "vflPts": 1.94
         }
       ],
       "matches": [
@@ -10737,7 +10737,7 @@
           "rating": 1.14,
           "fkfd": 1.28,
           "kpm": 18.3,
-          "vflPts": 3.0
+          "vflPts": 4.23
         },
         {
           "name": "Meteor",
@@ -10745,7 +10745,7 @@
           "rating": 0.97,
           "fkfd": 1.01,
           "kpm": 16.7,
-          "vflPts": 1.0
+          "vflPts": 3.68
         },
         {
           "name": "Munchkin",
@@ -10753,7 +10753,7 @@
           "rating": 1.02,
           "fkfd": 0.96,
           "kpm": 13.4,
-          "vflPts": 1.2
+          "vflPts": 2.91
         },
         {
           "name": "BuZz",
@@ -10761,7 +10761,7 @@
           "rating": 0.99,
           "fkfd": 1.1,
           "kpm": 17.0,
-          "vflPts": 2.6
+          "vflPts": 3.86
         },
         {
           "name": "stax",
@@ -11520,7 +11520,7 @@
           "rating": 0.97,
           "fkfd": 0.53,
           "kpm": 16.9,
-          "vflPts": 2.6
+          "vflPts": 1.71
         },
         {
           "name": "JessieVash",
@@ -11528,7 +11528,7 @@
           "rating": 0.94,
           "fkfd": 1.0,
           "kpm": 15.6,
-          "vflPts": 2.2
+          "vflPts": 1.71
         },
         {
           "name": "BerserX",
@@ -11536,7 +11536,7 @@
           "rating": 0.94,
           "fkfd": 1.0,
           "kpm": 14.3,
-          "vflPts": 1.6
+          "vflPts": 1.14
         },
         {
           "name": "TenTen",
@@ -11544,7 +11544,7 @@
           "rating": 0.79,
           "fkfd": 0.7,
           "kpm": 13.2,
-          "vflPts": 1.4
+          "vflPts": 1.0
         },
         {
           "name": "Sylvan",
@@ -11552,7 +11552,7 @@
           "rating": 0.75,
           "fkfd": 0.58,
           "kpm": 10.3,
-          "vflPts": 0.6
+          "vflPts": 0.71
         }
       ],
       "matches": [
@@ -11821,7 +11821,7 @@
           "rating": 1.01,
           "fkfd": 0.78,
           "kpm": 15.2,
-          "vflPts": 2.0
+          "vflPts": 2.2
         },
         {
           "name": "eKo",
@@ -11829,7 +11829,7 @@
           "rating": 0.95,
           "fkfd": 1.14,
           "kpm": 16.3,
-          "vflPts": 1.5
+          "vflPts": 2.1
         },
         {
           "name": "Xdll",
@@ -11837,7 +11837,7 @@
           "rating": 0.88,
           "fkfd": 1.33,
           "kpm": 13.4,
-          "vflPts": 0.5
+          "vflPts": 1.7
         },
         {
           "name": "Absol",
@@ -11845,7 +11845,7 @@
           "rating": 0.85,
           "fkfd": 0.87,
           "kpm": 15.0,
-          "vflPts": 2.0
+          "vflPts": 1.5
         },
         {
           "name": "SyouTa",
@@ -11853,7 +11853,7 @@
           "rating": 0.8,
           "fkfd": 0.75,
           "kpm": 12.5,
-          "vflPts": 0.5
+          "vflPts": 1.3
         }
       ],
       "matches": [
@@ -12205,7 +12205,7 @@
           "rating": 1.05,
           "fkfd": 2.0,
           "kpm": 15.6,
-          "vflPts": 2.62
+          "vflPts": 2.12
         },
         {
           "name": "Zexy",
@@ -12213,7 +12213,7 @@
           "rating": 1.0,
           "fkfd": 1.31,
           "kpm": 18.0,
-          "vflPts": 3.5
+          "vflPts": 3.12
         },
         {
           "name": "Klaus",
@@ -12221,7 +12221,7 @@
           "rating": 0.99,
           "fkfd": 0.9,
           "kpm": 15.4,
-          "vflPts": 2.75
+          "vflPts": 2.25
         },
         {
           "name": "oonzmlp",
@@ -12229,7 +12229,7 @@
           "rating": 0.81,
           "fkfd": 0.58,
           "kpm": 12.3,
-          "vflPts": 1.88
+          "vflPts": 1.5
         },
         {
           "name": "C1ndeR",
@@ -12512,7 +12512,7 @@
           "rating": 1.04,
           "fkfd": 1.18,
           "kpm": 14.0,
-          "vflPts": 3.79
+          "vflPts": 3.45
         },
         {
           "name": "Dambi",
@@ -12520,7 +12520,7 @@
           "rating": 1.11,
           "fkfd": 1.23,
           "kpm": 18.8,
-          "vflPts": 4.95
+          "vflPts": 4.68
         },
         {
           "name": "Xross",
@@ -12528,7 +12528,7 @@
           "rating": 1.1,
           "fkfd": 2.1,
           "kpm": 15.0,
-          "vflPts": 4.11
+          "vflPts": 3.77
         },
         {
           "name": "Ivy",
@@ -12536,7 +12536,7 @@
           "rating": 1.07,
           "fkfd": 1.12,
           "kpm": 15.9,
-          "vflPts": 4.11
+          "vflPts": 3.68
         },
         {
           "name": "Francis",
@@ -12544,7 +12544,7 @@
           "rating": 1.0,
           "fkfd": 1.14,
           "kpm": 16.3,
-          "vflPts": 4.11
+          "vflPts": 3.95
         }
       ],
       "matches": [
@@ -13233,7 +13233,7 @@
           "rating": 1.08,
           "fkfd": 1.52,
           "kpm": 17.7,
-          "vflPts": 5.2
+          "vflPts": 3.65
         },
         {
           "name": "Loita",
@@ -13241,7 +13241,7 @@
           "rating": 1.09,
           "fkfd": 0.58,
           "kpm": 15.1,
-          "vflPts": 3.8
+          "vflPts": 2.9
         },
         {
           "name": "Lar0k",
@@ -13249,7 +13249,7 @@
           "rating": 1.07,
           "fkfd": 1.03,
           "kpm": 17.6,
-          "vflPts": 4.2
+          "vflPts": 3.7
         },
         {
           "name": "Rosé",
@@ -13257,7 +13257,7 @@
           "rating": 0.82,
           "fkfd": 0.78,
           "kpm": 12.5,
-          "vflPts": 2.2
+          "vflPts": 2.25
         },
         {
           "name": "Crewen",
@@ -13265,7 +13265,7 @@
           "rating": 0.87,
           "fkfd": 0.75,
           "kpm": 14.2,
-          "vflPts": 2.8
+          "vflPts": 2.35
         }
       ],
       "matches": [
@@ -13877,7 +13877,7 @@
           "rating": 1.17,
           "fkfd": 1.78,
           "kpm": 18.5,
-          "vflPts": 4.0
+          "vflPts": 4.1
         },
         {
           "name": "Veqaj",
@@ -13885,7 +13885,7 @@
           "rating": 1.1,
           "fkfd": 1.0,
           "kpm": 16.7,
-          "vflPts": 3.14
+          "vflPts": 3.5
         },
         {
           "name": "crashies",
@@ -13893,7 +13893,7 @@
           "rating": 1.03,
           "fkfd": 1.0,
           "kpm": 15.2,
-          "vflPts": 3.29
+          "vflPts": 3.05
         },
         {
           "name": "kaajak",
@@ -13901,7 +13901,7 @@
           "rating": 0.95,
           "fkfd": 1.0,
           "kpm": 16.1,
-          "vflPts": 3.14
+          "vflPts": 3.1
         },
         {
           "name": "Boaster",
@@ -13909,7 +13909,7 @@
           "rating": 0.77,
           "fkfd": 0.5,
           "kpm": 10.3,
-          "vflPts": 1.29
+          "vflPts": 1.65
         }
       ],
       "matches": [
@@ -14521,7 +14521,7 @@
           "rating": 0.98,
           "fkfd": 1.12,
           "kpm": 16.7,
-          "vflPts": 3.6
+          "vflPts": 2.25
         },
         {
           "name": "MrFaliN",
@@ -14529,7 +14529,7 @@
           "rating": 0.97,
           "fkfd": 0.7,
           "kpm": 13.9,
-          "vflPts": 2.0
+          "vflPts": 1.88
         },
         {
           "name": "yetujey",
@@ -14537,7 +14537,7 @@
           "rating": 0.89,
           "fkfd": 0.58,
           "kpm": 12.8,
-          "vflPts": 1.8
+          "vflPts": 1.62
         },
         {
           "name": "KROSTALY",
@@ -14545,7 +14545,7 @@
           "rating": 0.85,
           "fkfd": 0.88,
           "kpm": 13.9,
-          "vflPts": 1.6
+          "vflPts": 1.62
         },
         {
           "name": "baha",
@@ -14553,7 +14553,7 @@
           "rating": 0.68,
           "fkfd": 0.56,
           "kpm": 12.1,
-          "vflPts": 1.2
+          "vflPts": 1.5
         }
       ],
       "matches": [
@@ -14829,7 +14829,7 @@
           "rating": 1.32,
           "fkfd": 1.59,
           "kpm": 20.3,
-          "vflPts": 4.88
+          "vflPts": 4.96
         },
         {
           "name": "Minny",
@@ -14837,7 +14837,7 @@
           "rating": 1.08,
           "fkfd": 0.97,
           "kpm": 16.2,
-          "vflPts": 3.47
+          "vflPts": 3.64
         },
         {
           "name": "bipo",
@@ -14853,7 +14853,7 @@
           "rating": 0.98,
           "fkfd": 1.12,
           "kpm": 13.7,
-          "vflPts": 2.59
+          "vflPts": 3.04
         },
         {
           "name": "GLYPH",
@@ -14861,7 +14861,7 @@
           "rating": 0.92,
           "fkfd": 1.12,
           "kpm": 12.4,
-          "vflPts": 2.24
+          "vflPts": 2.56
         }
       ],
       "matches": [
@@ -15634,7 +15634,7 @@
           "rating": 1.0,
           "fkfd": 1.5,
           "kpm": 14.7,
-          "vflPts": 3.57
+          "vflPts": 2.17
         },
         {
           "name": "Cloud",
@@ -15642,7 +15642,7 @@
           "rating": 0.97,
           "fkfd": 0.75,
           "kpm": 15.4,
-          "vflPts": 2.86
+          "vflPts": 2.33
         },
         {
           "name": "westside",
@@ -15650,7 +15650,7 @@
           "rating": 0.94,
           "fkfd": 1.2,
           "kpm": 15.2,
-          "vflPts": 3.14
+          "vflPts": 1.92
         },
         {
           "name": "grubinho",
@@ -15658,7 +15658,7 @@
           "rating": 0.92,
           "fkfd": 1.0,
           "kpm": 13.4,
-          "vflPts": 3.0
+          "vflPts": 1.5
         },
         {
           "name": "ara",
@@ -15666,7 +15666,7 @@
           "rating": 0.9,
           "fkfd": 0.94,
           "kpm": 14.5,
-          "vflPts": 2.71
+          "vflPts": 2.0
         }
       ],
       "matches": [
@@ -16096,7 +16096,7 @@
           "rating": 1.1,
           "fkfd": 0.5,
           "kpm": 15.8,
-          "vflPts": 4.0
+          "vflPts": 3.18
         },
         {
           "name": "SUYGETSU",
@@ -16104,7 +16104,7 @@
           "rating": 1.02,
           "fkfd": 1.12,
           "kpm": 15.4,
-          "vflPts": 2.67
+          "vflPts": 2.82
         },
         {
           "name": "LewN",
@@ -16112,7 +16112,7 @@
           "rating": 1.0,
           "fkfd": 1.12,
           "kpm": 16.9,
-          "vflPts": 3.5
+          "vflPts": 3.27
         },
         {
           "name": "Avez",
@@ -16120,7 +16120,7 @@
           "rating": 0.96,
           "fkfd": 0.77,
           "kpm": 15.4,
-          "vflPts": 2.5
+          "vflPts": 2.27
         },
         {
           "name": "sheydos",
@@ -16128,7 +16128,7 @@
           "rating": 0.86,
           "fkfd": 0.8,
           "kpm": 12.1,
-          "vflPts": 2.0
+          "vflPts": 1.64
         }
       ],
       "matches": [
@@ -16488,7 +16488,7 @@
           "rating": 1.3,
           "fkfd": 1.12,
           "kpm": 19.1,
-          "vflPts": 4.22
+          "vflPts": 3.92
         },
         {
           "name": "Ruxic",
@@ -16496,7 +16496,7 @@
           "rating": 1.08,
           "fkfd": 1.0,
           "kpm": 16.3,
-          "vflPts": 3.22
+          "vflPts": 3.08
         },
         {
           "name": "sociablEE",
@@ -16504,7 +16504,7 @@
           "rating": 0.85,
           "fkfd": 0.45,
           "kpm": 13.4,
-          "vflPts": 1.89
+          "vflPts": 2.0
         },
         {
           "name": "Filu",
@@ -16512,7 +16512,7 @@
           "rating": 0.84,
           "fkfd": 0.87,
           "kpm": 15.0,
-          "vflPts": 2.33
+          "vflPts": 2.5
         },
         {
           "name": "Shao",
@@ -16520,7 +16520,7 @@
           "rating": 0.78,
           "fkfd": 1.0,
           "kpm": 11.2,
-          "vflPts": 2.0
+          "vflPts": 1.75
         }
       ],
       "matches": [
@@ -16950,7 +16950,7 @@
           "rating": 1.04,
           "fkfd": 1.33,
           "kpm": 16.5,
-          "vflPts": 2.25
+          "vflPts": 3.14
         },
         {
           "name": "ComeBack",
@@ -16958,7 +16958,7 @@
           "rating": 0.99,
           "fkfd": 1.29,
           "kpm": 16.5,
-          "vflPts": 1.0
+          "vflPts": 2.79
         },
         {
           "name": "Boo",
@@ -16966,7 +16966,7 @@
           "rating": 0.97,
           "fkfd": 1.2,
           "kpm": 13.0,
-          "vflPts": 1.38
+          "vflPts": 2.14
         },
         {
           "name": "RieNs",
@@ -16974,7 +16974,7 @@
           "rating": 0.97,
           "fkfd": 1.5,
           "kpm": 15.8,
-          "vflPts": 2.75
+          "vflPts": 2.5
         },
         {
           "name": "Wo0t",
@@ -16982,7 +16982,7 @@
           "rating": 0.96,
           "fkfd": 1.33,
           "kpm": 14.3,
-          "vflPts": 1.75
+          "vflPts": 2.14
         }
       ],
       "matches": [
@@ -17489,7 +17489,7 @@
           "rating": 1.03,
           "fkfd": 1.13,
           "kpm": 17.1,
-          "vflPts": 2.5
+          "vflPts": 3.5
         },
         {
           "name": "nAts",
@@ -17497,7 +17497,7 @@
           "rating": 1.03,
           "fkfd": 0.79,
           "kpm": 16.0,
-          "vflPts": 2.25
+          "vflPts": 3.29
         },
         {
           "name": "kamo",
@@ -17505,7 +17505,7 @@
           "rating": 0.97,
           "fkfd": 0.85,
           "kpm": 15.6,
-          "vflPts": 2.75
+          "vflPts": 2.86
         },
         {
           "name": "purp0",
@@ -17513,7 +17513,7 @@
           "rating": 0.95,
           "fkfd": 1.16,
           "kpm": 13.7,
-          "vflPts": 2.12
+          "vflPts": 2.46
         },
         {
           "name": "wayne",
@@ -17521,7 +17521,7 @@
           "rating": 1.03,
           "fkfd": 0.92,
           "kpm": 15.0,
-          "vflPts": 3.6
+          "vflPts": 2.84
         }
       ],
       "matches": [
@@ -18441,7 +18441,7 @@
           "rating": 1.12,
           "fkfd": 1.22,
           "kpm": 16.7,
-          "vflPts": 5.6
+          "vflPts": 3.93
         },
         {
           "name": "Derke",
@@ -18449,7 +18449,7 @@
           "rating": 1.11,
           "fkfd": 1.29,
           "kpm": 18.0,
-          "vflPts": 4.8
+          "vflPts": 4.36
         },
         {
           "name": "Jamppi",
@@ -18457,7 +18457,7 @@
           "rating": 0.96,
           "fkfd": 0.92,
           "kpm": 16.1,
-          "vflPts": 5.0
+          "vflPts": 3.29
         },
         {
           "name": "PROFEK",
@@ -18465,7 +18465,7 @@
           "rating": 0.96,
           "fkfd": 1.0,
           "kpm": 13.9,
-          "vflPts": 3.2
+          "vflPts": 2.79
         },
         {
           "name": "UNFAKE",
@@ -18473,7 +18473,7 @@
           "rating": 0.83,
           "fkfd": 0.71,
           "kpm": 11.2,
-          "vflPts": 3.0
+          "vflPts": 2.29
         }
       ],
       "matches": [
@@ -18980,7 +18980,7 @@
           "rating": 1.13,
           "fkfd": 1.27,
           "kpm": 16.5,
-          "vflPts": 2.88
+          "vflPts": 2.75
         },
         {
           "name": "al0rante",
@@ -18988,7 +18988,7 @@
           "rating": 1.07,
           "fkfd": 0.67,
           "kpm": 18.0,
-          "vflPts": 3.25
+          "vflPts": 2.62
         },
         {
           "name": "NINJA",
@@ -18996,7 +18996,7 @@
           "rating": 0.89,
           "fkfd": 0.67,
           "kpm": 14.1,
-          "vflPts": 2.25
+          "vflPts": 1.88
         },
         {
           "name": "qpert",
@@ -19004,7 +19004,7 @@
           "rating": 0.86,
           "fkfd": 0.56,
           "kpm": 10.8,
-          "vflPts": 1.25
+          "vflPts": 1.0
         },
         {
           "name": "cNed",
@@ -19012,7 +19012,7 @@
           "rating": 0.78,
           "fkfd": 0.72,
           "kpm": 12.8,
-          "vflPts": 1.62
+          "vflPts": 1.5
         }
       ],
       "matches": [
@@ -19288,7 +19288,7 @@
           "rating": 1.06,
           "fkfd": 1.71,
           "kpm": 14.6,
-          "vflPts": 3.0
+          "vflPts": 2.65
         },
         {
           "name": "f4ngeer",
@@ -19296,7 +19296,7 @@
           "rating": 1.06,
           "fkfd": 1.34,
           "kpm": 17.8,
-          "vflPts": 3.58
+          "vflPts": 3.3
         },
         {
           "name": "K1ra",
@@ -19304,7 +19304,7 @@
           "rating": 1.03,
           "fkfd": 0.62,
           "kpm": 16.0,
-          "vflPts": 2.58
+          "vflPts": 2.95
         },
         {
           "name": "iamgrq",
@@ -19320,7 +19320,7 @@
           "rating": 0.89,
           "fkfd": 0.95,
           "kpm": 13.5,
-          "vflPts": 2.42
+          "vflPts": 2.4
         }
       ],
       "matches": [
@@ -19932,7 +19932,7 @@
           "rating": 1.11,
           "fkfd": 1.06,
           "kpm": 18.0,
-          "vflPts": 1.83
+          "vflPts": 3.7
         },
         {
           "name": "rushia",
@@ -19940,7 +19940,7 @@
           "rating": 1.04,
           "fkfd": 1.09,
           "kpm": 15.4,
-          "vflPts": 2.17
+          "vflPts": 2.95
         },
         {
           "name": "nephh",
@@ -19948,7 +19948,7 @@
           "rating": 1.01,
           "fkfd": 1.0,
           "kpm": 14.7,
-          "vflPts": 1.83
+          "vflPts": 2.9
         },
         {
           "name": "bud",
@@ -19956,7 +19956,7 @@
           "rating": 0.89,
           "fkfd": 0.33,
           "kpm": 12.8,
-          "vflPts": 1.17
+          "vflPts": 2.2
         },
         {
           "name": "Knight",
@@ -19964,7 +19964,7 @@
           "rating": 1.02,
           "fkfd": 0.67,
           "kpm": 13.9,
-          "vflPts": 0.5
+          "vflPts": 3.18
         }
       ],
       "matches": [
@@ -20576,7 +20576,7 @@
           "rating": 1.1,
           "fkfd": 1.36,
           "kpm": 15.5,
-          "vflPts": 3.1
+          "vflPts": 2.71
         },
         {
           "name": "Smoggy",
@@ -20584,7 +20584,7 @@
           "rating": 0.98,
           "fkfd": 0.95,
           "kpm": 14.3,
-          "vflPts": 2.4
+          "vflPts": 2.29
         },
         {
           "name": "ZmjjKK",
@@ -20592,7 +20592,7 @@
           "rating": 1.0,
           "fkfd": 1.34,
           "kpm": 18.1,
-          "vflPts": 3.1
+          "vflPts": 2.88
         },
         {
           "name": "cb",
@@ -20600,7 +20600,7 @@
           "rating": 0.93,
           "fkfd": 0.74,
           "kpm": 15.1,
-          "vflPts": 2.0
+          "vflPts": 2.29
         },
         {
           "name": "nobody",
@@ -20608,7 +20608,7 @@
           "rating": 0.86,
           "fkfd": 0.97,
           "kpm": 13.3,
-          "vflPts": 2.1
+          "vflPts": 1.88
         }
       ],
       "matches": [
@@ -21374,7 +21374,7 @@
           "rating": 1.2,
           "fkfd": 1.2,
           "kpm": 16.7,
-          "vflPts": 1.75
+          "vflPts": 2.0
         },
         {
           "name": "BerLIN",
@@ -21382,7 +21382,7 @@
           "rating": 1.12,
           "fkfd": 0.54,
           "kpm": 12.8,
-          "vflPts": 1.75
+          "vflPts": 1.0
         },
         {
           "name": "Setrod",
@@ -21390,7 +21390,7 @@
           "rating": 1.01,
           "fkfd": 0.9,
           "kpm": 14.5,
-          "vflPts": 1.25
+          "vflPts": 1.14
         },
         {
           "name": "sScary",
@@ -21398,7 +21398,7 @@
           "rating": 0.9,
           "fkfd": 1.6,
           "kpm": 12.1,
-          "vflPts": 0.5
+          "vflPts": 0.86
         },
         {
           "name": "Life",
@@ -21406,7 +21406,7 @@
           "rating": 0.65,
           "fkfd": 0.57,
           "kpm": 12.1,
-          "vflPts": 1.0
+          "vflPts": 0.86
         }
       ],
       "matches": [
@@ -21675,7 +21675,7 @@
           "rating": 1.21,
           "fkfd": 1.57,
           "kpm": 15.6,
-          "vflPts": 3.5
+          "vflPts": 2.94
         },
         {
           "name": "jkuro",
@@ -21683,7 +21683,7 @@
           "rating": 1.01,
           "fkfd": 1.0,
           "kpm": 15.2,
-          "vflPts": 2.67
+          "vflPts": 2.39
         },
         {
           "name": "stew",
@@ -21691,7 +21691,7 @@
           "rating": 1.01,
           "fkfd": 1.15,
           "kpm": 16.9,
-          "vflPts": 3.5
+          "vflPts": 2.72
         },
         {
           "name": "coconut",
@@ -21699,7 +21699,7 @@
           "rating": 0.92,
           "fkfd": 0.71,
           "kpm": 12.1,
-          "vflPts": 1.83
+          "vflPts": 1.67
         },
         {
           "name": "zhe",
@@ -21707,7 +21707,7 @@
           "rating": 0.91,
           "fkfd": 0.76,
           "kpm": 14.7,
-          "vflPts": 2.83
+          "vflPts": 2.22
         }
       ],
       "matches": [
@@ -22242,7 +22242,7 @@
           "rating": 1.02,
           "fkfd": 0.6,
           "kpm": 12.3,
-          "vflPts": 2.6
+          "vflPts": 1.14
         },
         {
           "name": "GREEN",
@@ -22250,7 +22250,7 @@
           "rating": 0.93,
           "fkfd": 1.09,
           "kpm": 16.7,
-          "vflPts": 1.8
+          "vflPts": 1.86
         },
         {
           "name": "GuanG",
@@ -22258,7 +22258,7 @@
           "rating": 0.93,
           "fkfd": 0.5,
           "kpm": 16.7,
-          "vflPts": 1.8
+          "vflPts": 1.86
         },
         {
           "name": "Ezeir",
@@ -22266,7 +22266,7 @@
           "rating": 0.89,
           "fkfd": 1.17,
           "kpm": 11.9,
-          "vflPts": 1.4
+          "vflPts": 1.0
         },
         {
           "name": "heybay",
@@ -22274,7 +22274,7 @@
           "rating": 0.74,
           "fkfd": 0.14,
           "kpm": 11.0,
-          "vflPts": 0.6
+          "vflPts": 0.86
         }
       ],
       "matches": [
@@ -22543,7 +22543,7 @@
           "rating": 1.04,
           "fkfd": 1.0,
           "kpm": 14.1,
-          "vflPts": 3.0
+          "vflPts": 2.17
         },
         {
           "name": "Coco",
@@ -22551,7 +22551,7 @@
           "rating": 1.01,
           "fkfd": 0.6,
           "kpm": 15.4,
-          "vflPts": 2.5
+          "vflPts": 2.42
         },
         {
           "name": "Dynamite",
@@ -22559,7 +22559,7 @@
           "rating": 1.01,
           "fkfd": 0.79,
           "kpm": 15.6,
-          "vflPts": 2.83
+          "vflPts": 2.42
         },
         {
           "name": "lucas",
@@ -22567,7 +22567,7 @@
           "rating": 1.01,
           "fkfd": 0.78,
           "kpm": 16.1,
-          "vflPts": 2.5
+          "vflPts": 2.33
         },
         {
           "name": "Abo",
@@ -22575,7 +22575,7 @@
           "rating": 0.91,
           "fkfd": 1.42,
           "kpm": 14.7,
-          "vflPts": 3.0
+          "vflPts": 2.5
         }
       ],
       "matches": [
@@ -22942,7 +22942,7 @@
           "rating": 1.07,
           "fkfd": 1.36,
           "kpm": 16.7,
-          "vflPts": 2.91
+          "vflPts": 2.62
         },
         {
           "name": "Kai",
@@ -22950,7 +22950,7 @@
           "rating": 1.01,
           "fkfd": 1.23,
           "kpm": 16.5,
-          "vflPts": 2.73
+          "vflPts": 2.54
         },
         {
           "name": "Viva",
@@ -22958,7 +22958,7 @@
           "rating": 0.96,
           "fkfd": 1.2,
           "kpm": 12.3,
-          "vflPts": 2.09
+          "vflPts": 1.92
         },
         {
           "name": "LuoK1ng",
@@ -22966,7 +22966,7 @@
           "rating": 0.96,
           "fkfd": 0.88,
           "kpm": 13.2,
-          "vflPts": 1.91
+          "vflPts": 1.69
         },
         {
           "name": "FengF",
@@ -22974,7 +22974,7 @@
           "rating": 0.93,
           "fkfd": 0.73,
           "kpm": 15.2,
-          "vflPts": 2.73
+          "vflPts": 2.31
         }
       ],
       "matches": [
@@ -23419,7 +23419,7 @@
           "rating": 1.08,
           "fkfd": 0.86,
           "kpm": 15.8,
-          "vflPts": 3.5
+          "vflPts": 2.94
         },
         {
           "name": "Scales",
@@ -23427,7 +23427,7 @@
           "rating": 1.03,
           "fkfd": 1.5,
           "kpm": 15.2,
-          "vflPts": 2.88
+          "vflPts": 3.12
         },
         {
           "name": "slowly",
@@ -23435,7 +23435,7 @@
           "rating": 1.0,
           "fkfd": 1.08,
           "kpm": 16.9,
-          "vflPts": 3.12
+          "vflPts": 3.06
         },
         {
           "name": "sword9",
@@ -23443,7 +23443,7 @@
           "rating": 0.96,
           "fkfd": 0.71,
           "kpm": 13.2,
-          "vflPts": 3.38
+          "vflPts": 2.71
         }
       ],
       "matches": [
@@ -24034,7 +24034,7 @@
           "rating": 1.03,
           "fkfd": 0.91,
           "kpm": 16.3,
-          "vflPts": null
+          "vflPts": 2.5
         },
         {
           "name": "jowa",
@@ -24042,7 +24042,7 @@
           "rating": 0.98,
           "fkfd": 1.0,
           "kpm": 15.4,
-          "vflPts": null
+          "vflPts": 2.21
         },
         {
           "name": "qiutiaN",
@@ -24050,7 +24050,7 @@
           "rating": 0.97,
           "fkfd": 1.15,
           "kpm": 14.3,
-          "vflPts": null
+          "vflPts": 2.14
         },
         {
           "name": "SiuFatBB",
@@ -24058,7 +24058,7 @@
           "rating": 0.95,
           "fkfd": 1.67,
           "kpm": 11.9,
-          "vflPts": null
+          "vflPts": 1.5
         },
         {
           "name": "Spring",
@@ -24066,7 +24066,7 @@
           "rating": 0.83,
           "fkfd": 0.69,
           "kpm": 13.9,
-          "vflPts": null
+          "vflPts": 2.07
         }
       ],
       "matches": [
@@ -24510,7 +24510,7 @@
           "rating": 1.27,
           "fkfd": 1.48,
           "kpm": 18.2,
-          "vflPts": 4.62
+          "vflPts": 3.83
         },
         {
           "name": "Rarga",
@@ -24518,7 +24518,7 @@
           "rating": 0.99,
           "fkfd": 1.14,
           "kpm": 18.1,
-          "vflPts": 3.38
+          "vflPts": 3.22
         },
         {
           "name": "Lysoar",
@@ -24526,7 +24526,7 @@
           "rating": 1.01,
           "fkfd": 1.15,
           "kpm": 14.8,
-          "vflPts": 3.15
+          "vflPts": 2.67
         },
         {
           "name": "WsLeo",
@@ -24534,7 +24534,7 @@
           "rating": 0.89,
           "fkfd": 1.26,
           "kpm": 12.9,
-          "vflPts": 2.31
+          "vflPts": 2.22
         },
         {
           "name": "NoMan",
@@ -24542,7 +24542,7 @@
           "rating": 0.87,
           "fkfd": 0.99,
           "kpm": 14.6,
-          "vflPts": 2.85
+          "vflPts": 2.61
         }
       ],
       "matches": [
@@ -25077,7 +25077,7 @@
           "rating": 1.19,
           "fkfd": 1.67,
           "kpm": 17.2,
-          "vflPts": 3.09
+          "vflPts": 3.0
         },
         {
           "name": "Nicc",
@@ -25085,7 +25085,7 @@
           "rating": 0.98,
           "fkfd": 1.2,
           "kpm": 14.3,
-          "vflPts": 2.55
+          "vflPts": 2.07
         },
         {
           "name": "SpiritZ1",
@@ -25093,7 +25093,7 @@
           "rating": 0.92,
           "fkfd": 0.88,
           "kpm": 16.7,
-          "vflPts": 2.27
+          "vflPts": 2.29
         },
         {
           "name": "Flex1n",
@@ -25101,7 +25101,7 @@
           "rating": 0.85,
           "fkfd": 1.14,
           "kpm": 13.0,
-          "vflPts": 1.45
+          "vflPts": 1.64
         },
         {
           "name": "Akeman",
@@ -25109,7 +25109,7 @@
           "rating": 0.82,
           "fkfd": 0.94,
           "kpm": 14.1,
-          "vflPts": 2.09
+          "vflPts": 1.86
         }
       ],
       "matches": [
@@ -25553,7 +25553,7 @@
           "rating": 1.05,
           "fkfd": 1.12,
           "kpm": 15.8,
-          "vflPts": 2.64
+          "vflPts": 2.75
         },
         {
           "name": "HYUNMIN",
@@ -25561,7 +25561,7 @@
           "rating": 1.05,
           "fkfd": 1.15,
           "kpm": 17.8,
-          "vflPts": 3.27
+          "vflPts": 3.5
         },
         {
           "name": "free1ng",
@@ -25569,7 +25569,7 @@
           "rating": 1.03,
           "fkfd": 1.0,
           "kpm": 15.0,
-          "vflPts": 2.45
+          "vflPts": 2.75
         },
         {
           "name": "BeYN",
@@ -25577,7 +25577,7 @@
           "rating": 0.98,
           "fkfd": 1.2,
           "kpm": 14.1,
-          "vflPts": 2.09
+          "vflPts": 2.5
         },
         {
           "name": "Hermes",
@@ -25585,7 +25585,7 @@
           "rating": 0.85,
           "fkfd": 0.86,
           "kpm": 13.4,
-          "vflPts": 2.18
+          "vflPts": 2.25
         }
       ],
       "matches": [
@@ -26114,7 +26114,7 @@
           "rating": 0.9,
           "fkfd": 1.0,
           "kpm": 14.5,
-          "vflPts": 1.0
+          "vflPts": 1.89
         },
         {
           "name": "Favian",
@@ -26122,7 +26122,7 @@
           "rating": 0.85,
           "fkfd": 0.91,
           "kpm": 15.2,
-          "vflPts": 1.0
+          "vflPts": 2.11
         },
         {
           "name": "d3mur",
@@ -26130,7 +26130,7 @@
           "rating": 0.8,
           "fkfd": 0.5,
           "kpm": 14.1,
-          "vflPts": 0.0
+          "vflPts": 2.0
         },
         {
           "name": "sturNN",
@@ -26138,7 +26138,7 @@
           "rating": 0.72,
           "fkfd": 0.58,
           "kpm": 13.0,
-          "vflPts": -0.25
+          "vflPts": 1.67
         }
       ],
       "matches": [
