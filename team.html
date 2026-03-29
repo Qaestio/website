@@ -547,6 +547,33 @@ function clearStatus() {
     document.getElementById('content').style.display = '';
 }
 
+// ── VFL price / points data ────────────────────────────────────────────────────
+const VFL_EVENT_ID = 8;   // VCT 2026 season event ID on valorantfantasyleague.net
+
+async function fetchVflData() {
+    try {
+        const r = await fetch(
+            `https://api.valorantfantasyleague.net/api/Player/allplayers?eventId=${VFL_EVENT_ID}`,
+            { cache: 'no-cache' }
+        );
+        if (!r.ok) return new Map();
+        const players = await r.json();
+        const map = new Map();
+        for (const p of players) {
+            // Normalise name: lowercase, strip non-alphanumeric for fuzzy matching
+            const key = p.player?.name?.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (key) map.set(key, {
+                price: p.price,
+                pts:   p.totalEventPoints?.totalPoints  ?? 0,
+                gw:    p.currentGameweekPoints?.totalPoints ?? 0,
+            });
+        }
+        return map;
+    } catch {
+        return new Map();
+    }
+}
+
 async function init() {
     const teamName = new URLSearchParams(location.search).get('team');
     if (!teamName) {
@@ -554,11 +581,11 @@ async function init() {
         return;
     }
 
-    let data;
+    let data, vflMap;
     try {
         const r = await fetch('./vct_data.json', { cache: 'no-cache' });
         if (!r.ok) throw new Error('fetch failed');
-        data = await r.json();
+        [data, vflMap] = await Promise.all([r.json(), fetchVflData()]);
     } catch (e) {
         setStatus('Could not load data. <a href="valorant.html" style="color:var(--muted)">← Go back</a>');
         return;
@@ -572,7 +599,7 @@ async function init() {
         return;
     }
 
-    renderTeam(team, data.teams || []);
+    renderTeam(team, data.teams || [], vflMap);
 }
 
 // ── Map statistics ─────────────────────────────────────────────────────────────
@@ -972,7 +999,7 @@ function hexToRgba(hex, alpha) {
 
 // ── Main render ───────────────────────────────────────────────────────────────
 
-function renderTeam(team, allTeams) {
+function renderTeam(team, allTeams, vflMap = new Map()) {
     const r = REGIONS[team.region] || { label: team.region, rawColor: '#888', bg: 'rgba(136,136,136,0.13)' };
 
     document.title = `${team.name} — VCT 2026`;
@@ -1207,6 +1234,16 @@ function renderTeam(team, allTeams) {
             statsEl.appendChild(makePlayerStat('Rating', p.rating != null ? p.rating.toFixed(2) : '—'));
             statsEl.appendChild(makePlayerStat('FK/FD',  p.fkfd   != null ? p.fkfd.toFixed(2)   : '—'));
             statsEl.appendChild(makePlayerStat('K/Map',  p.kpm    != null ? p.kpm               : '—'));
+
+            // VFL cost + value
+            const vflKey = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const vfl = vflMap.get(vflKey);
+            const costStr = vfl ? `${vfl.price} VP` : '—';
+            const valStr  = vfl && vfl.price > 0 && vfl.pts > 0
+                ? (vfl.pts / vfl.price).toFixed(2)
+                : '—';
+            statsEl.appendChild(makePlayerStat('Cost',     costStr));
+            statsEl.appendChild(makePlayerStat('Pts/Cost', valStr));
 
             card.append(nameEl, statsEl);
             playersGrid.appendChild(card);
