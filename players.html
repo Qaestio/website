@@ -290,10 +290,10 @@
     <div style="display:flex;align-items:center;gap:0.5rem">
         <span style="font-size:0.78rem;color:var(--muted)">Sort:</span>
         <div class="sort-group">
-            <button class="sbtn active" id="sVfl"    onclick="setSort('vfl')">VFL Pts</button>
-            <button class="sbtn"        id="sRating" onclick="setSort('rating')">VLR Rating</button>
-            <button class="sbtn"        id="sKpm"    onclick="setSort('kpm')">K / Map</button>
-            <button class="sbtn"        id="sAcs"    onclick="setSort('acs')">ACS</button>
+            <button class="sbtn active" id="sVfl"     onclick="setSort('vfl')">VFL Pts</button>
+            <button class="sbtn"        id="sRating"  onclick="setSort('rating')">VLR Rating</button>
+            <button class="sbtn"        id="sKpm"     onclick="setSort('kpm')">K / Map</button>
+            <button class="sbtn"        id="sCostPt"  onclick="setSort('costPt')">Cost / Pt</button>
         </div>
     </div>
 </div>
@@ -313,7 +313,7 @@
             <div class="lh-stat" id="hVfl"    title="VFL Pts/map: scored per map from actual match data. Includes kill pts, map win/loss, win margin, series bonuses, VLR rating rank &amp; threshold bonuses. Excludes multi-kill round bonuses (4K/5K/6K/7K — no per-round data available).">VFL Pts</div>
             <div class="lh-stat" id="hRating">VLR Rtg</div>
             <div class="lh-stat" id="hKpm">K / Map</div>
-            <div class="lh-stat" id="hAcs">ACS</div>
+            <div class="lh-stat" id="hCostPt" title="Cost per VFL point (lower = better value). VFL price ÷ avg VFL pts/map from Kickoff + Santiago.">Cost / Pt</div>
         </div>
     </div>
 
@@ -338,6 +338,29 @@ let allPlayers = [];
 let activeReg  = new Set(Object.keys(REGIONS));
 let sortMode   = 'vfl';
 
+// ── VFL price fetch ───────────────────────────────────────────────────────────
+
+const VFL_EVENT_ID = 8;
+
+async function fetchVflPrices() {
+    try {
+        const r = await fetch(
+            `https://api.valorantfantasyleague.net/api/Player/allplayers?eventId=${VFL_EVENT_ID}`,
+            { cache: 'no-cache' }
+        );
+        if (!r.ok) return new Map();
+        const players = await r.json();
+        const map = new Map();
+        for (const p of players) {
+            const key = p.player?.name?.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (key) map.set(key, p.price);
+        }
+        return map;
+    } catch {
+        return new Map();
+    }
+}
+
 // ── Data loading ──────────────────────────────────────────────────────────────
 
 async function loadData() {
@@ -347,11 +370,11 @@ async function loadData() {
     document.getElementById('sourceNote').classList.add('hidden');
     allPlayers = [];
 
-    let data;
+    let data, vflPrices;
     try {
         const r = await fetch('./vct_data.json', { cache: 'no-cache' });
         if (!r.ok) throw new Error();
-        data = await r.json();
+        [data, vflPrices] = await Promise.all([r.json(), fetchVflPrices()]);
     } catch (_) {
         setStatus(`<div style="color:#e05252">
             Could not load <code style="font-size:0.85em">vct_data.json</code>.<br>
@@ -369,12 +392,16 @@ async function loadData() {
     for (const team of data.teams) {
         if (!Array.isArray(team.players)) continue;
         for (const p of team.players) {
+            const vflKey   = p.name?.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const price    = vflPrices.get(vflKey) ?? null;
+            const vflPts   = p.vflPts ?? null;
+            const costPt   = price != null && vflPts > 0 ? price / vflPts : null;
             allPlayers.push({
                 name:   p.name,
-                acs:    p.acs    ?? null,
                 rating: p.rating ?? null,
                 kpm:    p.kpm    ?? null,
-                vfl:    p.vflPts ?? null,
+                vfl:    vflPts,
+                costPt,
                 team:   team.name,
                 region: team.region,
                 logo:   team.logo || '',
@@ -433,7 +460,7 @@ function setSort(mode) {
     document.getElementById('sVfl').classList.toggle('active',    mode === 'vfl');
     document.getElementById('sRating').classList.toggle('active', mode === 'rating');
     document.getElementById('sKpm').classList.toggle('active',    mode === 'kpm');
-    document.getElementById('sAcs').classList.toggle('active',    mode === 'acs');
+    document.getElementById('sCostPt').classList.toggle('active', mode === 'costPt');
     render();
 }
 
@@ -441,8 +468,12 @@ function sortedPlayers() {
     const visible = allPlayers.filter(p => activeReg.has(p.region));
     const key = sortMode === 'rating' ? 'rating'
               : sortMode === 'kpm'    ? 'kpm'
-              : sortMode === 'acs'    ? 'acs'
+              : sortMode === 'costPt' ? 'costPt'
               : 'vfl';
+    // Cost/Pt: lower is better — sort ascending; all others sort descending
+    if (sortMode === 'costPt') {
+        return [...visible].sort((a, b) => (a[key] ?? Infinity) - (b[key] ?? Infinity));
+    }
     return [...visible].sort((a, b) => (b[key] ?? -Infinity) - (a[key] ?? -Infinity));
 }
 
@@ -468,7 +499,7 @@ function render() {
     document.getElementById('hVfl').classList.toggle('sort-active',    sortMode === 'vfl');
     document.getElementById('hRating').classList.toggle('sort-active', sortMode === 'rating');
     document.getElementById('hKpm').classList.toggle('sort-active',    sortMode === 'kpm');
-    document.getElementById('hAcs').classList.toggle('sort-active',    sortMode === 'acs');
+    document.getElementById('hCostPt').classList.toggle('sort-active', sortMode === 'costPt');
 
     header.classList.remove('hidden');
 
@@ -527,7 +558,7 @@ function render() {
         stats.appendChild(makeStatVal(p.vfl,    sortMode === 'vfl',    1));
         stats.appendChild(makeStatVal(p.rating, sortMode === 'rating', 2));
         stats.appendChild(makeStatVal(p.kpm,    sortMode === 'kpm',    1));
-        stats.appendChild(makeStatVal(p.acs,    sortMode === 'acs',    0));
+        stats.appendChild(makeStatVal(p.costPt, sortMode === 'costPt', 2));
 
         row.append(rank, nameCol, teamCol, stats);
         list.appendChild(row);

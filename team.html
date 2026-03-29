@@ -1230,20 +1230,19 @@ function renderTeam(team, allTeams, vflMap = new Map()) {
                 return row;
             }
 
-            statsEl.appendChild(makePlayerStat('ACS',    p.acs    != null ? p.acs              : '—'));
-            statsEl.appendChild(makePlayerStat('Rating', p.rating != null ? p.rating.toFixed(2) : '—'));
-            statsEl.appendChild(makePlayerStat('FK/FD',  p.fkfd   != null ? p.fkfd.toFixed(2)   : '—'));
-            statsEl.appendChild(makePlayerStat('K/Map',  p.kpm    != null ? p.kpm               : '—'));
+            statsEl.appendChild(makePlayerStat('Rating',  p.rating != null ? p.rating.toFixed(2) : '—'));
+            statsEl.appendChild(makePlayerStat('VFL Pts', p.vflPts != null ? p.vflPts.toFixed(1) : '—'));
+            statsEl.appendChild(makePlayerStat('K/Map',   p.kpm    != null ? p.kpm               : '—'));
 
-            // VFL cost + value
-            const vflKey = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-            const vfl = vflMap.get(vflKey);
+            // VFL cost + cost-per-point
+            const vflKey  = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const vfl     = vflMap.get(vflKey);
             const costStr = vfl ? `${vfl.price} VP` : '—';
-            const valStr  = vfl && vfl.price > 0 && vfl.pts > 0
-                ? (vfl.pts / vfl.price).toFixed(2)
+            const costPt  = vfl && vfl.price > 0 && p.vflPts > 0
+                ? (vfl.price / p.vflPts).toFixed(2)
                 : '—';
-            statsEl.appendChild(makePlayerStat('Cost',     costStr));
-            statsEl.appendChild(makePlayerStat('Pts/Cost', valStr));
+            statsEl.appendChild(makePlayerStat('Cost',    costStr));
+            statsEl.appendChild(makePlayerStat('Cost/Pt', costPt));
 
             card.append(nameEl, statsEl);
             playersGrid.appendChild(card);
