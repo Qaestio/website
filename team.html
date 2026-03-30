@@ -4,20 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team — VCT 2026</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         :root {
-            --bg:       #0f0f0f;
-            --surface:  #161616;
-            --surface2: #1e1e1e;
-            --border:   #272727;
-            --text:     #e0e0e0;
-            --muted:    #888;
-            --dim:      #4a4a4a;
-            --win:      #52c77a;
-            --loss:     #e05252;
+            --win:  #52c77a;
+            --loss: #e05252;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html, body {
             height: 100%;
@@ -925,64 +917,67 @@ function drawChart(canvas, tooltip, history, lineColor) {
         ctx.stroke();
     }
 
-    // ── Hover interaction ──
+    // ── Hover interaction (rAF-throttled) ──
     const WRAP = canvas.parentElement;
     const canvasRect = () => canvas.getBoundingClientRect();
     const wrapRect   = () => WRAP.getBoundingClientRect();
 
+    let _rafId = null;
+    let _lastX = 0, _lastY = 0;
+
     canvas.addEventListener('mousemove', e => {
-        const cr = canvasRect();
-        const mx = e.clientX - cr.left;
-        const my = e.clientY - cr.top;
+        _lastX = e.clientX;
+        _lastY = e.clientY;
+        if (_rafId) return;
+        _rafId = requestAnimationFrame(() => {
+            _rafId = null;
+            const cr = canvasRect();
+            const mx = _lastX - cr.left;
+            const my = _lastY - cr.top;
 
-        // Find closest point
-        let best = -1, bestDist = Infinity;
-        for (let i = 0; i < history.length; i++) {
-            const dx = xOf(i) - mx;
-            const dy = yOf(history[i].rating) - my;
-            const d  = Math.sqrt(dx * dx + dy * dy);
-            if (d < bestDist) { bestDist = d; best = i; }
-        }
-        if (best < 0 || bestDist > 22) {
-            tooltip.style.display = 'none';
-            return;
-        }
+            let best = -1, bestDist = Infinity;
+            for (let i = 0; i < history.length; i++) {
+                const dx = xOf(i) - mx;
+                const dy = yOf(history[i].rating) - my;
+                const d  = Math.sqrt(dx * dx + dy * dy);
+                if (d < bestDist) { bestDist = d; best = i; }
+            }
+            if (best < 0 || bestDist > 22) {
+                tooltip.style.display = 'none';
+                return;
+            }
 
-        const p = history[best];
-        let html = `<div class="tt-rating">${p.rating.toLocaleString()}</div>`;
-        if (p.event === 'Start') {
-            html += `<div class="tt-sub">Starting rating</div>`;
-        } else {
-            const res    = p.result === 'W' ? '✓ Win' : p.result === 'L' ? '✗ Loss' : '';
-            const resCol = p.result === 'W' ? 'var(--win)' : p.result === 'L' ? 'var(--loss)' : 'var(--muted)';
-            if (res) html += `<div style="color:${resCol}">${res} vs ${p.opp}</div>`;
-            const sub = [p.event, p.rnd].filter(Boolean).join(' · ');
-            if (sub) html += `<div class="tt-sub">${sub}</div>`;
-        }
-        tooltip.innerHTML = html;
-        tooltip.style.display = 'block';
+            const p = history[best];
+            let html = `<div class="tt-rating">${p.rating.toLocaleString()}</div>`;
+            if (p.event === 'Start') {
+                html += `<div class="tt-sub">Starting rating</div>`;
+            } else {
+                const res    = p.result === 'W' ? '✓ Win' : p.result === 'L' ? '✗ Loss' : '';
+                const resCol = p.result === 'W' ? 'var(--win)' : p.result === 'L' ? 'var(--loss)' : 'var(--muted)';
+                if (res) html += `<div style="color:${resCol}">${res} vs ${p.opp}</div>`;
+                const sub = [p.event, p.rnd].filter(Boolean).join(' · ');
+                if (sub) html += `<div class="tt-sub">${sub}</div>`;
+            }
+            tooltip.innerHTML = html;
+            tooltip.style.display = 'block';
 
-        // Position tooltip (keep inside wrapper)
-        const wr = wrapRect();
-        const cr2 = canvasRect();
-        const relX = (cr2.left - wr.left) + xOf(best);
-        const relY = (cr2.top  - wr.top)  + yOf(history[best].rating);
+            const wr  = wrapRect();
+            const cr2 = canvasRect();
+            const relX = (cr2.left - wr.left) + xOf(best);
+            const relY = (cr2.top  - wr.top)  + yOf(history[best].rating);
 
-        let tx = relX + 10;
-        let ty = relY - tooltip.offsetHeight / 2;
+            let tx = relX + 10;
+            let ty = relY - tooltip.offsetHeight / 2;
+            if (tx + tooltip.offsetWidth + 12 > wr.width) tx = relX - tooltip.offsetWidth - 10;
+            ty = Math.max(4, Math.min(ty, wr.height - tooltip.offsetHeight - 4));
 
-        // Flip left if too close to right edge
-        if (tx + tooltip.offsetWidth + 12 > wr.width) {
-            tx = relX - tooltip.offsetWidth - 10;
-        }
-        // Clamp vertically
-        ty = Math.max(4, Math.min(ty, wr.height - tooltip.offsetHeight - 4));
-
-        tooltip.style.left = tx + 'px';
-        tooltip.style.top  = ty + 'px';
+            tooltip.style.left = tx + 'px';
+            tooltip.style.top  = ty + 'px';
+        });
     });
 
     canvas.addEventListener('mouseleave', () => {
+        if (_rafId) { cancelAnimationFrame(_rafId); _rafId = null; }
         tooltip.style.display = 'none';
     });
 }

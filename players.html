@@ -4,28 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players — VCT 2026</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --bg:       #0f0f0f;
-            --surface:  #161616;
-            --surface2: #1e1e1e;
-            --border:   #272727;
-            --text:     #e0e0e0;
-            --muted:    #888;
-            --dim:      #4a4a4a;
-
-            --americas-c:  #f0923b;
-            --americas-bg: rgba(240,146,59,0.13);
-            --emea-c:      #f0c040;
-            --emea-bg:     rgba(240,192,64,0.13);
-            --pacific-c:   #5b9cf6;
-            --pacific-bg:  rgba(91,156,246,0.13);
-            --china-c:     #e05252;
-            --china-bg:    rgba(224,82,82,0.13);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html, body {
             height: 100%;
             font-family: system-ui, -apple-system, sans-serif;
@@ -262,6 +242,40 @@
             margin-top: 1.5rem;
         }
 
+        /* ── Search ── */
+        .search-wrap { position: relative; display: flex; align-items: center; }
+        .search-icon { position: absolute; left: 0.55rem; color: var(--dim); font-size: 0.75rem; pointer-events: none; }
+        .search-input {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 0.82rem;
+            font-family: inherit;
+            padding: 0.45rem 0.7rem 0.45rem 1.8rem;
+            outline: none;
+            width: 150px;
+            transition: border-color 0.15s, width 0.2s;
+        }
+        .search-input::placeholder { color: var(--dim); }
+        .search-input:focus { border-color: #444; width: 190px; }
+
+        /* ── Sort direction button ── */
+        .dir-btn {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-family: inherit;
+            padding: 0.45rem 0.65rem;
+            line-height: 1;
+            transition: background 0.15s, color 0.15s;
+            flex-shrink: 0;
+        }
+        .dir-btn:hover { background: #252525; color: var(--text); }
+
         /* ── Responsive ── */
         @media (max-width: 600px) {
             .controls { height: auto; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
@@ -271,6 +285,7 @@
             .lh-team         { display: none; }
             .stat-col  { width: 50px; }
             .lh-stat   { width: 50px; }
+            .search-input { width: 110px; }
         }
     </style>
 </head>
@@ -282,7 +297,7 @@
         <a class="back-link" href="valorant.html">← Teams</a>
         <span class="topbar-title">VCT 2026 Players</span>
     </div>
-    <span id="playerCount" style="font-size:0.78rem;color:var(--dim)"></span>
+
 </div>
 
 <!-- Controls -->
@@ -295,6 +310,15 @@
             <button class="sbtn"        id="sKpm"     onclick="setSort('kpm')">K / Map</button>
             <button class="sbtn"        id="sCostPt"  onclick="setSort('costPt')">Cost / Pt</button>
         </div>
+        <button class="dir-btn" id="dirBtn" onclick="toggleDir()" title="Toggle sort direction">↓</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.75rem">
+        <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search players…"
+                oninput="searchQuery=this.value;saveState();render()" autocomplete="off" spellcheck="false" />
+        </div>
+        <span id="playerCount" style="font-size:0.78rem;color:var(--dim)"></span>
     </div>
 </div>
 
@@ -334,20 +358,64 @@ const REGIONS = {
     china:    { label: 'China',    color: 'var(--china-c)',    rawColor: '#e05252', bg: 'var(--china-bg)'    },
 };
 
-let allPlayers = [];
-let activeReg  = new Set(Object.keys(REGIONS));
-let sortMode   = 'vfl';
+let allPlayers  = [];
+let activeReg   = new Set(Object.keys(REGIONS));
+let sortMode    = 'vfl';
+let sortDir     = 'desc'; // 'desc' | 'asc'
+let searchQuery = '';
+let rowMap      = new Map(); // player index → DOM row
 
-// ── VFL price fetch ───────────────────────────────────────────────────────────
+// ── Session persistence ───────────────────────────────────────────────────────
+
+function saveState() {
+    sessionStorage.setItem('pl_sort',    sortMode);
+    sessionStorage.setItem('pl_dir',     sortDir);
+    sessionStorage.setItem('pl_regions', JSON.stringify([...activeReg]));
+    sessionStorage.setItem('pl_search',  searchQuery);
+}
+
+function restoreState() {
+    const sort = sessionStorage.getItem('pl_sort');
+    if (sort && ['vfl','rating','kpm','costPt'].includes(sort)) sortMode = sort;
+
+    const dir = sessionStorage.getItem('pl_dir');
+    if (dir === 'asc' || dir === 'desc') sortDir = dir;
+
+    const regs = sessionStorage.getItem('pl_regions');
+    if (regs) {
+        try {
+            const arr = JSON.parse(regs);
+            if (Array.isArray(arr) && arr.length > 0) activeReg = new Set(arr);
+        } catch (_) {}
+    }
+
+    const q = sessionStorage.getItem('pl_search');
+    if (q) {
+        searchQuery = q;
+        const input = document.getElementById('searchInput');
+        if (input) input.value = q;
+    }
+
+    ['sVfl','sRating','sKpm','sCostPt'].forEach(id => {
+        const mode = { sVfl:'vfl', sRating:'rating', sKpm:'kpm', sCostPt:'costPt' }[id];
+        document.getElementById(id).classList.toggle('active', mode === sortMode);
+    });
+    document.getElementById('dirBtn').textContent = sortDir === 'asc' ? '↑' : '↓';
+}
+
+// ── VFL price fetch (with 5 s timeout) ───────────────────────────────────────
 
 const VFL_EVENT_ID = 8;
 
 async function fetchVflPrices() {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5000);
     try {
         const r = await fetch(
             `https://api.valorantfantasyleague.net/api/Player/allplayers?eventId=${VFL_EVENT_ID}`,
-            { cache: 'no-cache' }
+            { cache: 'no-cache', signal: controller.signal }
         );
+        clearTimeout(timer);
         if (!r.ok) return new Map();
         const players = await r.json();
         const map = new Map();
@@ -357,6 +425,7 @@ async function fetchVflPrices() {
         }
         return map;
     } catch {
+        clearTimeout(timer);
         return new Map();
     }
 }
@@ -369,12 +438,14 @@ async function loadData() {
     document.getElementById('listHeader').classList.add('hidden');
     document.getElementById('sourceNote').classList.add('hidden');
     allPlayers = [];
+    rowMap.clear();
 
-    let data, vflPrices;
+    // Fetch VCT data first; VFL prices load in parallel but failures are silent
+    let data;
     try {
         const r = await fetch('./vct_data.json', { cache: 'no-cache' });
         if (!r.ok) throw new Error();
-        [data, vflPrices] = await Promise.all([r.json(), fetchVflPrices()]);
+        data = await r.json();
     } catch (_) {
         setStatus(`<div style="color:#e05252">
             Could not load <code style="font-size:0.85em">vct_data.json</code>.<br>
@@ -388,20 +459,21 @@ async function loadData() {
         return;
     }
 
-    // Flatten players from all teams
+    // VFL prices are best-effort — don't block render if the API is slow/down
+    const vflPrices = await fetchVflPrices();
+
     for (const team of data.teams) {
         if (!Array.isArray(team.players)) continue;
         for (const p of team.players) {
-            const vflKey   = p.name?.toLowerCase().replace(/[^a-z0-9]/g, '');
-            const price    = vflPrices.get(vflKey) ?? null;
-            const vflPts   = p.vflPts ?? null;
-            const costPt   = price != null && vflPts > 0 ? price / vflPts : null;
+            const vflKey = p.name?.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const price  = vflPrices.get(vflKey) ?? null;
+            const vflPts = p.vflPts ?? null;
             allPlayers.push({
                 name:   p.name,
                 rating: p.rating ?? null,
                 kpm:    p.kpm    ?? null,
                 vfl:    vflPts,
-                costPt,
+                costPt: price != null && vflPts > 0 ? price / vflPts : null,
                 team:   team.name,
                 region: team.region,
                 logo:   team.logo || '',
@@ -420,6 +492,7 @@ async function loadData() {
     document.getElementById('sourceNote').classList.remove('hidden');
 
     buildFilters();
+    buildAllRows();
     render();
     clearStatus();
 }
@@ -436,17 +509,16 @@ function buildFilters() {
         chip.style.cssText = on
             ? `background:${r.bg};border-color:${r.rawColor}44;color:${r.rawColor}`
             : `background:transparent;border-color:var(--border);color:var(--muted)`;
-
         const dot = document.createElement('span');
         dot.className = 'cdot';
         dot.style.background = r.rawColor;
-
         chip.appendChild(dot);
         chip.appendChild(document.createTextNode(r.label));
         chip.addEventListener('click', () => {
             if (activeReg.has(k) && activeReg.size > 1) activeReg.delete(k);
             else activeReg.add(k);
             buildFilters();
+            saveState();
             render();
         });
         cont.appendChild(chip);
@@ -461,6 +533,14 @@ function setSort(mode) {
     document.getElementById('sRating').classList.toggle('active', mode === 'rating');
     document.getElementById('sKpm').classList.toggle('active',    mode === 'kpm');
     document.getElementById('sCostPt').classList.toggle('active', mode === 'costPt');
+    saveState();
+    render();
+}
+
+function toggleDir() {
+    sortDir = sortDir === 'desc' ? 'asc' : 'desc';
+    document.getElementById('dirBtn').textContent = sortDir === 'asc' ? '↑' : '↓';
+    saveState();
     render();
 }
 
@@ -470,52 +550,34 @@ function sortedPlayers() {
               : sortMode === 'kpm'    ? 'kpm'
               : sortMode === 'costPt' ? 'costPt'
               : 'vfl';
-    // Cost/Pt: lower is better — sort ascending; all others sort descending
-    if (sortMode === 'costPt') {
-        return [...visible].sort((a, b) => (a[key] ?? Infinity) - (b[key] ?? Infinity));
-    }
-    return [...visible].sort((a, b) => (b[key] ?? -Infinity) - (a[key] ?? -Infinity));
+    // Default natural direction: costPt asc (lower = better), all others desc
+    const naturalAsc = sortMode === 'costPt';
+    const ascending  = naturalAsc ? sortDir === 'desc' : sortDir === 'asc';
+    return [...visible].sort((a, b) =>
+        ascending
+            ? (a[key] ?? Infinity)  - (b[key] ?? Infinity)
+            : (b[key] ?? -Infinity) - (a[key] ?? -Infinity)
+    );
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
+// ── Build rows once ───────────────────────────────────────────────────────────
 
-function render() {
-    const list   = document.getElementById('playerList');
-    const header = document.getElementById('listHeader');
+function buildAllRows() {
+    const list = document.getElementById('playerList');
     list.innerHTML = '';
+    rowMap.clear();
 
-    const players = sortedPlayers();
-    document.getElementById('playerCount').textContent =
-        `${players.length} player${players.length !== 1 ? 's' : ''}`;
-
-    if (players.length === 0) {
-        list.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--muted)">No players to display.</div>';
-        list.classList.remove('hidden');
-        header.classList.add('hidden');
-        return;
-    }
-
-    // Update header highlight
-    document.getElementById('hVfl').classList.toggle('sort-active',    sortMode === 'vfl');
-    document.getElementById('hRating').classList.toggle('sort-active', sortMode === 'rating');
-    document.getElementById('hKpm').classList.toggle('sort-active',    sortMode === 'kpm');
-    document.getElementById('hCostPt').classList.toggle('sort-active', sortMode === 'costPt');
-
-    header.classList.remove('hidden');
-
-    players.forEach((p, i) => {
+    allPlayers.forEach((p, idx) => {
         const r = REGIONS[p.region];
 
         const row = document.createElement('div');
         row.className = 'player-row';
         row.style.setProperty('--rc', r.rawColor);
+        row.dataset.idx = idx;
 
-        // Rank
         const rank = document.createElement('span');
         rank.className = 'player-rank';
-        rank.textContent = `${i + 1}`;
 
-        // Player name
         const nameCol = document.createElement('div');
         nameCol.className = 'player-name-col';
         const nameEl = document.createElement('div');
@@ -523,10 +585,8 @@ function render() {
         nameEl.textContent = p.name;
         nameCol.appendChild(nameEl);
 
-        // Team column
         const teamCol = document.createElement('div');
         teamCol.className = 'player-team-col';
-
         let logoEl;
         if (p.logo) {
             logoEl = document.createElement('img');
@@ -545,41 +605,119 @@ function render() {
             logoEl.className = 'team-logo-ph';
             logoEl.textContent = p.team.slice(0, 2).toUpperCase();
         }
-
         const teamName = document.createElement('span');
         teamName.className = 'team-name-text';
         teamName.textContent = p.team;
-
         teamCol.append(logoEl, teamName);
 
-        // Stats
         const stats = document.createElement('div');
         stats.className = 'player-stats';
-        stats.appendChild(makeStatVal(p.vfl,    sortMode === 'vfl',    1));
-        stats.appendChild(makeStatVal(p.rating, sortMode === 'rating', 2));
-        stats.appendChild(makeStatVal(p.kpm,    sortMode === 'kpm',    1));
-        stats.appendChild(makeStatVal(p.costPt, sortMode === 'costPt', 2));
+        stats.appendChild(makeStatVal(p.vfl,    'vfl',    1));
+        stats.appendChild(makeStatVal(p.rating, 'rating', 2));
+        stats.appendChild(makeStatVal(p.kpm,    'kpm',    1));
+        stats.appendChild(makeStatVal(p.costPt, 'costPt', 2));
 
         row.append(rank, nameCol, teamCol, stats);
         list.appendChild(row);
+        rowMap.set(idx, row);
     });
+}
+
+// ── Render — update order + visibility only ───────────────────────────────────
+
+function render() {
+    const list   = document.getElementById('playerList');
+    const header = document.getElementById('listHeader');
+
+    if (rowMap.size === 0) return;
+
+    const query  = searchQuery.trim().toLowerCase();
+    const sorted = sortedPlayers();
+    const sortedIdxs = new Set(sorted.map((_, i) => allPlayers.indexOf(sorted[i])));
+
+    // Assign order
+    sorted.forEach((p, i) => {
+        const idx = allPlayers.indexOf(p);
+        const row = rowMap.get(idx);
+        if (row) row.style.order = i;
+    });
+
+    // Visibility
+    allPlayers.forEach((p, idx) => {
+        const row = rowMap.get(idx);
+        if (!row) return;
+        const inRegion   = activeReg.has(p.region);
+        const passSearch = !query ||
+            p.name.toLowerCase().includes(query) ||
+            p.team.toLowerCase().includes(query);
+        row.classList.toggle('hidden', !inRegion || !passSearch);
+    });
+
+    // Update sort-active highlight on stat cells
+    document.getElementById('hVfl').classList.toggle('sort-active',    sortMode === 'vfl');
+    document.getElementById('hRating').classList.toggle('sort-active', sortMode === 'rating');
+    document.getElementById('hKpm').classList.toggle('sort-active',    sortMode === 'kpm');
+    document.getElementById('hCostPt').classList.toggle('sort-active', sortMode === 'costPt');
+
+    // Update stat cell highlights and rank numbers
+    let rank = 1;
+    sorted.forEach(p => {
+        const idx = allPlayers.indexOf(p);
+        const row = rowMap.get(idx);
+        if (!row) return;
+
+        // Rank
+        const rankEl = row.querySelector('.player-rank');
+        if (rankEl) {
+            if (row.classList.contains('hidden')) {
+                rankEl.textContent = '';
+            } else {
+                rankEl.textContent = `${rank}`;
+                rank++;
+            }
+        }
+
+        // Stat cell active highlight
+        const statCells = row.querySelectorAll('.stat-val');
+        const modes = ['vfl','rating','kpm','costPt'];
+        statCells.forEach((cell, i) => {
+            cell.classList.toggle('sort-active', modes[i] === sortMode);
+        });
+    });
+
+    const visibleCount = [...rowMap.values()].filter(r => !r.classList.contains('hidden')).length;
+    document.getElementById('playerCount').textContent =
+        `${visibleCount} player${visibleCount !== 1 ? 's' : ''}`;
+
+    const noRes = list.querySelector('.no-results');
+    if (visibleCount === 0 && allPlayers.length > 0) {
+        header.classList.add('hidden');
+        if (!noRes) {
+            const msg = document.createElement('div');
+            msg.className = 'no-results';
+            msg.style.cssText = 'text-align:center;padding:3rem;color:var(--muted)';
+            msg.textContent = 'No players match your search.';
+            list.appendChild(msg);
+        }
+    } else {
+        header.classList.remove('hidden');
+        if (noRes) noRes.remove();
+    }
 
     list.classList.remove('hidden');
 }
 
-function makeStatVal(value, isActive, decimals) {
+function makeStatVal(value, mode, decimals) {
     const col = document.createElement('div');
     col.className = 'stat-col';
-
     const val = document.createElement('div');
     if (value != null) {
-        val.className = `stat-val${isActive ? ' sort-active' : ''}`;
+        val.className = `stat-val${mode === sortMode ? ' sort-active' : ''}`;
         val.textContent = decimals === 0 ? Math.round(value) : value.toFixed(decimals);
     } else {
         val.className = 'stat-val dim-val';
         val.textContent = '–';
     }
-
     col.appendChild(val);
     return col;
 }
@@ -598,6 +736,7 @@ function clearStatus() {
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
+restoreState();
 buildFilters();
 loadData();
 </script>

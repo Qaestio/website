@@ -4,28 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VCT 2026 Teams</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --bg:       #0f0f0f;
-            --surface:  #161616;
-            --surface2: #1e1e1e;
-            --border:   #272727;
-            --text:     #e0e0e0;
-            --muted:    #888;
-            --dim:      #4a4a4a;
-
-            --americas-c:  #f0923b;
-            --americas-bg: rgba(240,146,59,0.13);
-            --emea-c:      #f0c040;
-            --emea-bg:     rgba(240,192,64,0.13);
-            --pacific-c:   #5b9cf6;
-            --pacific-bg:  rgba(91,156,246,0.13);
-            --china-c:     #e05252;
-            --china-bg:    rgba(224,82,82,0.13);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html, body {
             height: 100%;
             font-family: system-ui, -apple-system, sans-serif;
@@ -285,6 +265,34 @@
         .lh-stats  { display: flex; gap: 1.25rem; flex-shrink: 0; }
         .lh-stat   { min-width: 58px; text-align: center; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.06em; }
 
+        /* ── Search ── */
+        .search-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .search-icon {
+            position: absolute;
+            left: 0.55rem;
+            color: var(--dim);
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+        .search-input {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 0.82rem;
+            font-family: inherit;
+            padding: 0.45rem 0.7rem 0.45rem 1.8rem;
+            outline: none;
+            width: 160px;
+            transition: border-color 0.15s, width 0.2s;
+        }
+        .search-input::placeholder { color: var(--dim); }
+        .search-input:focus { border-color: #444; width: 200px; }
+
         /* ── Responsive ── */
         @media (max-width: 540px) {
             .controls { height: auto; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
@@ -292,6 +300,8 @@
             .stat-col { min-width: 48px; }
             .team-rank { display: none; }
             .lh-rank   { display: none; }
+            .search-input { width: 120px; }
+            .search-input:focus { width: 140px; }
             .pd-header,
             .pd-row    { padding-left: 0.9rem; }
         }
@@ -320,7 +330,14 @@
             <button class="sbtn"        id="sRecord" onclick="setSort('record')">Win %</button>
         </div>
     </div>
-    <span id="teamCount" style="font-size:0.78rem;color:var(--dim)"></span>
+    <div style="display:flex;align-items:center;gap:0.75rem">
+        <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search teams…"
+                oninput="searchQuery=this.value;saveState();render()" autocomplete="off" spellcheck="false" />
+        </div>
+        <span id="teamCount" style="font-size:0.78rem;color:var(--dim)"></span>
+    </div>
 </div>
 
 <!-- Region filter chips -->
@@ -364,9 +381,44 @@ const REGION_ORDER = { americas: 0, emea: 1, pacific: 2, china: 3 };
 
 // ── State ──────────────────────────────────────────────────────────────────────
 
-let allTeams  = [];
-let activeReg = new Set(Object.keys(REGIONS));
-let sortMode  = 'rating';
+let allTeams   = [];
+let activeReg  = new Set(Object.keys(REGIONS));
+let sortMode   = 'rating';
+let searchQuery = '';
+let rowMap     = new Map(); // team name → DOM row element
+
+// ── Session persistence ────────────────────────────────────────────────────────
+
+function saveState() {
+    sessionStorage.setItem('vct_sort',    sortMode);
+    sessionStorage.setItem('vct_regions', JSON.stringify([...activeReg]));
+    sessionStorage.setItem('vct_search',  searchQuery);
+}
+
+function restoreState() {
+    const sort = sessionStorage.getItem('vct_sort');
+    if (sort && ['rating','alpha','region','record'].includes(sort)) sortMode = sort;
+
+    const regs = sessionStorage.getItem('vct_regions');
+    if (regs) {
+        try {
+            const arr = JSON.parse(regs);
+            if (Array.isArray(arr) && arr.length > 0) activeReg = new Set(arr);
+        } catch (_) {}
+    }
+
+    const q = sessionStorage.getItem('vct_search');
+    if (q) {
+        searchQuery = q;
+        const input = document.getElementById('searchInput');
+        if (input) input.value = q;
+    }
+
+    ['sRating','sAlpha','sRegion','sRecord'].forEach(id => {
+        const mode = { sRating:'rating', sAlpha:'alpha', sRegion:'region', sRecord:'record' }[id];
+        document.getElementById(id).classList.toggle('active', mode === sortMode);
+    });
+}
 
 // ── Data loading ───────────────────────────────────────────────────────────────
 
@@ -377,6 +429,7 @@ async function loadData() {
     document.getElementById('listHeader').classList.add('hidden');
     document.getElementById('sourceNote').classList.add('hidden');
     allTeams = [];
+    rowMap.clear();
 
     const ok = await loadViaJson();
     if (!ok) {
@@ -391,6 +444,7 @@ async function loadData() {
 
     document.getElementById('sourceNote').classList.remove('hidden');
     buildFilters();
+    buildAllRows();
     render();
     document.getElementById('refreshBtn').disabled = false;
     clearStatus();
@@ -478,6 +532,7 @@ function buildFilters() {
             if (activeReg.has(k) && activeReg.size > 1) activeReg.delete(k);
             else activeReg.add(k);
             buildFilters();
+            saveState();
             render();
         });
         cont.appendChild(chip);
@@ -492,6 +547,7 @@ function setSort(mode) {
     document.getElementById('sAlpha').classList.toggle('active',  mode === 'alpha');
     document.getElementById('sRegion').classList.toggle('active', mode === 'region');
     document.getElementById('sRecord').classList.toggle('active', mode === 'record');
+    saveState();
     render();
 }
 
@@ -509,49 +565,32 @@ function sortedTeams() {
             return rd !== 0 ? rd : winRate(b) - winRate(a);
         });
     }
-    // record / win %
     return [...visible].sort((a, b) => {
         const wd = winRate(b) - winRate(a);
         if (wd !== 0) return wd;
-        return (b.matchW + b.matchL) - (a.matchW + a.matchL); // more games = higher if same %
+        return (b.matchW + b.matchL) - (a.matchW + a.matchL);
     });
 }
 
-// ── Render ─────────────────────────────────────────────────────────────────────
+// ── Build rows once ────────────────────────────────────────────────────────────
 
-function render() {
-    const list   = document.getElementById('teamList');
-    const header = document.getElementById('listHeader');
+function buildAllRows() {
+    const list = document.getElementById('teamList');
     list.innerHTML = '';
+    rowMap.clear();
 
-    const teams = sortedTeams();
-    document.getElementById('teamCount').textContent =
-        `${teams.length} team${teams.length !== 1 ? 's' : ''}`;
-
-    if (teams.length === 0) {
-        list.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--muted)">No teams to display.</div>';
-        list.classList.remove('hidden');
-        header.classList.add('hidden');
-        return;
-    }
-
-    header.classList.remove('hidden');
-
-    teams.forEach((t, i) => {
+    allTeams.forEach(t => {
         const r = REGIONS[t.region];
 
-        // ── Team row (anchor → team page) ──────────────────────────────────────
         const row = document.createElement('a');
         row.className = 'team-row';
         row.href = `team.html?team=${encodeURIComponent(t.name)}`;
         row.style.setProperty('--rc', r.rawColor);
+        row.dataset.name = t.name;
 
-        // Rank number
         const rank = document.createElement('span');
         rank.className = 'team-rank';
-        rank.textContent = (sortMode === 'rating' || sortMode === 'record') ? `${i + 1}` : '';
 
-        // Logo
         let logoEl;
         if (t.logo) {
             logoEl = document.createElement('img');
@@ -571,7 +610,6 @@ function render() {
             logoEl.textContent = t.name.slice(0, 2).toUpperCase();
         }
 
-        // Info
         const info = document.createElement('div');
         info.className = 'team-info';
         const name = document.createElement('div');
@@ -583,7 +621,6 @@ function render() {
         badge.style.cssText = `background:${r.bg};color:${r.rawColor}`;
         info.append(name, badge);
 
-        // Team stats
         const stats = document.createElement('div');
         stats.className = 'team-stats';
         stats.appendChild(makeRatingCol(t.eloRating));
@@ -592,7 +629,75 @@ function render() {
 
         row.append(rank, logoEl, info, stats);
         list.appendChild(row);
+        rowMap.set(t.name, row);
     });
+}
+
+// ── Render — update visibility + order only, no DOM creation ──────────────────
+
+function render() {
+    const list   = document.getElementById('teamList');
+    const header = document.getElementById('listHeader');
+
+    if (rowMap.size === 0) return;
+
+    const query  = searchQuery.trim().toLowerCase();
+    const qNorm  = normName(query);
+    const sorted = sortedTeams();
+    const sortedNames = new Set(sorted.map(t => t.name));
+
+    // Assign CSS flex-order to sorted teams
+    sorted.forEach((t, i) => {
+        const row = rowMap.get(t.name);
+        if (row) row.style.order = i;
+    });
+
+    // Toggle visibility for every team
+    allTeams.forEach(t => {
+        const row = rowMap.get(t.name);
+        if (!row) return;
+        const inRegion   = sortedNames.has(t.name);
+        const passSearch = !query ||
+            t.name.toLowerCase().includes(query) ||
+            normName(t.name).includes(qNorm);
+        row.classList.toggle('hidden', !inRegion || !passSearch);
+    });
+
+    // Update rank numbers in sorted order, counting only visible rows
+    let rank = 1;
+    const showRank = sortMode === 'rating' || sortMode === 'record';
+    sorted.forEach(t => {
+        const row = rowMap.get(t.name);
+        if (!row) return;
+        const rankEl = row.querySelector('.team-rank');
+        if (!rankEl) return;
+        if (row.classList.contains('hidden')) {
+            rankEl.textContent = '';
+        } else {
+            rankEl.textContent = showRank ? `${rank}` : '';
+            rank++;
+        }
+    });
+
+    const visibleCount = [...rowMap.values()].filter(r => !r.classList.contains('hidden')).length;
+    document.getElementById('teamCount').textContent =
+        `${visibleCount} team${visibleCount !== 1 ? 's' : ''}`;
+
+    // No-results placeholder
+    const noRes = list.querySelector('.no-results');
+    if (visibleCount === 0 && allTeams.length > 0) {
+        header.classList.add('hidden');
+        if (!noRes) {
+            const msg = document.createElement('div');
+            msg.className = 'no-results';
+            msg.style.cssText = 'text-align:center;padding:3rem;color:var(--muted)';
+            msg.textContent = 'No teams match your search.';
+            list.appendChild(msg);
+        }
+    } else {
+        header.classList.remove('hidden');
+        if (noRes) noRes.remove();
+    }
 
     list.classList.remove('hidden');
 }
@@ -600,15 +705,12 @@ function render() {
 function makeRatingCol(rating) {
     const col = document.createElement('div');
     col.className = 'stat-col';
-
     const lbl = document.createElement('div');
     lbl.className = 'stat-label';
     lbl.textContent = 'Rating';
-
     const val = document.createElement('div');
     val.className = 'stat-val rating-val';
     val.textContent = rating != null ? Math.round(rating).toLocaleString() : '–';
-
     col.append(lbl, val);
     return col;
 }
@@ -616,40 +718,27 @@ function makeRatingCol(rating) {
 function makeStatCol(label, w, l) {
     const col = document.createElement('div');
     col.className = 'stat-col';
-
     const lbl = document.createElement('div');
     lbl.className = 'stat-label';
     lbl.textContent = label;
-
     const val = document.createElement('div');
-
     if (w > 0 || l > 0) {
         val.className = 'stat-val';
-
-        const wEl = document.createElement('span');
-        wEl.className = 'w';
-        wEl.textContent = w;
-
-        const sep = document.createElement('span');
-        sep.className = 'sep';
-        sep.textContent = '–';
-
-        const lEl = document.createElement('span');
-        lEl.className = 'l';
-        lEl.textContent = l;
-
+        const wEl = document.createElement('span'); wEl.className = 'w'; wEl.textContent = w;
+        const sep = document.createElement('span'); sep.className = 'sep'; sep.textContent = '–';
+        const lEl = document.createElement('span'); lEl.className = 'l'; lEl.textContent = l;
         val.append(wEl, sep, lEl);
     } else {
         val.className = 'stat-val na';
         val.textContent = '–';
     }
-
     col.append(lbl, val);
     return col;
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────────
 
+restoreState();
 buildFilters();
 loadData();
 </script>

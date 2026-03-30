@@ -1,0 +1,25 @@
+/* ── Shared design tokens ────────────────────────────────────────────────────
+   Linked from: valorant.html, players.html, team.html, calendar.html
+   Page-specific variables (e.g. --win/--loss, category colours) stay inline.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+    --bg:       #0f0f0f;
+    --surface:  #161616;
+    --surface2: #1e1e1e;
+    --border:   #272727;
+    --text:     #e0e0e0;
+    --muted:    #888;
+    --dim:      #4a4a4a;
+
+    --americas-c:  #f0923b;
+    --americas-bg: rgba(240,146,59,0.13);
+    --emea-c:      #f0c040;
+    --emea-bg:     rgba(240,192,64,0.13);
+    --pacific-c:   #5b9cf6;
+    --pacific-bg:  rgba(91,156,246,0.13);
+    --china-c:     #e05252;
+    --china-bg:    rgba(224,82,82,0.13);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }

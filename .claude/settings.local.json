@@ -43,7 +43,16 @@
       "Bash(/c/Python314/python.exe:*)",
       "Bash(\"C:/Users/bearm/AppData/Local/Temp/vfl_players.json\")",
       "Bash(\"C:/Users/bearm/AppData/Local/Temp/extract_json.py\":*)",
-      "Bash(\"C:/Users/bearm/AppData/Local/Temp/compare.py\":*)"
+      "Bash(\"C:/Users/bearm/AppData/Local/Temp/compare.py\":*)",
+      "Bash(python scraper/optimize_vfl.py)",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(cmd /c \"taskkill /F /IM python.exe\")",
+      "Bash(python -c \"import scipy; print\\(scipy.__version__\\)\")",
+      "Bash(python -c \"import pulp; print\\(pulp.__version__\\)\")",
+      "Bash(python scraper/debug_vfl.py)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\(''''/c/Users/bearm/OneDrive/Documents/GitHub/website/vct_data.json''''\\)\\); print\\(''''Top-level keys:'''', list\\(d.keys\\(\\)\\)\\); print\\(''''Teams count:'''', len\\(d[''''teams'''']\\)\\); print\\(''''Events:'''', d[''''events'''']\\); print\\(''''First team structure:''''\\); import pprint; pprint.pprint\\(d[''''teams''''][0], width=100, compact=True\\)\")",
+      "Bash(python3 /c/Users/bearm/OneDrive/Documents/GitHub/website/scraper/calc_ratings.py)",
+      "Bash(python scraper/build_index.py)"
     ]
   }
 }

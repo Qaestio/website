@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         :root {
-            --bg:       #0f0f0f;
-            --surface:  #161616;
-            --surface2: #1e1e1e;
-            --border:   #272727;
-            --text:     #e0e0e0;
-            --muted:    #888;
-            --dim:      #4a4a4a;
-
             --school-c:   #5b9cf6;
             --school-bg:  rgba(91,156,246,0.15);
             --health-c:   #52c77a;
@@ -28,8 +21,6 @@
             --hdr-h:  52px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html, body {
             height: 100%;
             font-family: system-ui, -apple-system, sans-serif;
@@ -40,6 +31,27 @@
         body { display: flex; flex-direction: column; overflow: hidden; }
 
         .hidden { display: none !important; }
+
+        /* ── Undo toast ── */
+        .undo-toast {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(0);
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.82rem;
+            color: var(--text);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 9999;
+            white-space: nowrap;
+        }
+        .undo-toast.visible { opacity: 1; }
 
         /* ── Top bar ── */
         .topbar {
@@ -779,6 +791,8 @@
     </div>
 </div>
 
+<div id="undoToast" class="undo-toast"></div>
+
 <script>
 // ── Constants ─────────────────────────────────────────────────────────────────
 
@@ -820,6 +834,32 @@ const uid       = () => Date.now().toString(36) + Math.random().toString(36).sli
 const pad       = n  => String(n).padStart(2,'0');
 const save      = () => localStorage.setItem('cal_v1', JSON.stringify(appts));
 const saveTasks = () => localStorage.setItem('cal_tasks_v1', JSON.stringify(tasks));
+
+// ── Undo ──────────────────────────────────────────────────────────────────────
+const MAX_UNDO  = 30;
+const undoStack = [];
+
+function pushUndo() {
+    undoStack.push(JSON.stringify(appts));
+    if (undoStack.length > MAX_UNDO) undoStack.shift();
+}
+
+function undo() {
+    if (undoStack.length === 0) return;
+    appts = JSON.parse(undoStack.pop());
+    save();
+    render();
+    showToast('Undone');
+}
+
+let _toastTimer = null;
+function showToast(msg) {
+    const el = document.getElementById('undoToast');
+    el.textContent = msg;
+    el.classList.add('visible');
+    clearTimeout(_toastTimer);
+    _toastTimer = setTimeout(() => el.classList.remove('visible'), 2000);
+}
 const mkEl      = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
 function dKey(d) {
@@ -1484,6 +1524,7 @@ function saveAppt() {
 }
 
 function _commitSave(formData, scope) {
+    pushUndo();
     if (scope === 'one') {
         // Exclude the edited occurrence from the original series
         const orig = appts.find(x => x.id === editId);
@@ -1609,28 +1650,84 @@ function popupEdit() {
 }
 function popupDelete() {
     if (!popupId) return;
+    pushUndo();
     appts = appts.filter(x => x.id !== popupId);
     save(); closePopup(); render();
 }
 function popupDeleteThis() {
     const a = appts.find(x => x.id === popupId);
     if (!a || !popupDate) return;
+    pushUndo();
     if (!a.repeat.excluded) a.repeat.excluded = [];
     if (!a.repeat.excluded.includes(popupDate)) a.repeat.excluded.push(popupDate);
     save(); closePopup(); render();
 }
 function popupDeleteAll() {
     if (!popupId) return;
+    pushUndo();
     appts = appts.filter(x => x.id !== popupId);
     save(); closePopup(); render();
 }
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────────
+
+document.addEventListener('keydown', e => {
+    // Never intercept when the user is typing
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+    const modalOpen = !document.getElementById('overlay').classList.contains('hidden');
+    const popupOpen = !document.getElementById('popup').classList.contains('hidden');
+
+    // Escape closes modal or popup
+    if (e.key === 'Escape') {
+        if (modalOpen)     { e.preventDefault(); closeModal();  return; }
+        if (popupOpen)     { e.preventDefault(); closePopup();  return; }
+        return;
+    }
+
+    // Nothing below should fire while a modal is open
+    if (modalOpen || popupOpen) return;
+
+    // N — new event on current day
+    if (e.key === 'n' || e.key === 'N') {
+        e.preventDefault();
+        openAdd(curDate, '09:00', '10:00');
+        return;
+    }
+
+    // Arrow keys — navigate weeks (or days in day view)
+    if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        nav(-1);
+        return;
+    }
+    if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nav(1);
+        return;
+    }
+
+    // T — go to today
+    if (e.key === 't' || e.key === 'T') {
+        e.preventDefault();
+        goToday();
+        return;
+    }
+
+    // Ctrl/Cmd + Z — undo
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+        e.preventDefault();
+        undo();
+        return;
+    }
+});
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 renderCatGrid('school');
 render();
 scrollToNow();
-setInterval(render, 60000);
 </script>
 </body>
 </html>

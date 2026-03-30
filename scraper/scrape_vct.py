@@ -1119,3 +1119,5 @@ if __name__ == '__main__':
     main()
     print('\nRunning calc_ratings.py …')
     subprocess.run([sys.executable, str(Path(__file__).parent / 'calc_ratings.py')], check=True)
+    print('\nBuilding query index …')
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'build_index.py')], check=True)

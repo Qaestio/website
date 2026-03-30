@@ -306,3 +306,7 @@ with open('vct_data.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print('\n  Ratings written to vct_data.json')
+
+import subprocess, sys
+from pathlib import Path
+subprocess.run([sys.executable, str(Path(__file__).parent / 'build_index.py')], check=True)
