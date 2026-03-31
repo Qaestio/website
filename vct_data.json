@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T12:19:17.035776+00:00",
+  "lastUpdated": "2026-03-31T14:15:21.667796+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -19277,42 +19277,42 @@
       "name": "All Gamers",
       "region": "china",
       "logo": "https://owcdn.net/img/6549c2b905061.png",
-      "matchW": 5,
+      "matchW": 6,
       "matchL": 2,
-      "mapW": 12,
-      "mapL": 8,
+      "mapW": 14,
+      "mapL": 9,
       "players": [
         {
           "name": "Shr1mp",
-          "acs": 188,
-          "rating": 1.06,
-          "fkfd": 1.71,
-          "kpm": 14.6,
-          "vflPts": 2.65
+          "acs": 187,
+          "rating": 1.07,
+          "fkfd": 1.36,
+          "kpm": 14.7,
+          "vflPts": 2.74
         },
         {
           "name": "f4ngeer",
-          "acs": 222,
-          "rating": 1.06,
-          "fkfd": 1.34,
-          "kpm": 17.8,
-          "vflPts": 3.3
+          "acs": 227,
+          "rating": 1.1,
+          "fkfd": 1.39,
+          "kpm": 18.2,
+          "vflPts": 3.52
         },
         {
           "name": "K1ra",
-          "acs": 205,
-          "rating": 1.03,
-          "fkfd": 0.62,
-          "kpm": 16.0,
-          "vflPts": 2.95
+          "acs": 203,
+          "rating": 1.02,
+          "fkfd": 0.68,
+          "kpm": 15.9,
+          "vflPts": 2.91
         },
         {
           "name": "iamgrq",
-          "acs": 188,
-          "rating": 0.97,
-          "fkfd": 0.79,
-          "kpm": 14.4,
-          "vflPts": 2.75
+          "acs": 195,
+          "rating": 0.98,
+          "fkfd": 0.94,
+          "kpm": 14.7,
+          "vflPts": 2.78
         },
         {
           "name": "Au1",
@@ -19631,6 +19631,82 @@
             }
           ],
           "oppRating": 1698
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Wuxi Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "All Gamers"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "All Gamers"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         },
         {
           "event": "Masters Santiago",
@@ -20565,34 +20641,42 @@
       "name": "EDward Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/62c82049253b2.png",
-      "matchW": 5,
+      "matchW": 6,
       "matchL": 4,
-      "mapW": 12,
+      "mapW": 14,
       "mapL": 12,
       "players": [
         {
           "name": "CHICHOO",
-          "acs": 197,
-          "rating": 1.1,
-          "fkfd": 1.36,
+          "acs": 198,
+          "rating": 1.11,
+          "fkfd": 1.42,
           "kpm": 15.5,
-          "vflPts": 2.71
+          "vflPts": 2.85
         },
         {
           "name": "Smoggy",
-          "acs": 184,
-          "rating": 0.98,
-          "fkfd": 0.95,
-          "kpm": 14.3,
-          "vflPts": 2.29
+          "acs": 188,
+          "rating": 1.01,
+          "fkfd": 0.92,
+          "kpm": 14.6,
+          "vflPts": 2.62
         },
         {
           "name": "ZmjjKK",
-          "acs": 227,
-          "rating": 1.0,
-          "fkfd": 1.34,
-          "kpm": 18.1,
-          "vflPts": 2.88
+          "acs": 228,
+          "rating": 1.01,
+          "fkfd": 1.35,
+          "kpm": 18.3,
+          "vflPts": 3.12
+        },
+        {
+          "name": "nobody",
+          "acs": 174,
+          "rating": 0.86,
+          "fkfd": 0.97,
+          "kpm": 13.3,
+          "vflPts": 2.12
         },
         {
           "name": "cb",
@@ -20601,14 +20685,6 @@
           "fkfd": 0.74,
           "kpm": 15.1,
           "vflPts": 2.29
-        },
-        {
-          "name": "nobody",
-          "acs": 174,
-          "rating": 0.86,
-          "fkfd": 0.97,
-          "kpm": 13.3,
-          "vflPts": 1.88
         }
       ],
       "matches": [
@@ -21143,6 +21219,75 @@
             }
           ],
           "oppRating": 1470
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
         },
         {
           "event": "Masters Santiago",
@@ -22232,49 +22377,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/6404c0174250b.png",
       "matchW": 0,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 1,
-      "mapL": 6,
+      "mapL": 8,
       "players": [
         {
-          "name": "OBONE",
-          "acs": 172,
-          "rating": 1.02,
-          "fkfd": 0.6,
-          "kpm": 12.3,
-          "vflPts": 1.14
-        },
-        {
           "name": "GREEN",
-          "acs": 215,
-          "rating": 0.93,
-          "fkfd": 1.09,
-          "kpm": 16.7,
-          "vflPts": 1.86
+          "acs": 204,
+          "rating": 0.9,
+          "fkfd": 1.03,
+          "kpm": 15.9,
+          "vflPts": 1.22
         },
         {
           "name": "GuanG",
-          "acs": 205,
-          "rating": 0.93,
-          "fkfd": 0.5,
-          "kpm": 16.7,
-          "vflPts": 1.86
+          "acs": 188,
+          "rating": 0.85,
+          "fkfd": 0.53,
+          "kpm": 15.2,
+          "vflPts": 1.11
         },
         {
           "name": "Ezeir",
-          "acs": 164,
-          "rating": 0.89,
-          "fkfd": 1.17,
-          "kpm": 11.9,
-          "vflPts": 1.0
+          "acs": 174,
+          "rating": 0.91,
+          "fkfd": 1.25,
+          "kpm": 12.6,
+          "vflPts": 0.78
         },
         {
-          "name": "heybay",
+          "name": "qiutiaN",
+          "acs": 122,
+          "rating": 0.56,
+          "fkfd": 1.0,
+          "kpm": 7.0,
+          "vflPts": 1.69
+        },
+        {
+          "name": "swagzor",
           "acs": 158,
-          "rating": 0.74,
-          "fkfd": 0.14,
-          "kpm": 11.0,
-          "vflPts": 0.86
+          "rating": 0.53,
+          "fkfd": 0.46,
+          "kpm": 11.4,
+          "vflPts": -0.5
         }
       ],
       "matches": [
@@ -22494,6 +22639,75 @@
             }
           ],
           "oppRating": 1329
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "EDward Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                2,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1218,
@@ -22533,41 +22747,41 @@
       "region": "china",
       "logo": "https://owcdn.net/img/65487414b8562.png",
       "matchW": 1,
-      "matchL": 3,
-      "mapW": 5,
-      "mapL": 7,
+      "matchL": 4,
+      "mapW": 6,
+      "mapL": 9,
       "players": [
         {
           "name": "Haodong",
-          "acs": 178,
-          "rating": 1.04,
-          "fkfd": 1.0,
-          "kpm": 14.1,
-          "vflPts": 2.17
+          "acs": 175,
+          "rating": 1.02,
+          "fkfd": 0.97,
+          "kpm": 13.8,
+          "vflPts": 2.07
         },
         {
           "name": "Coco",
-          "acs": 199,
-          "rating": 1.01,
-          "fkfd": 0.6,
-          "kpm": 15.4,
-          "vflPts": 2.42
+          "acs": 212,
+          "rating": 1.06,
+          "fkfd": 0.73,
+          "kpm": 16.5,
+          "vflPts": 2.8
         },
         {
           "name": "Dynamite",
-          "acs": 196,
-          "rating": 1.01,
-          "fkfd": 0.79,
+          "acs": 197,
+          "rating": 0.98,
+          "fkfd": 0.75,
           "kpm": 15.6,
-          "vflPts": 2.42
+          "vflPts": 2.4
         },
         {
           "name": "lucas",
-          "acs": 203,
-          "rating": 1.01,
-          "fkfd": 0.78,
-          "kpm": 16.1,
-          "vflPts": 2.33
+          "acs": 200,
+          "rating": 1.02,
+          "fkfd": 0.82,
+          "kpm": 15.8,
+          "vflPts": 2.4
         },
         {
           "name": "Abo",
@@ -22886,6 +23100,82 @@
             }
           ],
           "oppRating": 1423
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "All Gamers",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                15
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "All Gamers"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "All Gamers"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1351,
@@ -24050,7 +24340,7 @@
           "rating": 0.97,
           "fkfd": 1.15,
           "kpm": 14.3,
-          "vflPts": 2.14
+          "vflPts": 1.69
         },
         {
           "name": "SiuFatBB",

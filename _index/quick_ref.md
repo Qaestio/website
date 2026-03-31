@@ -1,5 +1,5 @@
 # VCT 2026 Quick Reference
-_Last updated: 2026-03-30T12:19:17.035776+00:00_
+_Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 ## Elo Rankings (all teams)
 
@@ -109,8 +109,8 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| All Gamers | 5 | 2 | 71% | 12 | 8 | 60% | 1776 |
-| EDward Gaming | 5 | 4 | 56% | 12 | 12 | 50% | 1503 |
+| All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1776 |
+| EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1503 |
 | Guangzhou Huadu Bilibili Gaming | 4 | 3 | 57% | 11 | 9 | 55% | 1352 |
 | TYLOO | 4 | 3 | 57% | 10 | 7 | 59% | 1488 |
 | JD Mall JDG Esports | 3 | 3 | 50% | 9 | 9 | 50% | 1411 |
@@ -118,9 +118,9 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 | Trace Esports | 2 | 3 | 40% | 5 | 8 | 38% | 1309 |
 | Wolves Esports | 2 | 3 | 40% | 6 | 8 | 43% | 1321 |
 | Dragon Ranger Gaming | 2 | 3 | 40% | 6 | 8 | 43% | 1382 |
-| Wuxi Titan Esports Club | 1 | 3 | 25% | 5 | 7 | 42% | 1351 |
+| Wuxi Titan Esports Club | 1 | 4 | 20% | 6 | 9 | 40% | 1351 |
 | FunPlus Phoenix | 0 | 3 | 0% | 1 | 6 | 14% | 1218 |
-| Nova Esports | 0 | 3 | 0% | 1 | 6 | 14% | 1218 |
+| Nova Esports | 0 | 4 | 0% | 1 | 8 | 11% | 1218 |
 
 ## Top 20 Players by ACS
 
@@ -144,8 +144,8 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 | 16 | Rarga | Xi Lai Gaming | China | 232 | 0.99 | 1.14 | 18.1 | 3.22 |
 | 17 | lovers rock | BBL Esports | Emea | 229 | 1.08 | 1.52 | 17.7 | 3.65 |
 | 18 | lukxo | LOUD | Americas | 228 | 1.13 | 0.72 | 18.3 | 2.29 |
-| 19 | iZu | T1 | Pacific | 227 | 1.14 | 1.28 | 18.3 | 4.23 |
-| 20 | al0rante | PCIFIC Esports | Emea | 227 | 1.07 | 0.67 | 18.0 | 2.62 |
+| 19 | ZmjjKK | EDward Gaming | China | 228 | 1.01 | 1.35 | 18.3 | 3.12 |
+| 20 | iZu | T1 | Pacific | 227 | 1.14 | 1.28 | 18.3 | 4.23 |
 
 ## Top 20 Players by VFL Points
 
@@ -202,14 +202,16 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 | Map | Picked | Banned | Decider |
 |-----|--------|--------|---------|
 | Abyss | 57 | 72 | 15 |
-| Split | 49 | 62 | 33 |
-| Haven | 47 | 78 | 19 |
-| Pearl | 44 | 90 | 9 |
-| Bind | 42 | 74 | 28 |
-| Breeze | 42 | 78 | 24 |
+| Split | 49 | 64 | 33 |
+| Haven | 47 | 79 | 20 |
+| Pearl | 44 | 92 | 9 |
+| Bind | 43 | 75 | 28 |
+| Breeze | 43 | 78 | 25 |
 | Corrode | 35 | 93 | 16 |
+| Lotus | 1 | 1 | 0 |
+| Fracture | 1 | 1 | 0 |
 
-## All Match Results (132 total)
+## All Match Results (134 total)
 
 | Event | Winner | Loser | Score |
 |-------|--------|-------|-------|
@@ -318,6 +320,7 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 | China Kickoff | All Gamers | Guangzhou Huadu Bilibili Gaming | 2-0 |
 | China Kickoff | All Gamers | Dragon Ranger Gaming | 2-1 |
 | China Kickoff | All Gamers | Xi Lai Gaming | 3-2 |
+| China Stage 1 | All Gamers | Wuxi Titan Esports Club | 2-1 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | FunPlus Phoenix | 2-0 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | Trace Esports | 2-0 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | EDward Gaming | 2-1 |
@@ -327,6 +330,7 @@ _Last updated: 2026-03-30T12:19:17.035776+00:00_
 | China Kickoff | Xi Lai Gaming | EDward Gaming | 0-2 |
 | China Kickoff | EDward Gaming | JD Mall JDG Esports | 2-1 |
 | China Kickoff | EDward Gaming | Dragon Ranger Gaming | 2-1 |
+| China Stage 1 | EDward Gaming | Nova Esports | 2-0 |
 | China Kickoff | TYLOO | FunPlus Phoenix | 0-2 |
 | China Kickoff | JD Mall JDG Esports | FunPlus Phoenix | 1-2 |
 | China Kickoff | JD Mall JDG Esports | Wuxi Titan Esports Club | 2-1 |

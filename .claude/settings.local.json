@@ -52,7 +52,11 @@
       "Bash(python scraper/debug_vfl.py)",
       "Bash(python3 -c \"import json; d=json.load\\(open\\(''''/c/Users/bearm/OneDrive/Documents/GitHub/website/vct_data.json''''\\)\\); print\\(''''Top-level keys:'''', list\\(d.keys\\(\\)\\)\\); print\\(''''Teams count:'''', len\\(d[''''teams'''']\\)\\); print\\(''''Events:'''', d[''''events'''']\\); print\\(''''First team structure:''''\\); import pprint; pprint.pprint\\(d[''''teams''''][0], width=100, compact=True\\)\")",
       "Bash(python3 /c/Users/bearm/OneDrive/Documents/GitHub/website/scraper/calc_ratings.py)",
-      "Bash(python scraper/build_index.py)"
+      "Bash(python scraper/build_index.py)",
+      "Bash(python3 -m json.tool)",
+      "Bash(jq '.[] | select\\(.team1 == \"\"Team Secret\"\" or .team2 == \"\"Team Secret\"\"\\)' _index/matches.json)",
+      "Bash(python3:*)",
+      "Bash(python debug_vfl_secret.py)"
     ]
   }
 }
