@@ -5,20 +5,20 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | # | Team | Region | Elo |
 |---|------|--------|-----|
-| 1 | Nongshim RedForce | Pacific | 2639 |
-| 2 | Paper Rex | Pacific | 2217 |
-| 3 | G2 Esports | Americas | 2109 |
+| 1 | Nongshim RedForce | Pacific | 2638 |
+| 2 | Paper Rex | Pacific | 2214 |
+| 3 | G2 Esports | Americas | 2105 |
 | 4 | NRG | Americas | 2020 |
-| 5 | T1 | Pacific | 1815 |
-| 6 | All Gamers | China | 1805 |
-| 7 | Gentle Mates | Emea | 1797 |
+| 5 | All Gamers | China | 1821 |
+| 6 | T1 | Pacific | 1813 |
+| 7 | Gentle Mates | Emea | 1781 |
 | 8 | BBL Esports | Emea | 1780 |
 | 9 | FURIA | Americas | 1773 |
-| 10 | Team Liquid | Emea | 1701 |
+| 10 | Team Liquid | Emea | 1700 |
 | 11 | Cloud9 | Americas | 1606 |
 | 12 | KIWOOM DRX | Pacific | 1599 |
-| 13 | Global Esports | Pacific | 1582 |
-| 14 | EDward Gaming | China | 1573 |
+| 13 | EDward Gaming | China | 1584 |
+| 14 | Global Esports | Pacific | 1582 |
 | 15 | Xi Lai Gaming | China | 1560 |
 | 16 | 100 Thieves | Americas | 1553 |
 | 17 | DetonatioN FocusMe | Pacific | 1533 |
@@ -59,7 +59,7 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
 | NRG | 8 | 5 | 62% | 20 | 14 | 59% | 2020 |
-| G2 Esports | 8 | 4 | 67% | 20 | 9 | 69% | 2109 |
+| G2 Esports | 8 | 4 | 67% | 20 | 9 | 69% | 2105 |
 | 100 Thieves | 5 | 3 | 62% | 11 | 9 | 55% | 1553 |
 | Cloud9 | 4 | 3 | 57% | 9 | 7 | 56% | 1606 |
 | FURIA | 4 | 2 | 67% | 11 | 8 | 58% | 1773 |
@@ -75,9 +75,9 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| Paper Rex | 11 | 4 | 73% | 25 | 18 | 58% | 2217 |
-| Nongshim RedForce | 8 | 0 | 100% | 18 | 4 | 82% | 2639 |
-| T1 | 6 | 3 | 67% | 14 | 8 | 64% | 1815 |
+| Paper Rex | 11 | 4 | 73% | 25 | 18 | 58% | 2214 |
+| Nongshim RedForce | 8 | 0 | 100% | 18 | 4 | 82% | 2638 |
+| T1 | 6 | 3 | 67% | 14 | 8 | 64% | 1813 |
 | DetonatioN FocusMe | 4 | 3 | 57% | 8 | 8 | 50% | 1533 |
 | Global Esports | 3 | 3 | 50% | 9 | 7 | 56% | 1582 |
 | KIWOOM DRX | 3 | 3 | 50% | 8 | 8 | 50% | 1599 |
@@ -92,8 +92,8 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| Team Liquid | 7 | 4 | 64% | 16 | 12 | 57% | 1701 |
-| Gentle Mates | 6 | 3 | 67% | 16 | 9 | 64% | 1797 |
+| Team Liquid | 7 | 4 | 64% | 16 | 12 | 57% | 1700 |
+| Gentle Mates | 6 | 3 | 67% | 16 | 9 | 64% | 1781 |
 | BBL Esports | 5 | 2 | 71% | 12 | 8 | 60% | 1780 |
 | FNATIC | 4 | 3 | 57% | 10 | 10 | 50% | 1385 |
 | Team Heretics | 3 | 3 | 50% | 7 | 7 | 50% | 1399 |
@@ -109,8 +109,8 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1805 |
-| EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1573 |
+| All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1821 |
+| EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1584 |
 | Guangzhou Huadu Bilibili Gaming | 4 | 3 | 57% | 11 | 9 | 55% | 1352 |
 | TYLOO | 4 | 3 | 57% | 10 | 7 | 59% | 1488 |
 | JD Mall JDG Esports | 3 | 3 | 50% | 9 | 9 | 50% | 1411 |
