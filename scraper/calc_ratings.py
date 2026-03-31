@@ -221,6 +221,10 @@ events = [
     ('LR5','Dragon Ranger Gaming','EDward Gaming'),  ('UF','All Gamers','Xi Lai Gaming'),
     ('MF','Xi Lai Gaming','Bilibili Gaming'),         ('LF','Bilibili Gaming','EDward Gaming'),
   ]),
+  ('China Stage 1', None, [
+    ('SR1','All Gamers','Titan Esports Club'), ('SR1','EDward Gaming','Nova Esports'),
+    # SR1 (remaining), SR2–SR5, and playoff rounds to be added as results come in
+  ]),
   ('Masters Santiago', None, [
     ('SR1','Gentle Mates','EDward Gaming'),  ('SR1','Xi Lai Gaming','NRG'),
     ('SR1','G2 Esports','Paper Rex'),        ('SR1','T1','Team Liquid'),

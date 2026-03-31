@@ -5,23 +5,23 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | # | Team | Region | Elo |
 |---|------|--------|-----|
-| 1 | Nongshim RedForce | Pacific | 2638 |
-| 2 | Paper Rex | Pacific | 2214 |
-| 3 | G2 Esports | Americas | 2105 |
+| 1 | Nongshim RedForce | Pacific | 2639 |
+| 2 | Paper Rex | Pacific | 2217 |
+| 3 | G2 Esports | Americas | 2109 |
 | 4 | NRG | Americas | 2020 |
-| 5 | T1 | Pacific | 1813 |
-| 6 | Gentle Mates | Emea | 1781 |
-| 7 | BBL Esports | Emea | 1780 |
-| 8 | All Gamers | China | 1776 |
+| 5 | T1 | Pacific | 1815 |
+| 6 | All Gamers | China | 1805 |
+| 7 | Gentle Mates | Emea | 1797 |
+| 8 | BBL Esports | Emea | 1780 |
 | 9 | FURIA | Americas | 1773 |
-| 10 | Team Liquid | Emea | 1700 |
+| 10 | Team Liquid | Emea | 1701 |
 | 11 | Cloud9 | Americas | 1606 |
 | 12 | KIWOOM DRX | Pacific | 1599 |
 | 13 | Global Esports | Pacific | 1582 |
-| 14 | Xi Lai Gaming | China | 1560 |
-| 15 | 100 Thieves | Americas | 1553 |
-| 16 | DetonatioN FocusMe | Pacific | 1533 |
-| 17 | EDward Gaming | China | 1503 |
+| 14 | EDward Gaming | China | 1573 |
+| 15 | Xi Lai Gaming | China | 1560 |
+| 16 | 100 Thieves | Americas | 1553 |
+| 17 | DetonatioN FocusMe | Pacific | 1533 |
 | 18 | TYLOO | China | 1488 |
 | 19 | Team Vitality | Emea | 1461 |
 | 20 | Evil Geniuses | Americas | 1460 |
@@ -41,25 +41,25 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 | 34 | MIBR | Americas | 1362 |
 | 35 | Team Secret | Pacific | 1353 |
 | 36 | Guangzhou Huadu Bilibili Gaming | China | 1352 |
-| 37 | Wuxi Titan Esports Club | China | 1351 |
-| 38 | Eternal Fire | Emea | 1350 |
-| 39 | Natus Vincere | Emea | 1346 |
-| 40 | Karmine Corp | Emea | 1328 |
-| 41 | KRÜ Esports | Americas | 1322 |
-| 42 | Wolves Esports | China | 1321 |
-| 43 | Trace Esports | China | 1309 |
+| 37 | Eternal Fire | Emea | 1350 |
+| 38 | Natus Vincere | Emea | 1346 |
+| 39 | Karmine Corp | Emea | 1328 |
+| 40 | KRÜ Esports | Americas | 1322 |
+| 41 | Wolves Esports | China | 1321 |
+| 42 | Trace Esports | China | 1309 |
+| 43 | Wuxi Titan Esports Club | China | 1306 |
 | 44 | LOUD | Americas | 1295 |
 | 45 | FUT Esports | Emea | 1285 |
 | 46 | PCIFIC Esports | Emea | 1237 |
 | 47 | FunPlus Phoenix | China | 1218 |
-| 48 | Nova Esports | China | 1218 |
+| 48 | Nova Esports | China | 1137 |
 
 ## Americas Teams
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
 | NRG | 8 | 5 | 62% | 20 | 14 | 59% | 2020 |
-| G2 Esports | 8 | 4 | 67% | 20 | 9 | 69% | 2105 |
+| G2 Esports | 8 | 4 | 67% | 20 | 9 | 69% | 2109 |
 | 100 Thieves | 5 | 3 | 62% | 11 | 9 | 55% | 1553 |
 | Cloud9 | 4 | 3 | 57% | 9 | 7 | 56% | 1606 |
 | FURIA | 4 | 2 | 67% | 11 | 8 | 58% | 1773 |
@@ -75,9 +75,9 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| Paper Rex | 11 | 4 | 73% | 25 | 18 | 58% | 2214 |
-| Nongshim RedForce | 8 | 0 | 100% | 18 | 4 | 82% | 2638 |
-| T1 | 6 | 3 | 67% | 14 | 8 | 64% | 1813 |
+| Paper Rex | 11 | 4 | 73% | 25 | 18 | 58% | 2217 |
+| Nongshim RedForce | 8 | 0 | 100% | 18 | 4 | 82% | 2639 |
+| T1 | 6 | 3 | 67% | 14 | 8 | 64% | 1815 |
 | DetonatioN FocusMe | 4 | 3 | 57% | 8 | 8 | 50% | 1533 |
 | Global Esports | 3 | 3 | 50% | 9 | 7 | 56% | 1582 |
 | KIWOOM DRX | 3 | 3 | 50% | 8 | 8 | 50% | 1599 |
@@ -92,8 +92,8 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| Team Liquid | 7 | 4 | 64% | 16 | 12 | 57% | 1700 |
-| Gentle Mates | 6 | 3 | 67% | 16 | 9 | 64% | 1781 |
+| Team Liquid | 7 | 4 | 64% | 16 | 12 | 57% | 1701 |
+| Gentle Mates | 6 | 3 | 67% | 16 | 9 | 64% | 1797 |
 | BBL Esports | 5 | 2 | 71% | 12 | 8 | 60% | 1780 |
 | FNATIC | 4 | 3 | 57% | 10 | 10 | 50% | 1385 |
 | Team Heretics | 3 | 3 | 50% | 7 | 7 | 50% | 1399 |
@@ -109,8 +109,8 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1776 |
-| EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1503 |
+| All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1805 |
+| EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1573 |
 | Guangzhou Huadu Bilibili Gaming | 4 | 3 | 57% | 11 | 9 | 55% | 1352 |
 | TYLOO | 4 | 3 | 57% | 10 | 7 | 59% | 1488 |
 | JD Mall JDG Esports | 3 | 3 | 50% | 9 | 9 | 50% | 1411 |
@@ -118,9 +118,9 @@ _Last updated: 2026-03-31T14:15:21.667796+00:00_
 | Trace Esports | 2 | 3 | 40% | 5 | 8 | 38% | 1309 |
 | Wolves Esports | 2 | 3 | 40% | 6 | 8 | 43% | 1321 |
 | Dragon Ranger Gaming | 2 | 3 | 40% | 6 | 8 | 43% | 1382 |
-| Wuxi Titan Esports Club | 1 | 4 | 20% | 6 | 9 | 40% | 1351 |
+| Wuxi Titan Esports Club | 1 | 4 | 20% | 6 | 9 | 40% | 1306 |
 | FunPlus Phoenix | 0 | 3 | 0% | 1 | 6 | 14% | 1218 |
-| Nova Esports | 0 | 4 | 0% | 1 | 8 | 11% | 1218 |
+| Nova Esports | 0 | 4 | 0% | 1 | 8 | 11% | 1137 |
 
 ## Top 20 Players by ACS
 

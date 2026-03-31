@@ -4641,7 +4641,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1821
+          "oppRating": 1822
         },
         {
           "event": "Masters Santiago",
@@ -4858,7 +4858,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2322
+          "oppRating": 2323
         },
         {
           "event": "Masters Santiago",
@@ -4942,7 +4942,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2231
+          "oppRating": 2234
         }
       ],
       "eloRating": 2020,
@@ -6042,7 +6042,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1950
+          "oppRating": 1955
         },
         {
           "event": "Masters Santiago",
@@ -6112,7 +6112,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1834
+          "oppRating": 1879
         },
         {
           "event": "Masters Santiago",
@@ -6336,10 +6336,10 @@
               "team": ""
             }
           ],
-          "oppRating": 2128
+          "oppRating": 2129
         }
       ],
-      "eloRating": 2105,
+      "eloRating": 2109,
       "ratingHistory": [
         {
           "event": "Start",
@@ -6402,35 +6402,35 @@
           "rnd": "SR3",
           "opp": "T1",
           "result": "W",
-          "rating": 2076
+          "rating": 2080
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "AG",
           "result": "W",
-          "rating": 2198
+          "rating": 2205
         },
         {
           "event": "Masters Santiago",
           "rnd": "SF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2081
+          "rating": 2087
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "BBL",
           "result": "W",
-          "rating": 2208
+          "rating": 2215
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "PRX",
           "result": "L",
-          "rating": 2105
+          "rating": 2109
         }
       ]
     },
@@ -9875,7 +9875,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1837
+          "oppRating": 1867
         },
         {
           "event": "Masters Santiago",
@@ -9952,7 +9952,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2208
+          "oppRating": 2215
         },
         {
           "event": "Masters Santiago",
@@ -10116,7 +10116,7 @@
           "oppRating": 2446
         }
       ],
-      "eloRating": 2214,
+      "eloRating": 2217,
       "ratingHistory": [
         {
           "event": "Start",
@@ -10207,28 +10207,28 @@
           "rnd": "LR2",
           "opp": "AG",
           "result": "W",
-          "rating": 2128
+          "rating": 2129
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR3",
           "opp": "G2",
           "result": "W",
-          "rating": 2231
+          "rating": 2234
         },
         {
           "event": "Masters Santiago",
           "rnd": "LF",
           "opp": "NRG",
           "result": "W",
-          "rating": 2407
+          "rating": 2410
         },
         {
           "event": "Masters Santiago",
           "rnd": "GF",
           "opp": "NRF",
           "result": "L",
-          "rating": 2214
+          "rating": 2217
         }
       ]
     },
@@ -11358,7 +11358,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1610
+          "oppRating": 1686
         },
         {
           "event": "Masters Santiago",
@@ -11431,7 +11431,7 @@
           "oppRating": 1940
         }
       ],
-      "eloRating": 1813,
+      "eloRating": 1815,
       "ratingHistory": [
         {
           "event": "Start",
@@ -11494,14 +11494,14 @@
           "rnd": "SR2",
           "opp": "EDG",
           "result": "W",
-          "rating": 1950
+          "rating": 1955
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "G2",
           "result": "L",
-          "rating": 1813
+          "rating": 1815
         }
       ]
     },
@@ -12924,7 +12924,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2082
+          "oppRating": 2086
         },
         {
           "event": "Masters Santiago",
@@ -13001,7 +13001,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2198
+          "oppRating": 2205
         },
         {
           "event": "Masters Santiago",
@@ -13148,10 +13148,10 @@
               "team": ""
             }
           ],
-          "oppRating": 2407
+          "oppRating": 2410
         }
       ],
-      "eloRating": 2638,
+      "eloRating": 2639,
       "ratingHistory": [
         {
           "event": "Start",
@@ -13200,7 +13200,7 @@
           "rnd": "SF",
           "opp": "G2",
           "result": "W",
-          "rating": 2322
+          "rating": 2323
         },
         {
           "event": "Masters Santiago",
@@ -13214,7 +13214,7 @@
           "rnd": "GF",
           "opp": "PRX",
           "result": "W",
-          "rating": 2638
+          "rating": 2639
         }
       ]
     },
@@ -13799,7 +13799,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2081
+          "oppRating": 2087
         }
       ],
       "eloRating": 1780,
@@ -15325,7 +15325,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1725
+          "oppRating": 1806
         },
         {
           "event": "Masters Santiago",
@@ -15542,10 +15542,10 @@
               "team": ""
             }
           ],
-          "oppRating": 1711
+          "oppRating": 1753
         }
       ],
-      "eloRating": 1781,
+      "eloRating": 1797,
       "ratingHistory": [
         {
           "event": "Start",
@@ -15594,28 +15594,28 @@
           "rnd": "SR1",
           "opp": "EDG",
           "result": "W",
-          "rating": 1951
+          "rating": 1956
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "TL",
           "result": "W",
-          "rating": 2082
+          "rating": 2086
         },
         {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "NRF",
           "result": "L",
-          "rating": 1907
+          "rating": 1911
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "AG",
           "result": "L",
-          "rating": 1781
+          "rating": 1797
         }
       ]
     },
@@ -18265,7 +18265,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1951
+          "oppRating": 1956
         },
         {
           "event": "Masters Santiago",
@@ -18338,7 +18338,7 @@
           "oppRating": 1968
         }
       ],
-      "eloRating": 1700,
+      "eloRating": 1701,
       "ratingHistory": [
         {
           "event": "Start",
@@ -18415,14 +18415,14 @@
           "rnd": "SR2",
           "opp": "GM",
           "result": "L",
-          "rating": 1821
+          "rating": 1822
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR3",
           "opp": "NRG",
           "result": "L",
-          "rating": 1700
+          "rating": 1701
         }
       ]
     },
@@ -19706,7 +19706,8 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1351
         },
         {
           "event": "Masters Santiago",
@@ -19776,7 +19777,7 @@
               "team": ""
             }
           ],
-          "oppRating": 2076
+          "oppRating": 2080
         },
         {
           "event": "Masters Santiago",
@@ -19853,7 +19854,7 @@
               "team": ""
             }
           ],
-          "oppRating": 1907
+          "oppRating": 1911
         },
         {
           "event": "Masters Santiago",
@@ -19933,7 +19934,7 @@
           "oppRating": 2066
         }
       ],
-      "eloRating": 1776,
+      "eloRating": 1805,
       "ratingHistory": [
         {
           "event": "Start",
@@ -19971,25 +19972,32 @@
           "rating": 1834
         },
         {
+          "event": "China Stage 1",
+          "rnd": "SR1",
+          "opp": "TEC",
+          "result": "W",
+          "rating": 1879
+        },
+        {
           "event": "Masters Santiago",
           "rnd": "QF",
           "opp": "G2",
           "result": "L",
-          "rating": 1711
+          "rating": 1753
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR1",
           "opp": "GM",
           "result": "W",
-          "rating": 1837
+          "rating": 1867
         },
         {
           "event": "Masters Santiago",
           "rnd": "LR2",
           "opp": "PRX",
           "result": "L",
-          "rating": 1776
+          "rating": 1805
         }
       ]
     },
@@ -21287,7 +21295,8 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1218
         },
         {
           "event": "Masters Santiago",
@@ -21430,7 +21439,7 @@
           "oppRating": 1842
         }
       ],
-      "eloRating": 1503,
+      "eloRating": 1573,
       "ratingHistory": [
         {
           "event": "Start",
@@ -21489,18 +21498,25 @@
           "rating": 1725
         },
         {
+          "event": "China Stage 1",
+          "rnd": "SR1",
+          "opp": "NOV",
+          "result": "W",
+          "rating": 1806
+        },
+        {
           "event": "Masters Santiago",
           "rnd": "SR1",
           "opp": "GM",
           "result": "L",
-          "rating": 1610
+          "rating": 1686
         },
         {
           "event": "Masters Santiago",
           "rnd": "SR2",
           "opp": "T1",
           "result": "L",
-          "rating": 1503
+          "rating": 1573
         }
       ]
     },
@@ -22707,10 +22723,11 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1725
         }
       ],
-      "eloRating": 1218,
+      "eloRating": 1137,
       "ratingHistory": [
         {
           "event": "Start",
@@ -22739,6 +22756,13 @@
           "opp": "WLV",
           "result": "L",
           "rating": 1218
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "SR1",
+          "opp": "EDG",
+          "result": "L",
+          "rating": 1137
         }
       ]
     },
@@ -23175,10 +23199,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1834
         }
       ],
-      "eloRating": 1351,
+      "eloRating": 1306,
       "ratingHistory": [
         {
           "event": "Start",
@@ -23214,6 +23239,13 @@
           "opp": "JDG",
           "result": "L",
           "rating": 1351
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "SR1",
+          "opp": "AG",
+          "result": "L",
+          "rating": 1306
         }
       ]
     },
