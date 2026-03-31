@@ -302,9 +302,15 @@ for ev_name, flat_rnd, schedule in events:
     run_event(ev_name, flat_rnd, schedule)
 
 # ── Write ratings back to vct_data.json ───────────────────────
+EVENT_ORDER = {ev_name: i for i, (ev_name, _, __) in enumerate(events)}
+
 for team in data['teams']:
     team['eloRating']     = round(ratings.get(team['name'], 1500))
     team['ratingHistory'] = history.get(team['name'], [])
+    team['matches']       = sorted(
+        team.get('matches', []),
+        key=lambda m: EVENT_ORDER.get(m.get('event', ''), 999)
+    )
 
 with open('vct_data.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)

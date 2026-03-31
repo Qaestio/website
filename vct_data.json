@@ -19633,83 +19633,6 @@
           "oppRating": 1698
         },
         {
-          "event": "China Stage 1",
-          "opponent": "Wuxi Titan Esports Club",
-          "result": "W",
-          "matchScore": [
-            2,
-            1
-          ],
-          "maps": [
-            {
-              "map": "Lotus",
-              "score": [
-                13,
-                7
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                8,
-                13
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                15,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Split",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "All Gamers"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Lotus",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "All Gamers"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Fracture",
-              "team": "All Gamers"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ],
-          "oppRating": 1351
-        },
-        {
           "event": "Masters Santiago",
           "opponent": "G2 Esports",
           "result": "L",
@@ -19932,6 +19855,83 @@
             }
           ],
           "oppRating": 2066
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Wuxi Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "All Gamers"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "All Gamers"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ],
+          "oppRating": 1351
         }
       ],
       "eloRating": 1821,
@@ -21229,76 +21229,6 @@
           "oppRating": 1470
         },
         {
-          "event": "China Stage 1",
-          "opponent": "Nova Esports",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Fracture",
-              "score": [
-                13,
-                2
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                13,
-                3
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Split",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Fracture",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Lotus",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Haven",
-              "team": ""
-            }
-          ],
-          "oppRating": 1218
-        },
-        {
           "event": "Masters Santiago",
           "opponent": "Gentle Mates",
           "result": "L",
@@ -21437,6 +21367,76 @@
             }
           ],
           "oppRating": 1842
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ],
+          "oppRating": 1218
         }
       ],
       "eloRating": 1584,
