@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-31T14:15:21.667796+00:00",
+  "lastUpdated": "2026-04-01T15:01:42.627602+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -14444,6 +14444,17 @@
             }
           ],
           "oppRating": 1657
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "Eternal Fire",
+          "result": "L",
+          "matchScore": [
+            0,
+            0
+          ],
+          "maps": [],
+          "veto": []
         }
       ],
       "eloRating": 1385,
@@ -21525,49 +21536,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/65a17b313b131.png",
       "matchW": 0,
-      "matchL": 3,
-      "mapW": 1,
-      "mapL": 6,
+      "matchL": 4,
+      "mapW": 2,
+      "mapL": 8,
       "players": [
         {
           "name": "AAAAY",
-          "acs": 200,
-          "rating": 1.2,
-          "fkfd": 1.2,
-          "kpm": 16.7,
+          "acs": 199,
+          "rating": 1.17,
+          "fkfd": 1.54,
+          "kpm": 16.3,
           "vflPts": 2.0
         },
         {
           "name": "BerLIN",
-          "acs": 168,
-          "rating": 1.12,
-          "fkfd": 0.54,
-          "kpm": 12.8,
-          "vflPts": 1.0
+          "acs": 171,
+          "rating": 1.05,
+          "fkfd": 0.75,
+          "kpm": 12.5,
+          "vflPts": 1.1
         },
         {
           "name": "Setrod",
-          "acs": 185,
-          "rating": 1.01,
-          "fkfd": 0.9,
-          "kpm": 14.5,
-          "vflPts": 1.14
+          "acs": 183,
+          "rating": 0.95,
+          "fkfd": 0.67,
+          "kpm": 14.4,
+          "vflPts": 1.4
         },
         {
-          "name": "sScary",
-          "acs": 173,
-          "rating": 0.9,
-          "fkfd": 1.6,
-          "kpm": 12.1,
-          "vflPts": 0.86
+          "name": "KovaQ",
+          "acs": 208,
+          "rating": 0.96,
+          "fkfd": 1.0,
+          "kpm": 16.5,
+          "vflPts": 2.33
         },
         {
-          "name": "Life",
-          "acs": 163,
-          "rating": 0.65,
-          "fkfd": 0.57,
-          "kpm": 12.1,
-          "vflPts": 0.86
+          "name": "Ben1Ley",
+          "acs": 161,
+          "rating": 0.72,
+          "fkfd": 0.48,
+          "kpm": 11.4,
+          "vflPts": 1.67
         }
       ],
       "matches": [
@@ -21787,6 +21798,82 @@
             }
           ],
           "oppRating": 1381
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "JD Mall JDG Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1218,
@@ -21825,50 +21912,50 @@
       "name": "JD Mall JDG Esports",
       "region": "china",
       "logo": "https://owcdn.net/img/64f9825408326.png",
-      "matchW": 3,
+      "matchW": 4,
       "matchL": 3,
-      "mapW": 9,
-      "mapL": 9,
+      "mapW": 11,
+      "mapL": 10,
       "players": [
         {
           "name": "Yuicaw",
-          "acs": 210,
-          "rating": 1.21,
-          "fkfd": 1.57,
-          "kpm": 15.6,
-          "vflPts": 2.94
+          "acs": 211,
+          "rating": 1.2,
+          "fkfd": 1.54,
+          "kpm": 15.9,
+          "vflPts": 3.1
         },
         {
           "name": "jkuro",
-          "acs": 195,
-          "rating": 1.01,
+          "acs": 192,
+          "rating": 0.99,
           "fkfd": 1.0,
-          "kpm": 15.2,
-          "vflPts": 2.39
+          "kpm": 15.0,
+          "vflPts": 2.38
         },
         {
           "name": "stew",
-          "acs": 216,
-          "rating": 1.01,
-          "fkfd": 1.15,
-          "kpm": 16.9,
-          "vflPts": 2.72
+          "acs": 219,
+          "rating": 1.02,
+          "fkfd": 1.18,
+          "kpm": 17.2,
+          "vflPts": 2.86
         },
         {
           "name": "coconut",
           "acs": 156,
-          "rating": 0.92,
+          "rating": 0.93,
           "fkfd": 0.71,
-          "kpm": 12.1,
-          "vflPts": 1.67
+          "kpm": 12.3,
+          "vflPts": 1.76
         },
         {
           "name": "zhe",
-          "acs": 187,
-          "rating": 0.91,
-          "fkfd": 0.76,
-          "kpm": 14.7,
-          "vflPts": 2.22
+          "acs": 196,
+          "rating": 0.97,
+          "fkfd": 0.85,
+          "kpm": 15.3,
+          "vflPts": 2.52
         }
       ],
       "matches": [
@@ -22333,6 +22420,82 @@
             }
           ],
           "oppRating": 1433
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "FunPlus Phoenix",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                7,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1411,
@@ -24821,50 +24984,50 @@
       "name": "Xi Lai Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/671742f863b9b.png",
-      "matchW": 3,
+      "matchW": 4,
       "matchL": 3,
-      "mapW": 9,
+      "mapW": 11,
       "mapL": 9,
       "players": [
         {
           "name": "happywei",
-          "acs": 234,
-          "rating": 1.27,
-          "fkfd": 1.48,
-          "kpm": 18.2,
-          "vflPts": 3.83
+          "acs": 238,
+          "rating": 1.28,
+          "fkfd": 1.59,
+          "kpm": 18.7,
+          "vflPts": 4.05
         },
         {
           "name": "Rarga",
           "acs": 232,
-          "rating": 0.99,
-          "fkfd": 1.14,
-          "kpm": 18.1,
-          "vflPts": 3.22
+          "rating": 0.98,
+          "fkfd": 1.11,
+          "kpm": 18.0,
+          "vflPts": 3.3
         },
         {
           "name": "Lysoar",
-          "acs": 186,
-          "rating": 1.01,
-          "fkfd": 1.15,
-          "kpm": 14.8,
-          "vflPts": 2.67
+          "acs": 185,
+          "rating": 1.0,
+          "fkfd": 1.08,
+          "kpm": 14.7,
+          "vflPts": 2.8
         },
         {
           "name": "WsLeo",
-          "acs": 174,
-          "rating": 0.89,
-          "fkfd": 1.26,
-          "kpm": 12.9,
-          "vflPts": 2.22
+          "acs": 178,
+          "rating": 0.94,
+          "fkfd": 1.29,
+          "kpm": 13.3,
+          "vflPts": 2.6
         },
         {
           "name": "NoMan",
           "acs": 183,
-          "rating": 0.87,
-          "fkfd": 0.99,
-          "kpm": 14.6,
-          "vflPts": 2.61
+          "rating": 0.89,
+          "fkfd": 0.96,
+          "kpm": 14.7,
+          "vflPts": 2.75
         }
       ],
       "matches": [
@@ -25329,6 +25492,75 @@
             }
           ],
           "oppRating": 1828
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1560,
@@ -25389,49 +25621,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/642233fc01f26.png",
       "matchW": 2,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 6,
-      "mapL": 8,
+      "mapL": 10,
       "players": [
         {
           "name": "vo0kashu",
           "acs": 220,
           "rating": 1.19,
-          "fkfd": 1.67,
-          "kpm": 17.2,
-          "vflPts": 3.0
+          "fkfd": 1.54,
+          "kpm": 17.3,
+          "vflPts": 2.88
         },
         {
           "name": "Nicc",
-          "acs": 182,
+          "acs": 180,
           "rating": 0.98,
-          "fkfd": 1.2,
-          "kpm": 14.3,
-          "vflPts": 2.07
+          "fkfd": 0.9,
+          "kpm": 14.0,
+          "vflPts": 1.94
         },
         {
           "name": "SpiritZ1",
-          "acs": 209,
-          "rating": 0.92,
-          "fkfd": 0.88,
-          "kpm": 16.7,
-          "vflPts": 2.29
+          "acs": 214,
+          "rating": 0.95,
+          "fkfd": 0.96,
+          "kpm": 16.8,
+          "vflPts": 2.31
         },
         {
           "name": "Flex1n",
-          "acs": 173,
-          "rating": 0.85,
-          "fkfd": 1.14,
-          "kpm": 13.0,
-          "vflPts": 1.64
+          "acs": 169,
+          "rating": 0.82,
+          "fkfd": 1.24,
+          "kpm": 12.6,
+          "vflPts": 1.5
         },
         {
-          "name": "Akeman",
-          "acs": 186,
-          "rating": 0.82,
-          "fkfd": 0.94,
-          "kpm": 14.1,
-          "vflPts": 1.86
+          "name": "Life",
+          "acs": 202,
+          "rating": 0.8,
+          "fkfd": 0.75,
+          "kpm": 13.9,
+          "vflPts": 1.0
         }
       ],
       "matches": [
@@ -25812,6 +26044,75 @@
             }
           ],
           "oppRating": 1560
+        },
+        {
+          "event": "China Stage 1",
+          "opponent": "Xi Lai Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1382,
@@ -26750,6 +27051,17 @@
             }
           ],
           "oppRating": 1349
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "FNATIC",
+          "result": "L",
+          "matchScore": [
+            0,
+            0
+          ],
+          "maps": [],
+          "veto": []
         }
       ],
       "eloRating": 1350,
