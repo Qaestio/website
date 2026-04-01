@@ -76,7 +76,30 @@ REGION_META = {
     'china':    {'label': 'China',    'color': '#e05252'},
 }
 
-OUT_FILE = Path(__file__).parent.parent / 'vct_data.json'
+OUT_FILE    = Path(__file__).parent.parent / 'vct_data.json'
+CACHE_FILE  = Path(__file__).parent / 'match_cache.json'
+
+# -- Cache ---------------------------------------------------------------------
+
+def load_cache() -> dict:
+    """Load the match detail cache from disk. Returns empty dict if not found."""
+    if CACHE_FILE.exists():
+        try:
+            data = json.loads(CACHE_FILE.read_text(encoding='utf-8'))
+            cached = len(data.get('matches', {}))
+            print(f'Cache loaded: {cached} match(es) already stored in {CACHE_FILE.name}')
+            return data
+        except (json.JSONDecodeError, OSError) as exc:
+            print(f'! Could not read cache ({exc}), starting fresh')
+    return {'matches': {}}
+
+
+def save_cache(cache: dict):
+    """Persist the match detail cache to disk."""
+    cache['last_run'] = datetime.now(timezone.utc).isoformat()
+    CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f'Cache saved: {len(cache["matches"])} match(es) -> {CACHE_FILE.name}')
+
 
 # -- HTTP ----------------------------------------------------------------------
 
@@ -694,7 +717,7 @@ def calc_vfl_for_match(match_score, map_details, map_player_stats, t1_players, t
 
 
 def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label: str,
-                   vfl_map: dict):
+                   vfl_map: dict, match_cache: dict):
     """
     Scrape the event matches page.
     • Registers any new teams (with correct region).
@@ -767,7 +790,12 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         match_href = match.get('href', '')
         map_details, veto, t1_players, t2_players, map_player_stats = [], [], [], [], []
         if match_href:
-            detail           = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+            cached_matches = match_cache.setdefault('matches', {})
+            if match_href in cached_matches:
+                detail = cached_matches[match_href]
+            else:
+                detail = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+                cached_matches[match_href] = detail
             map_details      = detail['maps']
             veto             = detail['veto']
             t1_players       = detail.get('t1_players', [])
@@ -1007,6 +1035,8 @@ def main():
     print('VCT 2026 scraper  ->  vlr.gg')
     print('-' * 60)
 
+    match_cache = load_cache()
+
     team_map   = {}   # lower-case name -> team dict
     player_map = {}   # 'PlayerName|team_key' -> stat dict
     vfl_map    = {}   # player_name_lower -> {'vfl_total': float, 'maps_total': int}
@@ -1022,12 +1052,15 @@ def main():
             scrape_teams_from_overview(event_id, slug, region, team_map)
 
         print('  Matches …')
-        scrape_matches(event_id, slug, region or 'americas', team_map, label, vfl_map)
+        scrape_matches(event_id, slug, region or 'americas', team_map, label, vfl_map, match_cache)
 
         print('  Stats …')
         scrape_stats(event_id, slug, team_map, player_map)
 
         events_scraped.append(label)
+
+    # Persist match detail cache so future runs skip already-scraped matches
+    save_cache(match_cache)
 
     # Attach player stats to teams
     assign_players(team_map, player_map, vfl_map)
