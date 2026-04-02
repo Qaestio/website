@@ -1,5 +1,5 @@
 # VCT 2026 Quick Reference
-_Last updated: 2026-04-02T13:17:37.907671+00:00_
+_Last updated: 2026-04-02T14:37:37.404181+00:00_
 
 ## Elo Rankings (all teams)
 
@@ -111,8 +111,8 @@ _Last updated: 2026-04-02T13:17:37.907671+00:00_
 |------|---|---|------|-------|-------|------|-----|
 | All Gamers | 6 | 2 | 75% | 14 | 9 | 61% | 1821 |
 | EDward Gaming | 6 | 4 | 60% | 14 | 12 | 54% | 1584 |
-| TYLOO | 5 | 3 | 62% | 11 | 7 | 61% | 1488 |
-| Guangzhou Huadu Bilibili Gaming | 4 | 4 | 50% | 11 | 10 | 52% | 1352 |
+| TYLOO | 5 | 3 | 62% | 12 | 8 | 60% | 1488 |
+| Guangzhou Huadu Bilibili Gaming | 4 | 4 | 50% | 12 | 11 | 52% | 1352 |
 | JD Mall JDG Esports | 4 | 3 | 57% | 11 | 10 | 52% | 1411 |
 | Xi Lai Gaming | 4 | 3 | 57% | 11 | 9 | 55% | 1560 |
 | Trace Esports | 3 | 3 | 50% | 7 | 8 | 47% | 1309 |
@@ -128,7 +128,7 @@ _Last updated: 2026-04-02T13:17:37.907671+00:00_
 |---|--------|------|--------|-----|--------|------|-----|---------|
 | 1 | primmie | FULL SENSE | Pacific | 258 | 1.23 | 1.42 | 20.9 | 4.08 |
 | 2 | marteen | Gentle Mates | Emea | 257 | 1.32 | 1.59 | 20.3 | 4.96 |
-| 3 | splash | TYLOO | China | 252 | 1.1 | 1.07 | 19.4 | 3.75 |
+| 3 | splash | TYLOO | China | 250 | 1.08 | 1.01 | 19.1 | 3.75 |
 | 4 | dgzin | Evil Geniuses | Americas | 242 | 1.22 | 1.62 | 19.6 | 4.45 |
 | 5 | Dambi | Nongshim RedForce | Pacific | 242 | 1.11 | 1.23 | 18.8 | 4.68 |
 | 6 | Derke | Team Vitality | Emea | 241 | 1.11 | 1.29 | 18.0 | 4.36 |
@@ -137,15 +137,15 @@ _Last updated: 2026-04-02T13:17:37.907671+00:00_
 | 9 | happywei | Xi Lai Gaming | China | 238 | 1.28 | 1.59 | 18.7 | 4.05 |
 | 10 | Zexy | VARREL | Pacific | 237 | 1.0 | 1.31 | 18.0 | 3.12 |
 | 11 | hiro | Natus Vincere | Emea | 236 | 1.3 | 1.12 | 19.1 | 3.92 |
-| 12 | HYUNMIN | KIWOOM DRX | Pacific | 235 | 1.05 | 1.15 | 17.8 | 3.5 |
-| 13 | PatMen | Global Esports | Pacific | 233 | 1.14 | 1.3 | 18.3 | 4.06 |
-| 14 | Demon1 | ENVY | Americas | 233 | 1.13 | 1.0 | 18.7 | 4.57 |
-| 15 | Rarga | Xi Lai Gaming | China | 232 | 0.98 | 1.11 | 18.0 | 3.3 |
-| 16 | lovers rock | BBL Esports | Emea | 229 | 1.08 | 1.52 | 17.7 | 3.65 |
-| 17 | lukxo | LOUD | Americas | 228 | 1.13 | 0.72 | 18.3 | 2.29 |
-| 18 | ZmjjKK | EDward Gaming | China | 228 | 1.01 | 1.35 | 18.3 | 3.12 |
-| 19 | iZu | T1 | Pacific | 227 | 1.14 | 1.28 | 18.3 | 4.23 |
-| 20 | f4ngeer | All Gamers | China | 227 | 1.1 | 1.39 | 18.2 | 3.52 |
+| 12 | whzy | Guangzhou Huadu Bilibili Gaming | China | 236 | 1.11 | 1.09 | 18.2 | 3.35 |
+| 13 | HYUNMIN | KIWOOM DRX | Pacific | 235 | 1.05 | 1.15 | 17.8 | 3.5 |
+| 14 | PatMen | Global Esports | Pacific | 233 | 1.14 | 1.3 | 18.3 | 4.06 |
+| 15 | Demon1 | ENVY | Americas | 233 | 1.13 | 1.0 | 18.7 | 4.57 |
+| 16 | Rarga | Xi Lai Gaming | China | 232 | 0.98 | 1.11 | 18.0 | 3.3 |
+| 17 | lovers rock | BBL Esports | Emea | 229 | 1.08 | 1.52 | 17.7 | 3.65 |
+| 18 | lukxo | LOUD | Americas | 228 | 1.13 | 0.72 | 18.3 | 2.29 |
+| 19 | ZmjjKK | EDward Gaming | China | 228 | 1.01 | 1.35 | 18.3 | 3.12 |
+| 20 | iZu | T1 | Pacific | 227 | 1.14 | 1.28 | 18.3 | 4.23 |
 
 ## Top 20 Players by VFL Points
 
@@ -169,7 +169,7 @@ _Last updated: 2026-04-02T13:17:37.907671+00:00_
 | 16 | BuZz | T1 | Pacific | 3.86 | 224 | 0.99 |
 | 17 | Neon | LEVIATÁN | Americas | 3.83 | 212 | 1.14 |
 | 18 | Xross | Nongshim RedForce | Pacific | 3.77 | 197 | 1.1 |
-| 19 | splash | TYLOO | China | 3.75 | 252 | 1.1 |
+| 19 | splash | TYLOO | China | 3.75 | 250 | 1.08 |
 | 20 | Autumn | Global Esports | Pacific | 3.75 | 226 | 1.1 |
 
 ## Top 20 Players by Rating
@@ -328,7 +328,7 @@ _Last updated: 2026-04-02T13:17:37.907671+00:00_
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | EDward Gaming | 2-1 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | Dragon Ranger Gaming | 2-0 |
 | China Kickoff | Xi Lai Gaming | Guangzhou Huadu Bilibili Gaming | 2-3 |
-| China Stage 1 | TYLOO | Guangzhou Huadu Bilibili Gaming | 0-1 |
+| China Stage 1 | TYLOO | Guangzhou Huadu Bilibili Gaming | 1-2 |
 | China Kickoff | EDward Gaming | TYLOO | 2-0 |
 | China Kickoff | Xi Lai Gaming | EDward Gaming | 0-2 |
 | China Kickoff | EDward Gaming | JD Mall JDG Esports | 2-1 |

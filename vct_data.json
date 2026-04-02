@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02T13:17:37.907671+00:00",
+  "lastUpdated": "2026-04-02T14:37:37.404181+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -20221,31 +20221,31 @@
       "logo": "https://owcdn.net/img/63f25d72216c1.png",
       "matchW": 4,
       "matchL": 4,
-      "mapW": 11,
-      "mapL": 10,
+      "mapW": 12,
+      "mapL": 11,
       "players": [
         {
           "name": "whzy",
-          "acs": 226,
-          "rating": 1.07,
-          "fkfd": 1.07,
+          "acs": 236,
+          "rating": 1.11,
+          "fkfd": 1.09,
           "kpm": 18.2,
           "vflPts": 3.35
         },
         {
           "name": "rushia",
-          "acs": 202,
-          "rating": 1.04,
-          "fkfd": 1.07,
-          "kpm": 15.4,
+          "acs": 201,
+          "rating": 1.03,
+          "fkfd": 1.09,
+          "kpm": 15.2,
           "vflPts": 2.61
         },
         {
           "name": "nephh",
-          "acs": 196,
-          "rating": 1.01,
+          "acs": 198,
+          "rating": 1.03,
           "fkfd": 1.0,
-          "kpm": 14.9,
+          "kpm": 15.0,
           "vflPts": 2.61
         },
         {
@@ -20258,10 +20258,10 @@
         },
         {
           "name": "Knight",
-          "acs": 177,
-          "rating": 0.97,
-          "fkfd": 0.66,
-          "kpm": 13.9,
+          "acs": 184,
+          "rating": 1.04,
+          "fkfd": 0.69,
+          "kpm": 14.3,
           "vflPts": 2.57
         }
       ],
@@ -20803,8 +20803,8 @@
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
-            0,
-            1
+            1,
+            2
           ],
           "maps": [
             {
@@ -24235,37 +24235,37 @@
       "logo": "https://owcdn.net/img/63eb60fb08390.png",
       "matchW": 5,
       "matchL": 3,
-      "mapW": 11,
-      "mapL": 7,
+      "mapW": 12,
+      "mapL": 8,
       "players": [
         {
           "name": "splash",
-          "acs": 252,
-          "rating": 1.1,
-          "fkfd": 1.07,
-          "kpm": 19.4,
+          "acs": 250,
+          "rating": 1.08,
+          "fkfd": 1.01,
+          "kpm": 19.1,
           "vflPts": 3.75
         },
         {
           "name": "Erv",
-          "acs": 202,
+          "acs": 204,
           "rating": 1.07,
           "fkfd": 0.93,
-          "kpm": 15.5,
+          "kpm": 15.7,
           "vflPts": 2.55
         },
         {
           "name": "Scales",
-          "acs": 202,
-          "rating": 1.07,
-          "fkfd": 1.66,
-          "kpm": 15.3,
+          "acs": 204,
+          "rating": 1.05,
+          "fkfd": 1.77,
+          "kpm": 15.9,
           "vflPts": 2.85
         },
         {
           "name": "slowly",
-          "acs": 223,
-          "rating": 1.05,
+          "acs": 219,
+          "rating": 1.03,
           "fkfd": 1.05,
           "kpm": 16.9,
           "vflPts": 2.95
@@ -24796,8 +24796,8 @@
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
-            1,
-            0
+            2,
+            1
           ],
           "maps": [
             {
