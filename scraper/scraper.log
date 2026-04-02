@@ -6,3 +6,1253 @@ Traceback (most recent call last):
   File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
     import requests
 ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\calc_ratings.py", line 4, in <module>
+    with open('vct_data.json', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'vct_data.json'
+------------------------------------------------------------
+VCT 2026 scraper  ->  vlr.gg
+------------------------------------------------------------
+Cache loaded: 154 match(es) already stored in match_cache.json
+
+[Americas Kickoff]  event/2682
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 62 player-event rows scraped
+
+[Pacific Kickoff]  event/2683
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[EMEA Kickoff]  event/2684
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[China Kickoff]  event/2685
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[Pacific Stage 1]  event/2775
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[Pacific Stage 2]  event/2776
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 0 upcoming
+  Stats …
+    !  Stats table not found
+
+[Americas Stage 1]  event/2860
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[EMEA Stage 1]  event/2863
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 4 completed matches, 26 upcoming
+  Stats …
+    -> 40 player-event rows scraped
+
+[China Stage 1]  event/2864
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 6 completed matches, 24 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[Masters Santiago]  event/2760
+  Matches …
+    -> 24 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+Cache saved: 154 match(es) -> match_cache.json
+    -> Renamed "drx" -> "Kiwoom DRX"
+    -> Renamed "ulf esports" -> "Eternal Fire"
+    -> Renamed "bilibili gaming" -> "Guangzhou Huadu Bilibili Gaming"
+    -> Renamed "jdg esports" -> "JD Mall JDG Esports"
+    -> Renamed "titan esports club" -> "Wuxi Titan Esports Club"
+
+------------------------------------------------------------
+OK  48 teams written to vct_data.json
+   Americas      12 teams
+   China         12 teams
+   EMEA          12 teams
+   Pacific       12 teams
+   48 / 48 teams have player stats
+   308 match entries have map detail
+------------------------------------------------------------
+
+Running calc_ratings.py …
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 1154, in <module>
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'calc_ratings.py')], check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Python314\\python.exe', 'C:\\Users\\bearm\\OneDrive\\Documents\\GitHub\\website\\scraper\\calc_ratings.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+---TEST RUN---
+Index files written to _index/:
+  teams.json              30 KB
+  players.json            36 KB
+  matches.json            30 KB
+  veto.json                0 KB
+  ratings.json            31 KB
+  quick_ref.md            17 KB
+
+Original vct_data.json:     642 KB
+Total index size:           147 KB
+
+================================================================
+  Americas Kickoff
+================================================================
+
+  -- UR1 --
+    ENVY  def. EG     2-1   (ENVY: 1600  EG: 1500)
+    C9    def. LOUD   2-0   (C9: 1650  LOUD: 1450)
+    FUR   def. KRU    2-1   (FUR: 1600  KRU: 1500)
+    100T  def. LEV    2-1   (100T: 1600  LEV: 1500)
+
+  -- UR2 --
+    NRG   def. C9     2-0   (NRG: 1715  C9: 1485)
+    MIBR  def. ENVY   2-0   (MIBR: 1683  ENVY: 1467)
+    FUR   def. SEN    2-0   (FUR: 1703  SEN: 1447)
+    G2    def. 100T   2-1   (G2: 1617  100T: 1533)
+
+  -- MR1 --
+    100T  def. LOUD   2-1   (100T: 1582  LOUD: 1402)
+    SEN   def. EG     2-0   (SEN: 1573  EG: 1373)
+    ENVY  def. KRU    2-1   (ENVY: 1525  KRU: 1442)
+    C9    def. LEV    2-0   (C9: 1592  LEV: 1392)
+
+  -- MR2 --
+    100T  def. SEN    2-0   (100T: 1687  SEN: 1468)
+    C9    def. ENVY   2-1   (C9: 1643  ENVY: 1474)
+
+  -- UR3 --
+    MIBR  def. NRG    2-1   (MIBR: 1750  NRG: 1649)
+    FUR   def. G2     2-1   (FUR: 1757  G2: 1563)
+
+  -- LR1 --
+    EG    def. LOUD   2-0   (EG: 1480  LOUD: 1295)
+    LEV   def. KRU    2-0   (LEV: 1512  KRU: 1322)
+
+  -- MR3 --
+    NRG   def. 100T   2-0   (NRG: 1782  100T: 1553)
+    G2    def. C9     2-0   (G2: 1716  C9: 1490)
+
+  -- LR2 --
+    EG    def. ENVY   2-0   (EG: 1578  ENVY: 1376)
+    LEV   def. SEN    2-0   (LEV: 1610  SEN: 1371)
+
+  -- LR3 --
+    100T  def. EG     2-0   (100T: 1671  EG: 1460)
+    C9    def. LEV    2-0   (C9: 1662  LEV: 1438)
+
+  -- MR4 --
+    G2    def. NRG    2-0   (G2: 1875  NRG: 1624)
+
+  -- LR4 --
+    100T  def. C9     2-1   (100T: 1727  C9: 1606)
+
+  -- UF --
+    FUR   def. MIBR   3-2   (FUR: 1897  MIBR: 1610)
+
+  -- MF --
+    G2    def. MIBR   3-0   (G2: 2003  MIBR: 1481)
+
+  -- LR5 --
+    NRG   def. 100T   2-0   (NRG: 1799  100T: 1553)
+
+  -- LF --
+    NRG   def. MIBR   3-2   (NRG: 1917  MIBR: 1362)
+
+  ================================================================
+  Global Rankings  —  after Americas Kickoff
+  ================================================================
+   1. G2     2003 ############   17. 100T   1553 ####           33. EDG    1450 ##          
+   2. NRG    1917 ##########     18. BBL    1475 ###            34. FPX    1450 ##          
+   3. FUR    1897 ##########     19. FNC    1475 ###            35. JDG    1450 ##          
+   4. C9     1606 #####          20. FUT    1475 ###            36. NOV    1450 ##          
+   5. DFM    1600 #####          21. GM     1475 ###            37. TEC    1450 ##          
+   6. FS     1600 #####          22. GX     1475 ###            38. TRC    1450 ##          
+   7. GEN    1600 #####          23. KC     1475 ###            39. TYL    1450 ##          
+   8. GE     1600 #####          24. NAVI   1475 ###            40. WLV    1450 ##          
+   9. PRX    1600 #####          25. TH     1475 ###            41. XLG    1450 ##          
+  10. RRQ    1600 #####          26. TL     1475 ###            42. DRG    1450 ##          
+  11. T1     1600 #####          27. VIT    1475 ###            43. LEV    1438 ##          
+  12. TS     1600 #####          28. PCF    1475 ###            44. ENVY   1376 #           
+  13. ZETA   1600 #####          29. EF     1475 ###            45. SEN    1371 #           
+  14. VRL    1600 #####          30. EG     1460 ##             46. MIBR   1362 #           
+  15. NRF    1600 #####          31. AG     1450 ##             47. KRU    1322             
+  16. DRX    1600 #####          32. BLG    1450 ##             48. LOUD   1295             
+
+================================================================
+  EMEA Kickoff
+================================================================
+
+  -- UR1 --
+    NAVI  def. KC     2-0   (NAVI: 1575  KC: 1375)
+    GM    def. FUT    2-0   (GM: 1575  FUT: 1375)
+    BBL   def. PCF    2-1   (BBL: 1525  PCF: 1425)
+    VIT   def. EF     2-0   (VIT: 1575  EF: 1375)
+
+  -- UR2 --
+    NAVI  def. TH     2-1   (NAVI: 1624  TH: 1426)
+    GM    def. GX     2-0   (GM: 1673  GX: 1377)
+    BBL   def. FNC    2-0   (BBL: 1623  FNC: 1377)
+    VIT   def. TL     2-1   (VIT: 1624  TL: 1426)
+
+  -- MR1 --
+    TL    def. KC     2-1   (TL: 1472  KC: 1329)
+    FNC   def. FUT    2-1   (FNC: 1422  FUT: 1329)
+    GX    def. PCF    2-1   (GX: 1436  PCF: 1366)
+    TH    def. EF     2-0   (TH: 1518  EF: 1283)
+
+  -- UR3 --
+    GM    def. NAVI   2-0   (GM: 1782  NAVI: 1516)
+    BBL   def. VIT    2-0   (BBL: 1732  VIT: 1515)
+
+  -- MR2 --
+    FNC   def. TL     2-0   (FNC: 1545  TL: 1349)
+    GX    def. TH     2-0   (GX: 1578  TH: 1375)
+
+  -- LR1 --
+    KC    def. FUT    2-1   (KC: 1373  FUT: 1285)
+    EF    def. PCF    2-0   (EF: 1412  PCF: 1237)
+
+  -- MR3 --
+    FNC   def. NAVI   2-1   (FNC: 1595  NAVI: 1465)
+    VIT   def. GX     2-0   (VIT: 1654  GX: 1440)
+
+  -- LR2 --
+    TH    def. KC     2-1   (TH: 1421  KC: 1328)
+    TL    def. EF     2-1   (TL: 1411  EF: 1350)
+
+  -- LR3 --
+    TH    def. NAVI   2-0   (TH: 1540  NAVI: 1346)
+    TL    def. GX     2-1   (TL: 1466  GX: 1385)
+
+  -- LR4 --
+    TL    def. TH     2-0   (TL: 1607  TH: 1399)
+
+  -- MR4 --
+    FNC   def. VIT    2-0   (FNC: 1738  VIT: 1511)
+
+  -- UF --
+    BBL   def. GM     3-2   (BBL: 1910  GM: 1604)
+
+  -- LR5 --
+    TL    def. VIT    2-1   (TL: 1657  VIT: 1461)
+
+  -- MF --
+    GM    def. FNC    3-2   (GM: 1836  FNC: 1506)
+
+  -- LF --
+    TL    def. FNC    3-0   (TL: 1778  FNC: 1385)
+
+  ================================================================
+  Global Rankings  —  after EMEA Kickoff
+  ================================================================
+   1. G2     2003 ############   17. VRL    1600 #####          33. XLG    1450 ###         
+   2. NRG    1917 ##########     18. NRF    1600 #####          34. DRG    1450 ###         
+   3. BBL    1910 ##########     19. DRX    1600 #####          35. LEV    1438 ###         
+   4. FUR    1897 ##########     20. 100T   1553 ####           36. TH     1399 ##          
+   5. GM     1836 #########      21. VIT    1461 ###            37. FNC    1385 ##          
+   6. TL     1778 ########       22. EG     1460 ###            38. GX     1385 ##          
+   7. C9     1606 #####          23. AG     1450 ###            39. ENVY   1376 ##          
+   8. DFM    1600 #####          24. BLG    1450 ###            40. SEN    1371 ##          
+   9. FS     1600 #####          25. EDG    1450 ###            41. MIBR   1362 #           
+  10. GEN    1600 #####          26. FPX    1450 ###            42. EF     1350 #           
+  11. GE     1600 #####          27. JDG    1450 ###            43. NAVI   1346 #           
+  12. PRX    1600 #####          28. NOV    1450 ###            44. KC     1328 #           
+  13. RRQ    1600 #####          29. TEC    1450 ###            45. KRU    1322 #           
+  14. T1     1600 #####          30. TRC    1450 ###            46. LOUD   1295             
+  15. TS     1600 #####          31. TYL    1450 ###            47. FUT    1285             
+  16. ZETA   1600 #####          32. WLV    1450 ###            48. PCF    1237             
+
+================================================================
+  Pacific Kickoff
+================================================================
+
+  -- UR1 --
+    NRF   def. TS     2-0   (NRF: 1700  TS: 1500)
+    FS    def. ZETA   2-0   (FS: 1700  ZETA: 1500)
+    GE    def. VRL    2-0   (GE: 1700  VRL: 1500)
+    DFM   def. GEN    2-0   (DFM: 1700  GEN: 1500)
+
+  -- UR2 --
+    NRF   def. T1     2-1   (NRF: 1753  T1: 1547)
+    FS    def. DRX    2-1   (FS: 1753  DRX: 1547)
+    PRX   def. GE     2-1   (PRX: 1685  GE: 1615)
+    RRQ   def. DFM    2-0   (RRQ: 1770  DFM: 1530)
+
+  -- MR1 --
+    DFM   def. TS     2-0   (DFM: 1630  TS: 1400)
+    GE    def. ZETA   2-0   (GE: 1715  ZETA: 1400)
+    DRX   def. VRL    2-1   (DRX: 1597  VRL: 1450)
+    T1    def. GEN    2-1   (T1: 1597  GEN: 1450)
+
+  -- UR3 --
+    NRF   def. FS     2-0   (NRF: 1870  FS: 1636)
+    RRQ   def. PRX    2-0   (RRQ: 1882  PRX: 1573)
+
+  -- MR2 --
+    DFM   def. GE     2-1   (DFM: 1711  GE: 1634)
+    T1    def. DRX    2-0   (T1: 1703  DRX: 1490)
+
+  -- LR1 --
+    ZETA  def. TS     2-1   (ZETA: 1447  TS: 1353)
+    GEN   def. VRL    2-1   (GEN: 1498  VRL: 1402)
+
+  -- MR3 --
+    DFM   def. FS     2-1   (DFM: 1766  FS: 1582)
+    T1    def. PRX    2-1   (T1: 1756  PRX: 1520)
+
+  -- LR2 --
+    DRX   def. ZETA   2-1   (DRX: 1538  ZETA: 1398)
+    GE    def. GEN    2-1   (GE: 1683  GEN: 1448)
+
+  -- LR3 --
+    DRX   def. FS     2-0   (DRX: 1667  FS: 1454)
+    PRX   def. GE     2-1   (PRX: 1622  GE: 1582)
+
+  -- LR4 --
+    PRX   def. DRX    2-1   (PRX: 1690  DRX: 1599)
+
+  -- MR4 --
+    T1    def. DFM    2-0   (T1: 1879  DFM: 1642)
+
+  -- UF --
+    NRF   def. RRQ    3-2   (NRF: 2030  RRQ: 1723)
+
+  -- LR5 --
+    PRX   def. DFM    2-0   (PRX: 1800  DFM: 1533)
+
+  -- MF --
+    T1    def. RRQ    3-0   (T1: 2017  RRQ: 1585)
+
+  -- LF --
+    PRX   def. RRQ    3-1   (PRX: 1926  RRQ: 1458)
+
+  ================================================================
+  Global Rankings  —  after Pacific Kickoff
+  ================================================================
+   1. NRF    2030 ############   17. RRQ    1458 ###            33. VRL    1402 ##          
+   2. T1     2017 ###########    18. FS     1454 ###            34. TH     1399 ##          
+   3. G2     2003 ###########    19. AG     1450 ###            35. ZETA   1398 ##          
+   4. PRX    1926 ##########     20. BLG    1450 ###            36. FNC    1385 ##          
+   5. NRG    1917 ##########     21. EDG    1450 ###            37. GX     1385 ##          
+   6. BBL    1910 ##########     22. FPX    1450 ###            38. ENVY   1376 ##          
+   7. FUR    1897 #########      23. JDG    1450 ###            39. SEN    1371 ##          
+   8. GM     1836 #########      24. NOV    1450 ###            40. MIBR   1362 #           
+   9. TL     1778 ########       25. TEC    1450 ###            41. TS     1353 #           
+  10. C9     1606 #####          26. TRC    1450 ###            42. EF     1350 #           
+  11. DRX    1599 #####          27. TYL    1450 ###            43. NAVI   1346 #           
+  12. GE     1582 #####          28. WLV    1450 ###            44. KC     1328 #           
+  13. 100T   1553 ####           29. XLG    1450 ###            45. KRU    1322 #           
+  14. DFM    1533 ####           30. DRG    1450 ###            46. LOUD   1295             
+  15. VIT    1461 ###            31. GEN    1448 ###            47. FUT    1285             
+  16. EG     1460 ###            32. LEV    1438 ###            48. PCF    1237             
+
+================================================================
+  China Kickoff
+================================================================
+
+  -- UR1 --
+    WLV   def. TRC    2-1   (WLV: 1500  TRC: 1400)
+    TYL   def. FPX    2-0   (TYL: 1550  FPX: 1350)
+    AG    def. NOV    2-0   (AG: 1550  NOV: 1350)
+    JDG   def. TEC    2-1   (JDG: 1500  TEC: 1400)
+
+  -- UR2 --
+    XLG   def. WLV    2-0   (XLG: 1575  WLV: 1375)
+    EDG   def. TYL    2-0   (EDG: 1605  TYL: 1395)
+    AG    def. BLG    2-0   (AG: 1647  BLG: 1353)
+    DRG   def. JDG    2-1   (DRG: 1512  JDG: 1438)
+
+  -- MR1 --
+    TYL   def. NOV    2-0   (TYL: 1485  NOV: 1260)
+    TEC   def. WLV    2-1   (TEC: 1446  WLV: 1329)
+    TRC   def. JDG    2-1   (TRC: 1457  JDG: 1381)
+    BLG   def. FPX    2-0   (BLG: 1443  FPX: 1260)
+
+  -- MR2 --
+    TYL   def. TEC    2-1   (TYL: 1533  TEC: 1398)
+    BLG   def. TRC    2-0   (BLG: 1547  TRC: 1353)
+
+  -- LR1 --
+    WLV   def. NOV    2-1   (WLV: 1371  NOV: 1218)
+    JDG   def. FPX    2-1   (JDG: 1423  FPX: 1218)
+
+  -- UR3 --
+    AG    def. DRG    2-1   (AG: 1697  DRG: 1462)
+    XLG   def. EDG    2-0   (XLG: 1698  EDG: 1482)
+
+  -- LR2 --
+    TRC   def. WLV    2-1   (TRC: 1403  WLV: 1321)
+    JDG   def. TEC    2-1   (JDG: 1469  TEC: 1351)
+
+  -- MR3 --
+    DRG   def. TYL    2-1   (DRG: 1531  TYL: 1464)
+    BLG   def. EDG    2-1   (BLG: 1596  EDG: 1433)
+
+  -- LR3 --
+    TYL   def. TRC    2-0   (TYL: 1557  TRC: 1309)
+    EDG   def. JDG    2-1   (EDG: 1490  JDG: 1411)
+
+  -- MR4 --
+    BLG   def. DRG    2-0   (BLG: 1699  DRG: 1429)
+
+  -- LR4 --
+    EDG   def. TYL    2-1   (EDG: 1560  TYL: 1488)
+
+  -- LR5 --
+    EDG   def. DRG    2-1   (EDG: 1607  DRG: 1382)
+
+  -- UF --
+    AG    def. XLG    3-2   (AG: 1834  XLG: 1562)
+
+  -- MF --
+    XLG   def. BLG    3-2   (XLG: 1791  BLG: 1470)
+
+  -- LF --
+    EDG   def. BLG    3-1   (EDG: 1725  BLG: 1352)
+
+  ================================================================
+  Global Rankings  —  after China Kickoff
+  ================================================================
+   1. NRF    2030 ############   17. DFM    1533 ####           33. SEN    1371 ##          
+   2. T1     2017 ###########    18. TYL    1488 ###            34. MIBR   1362 ##          
+   3. G2     2003 ###########    19. VIT    1461 ###            35. TS     1353 ##          
+   4. PRX    1926 ##########     20. EG     1460 ###            36. BLG    1352 #           
+   5. NRG    1917 ##########     21. RRQ    1458 ###            37. TEC    1351 #           
+   6. BBL    1910 ##########     22. FS     1454 ###            38. EF     1350 #           
+   7. FUR    1897 ##########     23. GEN    1448 ###            39. NAVI   1346 #           
+   8. GM     1836 #########      24. LEV    1438 ###            40. KC     1328 #           
+   9. AG     1834 #########      25. JDG    1411 ##             41. KRU    1322 #           
+  10. XLG    1791 ########       26. VRL    1402 ##             42. WLV    1321 #           
+  11. TL     1778 ########       27. TH     1399 ##             43. TRC    1309 #           
+  12. EDG    1725 #######        28. ZETA   1398 ##             44. LOUD   1295 #           
+  13. C9     1606 #####          29. FNC    1385 ##             45. FUT    1285             
+  14. DRX    1599 #####          30. GX     1385 ##             46. PCF    1237             
+  15. GE     1582 #####          31. DRG    1382 ##             47. FPX    1218             
+  16. 100T   1553 ####           32. ENVY   1376 ##             48. NOV    1218             
+
+================================================================
+  Masters Santiago
+================================================================
+
+  -- SR1 --
+    GM    def. EDG    2-0   (GM: 1951  EDG: 1610)
+    NRG   def. XLG    2-0   (NRG: 2036  XLG: 1671)
+    PRX   def. G2     2-0   (PRX: 2101  G2: 1828)
+    TL    def. T1     2-0   (TL: 1953  T1: 1842)
+
+  -- SR2 --
+    PRX   def. NRG    2-1   (PRX: 2169  NRG: 1968)
+    GM    def. TL     2-0   (GM: 2082  TL: 1821)
+    T1    def. EDG    2-0   (T1: 1950  EDG: 1503)
+    G2    def. XLG    2-0   (G2: 1940  XLG: 1560)
+
+  -- SR3 --
+    NRG   def. TL     2-0   (NRG: 2090  TL: 1700)
+    G2    def. T1     2-0   (G2: 2076  T1: 1813)
+
+  -- QF --
+    PRX   def. FUR    2-1   (PRX: 2233  FUR: 1834)
+    NRF   def. GM     2-0   (NRF: 2205  GM: 1907)
+    NRG   def. BBL    2-1   (NRG: 2154  BBL: 1846)
+    G2    def. AG     2-0   (G2: 2198  AG: 1711)
+
+  -- LR1 --
+    BBL   def. FUR    2-1   (BBL: 1907  FUR: 1773)
+    AG    def. GM     2-1   (AG: 1837  GM: 1781)
+
+  -- SF --
+    NRF   def. G2     2-1   (NRF: 2322  G2: 2081)
+    NRG   def. PRX    2-0   (NRG: 2320  PRX: 2066)
+
+  -- LR2 --
+    G2    def. BBL    2-0   (G2: 2208  BBL: 1780)
+    PRX   def. AG     2-1   (PRX: 2128  AG: 1776)
+
+  -- UF --
+    NRF   def. NRG    2-0   (NRF: 2446  NRG: 2196)
+
+  -- LR3 --
+    PRX   def. G2     2-1   (PRX: 2231  G2: 2105)
+
+  -- LF --
+    PRX   def. NRG    3-1   (PRX: 2407  NRG: 2020)
+
+  -- GF --
+    NRF   def. PRX    3-0   (NRF: 2638  PRX: 2214)
+
+  ================================================================
+  Global Rankings  —  after Masters Santiago
+  ================================================================
+   1. NRF    2638 ############   17. EDG    1503 ##             33. SEN    1371 #           
+   2. PRX    2214 ########       18. TYL    1488 ##             34. MIBR   1362 #           
+   3. G2     2105 #######        19. VIT    1461 ##             35. TS     1353 #           
+   4. NRG    2020 ######         20. EG     1460 ##             36. BLG    1352 #           
+   5. T1     1813 #####          21. RRQ    1458 ##             37. TEC    1351 #           
+   6. GM     1781 ####           22. FS     1454 #              38. EF     1350 #           
+   7. BBL    1780 ####           23. GEN    1448 #              39. NAVI   1346 #           
+   8. AG     1776 ####           24. LEV    1438 #              40. KC     1328             
+   9. FUR    1773 ####           25. JDG    1411 #              41. KRU    1322             
+  10. TL     1700 ####           26. VRL    1402 #              42. WLV    1321             
+  11. C9     1606 ###            27. TH     1399 #              43. TRC    1309             
+  12. DRX    1599 ###            28. ZETA   1398 #              44. LOUD   1295             
+  13. GE     1582 ###            29. FNC    1385 #              45. FUT    1285             
+  14. XLG    1560 ##             30. GX     1385 #              46. PCF    1237             
+  15. 100T   1553 ##             31. DRG    1382 #              47. FPX    1218             
+  16. DFM    1533 ##             32. ENVY   1376 #              48. NOV    1218             
+
+================================================================
+  China Stage 1
+================================================================
+
+  -- SR1 --
+    AG    def. TEC    2-1   (AG: 1821  TEC: 1306)
+    EDG   def. NOV    2-0   (EDG: 1584  NOV: 1137)
+
+  ================================================================
+  Global Rankings  —  after China Stage 1
+  ================================================================
+   1. NRF    2638 ############   17. DFM    1533 ###            33. SEN    1371 #           
+   2. PRX    2214 ########       18. TYL    1488 ##             34. MIBR   1362 #           
+   3. G2     2105 #######        19. VIT    1461 ##             35. TS     1353 #           
+   4. NRG    2020 #######        20. EG     1460 ##             36. BLG    1352 #           
+   5. AG     1821 #####          21. RRQ    1458 ##             37. EF     1350 #           
+   6. T1     1813 #####          22. FS     1454 ##             38. NAVI   1346 #           
+   7. GM     1781 #####          23. GEN    1448 ##             39. KC     1328 #           
+   8. BBL    1780 #####          24. LEV    1438 ##             40. KRU    1322 #           
+   9. FUR    1773 #####          25. JDG    1411 ##             41. WLV    1321 #           
+  10. TL     1700 ####           26. VRL    1402 ##             42. TRC    1309 #           
+  11. C9     1606 ###            27. TH     1399 ##             43. TEC    1306 #           
+  12. DRX    1599 ###            28. ZETA   1398 ##             44. LOUD   1295 #           
+  13. EDG    1584 ###            29. FNC    1385 #              45. FUT    1285 #           
+  14. GE     1582 ###            30. GX     1385 #              46. PCF    1237             
+  15. XLG    1560 ###            31. DRG    1382 #              47. FPX    1218             
+  16. 100T   1553 ###            32. ENVY   1376 #              48. NOV    1137             
+
+  Ratings written to vct_data.json
+Index files written to _index/:
+  teams.json              30 KB
+  players.json            36 KB
+  matches.json            30 KB
+  veto.json                0 KB
+  ratings.json            31 KB
+  quick_ref.md            17 KB
+
+Original vct_data.json:     642 KB
+Total index size:           147 KB
+------------------------------------------------------------
+VCT 2026 scraper  ->  vlr.gg
+------------------------------------------------------------
+Cache loaded: 154 match(es) already stored in match_cache.json
+
+[Americas Kickoff]  event/2682
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 62 player-event rows scraped
+
+[Pacific Kickoff]  event/2683
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[EMEA Kickoff]  event/2684
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[China Kickoff]  event/2685
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[Pacific Stage 1]  event/2775
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[Pacific Stage 2]  event/2776
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 0 upcoming
+  Stats …
+    !  Stats table not found
+
+[Americas Stage 1]  event/2860
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[EMEA Stage 1]  event/2863
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 4 completed matches, 26 upcoming
+  Stats …
+    -> 40 player-event rows scraped
+
+[China Stage 1]  event/2864
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 6 completed matches, 24 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[Masters Santiago]  event/2760
+  Matches …
+    -> 24 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+Cache saved: 154 match(es) -> match_cache.json
+    -> Renamed "drx" -> "Kiwoom DRX"
+    -> Renamed "ulf esports" -> "Eternal Fire"
+    -> Renamed "bilibili gaming" -> "Guangzhou Huadu Bilibili Gaming"
+    -> Renamed "jdg esports" -> "JD Mall JDG Esports"
+    -> Renamed "titan esports club" -> "Wuxi Titan Esports Club"
+
+------------------------------------------------------------
+OK  48 teams written to vct_data.json
+   Americas      12 teams
+   China         12 teams
+   EMEA          12 teams
+   Pacific       12 teams
+   48 / 48 teams have player stats
+   308 match entries have map detail
+------------------------------------------------------------
+
+Running calc_ratings.py …
+
+Building query index …
+=== Task Scheduler Run Thu Apr  2 18:01:16 EDT 2026 ===
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+=== Verification Run Thu Apr  2 19:10:34 EDT 2026 ===
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 18, in <module>
+    from bs4 import BeautifulSoup
+ImportError: cannot import name 'BeautifulSoup' from 'bs4' (unknown location)
+=== Final Verification Thu Apr  2 19:14:35 EDT 2026 ===
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 18, in <module>
+    from bs4 import BeautifulSoup
+ImportError: cannot import name 'BeautifulSoup' from 'bs4' (unknown location)
+=== Venv Run Thu Apr  2 19:19:02 EDT 2026 ===
+Index files written to _index/:
+  teams.json              30 KB
+  players.json            36 KB
+  matches.json            30 KB
+  veto.json                0 KB
+  ratings.json            31 KB
+  quick_ref.md            17 KB
+
+Original vct_data.json:     642 KB
+Total index size:           147 KB
+
+================================================================
+  Americas Kickoff
+================================================================
+
+  -- UR1 --
+    ENVY  def. EG     2-1   (ENVY: 1600  EG: 1500)
+    C9    def. LOUD   2-0   (C9: 1650  LOUD: 1450)
+    FUR   def. KRU    2-1   (FUR: 1600  KRU: 1500)
+    100T  def. LEV    2-1   (100T: 1600  LEV: 1500)
+
+  -- UR2 --
+    NRG   def. C9     2-0   (NRG: 1715  C9: 1485)
+    MIBR  def. ENVY   2-0   (MIBR: 1683  ENVY: 1467)
+    FUR   def. SEN    2-0   (FUR: 1703  SEN: 1447)
+    G2    def. 100T   2-1   (G2: 1617  100T: 1533)
+
+  -- MR1 --
+    100T  def. LOUD   2-1   (100T: 1582  LOUD: 1402)
+    SEN   def. EG     2-0   (SEN: 1573  EG: 1373)
+    ENVY  def. KRU    2-1   (ENVY: 1525  KRU: 1442)
+    C9    def. LEV    2-0   (C9: 1592  LEV: 1392)
+
+  -- MR2 --
+    100T  def. SEN    2-0   (100T: 1687  SEN: 1468)
+    C9    def. ENVY   2-1   (C9: 1643  ENVY: 1474)
+
+  -- UR3 --
+    MIBR  def. NRG    2-1   (MIBR: 1750  NRG: 1649)
+    FUR   def. G2     2-1   (FUR: 1757  G2: 1563)
+
+  -- LR1 --
+    EG    def. LOUD   2-0   (EG: 1480  LOUD: 1295)
+    LEV   def. KRU    2-0   (LEV: 1512  KRU: 1322)
+
+  -- MR3 --
+    NRG   def. 100T   2-0   (NRG: 1782  100T: 1553)
+    G2    def. C9     2-0   (G2: 1716  C9: 1490)
+
+  -- LR2 --
+    EG    def. ENVY   2-0   (EG: 1578  ENVY: 1376)
+    LEV   def. SEN    2-0   (LEV: 1610  SEN: 1371)
+
+  -- LR3 --
+    100T  def. EG     2-0   (100T: 1671  EG: 1460)
+    C9    def. LEV    2-0   (C9: 1662  LEV: 1438)
+
+  -- MR4 --
+    G2    def. NRG    2-0   (G2: 1875  NRG: 1624)
+
+  -- LR4 --
+    100T  def. C9     2-1   (100T: 1727  C9: 1606)
+
+  -- UF --
+    FUR   def. MIBR   3-2   (FUR: 1897  MIBR: 1610)
+
+  -- MF --
+    G2    def. MIBR   3-0   (G2: 2003  MIBR: 1481)
+
+  -- LR5 --
+    NRG   def. 100T   2-0   (NRG: 1799  100T: 1553)
+
+  -- LF --
+    NRG   def. MIBR   3-2   (NRG: 1917  MIBR: 1362)
+
+  ================================================================
+  Global Rankings  —  after Americas Kickoff
+  ================================================================
+   1. G2     2003 ############   17. 100T   1553 ####           33. EDG    1450 ##          
+   2. NRG    1917 ##########     18. BBL    1475 ###            34. FPX    1450 ##          
+   3. FUR    1897 ##########     19. FNC    1475 ###            35. JDG    1450 ##          
+   4. C9     1606 #####          20. FUT    1475 ###            36. NOV    1450 ##          
+   5. DFM    1600 #####          21. GM     1475 ###            37. TEC    1450 ##          
+   6. FS     1600 #####          22. GX     1475 ###            38. TRC    1450 ##          
+   7. GEN    1600 #####          23. KC     1475 ###            39. TYL    1450 ##          
+   8. GE     1600 #####          24. NAVI   1475 ###            40. WLV    1450 ##          
+   9. PRX    1600 #####          25. TH     1475 ###            41. XLG    1450 ##          
+  10. RRQ    1600 #####          26. TL     1475 ###            42. DRG    1450 ##          
+  11. T1     1600 #####          27. VIT    1475 ###            43. LEV    1438 ##          
+  12. TS     1600 #####          28. PCF    1475 ###            44. ENVY   1376 #           
+  13. ZETA   1600 #####          29. EF     1475 ###            45. SEN    1371 #           
+  14. VRL    1600 #####          30. EG     1460 ##             46. MIBR   1362 #           
+  15. NRF    1600 #####          31. AG     1450 ##             47. KRU    1322             
+  16. DRX    1600 #####          32. BLG    1450 ##             48. LOUD   1295             
+
+================================================================
+  EMEA Kickoff
+================================================================
+
+  -- UR1 --
+    NAVI  def. KC     2-0   (NAVI: 1575  KC: 1375)
+    GM    def. FUT    2-0   (GM: 1575  FUT: 1375)
+    BBL   def. PCF    2-1   (BBL: 1525  PCF: 1425)
+    VIT   def. EF     2-0   (VIT: 1575  EF: 1375)
+
+  -- UR2 --
+    NAVI  def. TH     2-1   (NAVI: 1624  TH: 1426)
+    GM    def. GX     2-0   (GM: 1673  GX: 1377)
+    BBL   def. FNC    2-0   (BBL: 1623  FNC: 1377)
+    VIT   def. TL     2-1   (VIT: 1624  TL: 1426)
+
+  -- MR1 --
+    TL    def. KC     2-1   (TL: 1472  KC: 1329)
+    FNC   def. FUT    2-1   (FNC: 1422  FUT: 1329)
+    GX    def. PCF    2-1   (GX: 1436  PCF: 1366)
+    TH    def. EF     2-0   (TH: 1518  EF: 1283)
+
+  -- UR3 --
+    GM    def. NAVI   2-0   (GM: 1782  NAVI: 1516)
+    BBL   def. VIT    2-0   (BBL: 1732  VIT: 1515)
+
+  -- MR2 --
+    FNC   def. TL     2-0   (FNC: 1545  TL: 1349)
+    GX    def. TH     2-0   (GX: 1578  TH: 1375)
+
+  -- LR1 --
+    KC    def. FUT    2-1   (KC: 1373  FUT: 1285)
+    EF    def. PCF    2-0   (EF: 1412  PCF: 1237)
+
+  -- MR3 --
+    FNC   def. NAVI   2-1   (FNC: 1595  NAVI: 1465)
+    VIT   def. GX     2-0   (VIT: 1654  GX: 1440)
+
+  -- LR2 --
+    TH    def. KC     2-1   (TH: 1421  KC: 1328)
+    TL    def. EF     2-1   (TL: 1411  EF: 1350)
+
+  -- LR3 --
+    TH    def. NAVI   2-0   (TH: 1540  NAVI: 1346)
+    TL    def. GX     2-1   (TL: 1466  GX: 1385)
+
+  -- LR4 --
+    TL    def. TH     2-0   (TL: 1607  TH: 1399)
+
+  -- MR4 --
+    FNC   def. VIT    2-0   (FNC: 1738  VIT: 1511)
+
+  -- UF --
+    BBL   def. GM     3-2   (BBL: 1910  GM: 1604)
+
+  -- LR5 --
+    TL    def. VIT    2-1   (TL: 1657  VIT: 1461)
+
+  -- MF --
+    GM    def. FNC    3-2   (GM: 1836  FNC: 1506)
+
+  -- LF --
+    TL    def. FNC    3-0   (TL: 1778  FNC: 1385)
+
+  ================================================================
+  Global Rankings  —  after EMEA Kickoff
+  ================================================================
+   1. G2     2003 ############   17. VRL    1600 #####          33. XLG    1450 ###         
+   2. NRG    1917 ##########     18. NRF    1600 #####          34. DRG    1450 ###         
+   3. BBL    1910 ##########     19. DRX    1600 #####          35. LEV    1438 ###         
+   4. FUR    1897 ##########     20. 100T   1553 ####           36. TH     1399 ##          
+   5. GM     1836 #########      21. VIT    1461 ###            37. FNC    1385 ##          
+   6. TL     1778 ########       22. EG     1460 ###            38. GX     1385 ##          
+   7. C9     1606 #####          23. AG     1450 ###            39. ENVY   1376 ##          
+   8. DFM    1600 #####          24. BLG    1450 ###            40. SEN    1371 ##          
+   9. FS     1600 #####          25. EDG    1450 ###            41. MIBR   1362 #           
+  10. GEN    1600 #####          26. FPX    1450 ###            42. EF     1350 #           
+  11. GE     1600 #####          27. JDG    1450 ###            43. NAVI   1346 #           
+  12. PRX    1600 #####          28. NOV    1450 ###            44. KC     1328 #           
+  13. RRQ    1600 #####          29. TEC    1450 ###            45. KRU    1322 #           
+  14. T1     1600 #####          30. TRC    1450 ###            46. LOUD   1295             
+  15. TS     1600 #####          31. TYL    1450 ###            47. FUT    1285             
+  16. ZETA   1600 #####          32. WLV    1450 ###            48. PCF    1237             
+
+================================================================
+  Pacific Kickoff
+================================================================
+
+  -- UR1 --
+    NRF   def. TS     2-0   (NRF: 1700  TS: 1500)
+    FS    def. ZETA   2-0   (FS: 1700  ZETA: 1500)
+    GE    def. VRL    2-0   (GE: 1700  VRL: 1500)
+    DFM   def. GEN    2-0   (DFM: 1700  GEN: 1500)
+
+  -- UR2 --
+    NRF   def. T1     2-1   (NRF: 1753  T1: 1547)
+    FS    def. DRX    2-1   (FS: 1753  DRX: 1547)
+    PRX   def. GE     2-1   (PRX: 1685  GE: 1615)
+    RRQ   def. DFM    2-0   (RRQ: 1770  DFM: 1530)
+
+  -- MR1 --
+    DFM   def. TS     2-0   (DFM: 1630  TS: 1400)
+    GE    def. ZETA   2-0   (GE: 1715  ZETA: 1400)
+    DRX   def. VRL    2-1   (DRX: 1597  VRL: 1450)
+    T1    def. GEN    2-1   (T1: 1597  GEN: 1450)
+
+  -- UR3 --
+    NRF   def. FS     2-0   (NRF: 1870  FS: 1636)
+    RRQ   def. PRX    2-0   (RRQ: 1882  PRX: 1573)
+
+  -- MR2 --
+    DFM   def. GE     2-1   (DFM: 1711  GE: 1634)
+    T1    def. DRX    2-0   (T1: 1703  DRX: 1490)
+
+  -- LR1 --
+    ZETA  def. TS     2-1   (ZETA: 1447  TS: 1353)
+    GEN   def. VRL    2-1   (GEN: 1498  VRL: 1402)
+
+  -- MR3 --
+    DFM   def. FS     2-1   (DFM: 1766  FS: 1582)
+    T1    def. PRX    2-1   (T1: 1756  PRX: 1520)
+
+  -- LR2 --
+    DRX   def. ZETA   2-1   (DRX: 1538  ZETA: 1398)
+    GE    def. GEN    2-1   (GE: 1683  GEN: 1448)
+
+  -- LR3 --
+    DRX   def. FS     2-0   (DRX: 1667  FS: 1454)
+    PRX   def. GE     2-1   (PRX: 1622  GE: 1582)
+
+  -- LR4 --
+    PRX   def. DRX    2-1   (PRX: 1690  DRX: 1599)
+
+  -- MR4 --
+    T1    def. DFM    2-0   (T1: 1879  DFM: 1642)
+
+  -- UF --
+    NRF   def. RRQ    3-2   (NRF: 2030  RRQ: 1723)
+
+  -- LR5 --
+    PRX   def. DFM    2-0   (PRX: 1800  DFM: 1533)
+
+  -- MF --
+    T1    def. RRQ    3-0   (T1: 2017  RRQ: 1585)
+
+  -- LF --
+    PRX   def. RRQ    3-1   (PRX: 1926  RRQ: 1458)
+
+  ================================================================
+  Global Rankings  —  after Pacific Kickoff
+  ================================================================
+   1. NRF    2030 ############   17. RRQ    1458 ###            33. VRL    1402 ##          
+   2. T1     2017 ###########    18. FS     1454 ###            34. TH     1399 ##          
+   3. G2     2003 ###########    19. AG     1450 ###            35. ZETA   1398 ##          
+   4. PRX    1926 ##########     20. BLG    1450 ###            36. FNC    1385 ##          
+   5. NRG    1917 ##########     21. EDG    1450 ###            37. GX     1385 ##          
+   6. BBL    1910 ##########     22. FPX    1450 ###            38. ENVY   1376 ##          
+   7. FUR    1897 #########      23. JDG    1450 ###            39. SEN    1371 ##          
+   8. GM     1836 #########      24. NOV    1450 ###            40. MIBR   1362 #           
+   9. TL     1778 ########       25. TEC    1450 ###            41. TS     1353 #           
+  10. C9     1606 #####          26. TRC    1450 ###            42. EF     1350 #           
+  11. DRX    1599 #####          27. TYL    1450 ###            43. NAVI   1346 #           
+  12. GE     1582 #####          28. WLV    1450 ###            44. KC     1328 #           
+  13. 100T   1553 ####           29. XLG    1450 ###            45. KRU    1322 #           
+  14. DFM    1533 ####           30. DRG    1450 ###            46. LOUD   1295             
+  15. VIT    1461 ###            31. GEN    1448 ###            47. FUT    1285             
+  16. EG     1460 ###            32. LEV    1438 ###            48. PCF    1237             
+
+================================================================
+  China Kickoff
+================================================================
+
+  -- UR1 --
+    WLV   def. TRC    2-1   (WLV: 1500  TRC: 1400)
+    TYL   def. FPX    2-0   (TYL: 1550  FPX: 1350)
+    AG    def. NOV    2-0   (AG: 1550  NOV: 1350)
+    JDG   def. TEC    2-1   (JDG: 1500  TEC: 1400)
+
+  -- UR2 --
+    XLG   def. WLV    2-0   (XLG: 1575  WLV: 1375)
+    EDG   def. TYL    2-0   (EDG: 1605  TYL: 1395)
+    AG    def. BLG    2-0   (AG: 1647  BLG: 1353)
+    DRG   def. JDG    2-1   (DRG: 1512  JDG: 1438)
+
+  -- MR1 --
+    TYL   def. NOV    2-0   (TYL: 1485  NOV: 1260)
+    TEC   def. WLV    2-1   (TEC: 1446  WLV: 1329)
+    TRC   def. JDG    2-1   (TRC: 1457  JDG: 1381)
+    BLG   def. FPX    2-0   (BLG: 1443  FPX: 1260)
+
+  -- MR2 --
+    TYL   def. TEC    2-1   (TYL: 1533  TEC: 1398)
+    BLG   def. TRC    2-0   (BLG: 1547  TRC: 1353)
+
+  -- LR1 --
+    WLV   def. NOV    2-1   (WLV: 1371  NOV: 1218)
+    JDG   def. FPX    2-1   (JDG: 1423  FPX: 1218)
+
+  -- UR3 --
+    AG    def. DRG    2-1   (AG: 1697  DRG: 1462)
+    XLG   def. EDG    2-0   (XLG: 1698  EDG: 1482)
+
+  -- LR2 --
+    TRC   def. WLV    2-1   (TRC: 1403  WLV: 1321)
+    JDG   def. TEC    2-1   (JDG: 1469  TEC: 1351)
+
+  -- MR3 --
+    DRG   def. TYL    2-1   (DRG: 1531  TYL: 1464)
+    BLG   def. EDG    2-1   (BLG: 1596  EDG: 1433)
+
+  -- LR3 --
+    TYL   def. TRC    2-0   (TYL: 1557  TRC: 1309)
+    EDG   def. JDG    2-1   (EDG: 1490  JDG: 1411)
+
+  -- MR4 --
+    BLG   def. DRG    2-0   (BLG: 1699  DRG: 1429)
+
+  -- LR4 --
+    EDG   def. TYL    2-1   (EDG: 1560  TYL: 1488)
+
+  -- LR5 --
+    EDG   def. DRG    2-1   (EDG: 1607  DRG: 1382)
+
+  -- UF --
+    AG    def. XLG    3-2   (AG: 1834  XLG: 1562)
+
+  -- MF --
+    XLG   def. BLG    3-2   (XLG: 1791  BLG: 1470)
+
+  -- LF --
+    EDG   def. BLG    3-1   (EDG: 1725  BLG: 1352)
+
+  ================================================================
+  Global Rankings  —  after China Kickoff
+  ================================================================
+   1. NRF    2030 ############   17. DFM    1533 ####           33. SEN    1371 ##          
+   2. T1     2017 ###########    18. TYL    1488 ###            34. MIBR   1362 ##          
+   3. G2     2003 ###########    19. VIT    1461 ###            35. TS     1353 ##          
+   4. PRX    1926 ##########     20. EG     1460 ###            36. BLG    1352 #           
+   5. NRG    1917 ##########     21. RRQ    1458 ###            37. TEC    1351 #           
+   6. BBL    1910 ##########     22. FS     1454 ###            38. EF     1350 #           
+   7. FUR    1897 ##########     23. GEN    1448 ###            39. NAVI   1346 #           
+   8. GM     1836 #########      24. LEV    1438 ###            40. KC     1328 #           
+   9. AG     1834 #########      25. JDG    1411 ##             41. KRU    1322 #           
+  10. XLG    1791 ########       26. VRL    1402 ##             42. WLV    1321 #           
+  11. TL     1778 ########       27. TH     1399 ##             43. TRC    1309 #           
+  12. EDG    1725 #######        28. ZETA   1398 ##             44. LOUD   1295 #           
+  13. C9     1606 #####          29. FNC    1385 ##             45. FUT    1285             
+  14. DRX    1599 #####          30. GX     1385 ##             46. PCF    1237             
+  15. GE     1582 #####          31. DRG    1382 ##             47. FPX    1218             
+  16. 100T   1553 ####           32. ENVY   1376 ##             48. NOV    1218             
+
+================================================================
+  Masters Santiago
+================================================================
+
+  -- SR1 --
+    GM    def. EDG    2-0   (GM: 1951  EDG: 1610)
+    NRG   def. XLG    2-0   (NRG: 2036  XLG: 1671)
+    PRX   def. G2     2-0   (PRX: 2101  G2: 1828)
+    TL    def. T1     2-0   (TL: 1953  T1: 1842)
+
+  -- SR2 --
+    PRX   def. NRG    2-1   (PRX: 2169  NRG: 1968)
+    GM    def. TL     2-0   (GM: 2082  TL: 1821)
+    T1    def. EDG    2-0   (T1: 1950  EDG: 1503)
+    G2    def. XLG    2-0   (G2: 1940  XLG: 1560)
+
+  -- SR3 --
+    NRG   def. TL     2-0   (NRG: 2090  TL: 1700)
+    G2    def. T1     2-0   (G2: 2076  T1: 1813)
+
+  -- QF --
+    PRX   def. FUR    2-1   (PRX: 2233  FUR: 1834)
+    NRF   def. GM     2-0   (NRF: 2205  GM: 1907)
+    NRG   def. BBL    2-1   (NRG: 2154  BBL: 1846)
+    G2    def. AG     2-0   (G2: 2198  AG: 1711)
+
+  -- LR1 --
+    BBL   def. FUR    2-1   (BBL: 1907  FUR: 1773)
+    AG    def. GM     2-1   (AG: 1837  GM: 1781)
+
+  -- SF --
+    NRF   def. G2     2-1   (NRF: 2322  G2: 2081)
+    NRG   def. PRX    2-0   (NRG: 2320  PRX: 2066)
+
+  -- LR2 --
+    G2    def. BBL    2-0   (G2: 2208  BBL: 1780)
+    PRX   def. AG     2-1   (PRX: 2128  AG: 1776)
+
+  -- UF --
+    NRF   def. NRG    2-0   (NRF: 2446  NRG: 2196)
+
+  -- LR3 --
+    PRX   def. G2     2-1   (PRX: 2231  G2: 2105)
+
+  -- LF --
+    PRX   def. NRG    3-1   (PRX: 2407  NRG: 2020)
+
+  -- GF --
+    NRF   def. PRX    3-0   (NRF: 2638  PRX: 2214)
+
+  ================================================================
+  Global Rankings  —  after Masters Santiago
+  ================================================================
+   1. NRF    2638 ############   17. EDG    1503 ##             33. SEN    1371 #           
+   2. PRX    2214 ########       18. TYL    1488 ##             34. MIBR   1362 #           
+   3. G2     2105 #######        19. VIT    1461 ##             35. TS     1353 #           
+   4. NRG    2020 ######         20. EG     1460 ##             36. BLG    1352 #           
+   5. T1     1813 #####          21. RRQ    1458 ##             37. TEC    1351 #           
+   6. GM     1781 ####           22. FS     1454 #              38. EF     1350 #           
+   7. BBL    1780 ####           23. GEN    1448 #              39. NAVI   1346 #           
+   8. AG     1776 ####           24. LEV    1438 #              40. KC     1328             
+   9. FUR    1773 ####           25. JDG    1411 #              41. KRU    1322             
+  10. TL     1700 ####           26. VRL    1402 #              42. WLV    1321             
+  11. C9     1606 ###            27. TH     1399 #              43. TRC    1309             
+  12. DRX    1599 ###            28. ZETA   1398 #              44. LOUD   1295             
+  13. GE     1582 ###            29. FNC    1385 #              45. FUT    1285             
+  14. XLG    1560 ##             30. GX     1385 #              46. PCF    1237             
+  15. 100T   1553 ##             31. DRG    1382 #              47. FPX    1218             
+  16. DFM    1533 ##             32. ENVY   1376 #              48. NOV    1218             
+
+================================================================
+  China Stage 1
+================================================================
+
+  -- SR1 --
+    AG    def. TEC    2-1   (AG: 1821  TEC: 1306)
+    EDG   def. NOV    2-0   (EDG: 1584  NOV: 1137)
+
+  ================================================================
+  Global Rankings  —  after China Stage 1
+  ================================================================
+   1. NRF    2638 ############   17. DFM    1533 ###            33. SEN    1371 #           
+   2. PRX    2214 ########       18. TYL    1488 ##             34. MIBR   1362 #           
+   3. G2     2105 #######        19. VIT    1461 ##             35. TS     1353 #           
+   4. NRG    2020 #######        20. EG     1460 ##             36. BLG    1352 #           
+   5. AG     1821 #####          21. RRQ    1458 ##             37. EF     1350 #           
+   6. T1     1813 #####          22. FS     1454 ##             38. NAVI   1346 #           
+   7. GM     1781 #####          23. GEN    1448 ##             39. KC     1328 #           
+   8. BBL    1780 #####          24. LEV    1438 ##             40. KRU    1322 #           
+   9. FUR    1773 #####          25. JDG    1411 ##             41. WLV    1321 #           
+  10. TL     1700 ####           26. VRL    1402 ##             42. TRC    1309 #           
+  11. C9     1606 ###            27. TH     1399 ##             43. TEC    1306 #           
+  12. DRX    1599 ###            28. ZETA   1398 ##             44. LOUD   1295 #           
+  13. EDG    1584 ###            29. FNC    1385 #              45. FUT    1285 #           
+  14. GE     1582 ###            30. GX     1385 #              46. PCF    1237             
+  15. XLG    1560 ###            31. DRG    1382 #              47. FPX    1218             
+  16. 100T   1553 ###            32. ENVY   1376 #              48. NOV    1137             
+
+  Ratings written to vct_data.json
+Index files written to _index/:
+  teams.json              30 KB
+  players.json            36 KB
+  matches.json            30 KB
+  veto.json                0 KB
+  ratings.json            31 KB
+  quick_ref.md            17 KB
+
+Original vct_data.json:     642 KB
+Total index size:           147 KB
+------------------------------------------------------------
+VCT 2026 scraper  ->  vlr.gg
+------------------------------------------------------------
+Cache loaded: 154 match(es) already stored in match_cache.json
+
+[Americas Kickoff]  event/2682
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 62 player-event rows scraped
+
+[Pacific Kickoff]  event/2683
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[EMEA Kickoff]  event/2684
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[China Kickoff]  event/2685
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[Pacific Stage 1]  event/2775
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[Pacific Stage 2]  event/2776
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 0 upcoming
+  Stats …
+    !  Stats table not found
+
+[Americas Stage 1]  event/2860
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[EMEA Stage 1]  event/2863
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 4 completed matches, 26 upcoming
+  Stats …
+    -> 40 player-event rows scraped
+
+[China Stage 1]  event/2864
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 6 completed matches, 24 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[Masters Santiago]  event/2760
+  Matches …
+    -> 24 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+Cache saved: 154 match(es) -> match_cache.json
+    -> Renamed "drx" -> "Kiwoom DRX"
+    -> Renamed "ulf esports" -> "Eternal Fire"
+    -> Renamed "bilibili gaming" -> "Guangzhou Huadu Bilibili Gaming"
+    -> Renamed "jdg esports" -> "JD Mall JDG Esports"
+    -> Renamed "titan esports club" -> "Wuxi Titan Esports Club"
+
+------------------------------------------------------------
+OK  48 teams written to vct_data.json
+   Americas      12 teams
+   China         12 teams
+   EMEA          12 teams
+   Pacific       12 teams
+   48 / 48 teams have player stats
+   308 match entries have map detail
+------------------------------------------------------------
+
+Running calc_ratings.py …
+
+Building query index …

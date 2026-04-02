@@ -1,0 +1,125 @@
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\calc_ratings.py", line 4, in <module>
+    with open('vct_data.json', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'vct_data.json'
+------------------------------------------------------------
+VCT 2026 scraper  ->  vlr.gg
+------------------------------------------------------------
+Cache loaded: 154 match(es) already stored in match_cache.json
+
+[Americas Kickoff]  event/2682
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 62 player-event rows scraped
+
+[Pacific Kickoff]  event/2683
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[EMEA Kickoff]  event/2684
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[China Kickoff]  event/2685
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 30 completed matches, 0 upcoming
+  Stats …
+    -> 61 player-event rows scraped
+
+[Pacific Stage 1]  event/2775
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[Pacific Stage 2]  event/2776
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 0 upcoming
+  Stats …
+    !  Stats table not found
+
+[Americas Stage 1]  event/2860
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 0 completed matches, 30 upcoming
+  Stats …
+    !  Stats table not found
+
+[EMEA Stage 1]  event/2863
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 4 completed matches, 26 upcoming
+  Stats …
+    -> 40 player-event rows scraped
+
+[China Stage 1]  event/2864
+  Overview …
+    -> 12 teams registered from overview
+  Matches …
+    -> 6 completed matches, 24 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+
+[Masters Santiago]  event/2760
+  Matches …
+    -> 24 completed matches, 0 upcoming
+  Stats …
+    -> 60 player-event rows scraped
+Cache saved: 154 match(es) -> match_cache.json
+    -> Renamed "drx" -> "Kiwoom DRX"
+    -> Renamed "ulf esports" -> "Eternal Fire"
+    -> Renamed "bilibili gaming" -> "Guangzhou Huadu Bilibili Gaming"
+    -> Renamed "jdg esports" -> "JD Mall JDG Esports"
+    -> Renamed "titan esports club" -> "Wuxi Titan Esports Club"
+
+------------------------------------------------------------
+OK  48 teams written to vct_data.json
+   Americas      12 teams
+   China         12 teams
+   EMEA          12 teams
+   Pacific       12 teams
+   48 / 48 teams have player stats
+   308 match entries have map detail
+------------------------------------------------------------
+
+Running calc_ratings.py …
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 1154, in <module>
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'calc_ratings.py')], check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Python314\\python.exe', 'C:\\Users\\bearm\\OneDrive\\Documents\\GitHub\\website\\scraper\\calc_ratings.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'

@@ -61,7 +61,27 @@
       "Bash(schtasks /query /tn \"VCT Scraper\")",
       "Bash(cmd /c \"schtasks /create /tn \"\"VCT Scraper\"\" /tr \"\"C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\run_scraper.bat\"\" /sc hourly /mo 4 /st 00:00 /ru \"\"%USERNAME%\"\" /f\")",
       "Bash(powershell -Command \"schtasks /create /tn ''VCT Scraper'' /tr ''C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\run_scraper.bat'' /sc hourly /mo 4 /st 00:00 /f\")",
-      "Bash(powershell -Command \"schtasks /query /tn ''VCT Scraper'' /fo LIST\")"
+      "Bash(powershell -Command \"schtasks /query /tn ''VCT Scraper'' /fo LIST\")",
+      "Bash(powershell -Command \"schtasks /query /tn ''VCT Scraper'' /fo LIST /v\")",
+      "Bash(python -c \"import requests; import bs4; import sys; print\\(sys.executable\\)\")",
+      "Bash(C:Python314python.exe -c \"import requests\")",
+      "Bash(C:Python314python.exe -m pip install requests beautifulsoup4)",
+      "Bash(python -c \"import requests; print\\(''ok''\\)\")",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(python -c \"import sys; print\\(sys.path\\)\")",
+      "Bash(powershell -Command \"& ''C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\run_scraper.bat''\")",
+      "Bash(powershell -Command \"& ''C:\\\\Python314\\\\python.exe'' ''C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\calc_ratings.py'' 2>&1\")",
+      "Bash(python -c \"import subprocess,sys; r=subprocess.run\\([sys.executable,''calc_ratings.py''],capture_output=True,text=True\\); print\\(''RC:'',r.returncode\\); print\\(r.stdout[-300:] if r.stdout else ''''\\); print\\(r.stderr[-300:] if r.stderr else ''''\\)\")",
+      "Bash(python -c \"import subprocess,sys; r=subprocess.run\\([sys.executable,''calc_ratings.py''],capture_output=True,text=True\\); print\\(''RC:'',r.returncode\\); print\\(r.stdout[-200:] if r.stdout else ''\\(no stdout\\)''\\); print\\(r.stderr[-300:] if r.stderr else ''''\\)\")",
+      "Bash(powershell -Command \"schtasks /run /tn ''VCT Scraper''\")",
+      "Bash(powershell -Command \"C:\\\\Python314\\\\python.exe -m pip install --no-user requests beautifulsoup4 2>&1\")",
+      "Bash(powershell -Command \"ls C:\\\\Python314\\\\Lib\\\\site-packages | Where-Object {$_Name -match ''requests|bs4|beautifulsoup''}\")",
+      "Bash(python \"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/build_index.py\")",
+      "Bash(grep -iE \"^requests$|^bs4$|^beautifulsoup\")",
+      "Bash(powershell -Command \"C:\\\\Python314\\\\python.exe -c ''from bs4 import BeautifulSoup; import requests; print\\(\"\"OK\"\"\\)''\")",
+      "Bash(powershell -Command \"C:\\\\Python314\\\\python.exe -c \"\"from bs4 import BeautifulSoup; import requests; print\\(''OK''\\)\"\"\")",
+      "Bash(python -m venv \"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv\")",
+      "Bash(\"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv/Scripts/pip.exe\" install:*)"
     ]
   }
 }

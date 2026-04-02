@@ -1,5 +1,5 @@
 # VCT 2026 Quick Reference
-_Last updated: 2026-04-02T21:34:48.546041+00:00_
+_Last updated: 2026-04-02T23:19:44.923084+00:00_
 
 ## Elo Rankings (all teams)
 

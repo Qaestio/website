@@ -1,7 +1,10 @@
 import json
 from collections import defaultdict
+from pathlib import Path
 
-with open('vct_data.json', encoding='utf-8') as f:
+DATA_FILE = Path(__file__).parent.parent / 'vct_data.json'
+
+with open(DATA_FILE, encoding='utf-8') as f:
     data = json.load(f)
 
 NAME_MAP = {
@@ -312,7 +315,7 @@ for team in data['teams']:
         key=lambda m: EVENT_ORDER.get(m.get('event', ''), 999)
     )
 
-with open('vct_data.json', 'w', encoding='utf-8') as f:
+with open(DATA_FILE, 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print('\n  Ratings written to vct_data.json')
