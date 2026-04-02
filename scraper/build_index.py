@@ -54,11 +54,11 @@ for t in teams:
             "name":    p["name"],
             "team":    t["name"],
             "region":  t["region"],
-            "acs":     p.get("acs", 0),
-            "rating":  p.get("rating", 0),
-            "fkfd":    p.get("fkfd", 0),
-            "kpm":     p.get("kpm", 0),
-            "vflPts":  p.get("vflPts", 0),
+            "acs":     p.get("acs") or 0,
+            "rating":  p.get("rating") or 0,
+            "fkfd":    p.get("fkfd") or 0,
+            "kpm":     p.get("kpm") or 0,
+            "vflPts":  p.get("vflPts") or 0,
         })
 
 all_players.sort(key=lambda p: (p["acs"], p["rating"]), reverse=True)
