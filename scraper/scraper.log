@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "C:\Users\bearm\OneDrive\Documents\GitHub\website\scraper\scrape_vct.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'

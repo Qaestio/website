@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02T14:37:37.404181+00:00",
+  "lastUpdated": "2026-04-02T21:34:48.546041+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -14586,50 +14586,50 @@
       "name": "FUT Esports",
       "region": "emea",
       "logo": "https://owcdn.net/img/632be9976b8fe.png",
-      "matchW": 0,
+      "matchW": 1,
       "matchL": 3,
-      "mapW": 2,
-      "mapL": 6,
+      "mapW": 4,
+      "mapL": 7,
       "players": [
         {
           "name": "xeus",
           "acs": 204,
-          "rating": 0.98,
-          "fkfd": 1.12,
-          "kpm": 16.7,
-          "vflPts": 2.25
-        },
-        {
-          "name": "MrFaliN",
-          "acs": 174,
-          "rating": 0.97,
-          "fkfd": 0.7,
-          "kpm": 13.9,
-          "vflPts": 1.88
+          "rating": 0.99,
+          "fkfd": 1.05,
+          "kpm": 17.0,
+          "vflPts": 2.45
         },
         {
           "name": "yetujey",
-          "acs": 174,
-          "rating": 0.89,
-          "fkfd": 0.58,
-          "kpm": 12.8,
-          "vflPts": 1.62
+          "acs": 180,
+          "rating": 0.94,
+          "fkfd": 0.74,
+          "kpm": 13.3,
+          "vflPts": 2.0
         },
         {
           "name": "KROSTALY",
-          "acs": 174,
-          "rating": 0.85,
-          "fkfd": 0.88,
-          "kpm": 13.9,
-          "vflPts": 1.62
+          "acs": 169,
+          "rating": 0.83,
+          "fkfd": 0.74,
+          "kpm": 13.5,
+          "vflPts": 1.82
         },
         {
-          "name": "baha",
-          "acs": 159,
-          "rating": 0.68,
-          "fkfd": 0.56,
-          "kpm": 12.1,
-          "vflPts": 1.5
+          "name": "sociablEE",
+          "acs": 229,
+          "rating": 1.3,
+          "fkfd": 2.0,
+          "kpm": 18.5,
+          "vflPts": 2.47
+        },
+        {
+          "name": "s0pp",
+          "acs": 204,
+          "rating": 0.98,
+          "fkfd": 2.12,
+          "kpm": 15.0,
+          "vflPts": 2.67
         }
       ],
       "matches": [
@@ -14856,6 +14856,82 @@
             }
           ],
           "oppRating": 1329
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "Gentle Mates",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                10,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1285,
@@ -14895,49 +14971,49 @@
       "region": "emea",
       "logo": "https://owcdn.net/img/6670153fa9120.png",
       "matchW": 6,
-      "matchL": 3,
-      "mapW": 16,
-      "mapL": 9,
+      "matchL": 4,
+      "mapW": 17,
+      "mapL": 11,
       "players": [
         {
           "name": "marteen",
-          "acs": 257,
-          "rating": 1.32,
-          "fkfd": 1.59,
-          "kpm": 20.3,
-          "vflPts": 4.96
+          "acs": 250,
+          "rating": 1.27,
+          "fkfd": 1.51,
+          "kpm": 19.6,
+          "vflPts": 4.61
         },
         {
           "name": "Minny",
-          "acs": 203,
-          "rating": 1.08,
-          "fkfd": 0.97,
-          "kpm": 16.2,
-          "vflPts": 3.64
+          "acs": 204,
+          "rating": 1.1,
+          "fkfd": 1.04,
+          "kpm": 16.4,
+          "vflPts": 3.54
         },
         {
           "name": "bipo",
-          "acs": 191,
-          "rating": 0.91,
+          "acs": 190,
+          "rating": 0.9,
           "fkfd": 0.69,
-          "kpm": 15.1,
-          "vflPts": 3.0
+          "kpm": 14.9,
+          "vflPts": 2.86
         },
         {
           "name": "starxo",
-          "acs": 183,
-          "rating": 0.98,
-          "fkfd": 1.12,
-          "kpm": 13.7,
-          "vflPts": 3.04
+          "acs": 180,
+          "rating": 0.96,
+          "fkfd": 0.95,
+          "kpm": 13.5,
+          "vflPts": 2.86
         },
         {
           "name": "GLYPH",
-          "acs": 163,
+          "acs": 165,
           "rating": 0.92,
           "fkfd": 1.12,
           "kpm": 12.4,
-          "vflPts": 2.56
+          "vflPts": 2.39
         }
       ],
       "matches": [
@@ -15619,6 +15695,82 @@
             }
           ],
           "oppRating": 1711
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "FUT Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1781,
@@ -15700,49 +15852,49 @@
       "region": "emea",
       "logo": "https://owcdn.net/img/657b2f3fcd199.png",
       "matchW": 2,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 5,
-      "mapL": 7,
+      "mapL": 9,
       "players": [
         {
           "name": "Flickless",
-          "acs": 189,
-          "rating": 1.0,
-          "fkfd": 1.5,
-          "kpm": 14.7,
-          "vflPts": 2.17
+          "acs": 185,
+          "rating": 0.98,
+          "fkfd": 1.42,
+          "kpm": 14.3,
+          "vflPts": 1.86
         },
         {
           "name": "Cloud",
           "acs": 198,
-          "rating": 0.97,
-          "fkfd": 0.75,
-          "kpm": 15.4,
-          "vflPts": 2.33
+          "rating": 0.95,
+          "fkfd": 0.82,
+          "kpm": 15.1,
+          "vflPts": 2.0
         },
         {
           "name": "westside",
-          "acs": 186,
-          "rating": 0.94,
-          "fkfd": 1.2,
-          "kpm": 15.2,
-          "vflPts": 1.92
+          "acs": 193,
+          "rating": 0.95,
+          "fkfd": 1.22,
+          "kpm": 15.6,
+          "vflPts": 1.86
         },
         {
           "name": "grubinho",
-          "acs": 174,
-          "rating": 0.92,
-          "fkfd": 1.0,
-          "kpm": 13.4,
-          "vflPts": 1.5
+          "acs": 171,
+          "rating": 0.89,
+          "fkfd": 0.88,
+          "kpm": 13.0,
+          "vflPts": 1.29
         },
         {
           "name": "ara",
-          "acs": 184,
-          "rating": 0.9,
-          "fkfd": 0.94,
-          "kpm": 14.5,
-          "vflPts": 2.0
+          "acs": 177,
+          "rating": 0.86,
+          "fkfd": 0.8,
+          "kpm": 14.0,
+          "vflPts": 1.64
         }
       ],
       "matches": [
@@ -16109,6 +16261,75 @@
             }
           ],
           "oppRating": 1411
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "Team Vitality",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                3,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "GIANTX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "GIANTX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "GIANTX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1385,
@@ -16649,7 +16870,7 @@
           "rating": 0.85,
           "fkfd": 0.45,
           "kpm": 13.4,
-          "vflPts": 2.0
+          "vflPts": 2.47
         },
         {
           "name": "Filu",
@@ -18644,50 +18865,50 @@
       "name": "Team Vitality",
       "region": "emea",
       "logo": "https://owcdn.net/img/6466d79e1ed40.png",
-      "matchW": 3,
+      "matchW": 4,
       "matchL": 3,
-      "mapW": 7,
+      "mapW": 9,
       "mapL": 7,
       "players": [
         {
           "name": "Chronicle",
-          "acs": 217,
-          "rating": 1.12,
-          "fkfd": 1.22,
-          "kpm": 16.7,
-          "vflPts": 3.93
+          "acs": 205,
+          "rating": 1.08,
+          "fkfd": 1.16,
+          "kpm": 15.8,
+          "vflPts": 3.94
         },
         {
           "name": "Derke",
-          "acs": 241,
-          "rating": 1.11,
-          "fkfd": 1.29,
-          "kpm": 18.0,
-          "vflPts": 4.36
+          "acs": 245,
+          "rating": 1.17,
+          "fkfd": 1.42,
+          "kpm": 18.5,
+          "vflPts": 4.75
         },
         {
           "name": "Jamppi",
-          "acs": 204,
-          "rating": 0.96,
-          "fkfd": 0.92,
+          "acs": 205,
+          "rating": 0.99,
+          "fkfd": 0.93,
           "kpm": 16.1,
-          "vflPts": 3.29
+          "vflPts": 3.5
         },
         {
           "name": "PROFEK",
-          "acs": 174,
-          "rating": 0.96,
-          "fkfd": 1.0,
-          "kpm": 13.9,
-          "vflPts": 2.79
+          "acs": 179,
+          "rating": 0.98,
+          "fkfd": 1.05,
+          "kpm": 14.3,
+          "vflPts": 3.06
         },
         {
-          "name": "UNFAKE",
-          "acs": 149,
-          "rating": 0.83,
-          "fkfd": 0.71,
-          "kpm": 11.2,
-          "vflPts": 2.29
+          "name": "Sayonara",
+          "acs": 253,
+          "rating": 1.47,
+          "fkfd": 3.8,
+          "kpm": 18.9,
+          "vflPts": 7.0
         }
       ],
       "matches": [
@@ -19124,6 +19345,75 @@
             }
           ],
           "oppRating": 1607
+        },
+        {
+          "event": "EMEA Stage 1",
+          "opponent": "GIANTX",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "GIANTX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "GIANTX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Team Vitality"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "GIANTX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ]
         }
       ],
       "eloRating": 1461,
