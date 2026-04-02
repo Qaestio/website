@@ -56,7 +56,12 @@
       "Bash(python3 -m json.tool)",
       "Bash(jq '.[] | select\\(.team1 == \"\"Team Secret\"\" or .team2 == \"\"Team Secret\"\"\\)' _index/matches.json)",
       "Bash(python3:*)",
-      "Bash(python debug_vfl_secret.py)"
+      "Bash(python debug_vfl_secret.py)",
+      "Bash(where python:*)",
+      "Bash(schtasks /query /tn \"VCT Scraper\")",
+      "Bash(cmd /c \"schtasks /create /tn \"\"VCT Scraper\"\" /tr \"\"C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\run_scraper.bat\"\" /sc hourly /mo 4 /st 00:00 /ru \"\"%USERNAME%\"\" /f\")",
+      "Bash(powershell -Command \"schtasks /create /tn ''VCT Scraper'' /tr ''C:\\\\Users\\\\bearm\\\\OneDrive\\\\Documents\\\\GitHub\\\\website\\\\scraper\\\\run_scraper.bat'' /sc hourly /mo 4 /st 00:00 /f\")",
+      "Bash(powershell -Command \"schtasks /query /tn ''VCT Scraper'' /fo LIST\")"
     ]
   }
 }
