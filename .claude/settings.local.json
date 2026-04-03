@@ -81,7 +81,9 @@
       "Bash(powershell -Command \"C:\\\\Python314\\\\python.exe -c ''from bs4 import BeautifulSoup; import requests; print\\(\"\"OK\"\"\\)''\")",
       "Bash(powershell -Command \"C:\\\\Python314\\\\python.exe -c \"\"from bs4 import BeautifulSoup; import requests; print\\(''OK''\\)\"\"\")",
       "Bash(python -m venv \"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv\")",
-      "Bash(\"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv/Scripts/pip.exe\" install:*)"
+      "Bash(\"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv/Scripts/pip.exe\" install:*)",
+      "Bash(.venv/Scripts/python.exe -c \":*)",
+      "Bash(.venv/Scripts/python.exe scrape_vct.py)"
     ]
   }
 }

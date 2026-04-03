@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T00:00:41.384678+00:00",
+  "lastUpdated": "2026-04-03T02:13:36.039628+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -66,6 +66,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "LEVIATÁN",
           "result": "W",
           "matchScore": [
@@ -143,6 +144,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -220,6 +222,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "LOUD",
           "result": "W",
           "matchScore": [
@@ -297,6 +300,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR2",
           "opponent": "Sentinels",
           "result": "W",
           "matchScore": [
@@ -367,6 +371,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR3",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -433,10 +438,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1649
+          "oppRating": 1624
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR3",
           "opponent": "Evil Geniuses",
           "result": "W",
           "matchScore": [
@@ -507,6 +513,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR4",
           "opponent": "Cloud9",
           "result": "W",
           "matchScore": [
@@ -584,6 +591,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR5",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -773,6 +781,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "LOUD",
           "result": "W",
           "matchScore": [
@@ -843,6 +852,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -913,6 +923,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "LEVIATÁN",
           "result": "W",
           "matchScore": [
@@ -979,10 +990,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1500
+          "oppRating": 1610
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR2",
           "opponent": "ENVY",
           "result": "W",
           "matchScore": [
@@ -1060,6 +1072,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR3",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -1130,6 +1143,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR3",
           "opponent": "LEVIATÁN",
           "result": "W",
           "matchScore": [
@@ -1200,6 +1214,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR4",
           "opponent": "100 Thieves",
           "result": "L",
           "matchScore": [
@@ -1389,6 +1404,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "ENVY",
           "result": "L",
           "matchScore": [
@@ -1466,6 +1482,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "Sentinels",
           "result": "L",
           "matchScore": [
@@ -1536,6 +1553,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR1",
           "opponent": "LOUD",
           "result": "W",
           "matchScore": [
@@ -1606,6 +1624,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR2",
           "opponent": "ENVY",
           "result": "W",
           "matchScore": [
@@ -1676,6 +1695,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR3",
           "opponent": "100 Thieves",
           "result": "L",
           "matchScore": [
@@ -1844,6 +1864,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "KRÜ Esports",
           "result": "W",
           "matchScore": [
@@ -1921,6 +1942,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "Sentinels",
           "result": "W",
           "matchScore": [
@@ -1991,6 +2013,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR3",
           "opponent": "G2 Esports",
           "result": "W",
           "matchScore": [
@@ -2068,6 +2091,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UF",
           "opponent": "MIBR",
           "result": "W",
           "matchScore": [
@@ -2159,6 +2183,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -2236,6 +2261,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR1",
           "opponent": "BBL Esports",
           "result": "L",
           "matchScore": [
@@ -2418,6 +2444,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "FURIA",
           "result": "L",
           "matchScore": [
@@ -2495,6 +2522,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "ENVY",
           "result": "L",
           "matchScore": [
@@ -2572,6 +2600,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR1",
           "opponent": "LEVIATÁN",
           "result": "L",
           "matchScore": [
@@ -2726,6 +2755,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "100 Thieves",
           "result": "L",
           "matchScore": [
@@ -2803,6 +2833,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "Cloud9",
           "result": "L",
           "matchScore": [
@@ -2869,10 +2900,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1485
+          "oppRating": 1490
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR1",
           "opponent": "KRÜ Esports",
           "result": "W",
           "matchScore": [
@@ -2943,6 +2975,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR2",
           "opponent": "Sentinels",
           "result": "W",
           "matchScore": [
@@ -3007,6 +3040,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR3",
           "opponent": "Cloud9",
           "result": "L",
           "matchScore": [
@@ -3175,6 +3209,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "Cloud9",
           "result": "L",
           "matchScore": [
@@ -3245,6 +3280,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "100 Thieves",
           "result": "L",
           "matchScore": [
@@ -3322,6 +3358,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR1",
           "opponent": "Evil Geniuses",
           "result": "L",
           "matchScore": [
@@ -3476,6 +3513,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "ENVY",
           "result": "W",
           "matchScore": [
@@ -3546,6 +3584,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR3",
           "opponent": "NRG",
           "result": "W",
           "matchScore": [
@@ -3623,6 +3662,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UF",
           "opponent": "FURIA",
           "result": "L",
           "matchScore": [
@@ -3714,6 +3754,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MF",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -3791,6 +3832,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LF",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -3980,6 +4022,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "Cloud9",
           "result": "W",
           "matchScore": [
@@ -4050,6 +4093,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR3",
           "opponent": "MIBR",
           "result": "L",
           "matchScore": [
@@ -4127,6 +4171,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR3",
           "opponent": "100 Thieves",
           "result": "W",
           "matchScore": [
@@ -4193,10 +4238,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1687
+          "oppRating": 1727
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR4",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -4267,6 +4313,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR5",
           "opponent": "100 Thieves",
           "result": "W",
           "matchScore": [
@@ -4337,6 +4384,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LF",
           "opponent": "MIBR",
           "result": "W",
           "matchScore": [
@@ -4428,6 +4476,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "Xi Lai Gaming",
           "result": "W",
           "matchScore": [
@@ -4498,6 +4547,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -4575,6 +4625,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR3",
           "opponent": "Team Liquid",
           "result": "W",
           "matchScore": [
@@ -4645,6 +4696,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "BBL Esports",
           "result": "W",
           "matchScore": [
@@ -4722,6 +4774,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SF",
           "opponent": "Paper Rex",
           "result": "W",
           "matchScore": [
@@ -4792,6 +4845,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "UF",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -4862,6 +4916,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LF",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -5100,6 +5155,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "FURIA",
           "result": "L",
           "matchScore": [
@@ -5170,6 +5226,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "Evil Geniuses",
           "result": "W",
           "matchScore": [
@@ -5240,6 +5297,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR2",
           "opponent": "100 Thieves",
           "result": "L",
           "matchScore": [
@@ -5310,6 +5368,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR2",
           "opponent": "LEVIATÁN",
           "result": "L",
           "matchScore": [
@@ -5465,6 +5524,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "100 Thieves",
           "result": "W",
           "matchScore": [
@@ -5542,6 +5602,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR3",
           "opponent": "FURIA",
           "result": "L",
           "matchScore": [
@@ -5619,6 +5680,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR3",
           "opponent": "Cloud9",
           "result": "W",
           "matchScore": [
@@ -5689,6 +5751,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR4",
           "opponent": "NRG",
           "result": "W",
           "matchScore": [
@@ -5759,6 +5822,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MF",
           "opponent": "MIBR",
           "result": "W",
           "matchScore": [
@@ -5836,6 +5900,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -5906,6 +5971,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "Xi Lai Gaming",
           "result": "W",
           "matchScore": [
@@ -5976,6 +6042,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR3",
           "opponent": "T1",
           "result": "W",
           "matchScore": [
@@ -6046,6 +6113,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "All Gamers",
           "result": "W",
           "matchScore": [
@@ -6116,6 +6184,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SF",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -6193,6 +6262,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR2",
           "opponent": "BBL Esports",
           "result": "W",
           "matchScore": [
@@ -6263,6 +6333,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR3",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -6487,6 +6558,7 @@
       "matches": [
         {
           "event": "Americas Kickoff",
+          "rnd": "UR1",
           "opponent": "Evil Geniuses",
           "result": "W",
           "matchScore": [
@@ -6564,6 +6636,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "UR2",
           "opponent": "MIBR",
           "result": "L",
           "matchScore": [
@@ -6634,6 +6707,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR1",
           "opponent": "KRÜ Esports",
           "result": "W",
           "matchScore": [
@@ -6711,6 +6785,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "MR2",
           "opponent": "Cloud9",
           "result": "L",
           "matchScore": [
@@ -6788,6 +6863,7 @@
         },
         {
           "event": "Americas Kickoff",
+          "rnd": "LR2",
           "opponent": "Evil Geniuses",
           "result": "L",
           "matchScore": [
@@ -6956,6 +7032,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "Gen.G",
           "result": "W",
           "matchScore": [
@@ -7026,6 +7103,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "Rex Regum Qeon",
           "result": "L",
           "matchScore": [
@@ -7096,6 +7174,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "Team Secret",
           "result": "W",
           "matchScore": [
@@ -7166,6 +7245,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR2",
           "opponent": "Global Esports",
           "result": "W",
           "matchScore": [
@@ -7243,6 +7323,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR3",
           "opponent": "FULL SENSE",
           "result": "W",
           "matchScore": [
@@ -7320,6 +7401,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR4",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -7390,6 +7472,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR5",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -7572,6 +7655,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "ZETA DIVISION",
           "result": "W",
           "matchScore": [
@@ -7642,6 +7726,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
@@ -7718,6 +7803,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR3",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -7788,6 +7874,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR3",
           "opponent": "DetonatioN FocusMe",
           "result": "L",
           "matchScore": [
@@ -7865,6 +7952,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR3",
           "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
@@ -8032,6 +8120,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "DetonatioN FocusMe",
           "result": "L",
           "matchScore": [
@@ -8102,6 +8191,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -8179,6 +8269,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR1",
           "opponent": "VARREL",
           "result": "W",
           "matchScore": [
@@ -8256,6 +8347,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR2",
           "opponent": "Global Esports",
           "result": "L",
           "matchScore": [
@@ -8424,6 +8516,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "VARREL",
           "result": "W",
           "matchScore": [
@@ -8494,6 +8587,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -8567,10 +8661,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1600
+          "oppRating": 1520
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "ZETA DIVISION",
           "result": "W",
           "matchScore": [
@@ -8641,6 +8736,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR2",
           "opponent": "DetonatioN FocusMe",
           "result": "L",
           "matchScore": [
@@ -8718,6 +8814,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR2",
           "opponent": "Gen.G",
           "result": "W",
           "matchScore": [
@@ -8795,6 +8892,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR3",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -8977,6 +9075,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "Global Esports",
           "result": "W",
           "matchScore": [
@@ -9050,10 +9149,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1700
+          "oppRating": 1683
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR3",
           "opponent": "Rex Regum Qeon",
           "result": "L",
           "matchScore": [
@@ -9124,6 +9224,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR3",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -9201,6 +9302,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR3",
           "opponent": "Global Esports",
           "result": "W",
           "matchScore": [
@@ -9278,6 +9380,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR4",
           "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
@@ -9354,6 +9457,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR5",
           "opponent": "DetonatioN FocusMe",
           "result": "W",
           "matchScore": [
@@ -9424,6 +9528,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LF",
           "opponent": "Rex Regum Qeon",
           "result": "W",
           "matchScore": [
@@ -9508,6 +9613,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "G2 Esports",
           "result": "W",
           "matchScore": [
@@ -9578,6 +9684,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "NRG",
           "result": "W",
           "matchScore": [
@@ -9655,6 +9762,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "FURIA",
           "result": "W",
           "matchScore": [
@@ -9732,6 +9840,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SF",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -9802,6 +9911,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR2",
           "opponent": "All Gamers",
           "result": "W",
           "matchScore": [
@@ -9879,6 +9989,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR3",
           "opponent": "G2 Esports",
           "result": "W",
           "matchScore": [
@@ -9956,6 +10067,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LF",
           "opponent": "NRG",
           "result": "W",
           "matchScore": [
@@ -10040,6 +10152,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "GF",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -10285,6 +10398,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "DetonatioN FocusMe",
           "result": "W",
           "matchScore": [
@@ -10355,6 +10469,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR3",
           "opponent": "Paper Rex",
           "result": "W",
           "matchScore": [
@@ -10425,6 +10540,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UF",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -10516,6 +10632,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MF",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -10593,6 +10710,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LF",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -10775,6 +10893,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -10852,6 +10971,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "Gen.G",
           "result": "W",
           "matchScore": [
@@ -10929,6 +11049,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR2",
           "opponent": "Kiwoom DRX",
           "result": "W",
           "matchScore": [
@@ -10998,6 +11119,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR3",
           "opponent": "Paper Rex",
           "result": "W",
           "matchScore": [
@@ -11075,6 +11197,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR4",
           "opponent": "DetonatioN FocusMe",
           "result": "W",
           "matchScore": [
@@ -11145,6 +11268,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MF",
           "opponent": "Rex Regum Qeon",
           "result": "W",
           "matchScore": [
@@ -11222,6 +11346,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -11292,6 +11417,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "EDward Gaming",
           "result": "W",
           "matchScore": [
@@ -11362,6 +11488,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR3",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -11558,6 +11685,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -11628,6 +11756,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "DetonatioN FocusMe",
           "result": "L",
           "matchScore": [
@@ -11698,6 +11827,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR1",
           "opponent": "ZETA DIVISION",
           "result": "L",
           "matchScore": [
@@ -11859,6 +11989,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "FULL SENSE",
           "result": "L",
           "matchScore": [
@@ -11929,6 +12060,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "Global Esports",
           "result": "L",
           "matchScore": [
@@ -11999,6 +12131,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR1",
           "opponent": "Team Secret",
           "result": "W",
           "matchScore": [
@@ -12076,6 +12209,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR2",
           "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
@@ -12243,6 +12377,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "Global Esports",
           "result": "L",
           "matchScore": [
@@ -12313,6 +12448,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "Kiwoom DRX",
           "result": "L",
           "matchScore": [
@@ -12389,6 +12525,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR1",
           "opponent": "Gen.G",
           "result": "L",
           "matchScore": [
@@ -12550,6 +12687,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR1",
           "opponent": "Team Secret",
           "result": "W",
           "matchScore": [
@@ -12620,6 +12758,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "T1",
           "result": "W",
           "matchScore": [
@@ -12697,6 +12836,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR3",
           "opponent": "FULL SENSE",
           "result": "W",
           "matchScore": [
@@ -12767,6 +12907,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "UF",
           "opponent": "Rex Regum Qeon",
           "result": "W",
           "matchScore": [
@@ -12858,6 +12999,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "Gentle Mates",
           "result": "W",
           "matchScore": [
@@ -12928,6 +13070,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SF",
           "opponent": "G2 Esports",
           "result": "W",
           "matchScore": [
@@ -13005,6 +13148,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "UF",
           "opponent": "NRG",
           "result": "W",
           "matchScore": [
@@ -13075,6 +13219,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "GF",
           "opponent": "Paper Rex",
           "result": "W",
           "matchScore": [
@@ -13271,6 +13416,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "PCIFIC Esports",
           "result": "W",
           "matchScore": [
@@ -13348,6 +13494,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "FNATIC",
           "result": "W",
           "matchScore": [
@@ -13418,6 +13565,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR3",
           "opponent": "Team Vitality",
           "result": "W",
           "matchScore": [
@@ -13488,6 +13636,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UF",
           "opponent": "Gentle Mates",
           "result": "W",
           "matchScore": [
@@ -13579,6 +13728,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -13656,6 +13806,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR1",
           "opponent": "FURIA",
           "result": "W",
           "matchScore": [
@@ -13733,6 +13884,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR2",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -13915,6 +14067,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "BBL Esports",
           "result": "L",
           "matchScore": [
@@ -13985,6 +14138,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "FUT Esports",
           "result": "W",
           "matchScore": [
@@ -14062,6 +14216,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR2",
           "opponent": "Team Liquid",
           "result": "W",
           "matchScore": [
@@ -14132,6 +14287,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR3",
           "opponent": "Natus Vincere",
           "result": "W",
           "matchScore": [
@@ -14209,6 +14365,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR4",
           "opponent": "Team Vitality",
           "result": "W",
           "matchScore": [
@@ -14279,6 +14436,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MF",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -14370,6 +14528,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LF",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -14447,6 +14606,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
@@ -14519,10 +14679,11 @@
               "map": "Lotus",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1350
         }
       ],
-      "eloRating": 1385,
+      "eloRating": 1430,
       "ratingHistory": [
         {
           "event": "Start",
@@ -14579,6 +14740,13 @@
           "opp": "TL",
           "result": "L",
           "rating": 1385
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "EF",
+          "result": "W",
+          "rating": 1430
         }
       ]
     },
@@ -14635,6 +14803,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -14705,6 +14874,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "FNATIC",
           "result": "L",
           "matchScore": [
@@ -14782,6 +14952,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR1",
           "opponent": "Karmine Corp",
           "result": "L",
           "matchScore": [
@@ -14859,6 +15030,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "Gentle Mates",
           "result": "W",
           "matchScore": [
@@ -14931,10 +15103,11 @@
               "map": "Haven",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1781
         }
       ],
-      "eloRating": 1285,
+      "eloRating": 1460,
       "ratingHistory": [
         {
           "event": "Start",
@@ -14963,6 +15136,13 @@
           "opp": "KC",
           "result": "L",
           "rating": 1285
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "GM",
+          "result": "W",
+          "rating": 1460
         }
       ]
     },
@@ -15019,6 +15199,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "FUT Esports",
           "result": "W",
           "matchScore": [
@@ -15089,6 +15270,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "GIANTX",
           "result": "W",
           "matchScore": [
@@ -15159,6 +15341,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR3",
           "opponent": "Natus Vincere",
           "result": "W",
           "matchScore": [
@@ -15229,6 +15412,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UF",
           "opponent": "BBL Esports",
           "result": "L",
           "matchScore": [
@@ -15320,6 +15504,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MF",
           "opponent": "FNATIC",
           "result": "W",
           "matchScore": [
@@ -15410,7 +15595,86 @@
           "oppRating": 1738
         },
         {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opponent": "FUT Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ],
+          "oppRating": 1285
+        },
+        {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "EDward Gaming",
           "result": "W",
           "matchScore": [
@@ -15481,6 +15745,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "Team Liquid",
           "result": "W",
           "matchScore": [
@@ -15551,6 +15816,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "Nongshim RedForce",
           "result": "L",
           "matchScore": [
@@ -15621,6 +15887,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR1",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -15695,85 +15962,9 @@
             }
           ],
           "oppRating": 1711
-        },
-        {
-          "event": "EMEA Stage 1",
-          "opponent": "FUT Esports",
-          "result": "L",
-          "matchScore": [
-            1,
-            2
-          ],
-          "maps": [
-            {
-              "map": "Pearl",
-              "score": [
-                13,
-                10
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                8,
-                13
-              ]
-            },
-            {
-              "map": "Haven",
-              "score": [
-                6,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "Gentle Mates"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Fracture",
-              "team": "FUT Esports"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Gentle Mates"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "FUT Esports"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Lotus",
-              "team": "Gentle Mates"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "FUT Esports"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Haven",
-              "team": ""
-            }
-          ]
         }
       ],
-      "eloRating": 1781,
+      "eloRating": 1606,
       "ratingHistory": [
         {
           "event": "Start",
@@ -15844,6 +16035,13 @@
           "opp": "AG",
           "result": "L",
           "rating": 1781
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "FUT",
+          "result": "L",
+          "rating": 1606
         }
       ]
     },
@@ -15900,6 +16098,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -15970,6 +16169,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "PCIFIC Esports",
           "result": "W",
           "matchScore": [
@@ -16047,6 +16247,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR2",
           "opponent": "Team Heretics",
           "result": "W",
           "matchScore": [
@@ -16117,6 +16318,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR3",
           "opponent": "Team Vitality",
           "result": "L",
           "matchScore": [
@@ -16187,6 +16389,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR3",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -16264,6 +16467,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "Team Vitality",
           "result": "L",
           "matchScore": [
@@ -16329,10 +16533,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1461
         }
       ],
-      "eloRating": 1385,
+      "eloRating": 1293,
       "ratingHistory": [
         {
           "event": "Start",
@@ -16375,6 +16580,13 @@
           "opp": "TL",
           "result": "L",
           "rating": 1385
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "VIT",
+          "result": "L",
+          "rating": 1293
         }
       ]
     },
@@ -16431,6 +16643,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "Natus Vincere",
           "result": "L",
           "matchScore": [
@@ -16501,6 +16714,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -16578,6 +16792,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR1",
           "opponent": "FUT Esports",
           "result": "W",
           "matchScore": [
@@ -16655,6 +16870,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR2",
           "opponent": "Team Heretics",
           "result": "L",
           "matchScore": [
@@ -16732,6 +16948,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -16797,10 +17014,11 @@
               "map": "Fracture",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1700
         }
       ],
-      "eloRating": 1328,
+      "eloRating": 1239,
       "ratingHistory": [
         {
           "event": "Start",
@@ -16836,6 +17054,13 @@
           "opp": "TH",
           "result": "L",
           "rating": 1328
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "TL",
+          "result": "L",
+          "rating": 1239
         }
       ]
     },
@@ -16892,6 +17117,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "Karmine Corp",
           "result": "W",
           "matchScore": [
@@ -16962,6 +17188,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "Team Heretics",
           "result": "W",
           "matchScore": [
@@ -17039,6 +17266,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR3",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -17109,6 +17337,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR3",
           "opponent": "FNATIC",
           "result": "L",
           "matchScore": [
@@ -17186,6 +17415,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR3",
           "opponent": "Team Heretics",
           "result": "L",
           "matchScore": [
@@ -17354,6 +17584,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "Natus Vincere",
           "result": "L",
           "matchScore": [
@@ -17431,6 +17662,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
@@ -17501,6 +17733,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR2",
           "opponent": "GIANTX",
           "result": "L",
           "matchScore": [
@@ -17571,6 +17804,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR2",
           "opponent": "Karmine Corp",
           "result": "W",
           "matchScore": [
@@ -17648,6 +17882,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR3",
           "opponent": "Natus Vincere",
           "result": "W",
           "matchScore": [
@@ -17718,6 +17953,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR4",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -17893,6 +18129,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "Team Vitality",
           "result": "L",
           "matchScore": [
@@ -17970,6 +18207,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "Karmine Corp",
           "result": "W",
           "matchScore": [
@@ -18047,6 +18285,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR2",
           "opponent": "FNATIC",
           "result": "L",
           "matchScore": [
@@ -18117,6 +18356,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR2",
           "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
@@ -18194,6 +18434,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR3",
           "opponent": "GIANTX",
           "result": "W",
           "matchScore": [
@@ -18271,6 +18512,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR4",
           "opponent": "Team Heretics",
           "result": "W",
           "matchScore": [
@@ -18341,6 +18583,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR5",
           "opponent": "Team Vitality",
           "result": "W",
           "matchScore": [
@@ -18418,6 +18661,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LF",
           "opponent": "FNATIC",
           "result": "W",
           "matchScore": [
@@ -18494,7 +18738,79 @@
           "oppRating": 1506
         },
         {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opponent": "Karmine Corp",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                10
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                7
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Team Liquid"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Fracture",
+              "team": ""
+            }
+          ],
+          "oppRating": 1328
+        },
+        {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "T1",
           "result": "W",
           "matchScore": [
@@ -18565,6 +18881,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -18635,6 +18952,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR3",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -18702,78 +19020,9 @@
             }
           ],
           "oppRating": 1968
-        },
-        {
-          "event": "EMEA Stage 1",
-          "opponent": "Karmine Corp",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Haven",
-              "score": [
-                13,
-                10
-              ]
-            },
-            {
-              "map": "Pearl",
-              "score": [
-                13,
-                7
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Split",
-              "team": "Karmine Corp"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Lotus",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Haven",
-              "team": "Karmine Corp"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Pearl",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Breeze",
-              "team": "Karmine Corp"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Team Liquid"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Fracture",
-              "team": ""
-            }
-          ]
         }
       ],
-      "eloRating": 1700,
+      "eloRating": 1789,
       "ratingHistory": [
         {
           "event": "Start",
@@ -18858,6 +19107,13 @@
           "opp": "NRG",
           "result": "L",
           "rating": 1700
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "KC",
+          "result": "W",
+          "rating": 1789
         }
       ]
     },
@@ -18914,6 +19170,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "Eternal Fire",
           "result": "W",
           "matchScore": [
@@ -18984,6 +19241,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR2",
           "opponent": "Team Liquid",
           "result": "W",
           "matchScore": [
@@ -19061,6 +19319,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR3",
           "opponent": "BBL Esports",
           "result": "L",
           "matchScore": [
@@ -19131,6 +19390,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR3",
           "opponent": "GIANTX",
           "result": "W",
           "matchScore": [
@@ -19201,6 +19461,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR4",
           "opponent": "FNATIC",
           "result": "L",
           "matchScore": [
@@ -19271,6 +19532,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR5",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -19348,6 +19610,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "GIANTX",
           "result": "W",
           "matchScore": [
@@ -19413,10 +19676,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1385
         }
       ],
-      "eloRating": 1461,
+      "eloRating": 1553,
       "ratingHistory": [
         {
           "event": "Start",
@@ -19466,6 +19730,13 @@
           "opp": "TL",
           "result": "L",
           "rating": 1461
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "GX",
+          "result": "W",
+          "rating": 1553
         }
       ]
     },
@@ -19522,6 +19793,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "BBL Esports",
           "result": "L",
           "matchScore": [
@@ -19599,6 +19871,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "GIANTX",
           "result": "L",
           "matchScore": [
@@ -19676,6 +19949,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR1",
           "opponent": "Eternal Fire",
           "result": "L",
           "matchScore": [
@@ -19830,6 +20104,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "Nova Esports",
           "result": "W",
           "matchScore": [
@@ -19900,6 +20175,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
@@ -19970,6 +20246,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR3",
           "opponent": "Dragon Ranger Gaming",
           "result": "W",
           "matchScore": [
@@ -20047,6 +20324,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UF",
           "opponent": "Xi Lai Gaming",
           "result": "W",
           "matchScore": [
@@ -20137,7 +20415,86 @@
           "oppRating": 1698
         },
         {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Wuxi Titan Esports Club",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "All Gamers"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "All Gamers"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Wuxi Titan Esports Club"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "All Gamers"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ],
+          "oppRating": 1351
+        },
+        {
           "event": "Masters Santiago",
+          "rnd": "QF",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -20208,6 +20565,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR1",
           "opponent": "Gentle Mates",
           "result": "W",
           "matchScore": [
@@ -20285,6 +20643,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "LR2",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -20359,83 +20718,6 @@
             }
           ],
           "oppRating": 2066
-        },
-        {
-          "event": "China Stage 1",
-          "opponent": "Wuxi Titan Esports Club",
-          "result": "W",
-          "matchScore": [
-            2,
-            1
-          ],
-          "maps": [
-            {
-              "map": "Lotus",
-              "score": [
-                13,
-                7
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                8,
-                13
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                15,
-                13
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Split",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Haven",
-              "team": "All Gamers"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Lotus",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "All Gamers"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Wuxi Titan Esports Club"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Fracture",
-              "team": "All Gamers"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ],
-          "oppRating": 1351
         }
       ],
       "eloRating": 1821,
@@ -20558,6 +20840,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -20628,6 +20911,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "FunPlus Phoenix",
           "result": "W",
           "matchScore": [
@@ -20698,6 +20982,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR2",
           "opponent": "Trace Esports",
           "result": "W",
           "matchScore": [
@@ -20768,6 +21053,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR3",
           "opponent": "EDward Gaming",
           "result": "W",
           "matchScore": [
@@ -20845,6 +21131,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR4",
           "opponent": "Dragon Ranger Gaming",
           "result": "W",
           "matchScore": [
@@ -20915,6 +21202,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MF",
           "opponent": "Xi Lai Gaming",
           "result": "L",
           "matchScore": [
@@ -21006,6 +21294,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LF",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -21090,6 +21379,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
@@ -21162,10 +21452,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1488
         }
       ],
-      "eloRating": 1352,
+      "eloRating": 1307,
       "ratingHistory": [
         {
           "event": "Start",
@@ -21222,6 +21513,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1352
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "TYL",
+          "result": "L",
+          "rating": 1307
         }
       ]
     },
@@ -21278,6 +21576,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "TYLOO",
           "result": "W",
           "matchScore": [
@@ -21348,6 +21647,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR3",
           "opponent": "Xi Lai Gaming",
           "result": "L",
           "matchScore": [
@@ -21418,6 +21718,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR3",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
@@ -21495,6 +21796,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR3",
           "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
@@ -21572,6 +21874,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR4",
           "opponent": "TYLOO",
           "result": "W",
           "matchScore": [
@@ -21649,6 +21952,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR5",
           "opponent": "Dragon Ranger Gaming",
           "result": "W",
           "matchScore": [
@@ -21726,6 +22030,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LF",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
@@ -21809,7 +22114,79 @@
           "oppRating": 1470
         },
         {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Nova Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                2
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                3
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "EDward Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Nova Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ],
+          "oppRating": 1218
+        },
+        {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "Gentle Mates",
           "result": "L",
           "matchScore": [
@@ -21880,6 +22257,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -21947,76 +22325,6 @@
             }
           ],
           "oppRating": 1842
-        },
-        {
-          "event": "China Stage 1",
-          "opponent": "Nova Esports",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Fracture",
-              "score": [
-                13,
-                2
-              ]
-            },
-            {
-              "map": "Breeze",
-              "score": [
-                13,
-                3
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Split",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Fracture",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Breeze",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Lotus",
-              "team": "EDward Gaming"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Bind",
-              "team": "Nova Esports"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Haven",
-              "team": ""
-            }
-          ],
-          "oppRating": 1218
         }
       ],
       "eloRating": 1584,
@@ -22153,6 +22461,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
@@ -22223,6 +22532,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
@@ -22293,6 +22603,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR1",
           "opponent": "JD Mall JDG Esports",
           "result": "L",
           "matchScore": [
@@ -22370,6 +22681,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "JD Mall JDG Esports",
           "result": "L",
           "matchScore": [
@@ -22442,10 +22754,11 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1411
         }
       ],
-      "eloRating": 1218,
+      "eloRating": 1177,
       "ratingHistory": [
         {
           "event": "Start",
@@ -22474,6 +22787,13 @@
           "opp": "JDG",
           "result": "L",
           "rating": 1218
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "JDG",
+          "result": "L",
+          "rating": 1177
         }
       ]
     },
@@ -22530,6 +22850,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "Wuxi Titan Esports Club",
           "result": "W",
           "matchScore": [
@@ -22603,10 +22924,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1450
+          "oppRating": 1398
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "Dragon Ranger Gaming",
           "result": "L",
           "matchScore": [
@@ -22684,6 +23006,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "Trace Esports",
           "result": "L",
           "matchScore": [
@@ -22761,6 +23084,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR1",
           "opponent": "FunPlus Phoenix",
           "result": "W",
           "matchScore": [
@@ -22838,6 +23162,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR2",
           "opponent": "Wuxi Titan Esports Club",
           "result": "W",
           "matchScore": [
@@ -22915,6 +23240,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR3",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -22992,6 +23318,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "FunPlus Phoenix",
           "result": "W",
           "matchScore": [
@@ -23064,10 +23391,11 @@
               "map": "Split",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1218
         }
       ],
-      "eloRating": 1411,
+      "eloRating": 1452,
       "ratingHistory": [
         {
           "event": "Start",
@@ -23117,6 +23445,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1411
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "FPX",
+          "result": "W",
+          "rating": 1452
         }
       ]
     },
@@ -23173,6 +23508,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -23243,6 +23579,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
@@ -23313,6 +23650,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR1",
           "opponent": "Wolves Esports",
           "result": "L",
           "matchScore": [
@@ -23390,6 +23728,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -23551,6 +23890,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "JD Mall JDG Esports",
           "result": "L",
           "matchScore": [
@@ -23624,10 +23964,11 @@
               "team": ""
             }
           ],
-          "oppRating": 1450
+          "oppRating": 1423
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "Wolves Esports",
           "result": "W",
           "matchScore": [
@@ -23705,6 +24046,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR2",
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
@@ -23782,6 +24124,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR2",
           "opponent": "JD Mall JDG Esports",
           "result": "L",
           "matchScore": [
@@ -23859,6 +24202,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -24034,6 +24378,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "Wolves Esports",
           "result": "L",
           "matchScore": [
@@ -24111,6 +24456,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
@@ -24188,6 +24534,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR2",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
@@ -24258,6 +24605,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR2",
           "opponent": "Wolves Esports",
           "result": "W",
           "matchScore": [
@@ -24335,6 +24683,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR3",
           "opponent": "TYLOO",
           "result": "L",
           "matchScore": [
@@ -24405,6 +24754,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "Wolves Esports",
           "result": "W",
           "matchScore": [
@@ -24470,10 +24820,11 @@
               "map": "Fracture",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1321
         }
       ],
-      "eloRating": 1309,
+      "eloRating": 1402,
       "ratingHistory": [
         {
           "event": "Start",
@@ -24516,6 +24867,13 @@
           "opp": "TYL",
           "result": "L",
           "rating": 1309
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "WLV",
+          "result": "W",
+          "rating": 1402
         }
       ]
     },
@@ -24572,6 +24930,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "FunPlus Phoenix",
           "result": "W",
           "matchScore": [
@@ -24642,6 +25001,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -24712,6 +25072,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "Nova Esports",
           "result": "W",
           "matchScore": [
@@ -24782,6 +25143,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR2",
           "opponent": "Wuxi Titan Esports Club",
           "result": "W",
           "matchScore": [
@@ -24859,6 +25221,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR3",
           "opponent": "Dragon Ranger Gaming",
           "result": "L",
           "matchScore": [
@@ -24936,6 +25299,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR3",
           "opponent": "Trace Esports",
           "result": "W",
           "matchScore": [
@@ -25006,6 +25370,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR4",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -25083,6 +25448,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
@@ -25155,10 +25521,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1352
         }
       ],
-      "eloRating": 1488,
+      "eloRating": 1533,
       "ratingHistory": [
         {
           "event": "Start",
@@ -25215,6 +25582,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1488
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "BLG",
+          "result": "W",
+          "rating": 1533
         }
       ]
     },
@@ -25271,6 +25645,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR1",
           "opponent": "Trace Esports",
           "result": "W",
           "matchScore": [
@@ -25348,6 +25723,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "Xi Lai Gaming",
           "result": "L",
           "matchScore": [
@@ -25418,6 +25794,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR1",
           "opponent": "Wuxi Titan Esports Club",
           "result": "L",
           "matchScore": [
@@ -25495,6 +25872,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR1",
           "opponent": "Nova Esports",
           "result": "W",
           "matchScore": [
@@ -25572,6 +25950,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR2",
           "opponent": "Trace Esports",
           "result": "L",
           "matchScore": [
@@ -25649,6 +26028,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "Trace Esports",
           "result": "L",
           "matchScore": [
@@ -25714,10 +26094,11 @@
               "map": "Fracture",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1309
         }
       ],
-      "eloRating": 1321,
+      "eloRating": 1228,
       "ratingHistory": [
         {
           "event": "Start",
@@ -25760,6 +26141,13 @@
           "opp": "TRC",
           "result": "L",
           "rating": 1321
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "TRC",
+          "result": "L",
+          "rating": 1228
         }
       ]
     },
@@ -25816,6 +26204,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "Wolves Esports",
           "result": "W",
           "matchScore": [
@@ -25886,6 +26275,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR3",
           "opponent": "EDward Gaming",
           "result": "W",
           "matchScore": [
@@ -25956,6 +26346,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UF",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -26047,6 +26438,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MF",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "W",
           "matchScore": [
@@ -26137,7 +26529,79 @@
           "oppRating": 1699
         },
         {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ],
+          "oppRating": 1382
+        },
+        {
           "event": "Masters Santiago",
+          "rnd": "SR1",
           "opponent": "NRG",
           "result": "L",
           "matchScore": [
@@ -26208,6 +26672,7 @@
         },
         {
           "event": "Masters Santiago",
+          "rnd": "SR2",
           "opponent": "G2 Esports",
           "result": "L",
           "matchScore": [
@@ -26275,78 +26740,9 @@
             }
           ],
           "oppRating": 1828
-        },
-        {
-          "event": "China Stage 1",
-          "opponent": "Dragon Ranger Gaming",
-          "result": "W",
-          "matchScore": [
-            2,
-            0
-          ],
-          "maps": [
-            {
-              "map": "Lotus",
-              "score": [
-                13,
-                4
-              ]
-            },
-            {
-              "map": "Bind",
-              "score": [
-                13,
-                11
-              ]
-            }
-          ],
-          "veto": [
-            {
-              "step": 1,
-              "action": "ban",
-              "map": "Fracture",
-              "team": "Dragon Ranger Gaming"
-            },
-            {
-              "step": 2,
-              "action": "ban",
-              "map": "Pearl",
-              "team": "Xi Lai Gaming"
-            },
-            {
-              "step": 3,
-              "action": "pick",
-              "map": "Lotus",
-              "team": "Dragon Ranger Gaming"
-            },
-            {
-              "step": 4,
-              "action": "pick",
-              "map": "Bind",
-              "team": "Xi Lai Gaming"
-            },
-            {
-              "step": 5,
-              "action": "ban",
-              "map": "Haven",
-              "team": "Dragon Ranger Gaming"
-            },
-            {
-              "step": 6,
-              "action": "ban",
-              "map": "Split",
-              "team": "Xi Lai Gaming"
-            },
-            {
-              "step": 7,
-              "action": "decider",
-              "map": "Breeze",
-              "team": ""
-            }
-          ]
         }
       ],
-      "eloRating": 1560,
+      "eloRating": 1652,
       "ratingHistory": [
         {
           "event": "Start",
@@ -26396,6 +26792,13 @@
           "opp": "G2",
           "result": "L",
           "rating": 1560
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "DRG",
+          "result": "W",
+          "rating": 1652
         }
       ]
     },
@@ -26452,6 +26855,7 @@
       "matches": [
         {
           "event": "China Kickoff",
+          "rnd": "UR2",
           "opponent": "JD Mall JDG Esports",
           "result": "W",
           "matchScore": [
@@ -26529,6 +26933,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "UR3",
           "opponent": "All Gamers",
           "result": "L",
           "matchScore": [
@@ -26606,6 +27011,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR3",
           "opponent": "TYLOO",
           "result": "W",
           "matchScore": [
@@ -26683,6 +27089,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "MR4",
           "opponent": "Guangzhou Huadu Bilibili Gaming",
           "result": "L",
           "matchScore": [
@@ -26753,6 +27160,7 @@
         },
         {
           "event": "China Kickoff",
+          "rnd": "LR5",
           "opponent": "EDward Gaming",
           "result": "L",
           "matchScore": [
@@ -26830,6 +27238,7 @@
         },
         {
           "event": "China Stage 1",
+          "rnd": "W1",
           "opponent": "Xi Lai Gaming",
           "result": "L",
           "matchScore": [
@@ -26895,10 +27304,11 @@
               "map": "Breeze",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1560
         }
       ],
-      "eloRating": 1382,
+      "eloRating": 1290,
       "ratingHistory": [
         {
           "event": "Start",
@@ -26941,6 +27351,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1382
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "XLG",
+          "result": "L",
+          "rating": 1290
         }
       ]
     },
@@ -26997,6 +27414,7 @@
       "matches": [
         {
           "event": "Pacific Kickoff",
+          "rnd": "UR2",
           "opponent": "FULL SENSE",
           "result": "L",
           "matchScore": [
@@ -27074,6 +27492,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR1",
           "opponent": "VARREL",
           "result": "W",
           "matchScore": [
@@ -27151,6 +27570,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "MR2",
           "opponent": "T1",
           "result": "L",
           "matchScore": [
@@ -27221,6 +27641,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR2",
           "opponent": "ZETA DIVISION",
           "result": "W",
           "matchScore": [
@@ -27298,6 +27719,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR3",
           "opponent": "FULL SENSE",
           "result": "W",
           "matchScore": [
@@ -27368,6 +27790,7 @@
         },
         {
           "event": "Pacific Kickoff",
+          "rnd": "LR4",
           "opponent": "Paper Rex",
           "result": "L",
           "matchScore": [
@@ -27550,6 +27973,7 @@
       "matches": [
         {
           "event": "EMEA Kickoff",
+          "rnd": "UR1",
           "opponent": "Team Vitality",
           "result": "L",
           "matchScore": [
@@ -27620,6 +28044,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "MR1",
           "opponent": "Team Heretics",
           "result": "L",
           "matchScore": [
@@ -27690,6 +28115,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR1",
           "opponent": "PCIFIC Esports",
           "result": "W",
           "matchScore": [
@@ -27760,6 +28186,7 @@
         },
         {
           "event": "EMEA Kickoff",
+          "rnd": "LR2",
           "opponent": "Team Liquid",
           "result": "L",
           "matchScore": [
@@ -27837,6 +28264,7 @@
         },
         {
           "event": "EMEA Stage 1",
+          "rnd": "W1",
           "opponent": "FNATIC",
           "result": "L",
           "matchScore": [
@@ -27909,10 +28337,11 @@
               "map": "Lotus",
               "team": ""
             }
-          ]
+          ],
+          "oppRating": 1385
         }
       ],
-      "eloRating": 1350,
+      "eloRating": 1305,
       "ratingHistory": [
         {
           "event": "Start",
@@ -27948,6 +28377,13 @@
           "opp": "TL",
           "result": "L",
           "rating": 1350
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W1",
+          "opp": "FNC",
+          "result": "L",
+          "rating": 1305
         }
       ]
     }

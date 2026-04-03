@@ -79,6 +79,190 @@ REGION_META = {
 OUT_FILE    = Path(__file__).parent.parent / 'vct_data.json'
 CACHE_FILE  = Path(__file__).parent / 'match_cache.json'
 
+# -- Ratings -------------------------------------------------------------------
+
+_REGION_START = {'pacific': 1600., 'americas': 1550., 'emea': 1475., 'china': 1450.}
+_X            = 200    # rating-diff divisor (upset scaling)
+_CAP          = 175    # base delta cap before multiplier
+_WIN_FLOOR    = 35     # minimum rating transfer per match
+_FINALS_BASE  = 80     # flat base for deep-bracket rounds
+_BO5_MULT     = 1.5    # multiplier for best-of-5 series
+_FINALS_RNDS  = {'UF', 'MF', 'LF', 'GF', 'SF'}
+
+# Regional kickoff events use flat (seed-based) scoring for their first upper round
+_FLAT_EV_RND  = {label: ('UR1' if region else None)
+                 for _, _, region, label in VCT_EVENTS}
+
+# Map vlr.gg .match-item-event-series text → abbreviated round ID
+_RND_MAP = {
+    'Upper Round 1': 'UR1', 'Upper Round 2': 'UR2', 'Upper Round 3': 'UR3',
+    'Upper Round 4': 'UR4', 'Upper Round 5': 'UR5',
+    'Middle Round 1': 'MR1', 'Middle Round 2': 'MR2', 'Middle Round 3': 'MR3',
+    'Middle Round 4': 'MR4', 'Middle Round 5': 'MR5',
+    'Lower Round 1': 'LR1', 'Lower Round 2': 'LR2', 'Lower Round 3': 'LR3',
+    'Lower Round 4': 'LR4', 'Lower Round 5': 'LR5',
+    'Upper Final': 'UF', 'Middle Final': 'MF', 'Lower Final': 'LF',
+    'Grand Final': 'GF', 'Upper Semifinals': 'SF', 'Semifinal': 'SF',
+    'Upper Quarterfinals': 'QF', 'Quarterfinal': 'QF',
+    'Round 1': 'SR1', 'Round 2 (1-0)': 'SR2', 'Round 2 (0-1)': 'SR2',
+    'Round 3': 'SR3', 'Round 4': 'SR4',
+    'Week 1': 'W1', 'Week 2': 'W2', 'Week 3': 'W3',
+    'Week 4': 'W4', 'Week 5': 'W5', 'Week 6': 'W6', 'Week 7': 'W7',
+}
+
+# Short name used in ratingHistory 'opp' field (mirrors calc_ratings.py SHORT dict)
+_SHORT = {
+    '100 Thieves': '100T',       'Cloud9': 'C9',
+    'ENVY': 'ENVY',              'Evil Geniuses': 'EG',
+    'FURIA': 'FUR',              'G2 Esports': 'G2',
+    'LOUD': 'LOUD',              'MIBR': 'MIBR',
+    'NRG': 'NRG',                'Sentinels': 'SEN',
+    'Natus Vincere': 'NAVI',     'Karmine Corp': 'KC',
+    'FUT Esports': 'FUT',        'Gentle Mates': 'GM',
+    'PCIFIC Esports': 'PCF',     'BBL Esports': 'BBL',
+    'Team Vitality': 'VIT',      'Team Heretics': 'TH',
+    'GIANTX': 'GX',              'FNATIC': 'FNC',
+    'Team Liquid': 'TL',         'Eternal Fire': 'EF',
+    'Nongshim RedForce': 'NRF',  'Team Secret': 'TS',
+    'ZETA DIVISION': 'ZETA',     'FULL SENSE': 'FS',
+    'VARREL': 'VRL',             'Global Esports': 'GE',
+    'DetonatioN FocusMe': 'DFM', 'Gen.G': 'GEN',
+    'T1': 'T1',                  'KIWOOM DRX': 'DRX',
+    'Paper Rex': 'PRX',          'Rex Regum Qeon': 'RRQ',
+    'Trace Esports': 'TRC',      'Wolves Esports': 'WLV',
+    'FunPlus Phoenix': 'FPX',    'TYLOO': 'TYL',
+    'All Gamers': 'AG',          'Nova Esports': 'NOV',
+    'JD Mall JDG Esports': 'JDG','Wuxi Titan Esports Club': 'TEC',
+    'Xi Lai Gaming': 'XLG',      'EDward Gaming': 'EDG',
+    'Guangzhou Huadu Bilibili Gaming': 'BLG',
+    'Dragon Ranger Gaming': 'DRG',
+}
+
+def _sn(name):
+    """Return the short display name for a team."""
+    return _SHORT.get(name, name[:4].upper())
+
+def _apply_ratings(teams_out):
+    """Incremental Elo update — only processes matches not yet rated (no oppRating).
+
+    Loads current ratings from the existing vct_data.json, finds any new
+    completed matches, applies the rating delta for each in event/round order,
+    then stamps eloRating and ratingHistory onto every team in teams_out.
+    """
+    # Load existing ratings, history, and already-rated match fingerprints
+    cur_ratings, cur_history, old_opp = {}, {}, {}
+    if OUT_FILE.exists():
+        try:
+            old = json.loads(OUT_FILE.read_text(encoding='utf-8'))
+            for t in old.get('teams', []):
+                n = t['name']
+                if t.get('eloRating'):
+                    cur_ratings[n] = float(t['eloRating'])
+                if t.get('ratingHistory'):
+                    cur_history[n] = t['ratingHistory']
+                for m in t.get('matches', []):
+                    if m.get('oppRating') is not None:
+                        key = (n, m['event'],
+                               m.get('opponent', '').lower(),
+                               tuple(m.get('matchScore', [])))
+                        old_opp[key] = m['oppRating']
+        except Exception:
+            pass
+
+    by_name = {t['name']: t for t in teams_out}
+
+    # Initialise current ratings (stored value, or regional seed for new teams)
+    ratings = {t['name']: cur_ratings.get(t['name'],
+               _REGION_START.get(t.get('region', 'americas'), 1500.))
+               for t in teams_out}
+
+    history = {t['name']: (cur_history.get(t['name']) or
+               [{'event': 'Start', 'rnd': '', 'opp': '', 'result': '',
+                 'rating': round(ratings[t['name']])}])
+               for t in teams_out}
+
+    # Restore oppRating for matches already processed in a previous run
+    for t in teams_out:
+        for m in t.get('matches', []):
+            key = (t['name'], m['event'],
+                   m.get('opponent', '').lower(),
+                   tuple(m.get('matchScore', [])))
+            if key in old_opp:
+                m['oppRating'] = old_opp[key]
+
+    # Collect new matches (deduplicated canonical pairs, sorted by event then position)
+    ev_order = {label: i for i, (_, _, _, label) in enumerate(VCT_EVENTS)}
+    seen, to_rate = set(), []
+    for t in teams_out:
+        ta = t['name']
+        for pos, m in enumerate(t.get('matches', [])):
+            if m.get('oppRating') is not None:
+                continue                              # already rated
+            if not m.get('maps') or not m.get('matchScore'):
+                continue                              # incomplete / upcoming
+            tb  = m.get('opponent', '')
+            ev  = m['event']
+            pair = tuple(sorted([ta, tb])) + (ev,)
+            if pair in seen:
+                continue
+            seen.add(pair)
+            # Find opponent's corresponding match record
+            m_tb = None
+            tb_t = by_name.get(tb)
+            if tb_t:
+                for mo in tb_t.get('matches', []):
+                    if (mo.get('event') == ev
+                            and mo.get('opponent', '').lower() == ta.lower()
+                            and mo.get('matchScore') is not None
+                            and mo.get('oppRating') is None):
+                        m_tb = mo
+                        break
+            to_rate.append((ev_order.get(ev, 999), pos, ta, tb, m, m_tb, ev))
+
+    to_rate.sort(key=lambda x: (x[0], x[1]))
+
+    # Apply rating delta for each new match
+    for _, _, ta, tb, m_ta, m_tb, ev in to_rate:
+        if ta not in ratings or tb not in ratings:
+            continue
+        ms          = m_ta['matchScore']
+        w, l        = (ta, tb) if m_ta['result'] == 'W' else (tb, ta)
+        map_diff    = abs(ms[0] - ms[1])
+        rating_diff = ratings[l] - ratings[w]        # positive = upset
+        rnd         = m_ta.get('rnd', '')
+        flat        = (_FLAT_EV_RND.get(ev) == rnd) and bool(rnd)
+        use_flat    = rnd in _FINALS_RNDS
+
+        if flat:
+            delta = 50 * map_diff
+        elif use_flat:
+            delta = _FINALS_BASE * (ratings[l] / 1500) * (1 + max(0, rating_diff) / _X)
+        elif rating_diff <= 0:
+            delta = 50 * map_diff * (ratings[l] / 1500)
+        else:
+            delta = 50 * map_diff * (ratings[l] / 1500) * (1 + rating_diff / _X)
+
+        delta    = max(0, min(_CAP, delta))
+        transfer = max(delta * (_BO5_MULT if max(ms) >= 3 else 1.0), _WIN_FLOOR)
+
+        m_ta['oppRating'] = round(ratings[tb])
+        if m_tb is not None:
+            m_tb['oppRating'] = round(ratings[ta])
+
+        ratings[w] += transfer
+        ratings[l] -= transfer
+
+        history[w].append({'event': ev, 'rnd': rnd, 'opp': _sn(l),
+                            'result': 'W', 'rating': round(ratings[w])})
+        history[l].append({'event': ev, 'rnd': rnd, 'opp': _sn(w),
+                            'result': 'L', 'rating': round(ratings[l])})
+
+    # Stamp final ratings onto each team
+    for t in teams_out:
+        n = t['name']
+        t['eloRating']     = round(ratings.get(n, 1500))
+        t['ratingHistory'] = history.get(n, [])
+
 # -- Cache ---------------------------------------------------------------------
 
 def load_cache() -> dict:
@@ -824,9 +1008,14 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
             else:
                 vfl_map[key] = {'vfl_total': stats['vfl'], 'maps_total': stats['maps']}
 
+        # Extract round label (e.g. 'Upper Round 1' → 'UR1')
+        series_el = match.select_one('.match-item-event-series')
+        rnd = _RND_MAP.get(series_el.get_text(strip=True), '') if series_el else ''
+
         # Store match history on both teams (flip map scores for t2; veto is shared)
         team_map[k1].setdefault('matches', []).append({
             'event':      label,
+            'rnd':        rnd,
             'opponent':   t2_name,
             'result':     'W' if s1 > s2 else 'L',
             'matchScore': [s1, s2],
@@ -838,6 +1027,7 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         })
         team_map[k2].setdefault('matches', []).append({
             'event':      label,
+            'rnd':        rnd,
             'opponent':   t1_name,
             'result':     'W' if s2 > s1 else 'L',
             'matchScore': [s2, s1],
@@ -1120,6 +1310,9 @@ def main():
             'matches': t.get('matches', []),
         })
 
+    # Update ratings for any new completed matches before writing output
+    _apply_ratings(teams_out)
+
     output = {
         'lastUpdated': datetime.now(timezone.utc).isoformat(),
         'events':      events_scraped,
@@ -1150,7 +1343,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print('\nRunning calc_ratings.py …')
-    subprocess.run([sys.executable, str(Path(__file__).parent / 'calc_ratings.py')], check=True)
     print('\nBuilding query index …')
     subprocess.run([sys.executable, str(Path(__file__).parent / 'build_index.py')], check=True)
