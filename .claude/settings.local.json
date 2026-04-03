@@ -84,7 +84,14 @@
       "Bash(\"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv/Scripts/pip.exe\" install:*)",
       "Bash(.venv/Scripts/python.exe -c \":*)",
       "Bash(.venv/Scripts/python.exe scrape_vct.py)",
-      "Bash(powershell -Command \"schtasks /delete /tn ''VCT Scraper'' /f\")"
+      "Bash(powershell -Command \"schtasks /delete /tn ''VCT Scraper'' /f\")",
+      "Bash(python -c \"import requests; print\\(requests.__file__\\)\")",
+      "Bash(python -c \"import requests; print\\(requests\\)\")",
+      "Bash(python -c \"import requests; print\\(dir\\(requests\\)\\)\")",
+      "Bash(py -3 scraper/scrape_vct.py)",
+      "Read(//c/Python314/Lib/site-packages/requests/**)",
+      "Bash(icacls \"C:\\\\Python314\\\\Lib\\\\site-packages\\\\requests\\\\__init__.py\")",
+      "Bash(scraper/.venv/Scripts/python.exe scraper/scrape_vct.py)"
     ]
   }
 }
