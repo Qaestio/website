@@ -58,14 +58,14 @@ VCT_EVENTS = [
     (2683, 'vct-2026-pacific-kickoff',   'pacific',  'Pacific Kickoff'),
     (2684, 'vct-2026-emea-kickoff',      'emea',     'EMEA Kickoff'),
     (2685, 'vct-2026-china-kickoff',     'china',    'China Kickoff'),
+    # -- International ---------------------------------------------------------
+    (2760, 'valorant-masters-santiago-2026', None, 'Masters Santiago'),
     # -- Stage 1 ---------------------------------------------------------------
     (2775, 'vct-2026-pacific-stage-1',   'pacific',  'Pacific Stage 1'),
     (2776, 'vct-2026-pacific-stage-2',   'pacific',  'Pacific Stage 2'),
     (2860, 'vct-2026-americas-stage-1',  'americas', 'Americas Stage 1'),
     (2863, 'vct-2026-emea-stage-1',      'emea',     'EMEA Stage 1'),
     (2864, 'vct-2026-china-stage-1',     'china',    'China Stage 1'),
-    # -- International ---------------------------------------------------------
-    (2760, 'valorant-masters-santiago-2026', None, 'Masters Santiago'),
 ]
 
 # Region metadata (mirrors valorant.html)
