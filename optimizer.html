@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VFL Optimizer — VCT 2026</title>
+    <title>VFL Transfer Optimizer — VCT 2026</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         html, body {
@@ -37,7 +37,7 @@
         .main::-webkit-scrollbar-track { background: transparent; }
         .main::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
 
-        .inner { max-width: 900px; margin: 0 auto; }
+        .inner { max-width: 1060px; margin: 0 auto; }
 
         /* ── Status / loading ── */
         .status-area {
@@ -51,110 +51,302 @@
             vertical-align: middle; margin-right: 0.5rem;
         }
         @keyframes spin { to { transform: rotate(360deg); } }
-
         .error-text { color: #e05252; }
 
-        /* ── Rerun button ── */
-        .rerun-btn {
-            display: inline-flex; align-items: center; gap: 0.4rem;
+        /* ── Selection header ── */
+        .sel-header {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .sel-title { font-size: 1rem; font-weight: 600; }
+        .sel-actions { display: flex; align-items: center; gap: 0.75rem; }
+        .sel-count-badge {
             background: var(--surface2); border: 1px solid var(--border);
+            border-radius: 6px; padding: 0.35rem 0.75rem;
+            font-size: 0.85rem; font-weight: 600; color: var(--muted);
+            white-space: nowrap;
+        }
+        .sel-count-badge.complete { color: #7dc87d; border-color: #7dc87d44; }
+
+        .suggest-btn {
+            background: #2a4a2a; border: 1px solid #3a6a3a;
+            border-radius: 6px; color: #7dc87d; cursor: pointer;
+            font-size: 0.85rem; font-family: inherit; font-weight: 600;
+            padding: 0.45rem 1rem; transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .suggest-btn:hover:not(:disabled) { background: #325a32; border-color: #4a7a4a; }
+        .suggest-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+        /* ── Filter row ── */
+        .filter-row {
+            display: flex; align-items: center; gap: 0.75rem;
+            flex-wrap: wrap; margin-bottom: 0.9rem;
+        }
+        .search-box {
+            flex: 1; min-width: 160px; max-width: 300px;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 6px; color: var(--text); font-family: inherit;
+            font-size: 0.85rem; padding: 0.42rem 0.75rem; outline: none;
+        }
+        .search-box:focus { border-color: #444; }
+        .region-filters { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .rf-btn {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 5px; color: var(--muted); cursor: pointer;
+            font-size: 0.75rem; font-family: inherit; font-weight: 600;
+            padding: 0.3rem 0.7rem; transition: all 0.15s;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .rf-btn:hover { color: var(--text); border-color: #444; }
+        .rf-btn.active { color: #fff; background: #333; border-color: #555; }
+        .rf-btn[data-region="americas"].active { color: #f0923b; border-color: #f0923b55; background: rgba(240,146,59,0.1); }
+
+        /* ── Selection layout ── */
+        .sel-layout {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 1rem;
+            align-items: start;
+        }
+        @media (max-width: 700px) {
+            .sel-layout { grid-template-columns: 1fr; }
+        }
+
+        /* ── Pool grid ── */
+        .pool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.5rem;
+        }
+
+        /* ── Pool card ── */
+        .pool-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--role-color, var(--border));
+            border-radius: 7px;
+            padding: 0.6rem 0.8rem;
+            cursor: pointer;
+            transition: background 0.1s, border-color 0.1s;
+            user-select: none;
+            position: relative;
+        }
+        .pool-card:hover { border-color: #444; background: var(--surface2); }
+        .pool-card.selected {
+            background: rgba(125,200,125,0.08);
+            border-color: #7dc87d55 !important;
+        }
+        .pool-card.selected .pc-name::after {
+            content: ' ✓';
+            color: #7dc87d;
+            font-size: 0.8em;
+        }
+        .pool-card.maxed:not(.selected) { opacity: 0.4; cursor: not-allowed; }
+
+        .pc-top {
+            display: flex; align-items: center;
+            justify-content: space-between; gap: 0.4rem;
+            margin-bottom: 0.25rem;
+        }
+        .pc-badge {
+            font-size: 0.58rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.07em;
+            padding: 0.1rem 0.4rem; border-radius: 3px;
+            background: var(--role-bg, #1e1e1e);
+            color: var(--role-color, var(--muted));
+            flex-shrink: 0;
+        }
+        .pc-region {
+            font-size: 0.58rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.1rem 0.4rem; border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .pc-region.americas { background: rgba(240,146,59,0.15); color: #f0923b; }
+        .pc-region.pacific  { background: rgba(91,156,246,0.12); color: #5b9cf6; }
+        .pc-region.emea     { background: rgba(166,124,209,0.12); color: #a67cd1; }
+        .pc-pts { font-size: 0.75rem; font-weight: 600; color: #7dc87d; }
+
+        .pc-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.2rem; }
+        .pc-team {
+            display: flex; align-items: center; gap: 0.35rem;
+            font-size: 0.75rem; color: var(--muted);
+        }
+        .pc-logo {
+            width: 16px; height: 16px; object-fit: contain;
+            border-radius: 2px; flex-shrink: 0;
+        }
+        .pc-logo-ph {
+            width: 16px; height: 16px;
+            background: var(--surface2); border-radius: 2px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.48rem; color: var(--dim);
+        }
+        .pc-bottom {
+            display: flex; justify-content: flex-end;
+            margin-top: 0.15rem;
+        }
+        .pc-price { font-size: 0.72rem; color: var(--dim); }
+        .pc-price span { color: var(--muted); font-weight: 600; }
+
+        /* ── Team sidebar ── */
+        .team-sidebar {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.85rem;
+            position: sticky; top: 0;
+        }
+        .sidebar-heading {
+            font-size: 0.68rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--dim); margin-bottom: 0.65rem;
+        }
+        .team-list { display: flex; flex-direction: column; gap: 0.35rem; }
+        .team-list-item {
+            display: flex; align-items: center; gap: 0.5rem;
+            padding: 0.35rem 0.5rem;
+            background: var(--surface2); border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .tli-role {
+            width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+        }
+        .tli-name { flex: 1; font-weight: 600; }
+        .tli-team { color: var(--dim); font-size: 0.72rem; }
+        .tli-remove {
+            color: var(--dim); cursor: pointer; font-size: 0.85rem;
+            line-height: 1; padding: 0.1rem; margin-left: auto;
+            transition: color 0.1s;
+        }
+        .tli-remove:hover { color: #e05252; }
+        .sidebar-budget {
+            margin-top: 0.75rem; padding-top: 0.6rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.78rem; color: var(--muted);
+            display: flex; flex-direction: column; gap: 0.2rem;
+        }
+        .sb-row { display: flex; justify-content: space-between; }
+        .sb-val { font-weight: 600; }
+        .sb-val.ok  { color: #7dc87d; }
+        .sb-val.warn { color: #e05252; }
+        .team-slot-empty {
+            display: flex; align-items: center;
+            padding: 0.35rem 0.5rem;
+            background: var(--surface2); border-radius: 5px;
+            border: 1px dashed var(--border);
+            font-size: 0.75rem; color: var(--dim);
+        }
+
+        /* ── Back button ── */
+        .back-btn {
+            background: none; border: 1px solid var(--border);
             border-radius: 6px; color: var(--muted); cursor: pointer;
             font-size: 0.82rem; font-family: inherit;
-            padding: 0.45rem 0.9rem; transition: all 0.15s;
+            padding: 0.4rem 0.8rem; margin-bottom: 1rem;
+            transition: all 0.15s; display: inline-flex; align-items: center; gap: 0.3rem;
         }
-        .rerun-btn:hover { color: var(--text); border-color: #444; }
+        .back-btn:hover { color: var(--text); border-color: #444; }
 
-        /* ── Summary bar ── */
-        .summary {
+        /* ── Transfer summary bar ── */
+        .transfer-summary {
             display: flex; gap: 1.5rem; flex-wrap: wrap;
-            align-items: center; justify-content: space-between;
+            align-items: center;
             padding: 0.9rem 1.1rem;
             background: var(--surface); border: 1px solid var(--border);
             border-radius: 8px; margin-bottom: 1.25rem;
         }
-        .summary-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-        .sum-item { display: flex; flex-direction: column; gap: 0.15rem; }
-        .sum-label {
+        .ts-item { display: flex; flex-direction: column; gap: 0.12rem; }
+        .ts-label {
             font-size: 0.68rem; color: var(--dim);
             text-transform: uppercase; letter-spacing: 0.06em;
         }
-        .sum-val { font-size: 1.1rem; font-weight: 700; }
-        .sum-val.pts-color { color: #7dc87d; }
-        .sum-val.budget-ok { color: #7dc87d; }
-        .sum-val.budget-warn { color: #f0923b; }
+        .ts-val { font-size: 1.05rem; font-weight: 700; }
+        .ts-val.gain-pos { color: #7dc87d; }
+        .ts-val.gain-neg { color: #e05252; }
+        .ts-val.budget-ok { color: #7dc87d; }
+        .ts-val.budget-warn { color: #e05252; }
 
-        /* ── Player grid ── */
+        /* ── In/Out grid ── */
+        .inout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .inout-grid { grid-template-columns: 1fr; }
+        }
+        .inout-heading {
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.07em;
+            margin-bottom: 0.5rem;
+        }
+        .out-heading { color: #e05252; }
+        .in-heading  { color: #7dc87d; }
+
+        /* ── Player grid / card (results) ── */
         .player-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.65rem;
         }
-
-        /* ── Player card ── */
         .player-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-left: 3px solid var(--role-color, var(--border));
             border-radius: 8px;
-            padding: 0.85rem 1rem;
-            display: flex; flex-direction: column; gap: 0.4rem;
+            padding: 0.75rem 0.9rem;
+            display: flex; flex-direction: column; gap: 0.35rem;
         }
+        .player-card.card-out { border-color: #e0525244 !important; background: rgba(224,82,82,0.04); }
+        .player-card.card-in  { border-color: #7dc87d44 !important; background: rgba(125,200,125,0.05); }
 
         .card-top {
             display: flex; align-items: center;
             justify-content: space-between; gap: 0.5rem;
         }
-
+        .card-badges { display: flex; align-items: center; gap: 0.3rem; flex-wrap: wrap; }
         .role-badge {
-            font-size: 0.6rem; font-weight: 700;
+            font-size: 0.58rem; font-weight: 700;
             text-transform: uppercase; letter-spacing: 0.07em;
-            padding: 0.15rem 0.5rem; border-radius: 3px;
+            padding: 0.12rem 0.45rem; border-radius: 3px;
             background: var(--role-bg, #1e1e1e);
             color: var(--role-color, var(--muted));
-            flex-shrink: 0;
         }
+        .region-badge {
+            font-size: 0.58rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.12rem 0.45rem; border-radius: 3px;
+        }
+        .region-badge.americas { background: rgba(240,146,59,0.15); color: #f0923b; }
+        .region-badge.pacific  { background: rgba(91,156,246,0.12); color: #5b9cf6; }
+        .region-badge.emea     { background: rgba(166,124,209,0.12); color: #a67cd1; }
+        .card-pts { font-size: 0.8rem; font-weight: 600; color: #7dc87d; flex-shrink: 0; }
 
-        .card-pts {
-            font-size: 0.82rem; font-weight: 600; color: #7dc87d; flex-shrink: 0;
-        }
-
-        .card-name {
-            font-weight: 700; font-size: 1rem;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
-
-        .card-team {
-            display: flex; align-items: center; gap: 0.45rem;
-        }
+        .card-name { font-weight: 700; font-size: 0.95rem; }
+        .card-team { display: flex; align-items: center; gap: 0.4rem; }
         .team-logo {
-            width: 20px; height: 20px; object-fit: contain;
+            width: 18px; height: 18px; object-fit: contain;
             border-radius: 2px; flex-shrink: 0;
         }
         .team-logo-ph {
-            width: 20px; height: 20px;
+            width: 18px; height: 18px;
             background: var(--surface2); border-radius: 2px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.55rem; color: var(--dim);
+            font-size: 0.5rem; color: var(--dim);
         }
-        .team-name-text {
-            font-size: 0.8rem; color: var(--muted);
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
-
-        .card-bottom {
-            display: flex; align-items: center; justify-content: space-between;
-            margin-top: 0.1rem;
-        }
-        .card-price {
-            font-size: 0.78rem; color: var(--dim);
-        }
+        .team-name-text { font-size: 0.78rem; color: var(--muted); }
+        .card-price { font-size: 0.75rem; color: var(--dim); }
         .card-price span { color: var(--muted); font-weight: 600; }
 
         /* ── Section heading ── */
         .section-heading {
             font-size: 0.68rem; font-weight: 700;
             text-transform: uppercase; letter-spacing: 0.08em;
-            color: var(--dim); margin: 1.25rem 0 0.5rem;
+            color: var(--dim); margin: 1.1rem 0 0.5rem;
         }
 
         /* ── Meta note ── */
@@ -163,24 +355,8 @@
             margin-top: 1.25rem; text-align: center;
         }
 
-        /* ── Constraint legend ── */
-        .constraint-info {
-            display: flex; gap: 1rem; flex-wrap: wrap;
-            font-size: 0.72rem; color: var(--dim);
-        }
-        .constraint-info span { display: flex; align-items: center; gap: 0.3rem; }
-        .ci-dot {
-            width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-        }
-
         /* ── Hidden ── */
         .hidden { display: none !important; }
-
-        /* ── Responsive ── */
-        @media (max-width: 600px) {
-            .player-grid { grid-template-columns: 1fr; }
-            .summary-stats { gap: 1rem; }
-        }
     </style>
 </head>
 <body>
@@ -189,12 +365,7 @@
 <div class="topbar">
     <div class="topbar-left">
         <a class="back-link" href="players.html">← Players</a>
-        <span class="topbar-title">VFL Optimizer</span>
-    </div>
-    <div>
-        <button class="rerun-btn" id="rerunBtn" onclick="runOptimizer()" style="display:none">
-            ↻ Re-run
-        </button>
+        <span class="topbar-title">VFL Transfer Optimizer</span>
     </div>
 </div>
 
@@ -207,48 +378,85 @@
             <span class="spinner"></span> Loading player data…
         </div>
 
-        <!-- Results (hidden until ready) -->
-        <div id="resultsArea" class="hidden">
+        <!-- Phase 1: Selection -->
+        <div id="selectionPhase" class="hidden">
 
-            <!-- Summary bar -->
-            <div class="summary">
-                <div class="summary-stats">
-                    <div class="sum-item">
-                        <span class="sum-label">Total VFL pts</span>
-                        <span class="sum-val pts-color" id="sumPts">–</span>
-                    </div>
-                    <div class="sum-item">
-                        <span class="sum-label">Budget used</span>
-                        <span class="sum-val" id="sumCost">–</span>
-                    </div>
-                    <div class="sum-item">
-                        <span class="sum-label">Remaining</span>
-                        <span class="sum-val" id="sumRemain">–</span>
-                    </div>
-                    <div class="sum-item">
-                        <span class="sum-label">Avg pts / player</span>
-                        <span class="sum-val" id="sumAvg">–</span>
-                    </div>
-                </div>
-                <div class="constraint-info">
-                    <span><span class="ci-dot" style="background:#e05252"></span>Duelist ×2</span>
-                    <span><span class="ci-dot" style="background:#f0923b"></span>Controller ×2</span>
-                    <span><span class="ci-dot" style="background:#5b9cf6"></span>Initiator ×2</span>
-                    <span><span class="ci-dot" style="background:#a67cd1"></span>Sentinel ×2</span>
-                    <span><span class="ci-dot" style="background:#888"></span>Wildcard ×3</span>
+            <div class="sel-header">
+                <div class="sel-title">Select Your Current Team</div>
+                <div class="sel-actions">
+                    <span class="sel-count-badge" id="selCountBadge">0 / 11</span>
+                    <button class="suggest-btn" id="suggestBtn" onclick="runTransferOptimizer()" disabled>
+                        Suggest Transfers →
+                    </button>
                 </div>
             </div>
 
-            <!-- Role picks -->
-            <div class="section-heading">Role Picks</div>
-            <div id="roleGrid" class="player-grid"></div>
+            <div class="filter-row">
+                <input type="text" id="searchBox" class="search-box" placeholder="Search players…" oninput="filterPool()">
+                <div class="region-filters">
+                    <button class="rf-btn active" data-region="all" onclick="setRegionFilter('all', this)">All</button>
+                    <button class="rf-btn" data-region="pacific" onclick="setRegionFilter('pacific', this)">Pacific</button>
+                    <button class="rf-btn" data-region="emea" onclick="setRegionFilter('emea', this)">EMEA</button>
+                    <button class="rf-btn" data-region="americas" onclick="setRegionFilter('americas', this)">Americas</button>
+                </div>
+            </div>
 
-            <!-- Wildcard picks -->
-            <div class="section-heading">Wildcard Picks</div>
-            <div id="wcGrid" class="player-grid"></div>
+            <div class="sel-layout">
+                <div class="pool-panel">
+                    <div id="poolGrid" class="pool-grid"></div>
+                </div>
+                <div class="team-sidebar">
+                    <div class="sidebar-heading">Your Team</div>
+                    <div id="teamList" class="team-list"></div>
+                    <div class="sidebar-budget" id="sidebarBudget"></div>
+                </div>
+            </div>
+        </div>
 
-            <!-- Meta -->
+        <!-- Phase 2: Transfer Results -->
+        <div id="resultsPhase" class="hidden">
+
+            <button class="back-btn" onclick="showSelectionPhase()">← Adjust Team</button>
+
+            <div class="transfer-summary" id="transferSummary">
+                <div class="ts-item">
+                    <span class="ts-label">Pts before</span>
+                    <span class="ts-val" id="tsPtsBefore">–</span>
+                </div>
+                <div class="ts-item">
+                    <span class="ts-label">Pts after</span>
+                    <span class="ts-val" id="tsPtsAfter">–</span>
+                </div>
+                <div class="ts-item">
+                    <span class="ts-label">Projected gain</span>
+                    <span class="ts-val" id="tsPtsGain">–</span>
+                </div>
+                <div class="ts-item">
+                    <span class="ts-label">Budget remaining</span>
+                    <span class="ts-val" id="tsBudget">–</span>
+                </div>
+                <div class="ts-item">
+                    <span class="ts-label">Americas players</span>
+                    <span class="ts-val" id="tsAmericasCount">–</span>
+                </div>
+            </div>
+
+            <div class="inout-grid">
+                <div>
+                    <div class="inout-heading out-heading">Transfer Out</div>
+                    <div id="dropGrid" class="player-grid"></div>
+                </div>
+                <div>
+                    <div class="inout-heading in-heading">Transfer In</div>
+                    <div id="addGrid" class="player-grid"></div>
+                </div>
+            </div>
+
+            <div class="section-heading">Full Team After Transfers</div>
+            <div id="fullTeamGrid" class="player-grid"></div>
+
             <div id="metaNote" class="meta-note"></div>
+
         </div>
 
     </div>
@@ -264,156 +472,243 @@ const ROLE_STYLE = {
     wildcard:   { color: '#888',    bg: 'rgba(136,136,136,0.12)' },
 };
 
-// ── Hardcoded role data (sourced from optimize_vfl.py) ────────────────────────
+// ── Player roster with roles and regions ─────────────────────────────────────
 const VFL_ROLES = [
-    // ── Gen.G ──────────────────────────────────────────────────────────────────
-    {name:'Lakia',      team:'Gen.G',                  role:'initiator'},
-    {name:'ZynX',       team:'Gen.G',                  role:'duelist'},
-    {name:'Ash',        team:'Gen.G',                  role:'controller'},
-    {name:'Karon',      team:'Gen.G',                  role:'sentinel'},
-    {name:'t3xture',    team:'Gen.G',                  role:'duelist'},
-    // ── Global Esports ─────────────────────────────────────────────────────────
-    {name:'PatMen',     team:'Global Esports',          role:'controller'},
-    {name:'UdoTan',     team:'Global Esports',          role:'sentinel'},
-    {name:'Kr1stal',    team:'Global Esports',          role:'initiator'},
-    {name:'xavi8k',     team:'Global Esports',          role:'controller'},
-    {name:'Autumn',     team:'Global Esports',          role:'duelist'},
-    // ── T1 ─────────────────────────────────────────────────────────────────────
-    {name:'stax',       team:'T1',                      role:'initiator'},
-    {name:'Meteor',     team:'T1',                      role:'sentinel'},
-    {name:'BuZz',       team:'T1',                      role:'duelist'},
-    {name:'iZu',        team:'T1',                      role:'duelist'},
-    {name:'Munchkin',   team:'T1',                      role:'controller'},
-    // ── VARREL ─────────────────────────────────────────────────────────────────
-    {name:'C1ndeR',     team:'VARREL',                  role:'controller'},
-    {name:'Zexy',       team:'VARREL',                  role:'duelist'},
-    {name:'Klaus',      team:'VARREL',                  role:'sentinel'},
-    {name:'XuNa',       team:'VARREL',                  role:'initiator'},
-    {name:'oonzmlp',    team:'VARREL',                  role:'controller'},
-    // ── Nongshim RedForce ──────────────────────────────────────────────────────
-    {name:'Rb',         team:'Nongshim RedForce',        role:'controller'},
-    {name:'Dambi',      team:'Nongshim RedForce',        role:'duelist'},
-    {name:'Xross',      team:'Nongshim RedForce',        role:'initiator'},
-    {name:'Ivy',        team:'Nongshim RedForce',        role:'sentinel'},
-    {name:'Francis',    team:'Nongshim RedForce',        role:'duelist'},
-    // ── Rex Regum Qeon ─────────────────────────────────────────────────────────
-    {name:'Jemkin',     team:'Rex Regum Qeon',           role:'duelist'},
-    {name:'xffero',     team:'Rex Regum Qeon',           role:'sentinel'},
-    {name:'Kushy',      team:'Rex Regum Qeon',           role:'initiator'},
-    {name:'Monyet',     team:'Rex Regum Qeon',           role:'controller'},
-    {name:'crazyguy',   team:'Rex Regum Qeon',           role:'controller'},
-    // ── FULL SENSE ─────────────────────────────────────────────────────────────
-    {name:'primmie',    team:'FULL SENSE',               role:'duelist'},
-    {name:'Killua',     team:'FULL SENSE',               role:'initiator'},
-    {name:'Leviathan',  team:'FULL SENSE',               role:'controller'},
-    {name:'JitBoyS',    team:'FULL SENSE',               role:'sentinel'},
-    {name:'CRWS',       team:'FULL SENSE',               role:'controller'},
-    // ── Paper Rex ──────────────────────────────────────────────────────────────
-    {name:'f0rsakeN',   team:'Paper Rex',                role:'controller'},
-    {name:'invy',       team:'Paper Rex',                role:'initiator'},
-    {name:'Jinggg',     team:'Paper Rex',                role:'duelist'},
-    {name:'something',  team:'Paper Rex',                role:'duelist'},
-    {name:'d4v41',      team:'Paper Rex',                role:'sentinel'},
-    // ── DetonatioN FocusMe ─────────────────────────────────────────────────────
-    {name:'Meiy',       team:'DetonatioN FocusMe',       role:'duelist'},
-    {name:'Akame',      team:'DetonatioN FocusMe',       role:'initiator'},
-    {name:'yatsuka',    team:'DetonatioN FocusMe',       role:'duelist'},
-    {name:'SSeeS',      team:'DetonatioN FocusMe',       role:'controller'},
-    {name:'Caedye',     team:'DetonatioN FocusMe',       role:'sentinel'},
-    // ── KIWOOM DRX ─────────────────────────────────────────────────────────────
-    {name:'MaKo',       team:'KIWOOM DRX',               role:'controller'},
-    {name:'HYUNMIN',    team:'KIWOOM DRX',               role:'duelist'},
-    {name:'free1ng',    team:'KIWOOM DRX',               role:'sentinel'},
-    {name:'BeYN',       team:'KIWOOM DRX',               role:'initiator'},
-    {name:'Hermes',     team:'KIWOOM DRX',               role:'initiator'},
-    // ── ZETA DIVISION ──────────────────────────────────────────────────────────
-    {name:'SugarZ3ro',  team:'ZETA DIVISION',            role:'controller'},
-    {name:'eKo',        team:'ZETA DIVISION',            role:'duelist'},
-    {name:'Xdll',       team:'ZETA DIVISION',            role:'initiator'},
-    {name:'Absol',      team:'ZETA DIVISION',            role:'duelist'},
-    {name:'SyouTa',     team:'ZETA DIVISION',            role:'sentinel'},
-    // ── Team Secret ────────────────────────────────────────────────────────────
-    {name:'kellyS',     team:'Team Secret',              role:'duelist'},
-    {name:'JessieVash', team:'Team Secret',              role:'initiator'},
-    {name:'BerserX',    team:'Team Secret',              role:'sentinel'},
-    {name:'Sylvan',     team:'Team Secret',              role:'controller'},
-    {name:'Rimuru',     team:'Team Secret',              role:'duelist'},
-    // ── PCIFIC Esports ─────────────────────────────────────────────────────────
-    {name:'seven',      team:'PCIFIC Esports',           role:'initiator'},
-    {name:'al0rante',   team:'PCIFIC Esports',           role:'sentinel'},
-    {name:'NINJA',      team:'PCIFIC Esports',           role:'initiator'},
-    {name:'qpert',      team:'PCIFIC Esports',           role:'controller'},
-    {name:'cNed',       team:'PCIFIC Esports',           role:'duelist'},
-    // ── BBL Esports ────────────────────────────────────────────────────────────
-    {name:'lovers rock',team:'BBL Esports',              role:'duelist'},
-    {name:'Loita',      team:'BBL Esports',              role:'controller'},
-    {name:'Lar0k',      team:'BBL Esports',              role:'duelist'},
-    {name:'Rose',       team:'BBL Esports',              role:'initiator'},
-    {name:'Crewen',     team:'BBL Esports',              role:'sentinel'},
-    // ── FNATIC ─────────────────────────────────────────────────────────────────
-    {name:'Alfajer',    team:'FNATIC',                   role:'sentinel'},
-    {name:'Veqaj',      team:'FNATIC',                   role:'controller'},
-    {name:'crashies',   team:'FNATIC',                   role:'initiator'},
-    {name:'kaajak',     team:'FNATIC',                   role:'duelist'},
-    {name:'Boaster',    team:'FNATIC',                   role:'controller'},
-    // ── FUT Esports ────────────────────────────────────────────────────────────
-    {name:'xeus',       team:'FUT Esports',              role:'duelist'},
-    {name:'MrFaliN',    team:'FUT Esports',              role:'controller'},
-    {name:'yetujey',    team:'FUT Esports',              role:'sentinel'},
-    {name:'KROSTALY',   team:'FUT Esports',              role:'initiator'},
-    {name:'S0PP',       team:'FUT Esports',              role:'duelist'},
-    // ── Gentle Mates ───────────────────────────────────────────────────────────
-    {name:'marteen',    team:'Gentle Mates',             role:'duelist'},
-    {name:'Minny',      team:'Gentle Mates',             role:'sentinel'},
-    {name:'bipo',       team:'Gentle Mates',             role:'duelist'},
-    {name:'starxo',     team:'Gentle Mates',             role:'initiator'},
-    {name:'GLYPH',      team:'Gentle Mates',             role:'controller'},
-    // ── GIANTX ─────────────────────────────────────────────────────────────────
-    {name:'Flickless',  team:'GIANTX',                   role:'initiator'},
-    {name:'Cloud',      team:'GIANTX',                   role:'initiator'},
-    {name:'westside',   team:'GIANTX',                   role:'sentinel'},
-    {name:'grubinho',   team:'GIANTX',                   role:'controller'},
-    {name:'ara',        team:'GIANTX',                   role:'duelist'},
-    // ── Karmine Corp ───────────────────────────────────────────────────────────
-    {name:'dos9',       team:'Karmine Corp',             role:'controller'},
-    {name:'SUYGETSU',   team:'Karmine Corp',             role:'sentinel'},
-    {name:'LewN',       team:'Karmine Corp',             role:'duelist'},
-    {name:'Avez',       team:'Karmine Corp',             role:'initiator'},
-    {name:'N4RRATE',    team:'Karmine Corp',             role:'initiator'},
-    // ── Natus Vincere ──────────────────────────────────────────────────────────
-    {name:'hiro',       team:'Natus Vincere',            role:'sentinel'},
-    {name:'Ruxic',      team:'Natus Vincere',            role:'controller'},
-    {name:'Filu',       team:'Natus Vincere',            role:'duelist'},
-    {name:'Exit',       team:'Natus Vincere',            role:'duelist'},
-    {name:'Chloric',    team:'Natus Vincere',            role:'initiator'},
-    // ── Team Heretics ──────────────────────────────────────────────────────────
-    {name:'benjyfishy', team:'Team Heretics',            role:'sentinel'},
-    {name:'ComeBack',   team:'Team Heretics',            role:'duelist'},
-    {name:'Boo',        team:'Team Heretics',            role:'controller'},
-    {name:'RieNs',      team:'Team Heretics',            role:'initiator'},
-    {name:'Wo0t',       team:'Team Heretics',            role:'initiator'},
-    // ── Team Liquid ────────────────────────────────────────────────────────────
-    {name:'MiniBoo',    team:'Team Liquid',              role:'duelist'},
-    {name:'nAts',       team:'Team Liquid',              role:'sentinel'},
-    {name:'kamo',       team:'Team Liquid',              role:'duelist'},
-    {name:'purp0',      team:'Team Liquid',              role:'initiator'},
-    {name:'wayne',      team:'Team Liquid',              role:'controller'},
-    // ── Team Vitality ──────────────────────────────────────────────────────────
-    {name:'Chronicle',  team:'Team Vitality',            role:'sentinel'},
-    {name:'Derke',      team:'Team Vitality',            role:'duelist'},
-    {name:'Jamppi',     team:'Team Vitality',            role:'initiator'},
-    {name:'PROFEK',     team:'Team Vitality',            role:'controller'},
-    {name:'Sayonara',   team:'Team Vitality',            role:'initiator'},
-    // ── Eternal Fire ───────────────────────────────────────────────────────────
-    {name:'audaz',      team:'Eternal Fire',             role:'controller'},
-    {name:'nekky',      team:'Eternal Fire',             role:'initiator'},
-    {name:'Favian',     team:'Eternal Fire',             role:'duelist'},
-    {name:'Izzy',       team:'Eternal Fire',             role:'duelist'},
-    {name:'Echo',       team:'Eternal Fire',             role:'sentinel'},
+    // ── Pacific ───────────────────────────────────────────────────────────────
+    // Gen.G
+    {name:'Lakia',      team:'Gen.G',                  role:'initiator', region:'pacific'},
+    {name:'ZynX',       team:'Gen.G',                  role:'duelist',   region:'pacific'},
+    {name:'Ash',        team:'Gen.G',                  role:'controller',region:'pacific'},
+    {name:'Karon',      team:'Gen.G',                  role:'sentinel',  region:'pacific'},
+    {name:'t3xture',    team:'Gen.G',                  role:'duelist',   region:'pacific'},
+    // Global Esports
+    {name:'PatMen',     team:'Global Esports',          role:'controller',region:'pacific'},
+    {name:'UdoTan',     team:'Global Esports',          role:'sentinel',  region:'pacific'},
+    {name:'Kr1stal',    team:'Global Esports',          role:'initiator', region:'pacific'},
+    {name:'xavi8k',     team:'Global Esports',          role:'controller',region:'pacific'},
+    {name:'Autumn',     team:'Global Esports',          role:'duelist',   region:'pacific'},
+    // T1
+    {name:'stax',       team:'T1',                      role:'initiator', region:'pacific'},
+    {name:'Meteor',     team:'T1',                      role:'sentinel',  region:'pacific'},
+    {name:'BuZz',       team:'T1',                      role:'duelist',   region:'pacific'},
+    {name:'iZu',        team:'T1',                      role:'duelist',   region:'pacific'},
+    {name:'Munchkin',   team:'T1',                      role:'controller',region:'pacific'},
+    // VARREL
+    {name:'C1ndeR',     team:'VARREL',                  role:'controller',region:'pacific'},
+    {name:'Zexy',       team:'VARREL',                  role:'duelist',   region:'pacific'},
+    {name:'Klaus',      team:'VARREL',                  role:'sentinel',  region:'pacific'},
+    {name:'XuNa',       team:'VARREL',                  role:'initiator', region:'pacific'},
+    {name:'oonzmlp',    team:'VARREL',                  role:'controller',region:'pacific'},
+    // Nongshim RedForce
+    {name:'Rb',         team:'Nongshim RedForce',        role:'controller',region:'pacific'},
+    {name:'Dambi',      team:'Nongshim RedForce',        role:'duelist',   region:'pacific'},
+    {name:'Xross',      team:'Nongshim RedForce',        role:'initiator', region:'pacific'},
+    {name:'Ivy',        team:'Nongshim RedForce',        role:'sentinel',  region:'pacific'},
+    {name:'Francis',    team:'Nongshim RedForce',        role:'duelist',   region:'pacific'},
+    // Rex Regum Qeon
+    {name:'Jemkin',     team:'Rex Regum Qeon',           role:'duelist',   region:'pacific'},
+    {name:'xffero',     team:'Rex Regum Qeon',           role:'sentinel',  region:'pacific'},
+    {name:'Kushy',      team:'Rex Regum Qeon',           role:'initiator', region:'pacific'},
+    {name:'Monyet',     team:'Rex Regum Qeon',           role:'controller',region:'pacific'},
+    {name:'crazyguy',   team:'Rex Regum Qeon',           role:'controller',region:'pacific'},
+    // FULL SENSE
+    {name:'primmie',    team:'FULL SENSE',               role:'duelist',   region:'pacific'},
+    {name:'Killua',     team:'FULL SENSE',               role:'initiator', region:'pacific'},
+    {name:'Leviathan',  team:'FULL SENSE',               role:'controller',region:'pacific'},
+    {name:'JitBoyS',    team:'FULL SENSE',               role:'sentinel',  region:'pacific'},
+    {name:'CRWS',       team:'FULL SENSE',               role:'controller',region:'pacific'},
+    // Paper Rex
+    {name:'f0rsakeN',   team:'Paper Rex',                role:'controller',region:'pacific'},
+    {name:'invy',       team:'Paper Rex',                role:'initiator', region:'pacific'},
+    {name:'Jinggg',     team:'Paper Rex',                role:'duelist',   region:'pacific'},
+    {name:'something',  team:'Paper Rex',                role:'duelist',   region:'pacific'},
+    {name:'d4v41',      team:'Paper Rex',                role:'sentinel',  region:'pacific'},
+    // DetonatioN FocusMe
+    {name:'Meiy',       team:'DetonatioN FocusMe',       role:'duelist',   region:'pacific'},
+    {name:'Akame',      team:'DetonatioN FocusMe',       role:'initiator', region:'pacific'},
+    {name:'yatsuka',    team:'DetonatioN FocusMe',       role:'duelist',   region:'pacific'},
+    {name:'SSeeS',      team:'DetonatioN FocusMe',       role:'controller',region:'pacific'},
+    {name:'Caedye',     team:'DetonatioN FocusMe',       role:'sentinel',  region:'pacific'},
+    // KIWOOM DRX
+    {name:'MaKo',       team:'KIWOOM DRX',               role:'controller',region:'pacific'},
+    {name:'HYUNMIN',    team:'KIWOOM DRX',               role:'duelist',   region:'pacific'},
+    {name:'free1ng',    team:'KIWOOM DRX',               role:'sentinel',  region:'pacific'},
+    {name:'BeYN',       team:'KIWOOM DRX',               role:'initiator', region:'pacific'},
+    {name:'Hermes',     team:'KIWOOM DRX',               role:'initiator', region:'pacific'},
+    // ZETA DIVISION
+    {name:'SugarZ3ro',  team:'ZETA DIVISION',            role:'controller',region:'pacific'},
+    {name:'eKo',        team:'ZETA DIVISION',            role:'duelist',   region:'pacific'},
+    {name:'Xdll',       team:'ZETA DIVISION',            role:'initiator', region:'pacific'},
+    {name:'Absol',      team:'ZETA DIVISION',            role:'duelist',   region:'pacific'},
+    {name:'SyouTa',     team:'ZETA DIVISION',            role:'sentinel',  region:'pacific'},
+    // Team Secret
+    {name:'kellyS',     team:'Team Secret',              role:'duelist',   region:'pacific'},
+    {name:'JessieVash', team:'Team Secret',              role:'initiator', region:'pacific'},
+    {name:'BerserX',    team:'Team Secret',              role:'sentinel',  region:'pacific'},
+    {name:'Sylvan',     team:'Team Secret',              role:'controller',region:'pacific'},
+    {name:'Rimuru',     team:'Team Secret',              role:'duelist',   region:'pacific'},
+    // PCIFIC Esports
+    {name:'seven',      team:'PCIFIC Esports',           role:'initiator', region:'pacific'},
+    {name:'al0rante',   team:'PCIFIC Esports',           role:'sentinel',  region:'pacific'},
+    {name:'NINJA',      team:'PCIFIC Esports',           role:'initiator', region:'pacific'},
+    {name:'qpert',      team:'PCIFIC Esports',           role:'controller',region:'pacific'},
+    {name:'cNed',       team:'PCIFIC Esports',           role:'duelist',   region:'pacific'},
+
+    // ── EMEA ─────────────────────────────────────────────────────────────────
+    // BBL Esports
+    {name:'lovers rock',team:'BBL Esports',              role:'duelist',   region:'emea'},
+    {name:'Loita',      team:'BBL Esports',              role:'controller',region:'emea'},
+    {name:'Lar0k',      team:'BBL Esports',              role:'duelist',   region:'emea'},
+    {name:'Rose',       team:'BBL Esports',              role:'initiator', region:'emea'},
+    {name:'Crewen',     team:'BBL Esports',              role:'sentinel',  region:'emea'},
+    // FNATIC
+    {name:'Alfajer',    team:'FNATIC',                   role:'sentinel',  region:'emea'},
+    {name:'Veqaj',      team:'FNATIC',                   role:'controller',region:'emea'},
+    {name:'crashies',   team:'FNATIC',                   role:'initiator', region:'emea'},
+    {name:'kaajak',     team:'FNATIC',                   role:'duelist',   region:'emea'},
+    {name:'Boaster',    team:'FNATIC',                   role:'controller',region:'emea'},
+    // FUT Esports
+    {name:'xeus',       team:'FUT Esports',              role:'duelist',   region:'emea'},
+    {name:'MrFaliN',    team:'FUT Esports',              role:'controller',region:'emea'},
+    {name:'yetujey',    team:'FUT Esports',              role:'sentinel',  region:'emea'},
+    {name:'KROSTALY',   team:'FUT Esports',              role:'initiator', region:'emea'},
+    {name:'S0PP',       team:'FUT Esports',              role:'duelist',   region:'emea'},
+    // Gentle Mates
+    {name:'marteen',    team:'Gentle Mates',             role:'duelist',   region:'emea'},
+    {name:'Minny',      team:'Gentle Mates',             role:'sentinel',  region:'emea'},
+    {name:'bipo',       team:'Gentle Mates',             role:'duelist',   region:'emea'},
+    {name:'starxo',     team:'Gentle Mates',             role:'initiator', region:'emea'},
+    {name:'GLYPH',      team:'Gentle Mates',             role:'controller',region:'emea'},
+    // GIANTX
+    {name:'Flickless',  team:'GIANTX',                   role:'initiator', region:'emea'},
+    {name:'Cloud',      team:'GIANTX',                   role:'initiator', region:'emea'},
+    {name:'westside',   team:'GIANTX',                   role:'sentinel',  region:'emea'},
+    {name:'grubinho',   team:'GIANTX',                   role:'controller',region:'emea'},
+    {name:'ara',        team:'GIANTX',                   role:'duelist',   region:'emea'},
+    // Karmine Corp
+    {name:'dos9',       team:'Karmine Corp',             role:'controller',region:'emea'},
+    {name:'SUYGETSU',   team:'Karmine Corp',             role:'sentinel',  region:'emea'},
+    {name:'LewN',       team:'Karmine Corp',             role:'duelist',   region:'emea'},
+    {name:'Avez',       team:'Karmine Corp',             role:'initiator', region:'emea'},
+    {name:'N4RRATE',    team:'Karmine Corp',             role:'initiator', region:'emea'},
+    // Natus Vincere
+    {name:'hiro',       team:'Natus Vincere',            role:'sentinel',  region:'emea'},
+    {name:'Ruxic',      team:'Natus Vincere',            role:'controller',region:'emea'},
+    {name:'Filu',       team:'Natus Vincere',            role:'duelist',   region:'emea'},
+    {name:'Exit',       team:'Natus Vincere',            role:'duelist',   region:'emea'},
+    {name:'Chloric',    team:'Natus Vincere',            role:'initiator', region:'emea'},
+    // Team Heretics
+    {name:'benjyfishy', team:'Team Heretics',            role:'sentinel',  region:'emea'},
+    {name:'ComeBack',   team:'Team Heretics',            role:'duelist',   region:'emea'},
+    {name:'Boo',        team:'Team Heretics',            role:'controller',region:'emea'},
+    {name:'RieNs',      team:'Team Heretics',            role:'initiator', region:'emea'},
+    {name:'Wo0t',       team:'Team Heretics',            role:'initiator', region:'emea'},
+    // Team Liquid
+    {name:'MiniBoo',    team:'Team Liquid',              role:'duelist',   region:'emea'},
+    {name:'nAts',       team:'Team Liquid',              role:'sentinel',  region:'emea'},
+    {name:'kamo',       team:'Team Liquid',              role:'duelist',   region:'emea'},
+    {name:'purp0',      team:'Team Liquid',              role:'initiator', region:'emea'},
+    {name:'wayne',      team:'Team Liquid',              role:'controller',region:'emea'},
+    // Team Vitality
+    {name:'Chronicle',  team:'Team Vitality',            role:'sentinel',  region:'emea'},
+    {name:'Derke',      team:'Team Vitality',            role:'duelist',   region:'emea'},
+    {name:'Jamppi',     team:'Team Vitality',            role:'initiator', region:'emea'},
+    {name:'PROFEK',     team:'Team Vitality',            role:'controller',region:'emea'},
+    {name:'Sayonara',   team:'Team Vitality',            role:'initiator', region:'emea'},
+    // Eternal Fire
+    {name:'audaz',      team:'Eternal Fire',             role:'controller',region:'emea'},
+    {name:'nekky',      team:'Eternal Fire',             role:'initiator', region:'emea'},
+    {name:'Favian',     team:'Eternal Fire',             role:'duelist',   region:'emea'},
+    {name:'Izzy',       team:'Eternal Fire',             role:'duelist',   region:'emea'},
+    {name:'Echo',       team:'Eternal Fire',             role:'sentinel',  region:'emea'},
+
+    // ── Americas ─────────────────────────────────────────────────────────────
+    // 100 Thieves
+    {name:'Cryocells',  team:'100 Thieves',              role:'duelist',   region:'americas'},
+    {name:'bang',       team:'100 Thieves',              role:'controller',region:'americas'},
+    {name:'vora',       team:'100 Thieves',              role:'initiator', region:'americas'},
+    {name:'Asuna',      team:'100 Thieves',              role:'duelist',   region:'americas'},
+    {name:'Timotino',   team:'100 Thieves',              role:'sentinel',  region:'americas'},
+    // Cloud9
+    {name:'v1c',        team:'Cloud9',                   role:'controller',region:'americas'},
+    {name:'Xeppaa',     team:'Cloud9',                   role:'initiator', region:'americas'},
+    {name:'penny',      team:'Cloud9',                   role:'initiator', region:'americas'},
+    {name:'Zellsis',    team:'Cloud9',                   role:'duelist',   region:'americas'},
+    {name:'OXY',        team:'Cloud9',                   role:'duelist',   region:'americas'},
+    // Evil Geniuses
+    {name:'dgzin',      team:'Evil Geniuses',            role:'controller',region:'americas'},
+    {name:'supamen',    team:'Evil Geniuses',            role:'duelist',   region:'americas'},
+    {name:'bao',        team:'Evil Geniuses',            role:'controller',region:'americas'},
+    {name:'C0M',        team:'Evil Geniuses',            role:'initiator', region:'americas'},
+    {name:'Okeanos',    team:'Evil Geniuses',            role:'sentinel',  region:'americas'},
+    // FURIA
+    {name:'koalanoob',  team:'FURIA',                    role:'controller',region:'americas'},
+    {name:'artzin',     team:'FURIA',                    role:'duelist',   region:'americas'},
+    {name:'eeiu',       team:'FURIA',                    role:'duelist',   region:'americas'},
+    {name:'alym',       team:'FURIA',                    role:'initiator', region:'americas'},
+    {name:'nerve',      team:'FURIA',                    role:'sentinel',  region:'americas'},
+    // KRÜ Esports
+    {name:'NagZ',       team:'KR\u00dc Esports',         role:'duelist',   region:'americas'},
+    {name:'mta',        team:'KR\u00dc Esports',         role:'sentinel',  region:'americas'},
+    {name:'benG',       team:'KR\u00dc Esports',         role:'controller',region:'americas'},
+    {name:'infiltrator',team:'KR\u00dc Esports',         role:'initiator', region:'americas'},
+    {name:'Governor',   team:'KR\u00dc Esports',         role:'sentinel',  region:'americas'},
+    // LEVIATÁN
+    {name:'kiNgg',      team:'LEVIAT\u00c1N',            role:'controller',region:'americas'},
+    {name:'blowz',      team:'LEVIAT\u00c1N',            role:'duelist',   region:'americas'},
+    {name:'Sato',       team:'LEVIAT\u00c1N',            role:'initiator', region:'americas'},
+    {name:'spike',      team:'LEVIAT\u00c1N',            role:'sentinel',  region:'americas'},
+    {name:'Neon',       team:'LEVIAT\u00c1N',            role:'duelist',   region:'americas'},
+    // LOUD
+    {name:'lukxo',      team:'LOUD',                     role:'sentinel',  region:'americas'},
+    {name:'Darker',     team:'LOUD',                     role:'initiator', region:'americas'},
+    {name:'pANcada',    team:'LOUD',                     role:'controller',region:'americas'},
+    {name:'cauanzin',   team:'LOUD',                     role:'duelist',   region:'americas'},
+    {name:'Virtyy',     team:'LOUD',                     role:'duelist',   region:'americas'},
+    // MIBR
+    {name:'Verno',      team:'MIBR',                     role:'sentinel',  region:'americas'},
+    {name:'zekken',     team:'MIBR',                     role:'duelist',   region:'americas'},
+    {name:'aspas',      team:'MIBR',                     role:'duelist',   region:'americas'},
+    {name:'Mazino',     team:'MIBR',                     role:'controller',region:'americas'},
+    {name:'tex',        team:'MIBR',                     role:'initiator', region:'americas'},
+    // NRG
+    {name:'brawk',      team:'NRG',                      role:'controller',region:'americas'},
+    {name:'mada',       team:'NRG',                      role:'initiator', region:'americas'},
+    {name:'keiko',      team:'NRG',                      role:'duelist',   region:'americas'},
+    {name:'skuba',      team:'NRG',                      role:'sentinel',  region:'americas'},
+    {name:'Ethan',      team:'NRG',                      role:'initiator', region:'americas'},
+    // Sentinels
+    {name:'johnqt',     team:'Sentinels',                role:'initiator', region:'americas'},
+    {name:'Reduxx',     team:'Sentinels',                role:'duelist',   region:'americas'},
+    {name:'Kyu',        team:'Sentinels',                role:'controller',region:'americas'},
+    {name:'cortezia',   team:'Sentinels',                role:'sentinel',  region:'americas'},
+    // G2 Esports
+    {name:'valyn',      team:'G2 Esports',               role:'controller',region:'americas'},
+    {name:'BABYBAY',    team:'G2 Esports',               role:'duelist',   region:'americas'},
+    {name:'trent',      team:'G2 Esports',               role:'initiator', region:'americas'},
+    {name:'leaf',       team:'G2 Esports',               role:'duelist',   region:'americas'},
+    {name:'jawgemo',    team:'G2 Esports',               role:'sentinel',  region:'americas'},
+    // ENVY
+    {name:'Rossy',      team:'ENVY',                     role:'controller',region:'americas'},
+    {name:'keznit',     team:'ENVY',                     role:'duelist',   region:'americas'},
+    {name:'Eggsterr',   team:'ENVY',                     role:'initiator', region:'americas'},
+    {name:'P0PPIN',     team:'ENVY',                     role:'sentinel',  region:'americas'},
+    {name:'Demon1',     team:'ENVY',                     role:'duelist',   region:'americas'},
 ];
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
+// ── Constants ─────────────────────────────────────────────────────────────────
+const BUDGET       = 100;
+const MAX_PER_TEAM = 2;
+const VFL_EVENT_ID = 8;
 
+// ── State ─────────────────────────────────────────────────────────────────────
+let allPlayers   = [];   // enriched pool (pts + price + region)
+let currentTeam  = [];   // user's selected 11
+let teamLogoMap  = new Map();
+let activeRegion = 'all';
+let searchTerm   = '';
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
 function normName(s) {
     return s.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
@@ -421,17 +716,11 @@ function normName(s) {
 function setStatus(html) {
     document.getElementById('statusArea').innerHTML = html;
     document.getElementById('statusArea').classList.remove('hidden');
-    document.getElementById('resultsArea').classList.add('hidden');
+    document.getElementById('selectionPhase').classList.add('hidden');
+    document.getElementById('resultsPhase').classList.add('hidden');
 }
 
-function clearStatus() {
-    document.getElementById('statusArea').classList.add('hidden');
-}
-
-// ── VFL price fetch (5 s timeout) ────────────────────────────────────────────
-
-const VFL_EVENT_ID = 8;
-
+// ── VFL price fetch ───────────────────────────────────────────────────────────
 async function fetchVflPrices() {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 5000);
@@ -455,223 +744,211 @@ async function fetchVflPrices() {
     }
 }
 
-// ── Branch-and-Bound Optimizer ────────────────────────────────────────────────
+// ── Transfer solver ───────────────────────────────────────────────────────────
 //
-// Slot order: D, D, C, C, I, I, S, S, WC, WC, WC
-// At each slot, enumerate valid candidates (role match, team cap, budget).
-// Prune with a fractional-knapsack upper bound (ignores role/team constraints
-// for the remaining slots — always overestimates, always a valid upper bound).
-// Candidates per slot are visited in descending pts order so good solutions are
-// found early, maximising subsequent pruning.
+// Tries all C(11,3) = 165 drop combinations. For each, finds the best 3
+// additions from the remaining pool where ≥2 are Americas players.
+// Maximises total team VFL pts, respecting the 100 VP budget cap and
+// max-2-per-team rule.
 
-const BUDGET       = 100;
-const MAX_PER_TEAM = 2;
-const SLOTS = [
-    'duelist','duelist',
-    'controller','controller',
-    'initiator','initiator',
-    'sentinel','sentinel',
-    'wildcard','wildcard','wildcard',
-];
+function getRequiredSlots(kept) {
+    // Given 8 kept players, compute the 3 slot types the additions must fill.
+    const cnt = { duelist: 0, controller: 0, initiator: 0, sentinel: 0 };
+    for (const p of kept) cnt[p.role]++;
 
-function solve(players) {
-    // Sort all players by pts desc — used for UB calculation and wildcard slots
-    const allByPts = [...players].sort((a, b) => b.pts - a.pts);
+    const D_rem = Math.max(0, 2 - cnt.duelist);
+    const C_rem = Math.max(0, 2 - cnt.controller);
+    const I_rem = Math.max(0, 2 - cnt.initiator);
+    const S_rem = Math.max(0, 2 - cnt.sentinel);
+    // Players beyond 2 per role spill into wildcard slots
+    const excess = Math.max(0, cnt.duelist - 2) + Math.max(0, cnt.controller - 2) +
+                   Math.max(0, cnt.initiator - 2) + Math.max(0, cnt.sentinel - 2);
+    const WC_rem = 3 - excess;
 
-    // Group by role, sorted by pts desc — used for role slots
-    const byRole = { duelist:[], controller:[], initiator:[], sentinel:[] };
-    for (const p of allByPts) {
-        if (byRole[p.role]) byRole[p.role].push(p);
-    }
-
-    // Global minimum price — used for feasibility guard
-    const minPrice = Math.min(...players.map(p => p.price));
-
-    let bestPts  = 0;
-    let bestTeam = null;
-    let nodes    = 0;
-    const t0 = performance.now();
-
-    // Fractional knapsack upper bound over the remaining (slotsLeft) slots,
-    // ignoring role and team constraints.  Always >= actual achievable points.
-    function upperBound(slotsLeft, usedNames, budgetLeft) {
-        if (slotsLeft === 0 || budgetLeft <= 0) return 0;
-        let pts = 0, budget = budgetLeft, taken = 0;
-        for (const p of allByPts) {
-            if (taken >= slotsLeft) break;
-            if (usedNames.has(p.name)) continue;
-            if (p.price <= budget) {
-                pts    += p.pts;
-                budget -= p.price;
-                taken++;
-            } else {
-                // Fractional pick — valid relaxation
-                pts += p.pts * (budget / p.price);
-                break;
-            }
-        }
-        return pts;
-    }
-
-    // Recursive branch function
-    function branch(slotIdx, selected, teamCounts, usedNames, budgetLeft, currentPts) {
-        nodes++;
-
-        if (slotIdx === SLOTS.length) {
-            if (currentPts > bestPts) {
-                bestPts  = currentPts;
-                bestTeam = selected.map(p => ({ ...p }));
-            }
-            return;
-        }
-
-        const slotsLeft = SLOTS.length - slotIdx;
-
-        // Feasibility: can we still afford the minimum cost for every remaining slot?
-        if (budgetLeft < slotsLeft * minPrice) return;
-
-        // Upper bound pruning
-        if (currentPts + upperBound(slotsLeft, usedNames, budgetLeft) <= bestPts) return;
-
-        const slotType   = SLOTS[slotIdx];
-        const candidates = slotType === 'wildcard' ? allByPts : byRole[slotType];
-
-        for (const p of candidates) {
-            if (usedNames.has(p.name))                    continue; // already picked
-            if ((teamCounts[p.team] || 0) >= MAX_PER_TEAM) continue; // team cap
-            if (p.price > budgetLeft)                     continue; // over budget
-            // Reserve minimum budget for remaining slots after this pick
-            if (budgetLeft - p.price < (slotsLeft - 1) * minPrice) continue;
-
-            // Explore branch
-            usedNames.add(p.name);
-            teamCounts[p.team] = (teamCounts[p.team] || 0) + 1;
-            selected.push(p);
-
-            branch(
-                slotIdx + 1,
-                selected, teamCounts, usedNames,
-                budgetLeft - p.price,
-                currentPts + p.pts
-            );
-
-            // Backtrack
-            selected.pop();
-            teamCounts[p.team]--;
-            if (teamCounts[p.team] === 0) delete teamCounts[p.team];
-            usedNames.delete(p.name);
-        }
-    }
-
-    branch(0, [], {}, new Set(), BUDGET, 0);
-
-    const elapsed = (performance.now() - t0).toFixed(1);
-    return bestTeam
-        ? { team: bestTeam, pts: bestPts, nodes, elapsed }
-        : null;
+    const slots = [];
+    for (let i = 0; i < D_rem;  i++) slots.push('duelist');
+    for (let i = 0; i < C_rem;  i++) slots.push('controller');
+    for (let i = 0; i < I_rem;  i++) slots.push('initiator');
+    for (let i = 0; i < S_rem;  i++) slots.push('sentinel');
+    for (let i = 0; i < WC_rem; i++) slots.push('wildcard');
+    return slots; // always length 3
 }
 
-// ── Render results ────────────────────────────────────────────────────────────
-
-function buildResults(result, teamLogoMap) {
-    const { team, pts, nodes, elapsed } = result;
-    const totalCost = team.reduce((s, p) => s + p.price, 0);
-    const remain    = BUDGET - totalCost;
-
-    // Summary
-    document.getElementById('sumPts').textContent    = pts.toFixed(2);
-    document.getElementById('sumCost').textContent   = `${totalCost.toFixed(1)} VP`;
-    document.getElementById('sumAvg').textContent    = (pts / 11).toFixed(2);
-    const remainEl = document.getElementById('sumRemain');
-    remainEl.textContent = `${remain.toFixed(1)} VP`;
-    remainEl.className   = `sum-val ${remain >= 0 ? 'budget-ok' : 'budget-warn'}`;
-
-    document.getElementById('metaNote').textContent =
-        `Branch-and-bound · ${nodes.toLocaleString()} nodes · ${elapsed} ms · ` +
-        `max 2 per team · 100 VP budget`;
-
-    const rolePlayers = team.filter(p => p.slotType !== 'wildcard');
-    const wcPlayers   = team.filter(p => p.slotType === 'wildcard');
-
-    renderGrid('roleGrid', rolePlayers, teamLogoMap);
-    renderGrid('wcGrid',   wcPlayers,   teamLogoMap);
-
-    document.getElementById('resultsArea').classList.remove('hidden');
-    clearStatus();
-    document.getElementById('rerunBtn').style.display = '';
+// Check if 3 players can be assigned to 3 slots (any permutation)
+const PERMS3 = [[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
+function canFillSlots(pa, pb, pc, slots) {
+    const ps = [pa, pb, pc];
+    for (const perm of PERMS3) {
+        if (slots.every((slot, i) =>
+            slot === 'wildcard' || slot === ps[perm[i]].role
+        )) return true;
+    }
+    return false;
 }
 
-function renderGrid(containerId, players, teamLogoMap) {
-    const grid = document.getElementById(containerId);
+function findBestAdditions(pool, kept, slots) {
+    const budgetLeft = BUDGET - kept.reduce((s, p) => s + p.price, 0);
+    const teamCounts = {};
+    for (const p of kept) teamCounts[p.team] = (teamCounts[p.team] || 0) + 1;
+
+    let bestPts = -Infinity;
+    let bestAdd = null;
+    const n = pool.length;
+
+    for (let a = 0; a < n; a++) {
+        const pa = pool[a];
+        if ((teamCounts[pa.team] || 0) >= MAX_PER_TEAM) continue;
+        if (pa.price > budgetLeft) continue;
+
+        for (let b = a + 1; b < n; b++) {
+            const pb = pool[b];
+            // Team cap for b (accounting for a)
+            const tcB = (teamCounts[pb.team] || 0) + (pb.team === pa.team ? 1 : 0);
+            if (tcB >= MAX_PER_TEAM) continue;
+            if (pa.price + pb.price > budgetLeft) continue;
+
+            for (let c = b + 1; c < n; c++) {
+                const pc = pool[c];
+                // Team cap for c (accounting for a + b)
+                const tcC = (teamCounts[pc.team] || 0) +
+                            (pc.team === pa.team ? 1 : 0) +
+                            (pc.team === pb.team ? 1 : 0);
+                if (tcC >= MAX_PER_TEAM) continue;
+                if (pa.price + pb.price + pc.price > budgetLeft) continue;
+
+                // Americas constraint: ≥2 of 3 must be Americas
+                const amCount = (pa.region === 'americas' ? 1 : 0) +
+                                (pb.region === 'americas' ? 1 : 0) +
+                                (pc.region === 'americas' ? 1 : 0);
+                if (amCount < 2) continue;
+
+                // Role slot compatibility
+                if (!canFillSlots(pa, pb, pc, slots)) continue;
+
+                const pts = pa.pts + pb.pts + pc.pts;
+                if (pts > bestPts) {
+                    bestPts = pts;
+                    bestAdd = [pa, pb, pc];
+                }
+            }
+        }
+    }
+
+    return bestAdd ? { players: bestAdd, pts: bestPts } : null;
+}
+
+function solveTransfers(currentTeam, pool) {
+    let best = null;
+    let bestNewPts = -Infinity;
+
+    for (let i = 0; i < 11; i++) {
+        for (let j = i + 1; j < 11; j++) {
+            for (let k = j + 1; k < 11; k++) {
+                const drop = [currentTeam[i], currentTeam[j], currentTeam[k]];
+                const kept = currentTeam.filter((_, idx) => idx !== i && idx !== j && idx !== k);
+                const slots = getRequiredSlots(kept);
+                const keptPts = kept.reduce((s, p) => s + p.pts, 0);
+
+                const addResult = findBestAdditions(pool, kept, slots);
+                if (!addResult) continue;
+
+                const newPts = keptPts + addResult.pts;
+                if (newPts > bestNewPts) {
+                    bestNewPts = newPts;
+                    best = { drop, add: addResult.players, kept, newPts };
+                }
+            }
+        }
+    }
+
+    return best;
+}
+
+// ── Pool rendering ────────────────────────────────────────────────────────────
+function makeLogoEl(team, small = false) {
+    const size = small ? 16 : 18;
+    const logo = teamLogoMap.get(team);
+    if (logo) {
+        const img = document.createElement('img');
+        img.className = small ? 'pc-logo' : 'team-logo';
+        img.src   = logo; img.alt = team; img.loading = 'lazy';
+        img.onerror = function () {
+            const ph = document.createElement('div');
+            ph.className   = small ? 'pc-logo-ph' : 'team-logo-ph';
+            ph.textContent = team.slice(0, 2).toUpperCase();
+            this.replaceWith(ph);
+        };
+        return img;
+    }
+    const ph = document.createElement('div');
+    ph.className   = small ? 'pc-logo-ph' : 'team-logo-ph';
+    ph.textContent = team.slice(0, 2).toUpperCase();
+    return ph;
+}
+
+function renderPool() {
+    const grid = document.getElementById('poolGrid');
     grid.innerHTML = '';
+    const maxed = currentTeam.length >= 11;
+    const selectedNames = new Set(currentTeam.map(p => p.name));
+    const term = searchTerm.toLowerCase();
 
-    // Sort role players by role for a tidy display
-    const ORDER = { duelist:0, controller:1, initiator:2, sentinel:3, wildcard:4 };
-    const sorted = [...players].sort((a, b) =>
-        ORDER[a.role] - ORDER[b.role] || b.pts - a.pts
-    );
+    const visible = allPlayers.filter(p => {
+        if (activeRegion !== 'all' && p.region !== activeRegion) return false;
+        if (term && !p.name.toLowerCase().includes(term) && !p.team.toLowerCase().includes(term)) return false;
+        return true;
+    });
 
-    for (const p of sorted) {
+    for (const p of visible) {
+        const isSelected = selectedNames.has(p.name);
         const rs = ROLE_STYLE[p.role] || ROLE_STYLE.wildcard;
 
         const card = document.createElement('div');
-        card.className = 'player-card';
+        card.className = 'pool-card' +
+            (isSelected ? ' selected' : '') +
+            (!isSelected && maxed ? ' maxed' : '');
         card.style.setProperty('--role-color', rs.color);
         card.style.setProperty('--role-bg',    rs.bg);
+        if (!maxed || isSelected) card.onclick = () => togglePlayer(p);
 
-        // Top row: badge + pts
+        // Top row
         const top = document.createElement('div');
-        top.className = 'card-top';
+        top.className = 'pc-top';
 
-        const badge = document.createElement('span');
-        badge.className   = 'role-badge';
-        badge.textContent = p.slotType === 'wildcard'
-            ? `${p.role} (flex)`
-            : p.role;
+        const badges = document.createElement('div');
+        badges.style.cssText = 'display:flex;gap:0.3rem;align-items:center;flex-wrap:wrap';
+
+        const roleBadge = document.createElement('span');
+        roleBadge.className   = 'pc-badge';
+        roleBadge.textContent = p.role;
+        badges.appendChild(roleBadge);
+
+        const regionBadge = document.createElement('span');
+        regionBadge.className   = `pc-region ${p.region}`;
+        regionBadge.textContent = p.region === 'americas' ? 'AME' : p.region === 'pacific' ? 'PAC' : 'EMEA';
+        badges.appendChild(regionBadge);
 
         const ptsEl = document.createElement('span');
-        ptsEl.className   = 'card-pts';
+        ptsEl.className   = 'pc-pts';
         ptsEl.textContent = `${p.pts.toFixed(2)} pts`;
 
-        top.append(badge, ptsEl);
+        top.append(badges, ptsEl);
 
-        // Name
         const nameEl = document.createElement('div');
-        nameEl.className   = 'card-name';
+        nameEl.className   = 'pc-name';
         nameEl.textContent = p.name;
 
-        // Team row
         const teamRow = document.createElement('div');
-        teamRow.className = 'card-team';
-        const logo = teamLogoMap.get(p.team);
-        let logoEl;
-        if (logo) {
-            logoEl = document.createElement('img');
-            logoEl.className = 'team-logo';
-            logoEl.src   = logo;
-            logoEl.alt   = p.team;
-            logoEl.loading = 'lazy';
-            logoEl.onerror = function () {
-                const ph = document.createElement('div');
-                ph.className   = 'team-logo-ph';
-                ph.textContent = p.team.slice(0, 2).toUpperCase();
-                this.replaceWith(ph);
-            };
-        } else {
-            logoEl = document.createElement('div');
-            logoEl.className   = 'team-logo-ph';
-            logoEl.textContent = p.team.slice(0, 2).toUpperCase();
-        }
-        const teamNameEl = document.createElement('span');
-        teamNameEl.className   = 'team-name-text';
-        teamNameEl.textContent = p.team;
-        teamRow.append(logoEl, teamNameEl);
+        teamRow.className = 'pc-team';
+        teamRow.append(makeLogoEl(p.team, true));
+        const tn = document.createElement('span');
+        tn.textContent = p.team;
+        teamRow.appendChild(tn);
 
-        // Bottom: price
         const bottom = document.createElement('div');
-        bottom.className = 'card-bottom';
+        bottom.className = 'pc-bottom';
         const priceEl = document.createElement('div');
-        priceEl.className = 'card-price';
+        priceEl.className = 'pc-price';
         priceEl.innerHTML = `Price: <span>${p.price} VP</span>`;
         bottom.appendChild(priceEl);
 
@@ -680,23 +957,238 @@ function renderGrid(containerId, players, teamLogoMap) {
     }
 }
 
-// ── Main ─────────────────────────────────────────────────────────────────────
+function renderTeamSidebar() {
+    const list = document.getElementById('teamList');
+    list.innerHTML = '';
 
-async function runOptimizer() {
-    document.getElementById('rerunBtn').style.display = 'none';
-    setStatus('<span class="spinner"></span> Fetching player data…');
+    for (let i = 0; i < 11; i++) {
+        const p = currentTeam[i];
+        if (!p) {
+            const empty = document.createElement('div');
+            empty.className   = 'team-slot-empty';
+            empty.textContent = `Slot ${i + 1}`;
+            list.appendChild(empty);
+            continue;
+        }
 
-    // Load VCT data and VFL prices in parallel
-    let vctData;
+        const rs = ROLE_STYLE[p.role] || ROLE_STYLE.wildcard;
+        const item = document.createElement('div');
+        item.className = 'team-list-item';
+
+        const dot = document.createElement('span');
+        dot.className = 'tli-role';
+        dot.style.background = rs.color;
+
+        const name = document.createElement('span');
+        name.className   = 'tli-name';
+        name.textContent = p.name;
+
+        const team = document.createElement('span');
+        team.className   = 'tli-team';
+        team.textContent = p.team;
+
+        const rm = document.createElement('span');
+        rm.className   = 'tli-remove';
+        rm.textContent = '×';
+        rm.title       = `Remove ${p.name}`;
+        rm.onclick = () => togglePlayer(p);
+
+        item.append(dot, name, team, rm);
+        list.appendChild(item);
+    }
+
+    // Budget info
+    const budget = document.getElementById('sidebarBudget');
+    if (currentTeam.length > 0) {
+        const totalCost = currentTeam.reduce((s, p) => s + p.price, 0);
+        const remain    = BUDGET - totalCost;
+        budget.innerHTML = `
+            <div class="sb-row"><span>Cost</span><span class="sb-val">${totalCost.toFixed(1)} VP</span></div>
+            <div class="sb-row"><span>Remaining</span>
+                <span class="sb-val ${remain >= 0 ? 'ok' : 'warn'}">${remain.toFixed(1)} VP</span>
+            </div>
+        `;
+        budget.style.display = '';
+    } else {
+        budget.style.display = 'none';
+    }
+
+    // Update counter badge
+    const badge = document.getElementById('selCountBadge');
+    badge.textContent = `${currentTeam.length} / 11`;
+    badge.className   = 'sel-count-badge' + (currentTeam.length === 11 ? ' complete' : '');
+
+    // Enable / disable suggest button
+    document.getElementById('suggestBtn').disabled = currentTeam.length !== 11;
+}
+
+function togglePlayer(p) {
+    const idx = currentTeam.findIndex(t => t.name === p.name);
+    if (idx >= 0) {
+        currentTeam.splice(idx, 1);
+    } else {
+        if (currentTeam.length < 11) currentTeam.push(p);
+    }
+    renderPool();
+    renderTeamSidebar();
+}
+
+function filterPool() {
+    searchTerm = document.getElementById('searchBox').value;
+    renderPool();
+}
+
+function setRegionFilter(region, btn) {
+    activeRegion = region;
+    document.querySelectorAll('.rf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderPool();
+}
+
+function showSelectionPhase() {
+    document.getElementById('statusArea').classList.add('hidden');
+    document.getElementById('selectionPhase').classList.remove('hidden');
+    document.getElementById('resultsPhase').classList.add('hidden');
+    renderPool();
+    renderTeamSidebar();
+}
+
+// ── Result rendering ──────────────────────────────────────────────────────────
+function makePlayerCard(p, modifier = '') {
+    const rs = ROLE_STYLE[p.role] || ROLE_STYLE.wildcard;
+
+    const card = document.createElement('div');
+    card.className = 'player-card' + (modifier ? ' ' + modifier : '');
+    card.style.setProperty('--role-color', rs.color);
+    card.style.setProperty('--role-bg',    rs.bg);
+
+    const top = document.createElement('div');
+    top.className = 'card-top';
+
+    const badges = document.createElement('div');
+    badges.className = 'card-badges';
+
+    const roleBadge = document.createElement('span');
+    roleBadge.className   = 'role-badge';
+    roleBadge.textContent = p.role;
+    badges.appendChild(roleBadge);
+
+    const regionBadge = document.createElement('span');
+    regionBadge.className   = `region-badge ${p.region}`;
+    regionBadge.textContent = p.region === 'americas' ? 'AME' : p.region === 'pacific' ? 'PAC' : 'EMEA';
+    badges.appendChild(regionBadge);
+
+    const ptsEl = document.createElement('span');
+    ptsEl.className   = 'card-pts';
+    ptsEl.textContent = `${p.pts.toFixed(2)} pts`;
+
+    top.append(badges, ptsEl);
+
+    const nameEl = document.createElement('div');
+    nameEl.className   = 'card-name';
+    nameEl.textContent = p.name;
+
+    const teamRow = document.createElement('div');
+    teamRow.className = 'card-team';
+    teamRow.append(makeLogoEl(p.team));
+    const tn = document.createElement('span');
+    tn.className   = 'team-name-text';
+    tn.textContent = p.team;
+    teamRow.appendChild(tn);
+
+    const priceEl = document.createElement('div');
+    priceEl.className = 'card-price';
+    priceEl.innerHTML = `Price: <span>${p.price} VP</span>`;
+
+    card.append(top, nameEl, teamRow, priceEl);
+    return card;
+}
+
+function renderGrid(id, players, modifier = '') {
+    const grid = document.getElementById(id);
+    grid.innerHTML = '';
+    const ORDER = { duelist:0, controller:1, initiator:2, sentinel:3 };
+    const sorted = [...players].sort((a, b) =>
+        (ORDER[a.role] ?? 9) - (ORDER[b.role] ?? 9) || b.pts - a.pts
+    );
+    for (const p of sorted) grid.appendChild(makePlayerCard(p, modifier));
+}
+
+function showResults(result, ptsBefore) {
+    const { drop, add, kept, newPts } = result;
+    const gain = newPts - ptsBefore;
+
+    // Summary
+    document.getElementById('tsPtsBefore').textContent = ptsBefore.toFixed(2);
+    document.getElementById('tsPtsAfter').textContent  = newPts.toFixed(2);
+
+    const gainEl = document.getElementById('tsPtsGain');
+    gainEl.textContent = (gain >= 0 ? '+' : '') + gain.toFixed(2);
+    gainEl.className   = `ts-val ${gain >= 0 ? 'gain-pos' : 'gain-neg'}`;
+
+    const newTeam = [...kept, ...add];
+    const totalCost = newTeam.reduce((s, p) => s + p.price, 0);
+    const remain    = BUDGET - totalCost;
+    const budgetEl  = document.getElementById('tsBudget');
+    budgetEl.textContent = `${remain.toFixed(1)} VP`;
+    budgetEl.className   = `ts-val ${remain >= 0 ? 'budget-ok' : 'budget-warn'}`;
+
+    const americasInNewTeam = newTeam.filter(p => p.region === 'americas').length;
+    document.getElementById('tsAmericasCount').textContent =
+        `${americasInNewTeam} / 11`;
+
+    // Grids
+    renderGrid('dropGrid', drop, 'card-out');
+    renderGrid('addGrid',  add,  'card-in');
+    renderGrid('fullTeamGrid', newTeam);
+
+    const americasIn = add.filter(p => p.region === 'americas').length;
+    document.getElementById('metaNote').textContent =
+        `${americasIn}/3 incoming players are Americas · max 2 per team · 100 VP budget`;
+
+    document.getElementById('selectionPhase').classList.add('hidden');
+    document.getElementById('resultsPhase').classList.remove('hidden');
+}
+
+// ── Transfer optimizer entry point ────────────────────────────────────────────
+async function runTransferOptimizer() {
+    document.getElementById('suggestBtn').disabled = true;
+    setStatus('<span class="spinner"></span> Finding best transfers…');
+
+    await new Promise(r => setTimeout(r, 40)); // yield to paint
+
+    const currentNames = new Set(currentTeam.map(p => p.name));
+    const pool = allPlayers.filter(p => !currentNames.has(p.name));
+
+    const ptsBefore = currentTeam.reduce((s, p) => s + p.pts, 0);
+    const result    = solveTransfers(currentTeam, pool);
+
+    if (!result) {
+        setStatus(`<span class="error-text">
+            No valid transfer found.<br>
+            Check that your team budget is ≤ 100 VP and all players have live prices.
+        </span>`);
+        document.getElementById('suggestBtn').disabled = false;
+        showSelectionPhase();
+        return;
+    }
+
+    showResults(result, ptsBefore);
+    document.getElementById('suggestBtn').disabled = false;
+}
+
+// ── Initial data load ─────────────────────────────────────────────────────────
+async function init() {
+    setStatus('<span class="spinner"></span> Loading player data…');
+
     const [vctResp, priceMap] = await Promise.all([
         fetch('./vct_data.json', { cache: 'no-cache' })
             .then(r => r.ok ? r.json() : null)
             .catch(() => null),
         fetchVflPrices(),
     ]);
-    vctData = vctResp;
 
-    if (!vctData || !Array.isArray(vctData.teams)) {
+    if (!vctResp || !Array.isArray(vctResp.teams)) {
         setStatus(`<span class="error-text">
             Could not load <code>vct_data.json</code>.<br>
             Run <code>python scraper/scrape_vct.py</code> then refresh.
@@ -704,75 +1196,45 @@ async function runOptimizer() {
         return;
     }
 
-    // Build lookup: normalised name → vflPts
-    const ptsMap     = new Map();
-    const teamLogoMap = new Map(); // team name → logo URL
-    for (const team of vctData.teams) {
+    // Build pts map + logo map from vct_data.json
+    const ptsMap = new Map();
+    for (const team of vctResp.teams) {
         if (team.logo) teamLogoMap.set(team.name, team.logo);
         for (const p of team.players || []) {
             if (p.vflPts != null) ptsMap.set(normName(p.name), p.vflPts);
         }
     }
 
-    // Join VFL_ROLES with pts + prices
-    const players = [];
-    const missingPts    = [];
-    const missingPrice  = [];
+    // Enrich VFL_ROLES with pts + prices
+    const missingPrice = [];
     for (const rp of VFL_ROLES) {
         const key   = normName(rp.name);
         const pts   = ptsMap.get(key);
         const price = priceMap.get(key);
-        if (pts   == null) { missingPts.push(rp.name);   continue; }
+        if (pts   == null) continue;
         if (price == null) { missingPrice.push(rp.name); continue; }
         if (price <= 0)    continue;
-        players.push({ name: rp.name, team: rp.team, role: rp.role, pts, price });
+        allPlayers.push({ ...rp, pts, price });
     }
 
-    if (players.length < 11) {
-        const priceNote = missingPrice.length
-            ? `<br><small>No VFL price for: ${missingPrice.slice(0,5).join(', ')}${missingPrice.length > 5 ? '…' : ''}</small>`
+    // Sort by pts desc for display
+    allPlayers.sort((a, b) => b.pts - a.pts);
+
+    if (allPlayers.length < 11) {
+        const note = missingPrice.length
+            ? `<br><small>No VFL price for: ${missingPrice.slice(0, 6).join(', ')}${missingPrice.length > 6 ? '…' : ''}</small>`
             : '';
         setStatus(`<span class="error-text">
-            Only ${players.length} eligible players found (need ≥ 11).
-            ${priceNote}
-            <br>VFL prices may be unavailable — try again later.
+            Only ${allPlayers.length} eligible players found — VFL prices may be unavailable.${note}
+            <br>Try again later.
         </span>`);
-        document.getElementById('rerunBtn').style.display = '';
         return;
     }
 
-    setStatus(`<span class="spinner"></span> Running branch-and-bound on ${players.length} eligible players…`);
-
-    // Yield to browser paint before heavy computation
-    await new Promise(r => setTimeout(r, 60));
-
-    const result = solve(players);
-
-    if (!result) {
-        setStatus('<span class="error-text">No valid team found within the given constraints.</span>');
-        document.getElementById('rerunBtn').style.display = '';
-        return;
-    }
-
-    // Tag each player with their slot type
-    const SLOT_ORDER = ['duelist','duelist','controller','controller',
-                        'initiator','initiator','sentinel','sentinel',
-                        'wildcard','wildcard','wildcard'];
-    const slotUsage = { duelist:0, controller:0, initiator:0, sentinel:0 };
-    for (const p of result.team) {
-        if (slotUsage[p.role] != null && slotUsage[p.role] < 2) {
-            p.slotType = p.role;
-            slotUsage[p.role]++;
-        } else {
-            p.slotType = 'wildcard';
-        }
-    }
-
-    buildResults(result, teamLogoMap);
+    showSelectionPhase();
 }
 
-// Auto-run on load
-runOptimizer();
+init();
 </script>
 </body>
 </html>
