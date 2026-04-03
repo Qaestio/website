@@ -914,7 +914,7 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
     if not soup:
         return
 
-    completed = upcoming = 0
+    completed = upcoming = new_count = 0
 
     for match in soup.select('a.match-item'):
         teams_els = match.select('div.match-item-vs-team')
@@ -959,6 +959,13 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         except ValueError:
             continue
 
+        # Skip matches already in the cache — their data is in vct_data.json
+        match_href = match.get('href', '')
+        cached_matches = match_cache.setdefault('matches', {})
+        if match_href and match_href in cached_matches:
+            completed += 1
+            continue
+
         k1, k2 = t1_name.lower(), t2_name.lower()
         if s1 > s2:
             team_map[k1]['matchW'] += 1
@@ -971,15 +978,10 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         team_map[k2]['mapW'] += s2;  team_map[k2]['mapL'] += s1
 
         # Fetch per-map details + veto sequence + rosters from the match page
-        match_href = match.get('href', '')
         map_details, veto, t1_players, t2_players, map_player_stats = [], [], [], [], []
         if match_href:
-            cached_matches = match_cache.setdefault('matches', {})
-            if match_href in cached_matches:
-                detail = cached_matches[match_href]
-            else:
-                detail = scrape_match_detail(BASE + match_href, t1_name, t2_name)
-                cached_matches[match_href] = detail
+            detail = scrape_match_detail(BASE + match_href, t1_name, t2_name)
+            cached_matches[match_href] = detail
             map_details      = detail['maps']
             veto             = detail['veto']
             t1_players       = detail.get('t1_players', [])
@@ -1039,8 +1041,11 @@ def scrape_matches(event_id: int, slug: str, region: str, team_map: dict, label:
         })
 
         completed += 1
+        new_count += 1
 
-    print(f'    -> {completed} completed matches, {upcoming} upcoming')
+    skipped = completed - new_count
+    print(f'    -> {new_count} new  |  {skipped} already stored  |  {upcoming} upcoming')
+    return new_count
 
 
 def scrape_stats(event_id: int, slug: str, team_map: dict, player_map: dict):
@@ -1227,33 +1232,76 @@ def main():
 
     match_cache = load_cache()
 
-    team_map   = {}   # lower-case name -> team dict
-    player_map = {}   # 'PlayerName|team_key' -> stat dict
-    vfl_map    = {}   # player_name_lower -> {'vfl_total': float, 'maps_total': int}
+    # Seed team_map from existing data — avoids re-processing old matches
+    team_map       = {}
+    existing_events = set()
+    old_vfl_pts    = {}   # (team_key, player_name_lower) -> vflPts, for restoration below
+    if OUT_FILE.exists():
+        try:
+            old = json.loads(OUT_FILE.read_text(encoding='utf-8'))
+            existing_events = set(old.get('events', []))
+            for t in old.get('teams', []):
+                key = t['name'].lower()
+                team_map[key] = {
+                    'name':      t['name'],
+                    'region':    t['region'],
+                    'logo':      t['logo'],
+                    'matchW':    t['matchW'],
+                    'matchL':    t['matchL'],
+                    'mapW':      t['mapW'],
+                    'mapL':      t['mapL'],
+                    'players':   list(t.get('players', [])),
+                    'matches':   list(t.get('matches', [])),
+                    'franchise': True,
+                }
+                for p in t.get('players', []):
+                    if p.get('vflPts') is not None:
+                        old_vfl_pts[(key, p['name'].lower())] = p['vflPts']
+        except Exception:
+            pass
 
-    events_scraped = []
+    player_map     = {}
+    vfl_map        = {}
+    events_scraped = sorted(existing_events, key=lambda e: next(
+        (i for i, (_, _, _, l) in enumerate(VCT_EVENTS) if l == e), 999))
+    events_with_new = set()
 
     for (event_id, slug, region, label) in VCT_EVENTS:
         print(f'\n[{label}]  event/{event_id}')
 
-        if region:
-            # Register all franchise teams from the overview page (incl. pre-season)
+        if region and label not in existing_events:
+            # Only hit the overview page for events we haven't seen before
             print('  Overview …')
             scrape_teams_from_overview(event_id, slug, region, team_map)
 
         print('  Matches …')
-        scrape_matches(event_id, slug, region or 'americas', team_map, label, vfl_map, match_cache)
+        new_count = scrape_matches(event_id, slug, region or 'americas', team_map, label, vfl_map, match_cache)
 
-        print('  Stats …')
-        scrape_stats(event_id, slug, team_map, player_map)
+        if new_count > 0:
+            events_with_new.add(label)
+            print('  Stats …')
+            scrape_stats(event_id, slug, team_map, player_map)
 
-        events_scraped.append(label)
+        if label not in existing_events:
+            events_scraped.append(label)
+
+    if not events_with_new:
+        print('\nNo new matches — database is up to date.')
+        return
 
     # Persist match detail cache so future runs skip already-scraped matches
     save_cache(match_cache)
 
-    # Attach player stats to teams
+    # Attach updated player stats to teams that had new matches
     assign_players(team_map, player_map, vfl_map)
+
+    # Restore vflPts for any player whose value was lost (stats page lacks per-match VFL)
+    for key, t in team_map.items():
+        for p in t.get('players', []):
+            if p.get('vflPts') is None:
+                stored = old_vfl_pts.get((key, p['name'].lower()))
+                if stored is not None:
+                    p['vflPts'] = stored
 
     # Apply mid-season team renames (e.g. DRX → Kiwoom DRX).
     # Merges old entry into new name, preserving all historical stats/matches.
@@ -1340,8 +1388,9 @@ def main():
     print(f'   {matches_with_maps} match entries have map detail')
     print('-' * 60)
 
+    print('\nBuilding query index …')
+    subprocess.run([sys.executable, str(Path(__file__).parent / 'build_index.py')], check=True)
+
 
 if __name__ == '__main__':
     main()
-    print('\nBuilding query index …')
-    subprocess.run([sys.executable, str(Path(__file__).parent / 'build_index.py')], check=True)

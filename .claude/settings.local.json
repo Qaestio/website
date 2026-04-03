@@ -83,7 +83,8 @@
       "Bash(python -m venv \"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv\")",
       "Bash(\"C:/Users/bearm/OneDrive/Documents/GitHub/website/scraper/.venv/Scripts/pip.exe\" install:*)",
       "Bash(.venv/Scripts/python.exe -c \":*)",
-      "Bash(.venv/Scripts/python.exe scrape_vct.py)"
+      "Bash(.venv/Scripts/python.exe scrape_vct.py)",
+      "Bash(powershell -Command \"schtasks /delete /tn ''VCT Scraper'' /f\")"
     ]
   }
 }
