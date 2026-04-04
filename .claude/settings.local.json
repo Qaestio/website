@@ -91,7 +91,12 @@
       "Bash(py -3 scraper/scrape_vct.py)",
       "Read(//c/Python314/Lib/site-packages/requests/**)",
       "Bash(icacls \"C:\\\\Python314\\\\Lib\\\\site-packages\\\\requests\\\\__init__.py\")",
-      "Bash(scraper/.venv/Scripts/python.exe scraper/scrape_vct.py)"
+      "Bash(scraper/.venv/Scripts/python.exe scraper/scrape_vct.py)",
+      "Bash(where python3:*)",
+      "Bash(py --version)",
+      "Bash(pip show:*)",
+      "Bash(python -m pip install requests --target /c/Users/bearm/AppData/Roaming/Python/Python314/site-packages)",
+      "Bash(PYTHONPATH=/c/Users/bearm/AppData/Roaming/Python/Python314/site-packages python scraper/scrape_vct.py)"
     ]
   }
 }
