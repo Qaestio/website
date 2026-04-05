@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T17:35:46.946133+00:00",
+  "lastUpdated": "2026-04-05T18:05:33.920016+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -10707,50 +10707,50 @@
       "name": "Rex Regum Qeon",
       "region": "pacific",
       "logo": "https://owcdn.net/img/629f17f51e7a3.png",
-      "matchW": 2,
+      "matchW": 3,
       "matchL": 3,
-      "mapW": 7,
-      "mapL": 9,
+      "mapW": 9,
+      "mapL": 10,
       "players": [
         {
           "name": "Jemkin",
-          "acs": 226,
-          "rating": 1.13,
-          "fkfd": 1.73,
-          "kpm": 18.0,
-          "vflPts": 3.44
-        },
-        {
-          "name": "xffero",
-          "acs": 195,
-          "rating": 1.07,
-          "fkfd": 1.5,
-          "kpm": 15.4,
-          "vflPts": 2.62
-        },
-        {
-          "name": "Kushy",
-          "acs": 185,
-          "rating": 0.97,
-          "fkfd": 1.4,
-          "kpm": 13.9,
-          "vflPts": 2.44
-        },
-        {
-          "name": "Monyet",
-          "acs": 196,
-          "rating": 0.87,
-          "fkfd": 0.52,
-          "kpm": 14.3,
-          "vflPts": 2.31
+          "acs": 251,
+          "rating": 1.38,
+          "fkfd": 1.3,
+          "kpm": 20.2,
+          "vflPts": 4.33
         },
         {
           "name": "crazyguy",
-          "acs": 156,
-          "rating": 0.85,
-          "fkfd": 0.42,
-          "kpm": 12.5,
-          "vflPts": 1.94
+          "acs": 195,
+          "rating": 1.12,
+          "fkfd": 0.33,
+          "kpm": 15.4,
+          "vflPts": 3.0
+        },
+        {
+          "name": "xffero",
+          "acs": 222,
+          "rating": 1.09,
+          "fkfd": 1.67,
+          "kpm": 16.1,
+          "vflPts": 3.0
+        },
+        {
+          "name": "Kushy",
+          "acs": 136,
+          "rating": 0.89,
+          "fkfd": 0.27,
+          "kpm": 10.1,
+          "vflPts": 1.67
+        },
+        {
+          "name": "Monyet",
+          "acs": 186,
+          "rating": 0.83,
+          "fkfd": 1.11,
+          "kpm": 14.7,
+          "vflPts": 2.0
         }
       ],
       "matches": [
@@ -11150,9 +11150,87 @@
             }
           ],
           "oppRating": 1983
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opponent": "ZETA DIVISION",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                11
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ],
+          "oppRating": 1398
         }
       ],
-      "eloRating": 1458,
+      "eloRating": 1505,
       "ratingHistory": [
         {
           "event": "Start",
@@ -11195,6 +11273,13 @@
           "opp": "PRX",
           "result": "L",
           "rating": 1458
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opp": "ZETA",
+          "result": "W",
+          "rating": 1505
         }
       ]
     },
@@ -12074,49 +12159,49 @@
       "region": "pacific",
       "logo": "https://owcdn.net/img/629f13085ead6.png",
       "matchW": 0,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 1,
-      "mapL": 6,
+      "mapL": 8,
       "players": [
         {
           "name": "kellyS",
-          "acs": 219,
-          "rating": 0.97,
-          "fkfd": 0.53,
-          "kpm": 16.9,
-          "vflPts": 1.71
-        },
-        {
-          "name": "JessieVash",
-          "acs": 202,
-          "rating": 0.94,
+          "acs": 247,
+          "rating": 1.16,
           "fkfd": 1.0,
-          "kpm": 15.6,
-          "vflPts": 1.71
-        },
-        {
-          "name": "BerserX",
-          "acs": 192,
-          "rating": 0.94,
-          "fkfd": 1.0,
-          "kpm": 14.3,
-          "vflPts": 1.14
-        },
-        {
-          "name": "TenTen",
-          "acs": 171,
-          "rating": 0.79,
-          "fkfd": 0.7,
-          "kpm": 13.2,
-          "vflPts": 1.0
+          "kpm": 18.7,
+          "vflPts": 3.0
         },
         {
           "name": "Sylvan",
-          "acs": 142,
-          "rating": 0.75,
-          "fkfd": 0.58,
-          "kpm": 10.3,
-          "vflPts": 0.71
+          "acs": 206,
+          "rating": 0.96,
+          "fkfd": 0.57,
+          "kpm": 16.3,
+          "vflPts": 2.0
+        },
+        {
+          "name": "BerserX",
+          "acs": 160,
+          "rating": 0.81,
+          "fkfd": 1.0,
+          "kpm": 13.4,
+          "vflPts": 1.5
+        },
+        {
+          "name": "JessieVash",
+          "acs": 156,
+          "rating": 0.76,
+          "fkfd": 1.75,
+          "kpm": 11.4,
+          "vflPts": 1.0
+        },
+        {
+          "name": "Rimuru",
+          "acs": 160,
+          "rating": 0.62,
+          "fkfd": 1.0,
+          "kpm": 11.4,
+          "vflPts": 1.0
         }
       ],
       "matches": [
@@ -12339,9 +12424,80 @@
             }
           ],
           "oppRating": 1400
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opponent": "Kiwoom DRX",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                15
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Team Secret"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Team Secret"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Team Secret"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1640
         }
       ],
-      "eloRating": 1353,
+      "eloRating": 1263,
       "ratingHistory": [
         {
           "event": "Start",
@@ -12370,6 +12526,13 @@
           "opp": "ZETA",
           "result": "L",
           "rating": 1353
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opp": "DRX",
+          "result": "L",
+          "rating": 1263
         }
       ]
     },
@@ -12378,49 +12541,49 @@
       "region": "pacific",
       "logo": "https://owcdn.net/img/62a411783d94d.png",
       "matchW": 1,
-      "matchL": 3,
-      "mapW": 3,
-      "mapL": 7,
+      "matchL": 4,
+      "mapW": 4,
+      "mapL": 9,
       "players": [
         {
-          "name": "SugarZ3ro",
-          "acs": 203,
-          "rating": 1.01,
-          "fkfd": 0.78,
-          "kpm": 15.2,
-          "vflPts": 2.2
-        },
-        {
-          "name": "eKo",
-          "acs": 206,
-          "rating": 0.95,
-          "fkfd": 1.14,
-          "kpm": 16.3,
-          "vflPts": 2.1
-        },
-        {
-          "name": "Xdll",
-          "acs": 167,
-          "rating": 0.88,
-          "fkfd": 1.33,
-          "kpm": 13.4,
-          "vflPts": 1.7
-        },
-        {
           "name": "Absol",
-          "acs": 196,
-          "rating": 0.85,
-          "fkfd": 0.87,
-          "kpm": 15.0,
-          "vflPts": 1.5
+          "acs": 227,
+          "rating": 1.01,
+          "fkfd": 0.85,
+          "kpm": 17.8,
+          "vflPts": 2.67
+        },
+        {
+          "name": "SugarZ3ro",
+          "acs": 197,
+          "rating": 0.95,
+          "fkfd": 0.8,
+          "kpm": 13.9,
+          "vflPts": 2.0
         },
         {
           "name": "SyouTa",
-          "acs": 156,
-          "rating": 0.8,
-          "fkfd": 0.75,
-          "kpm": 12.5,
-          "vflPts": 1.3
+          "acs": 160,
+          "rating": 0.87,
+          "fkfd": 0.85,
+          "kpm": 13.6,
+          "vflPts": 2.0
+        },
+        {
+          "name": "eKo",
+          "acs": 193,
+          "rating": 0.83,
+          "fkfd": 1.91,
+          "kpm": 13.9,
+          "vflPts": 2.0
+        },
+        {
+          "name": "Xdll",
+          "acs": 124,
+          "rating": 0.77,
+          "fkfd": 1.0,
+          "kpm": 9.7,
+          "vflPts": 1.0
         }
       ],
       "matches": [
@@ -12721,9 +12884,87 @@
             }
           ],
           "oppRating": 1490
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opponent": "Rex Regum Qeon",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Split",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                11,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Split",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "ZETA DIVISION"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Rex Regum Qeon"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Haven",
+              "team": ""
+            }
+          ],
+          "oppRating": 1458
         }
       ],
-      "eloRating": 1398,
+      "eloRating": 1351,
       "ratingHistory": [
         {
           "event": "Start",
@@ -12759,6 +13000,13 @@
           "opp": "DRX",
           "result": "L",
           "rating": 1398
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opp": "RRQ",
+          "result": "L",
+          "rating": 1351
         }
       ]
     },
@@ -21797,53 +22045,124 @@
       "name": "Guangzhou Huadu Bilibili Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/63f25d72216c1.png",
-      "matchW": 4,
+      "matchW": 5,
       "matchL": 4,
-      "mapW": 12,
+      "mapW": 14,
       "mapL": 11,
       "players": [
         {
           "name": "nephh",
-          "acs": 216,
-          "rating": 1.16,
+          "acs": 251,
+          "rating": 1.47,
           "fkfd": 1.0,
-          "kpm": 17.2,
-          "vflPts": 2.61
+          "kpm": 21.1,
+          "vflPts": 8.5
         },
         {
           "name": "whzy",
-          "acs": 256,
-          "rating": 1.15,
-          "fkfd": 1.29,
-          "kpm": 19.8,
-          "vflPts": 3.35
+          "acs": 241,
+          "rating": 1.12,
+          "fkfd": 1.24,
+          "kpm": 18.7,
+          "vflPts": 5.0
         },
         {
           "name": "Knight",
-          "acs": 209,
-          "rating": 1.12,
-          "fkfd": 1.0,
-          "kpm": 16.3,
-          "vflPts": 2.57
+          "acs": 191,
+          "rating": 1.09,
+          "fkfd": 1.67,
+          "kpm": 15.2,
+          "vflPts": 3.5
         },
         {
           "name": "rushia",
-          "acs": 197,
-          "rating": 0.93,
-          "fkfd": 1.0,
-          "kpm": 13.6,
-          "vflPts": 2.61
+          "acs": 206,
+          "rating": 0.99,
+          "fkfd": 0.83,
+          "kpm": 14.5,
+          "vflPts": 4.0
         },
         {
           "name": "yilai",
-          "acs": 150,
-          "rating": 0.58,
-          "fkfd": 0.55,
-          "kpm": 9.9,
-          "vflPts": null
+          "acs": 183,
+          "rating": 0.73,
+          "fkfd": 0.5,
+          "kpm": 13.4,
+          "vflPts": 5.0
         }
       ],
       "matches": [
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "JD Mall JDG Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                4
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Lotus",
+              "team": ""
+            }
+          ],
+          "oppRating": 1373
+        },
         {
           "event": "China Kickoff",
           "rnd": "UR2",
@@ -22462,7 +22781,7 @@
           "oppRating": 1539
         }
       ],
-      "eloRating": 1304,
+      "eloRating": 1427,
       "ratingHistory": [
         {
           "event": "Start",
@@ -22526,6 +22845,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1304
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "JDG",
+          "result": "W",
+          "rating": 1427
         }
       ]
     },
@@ -23510,20 +23836,20 @@
           "vflPts": 4.5
         },
         {
-          "name": "Setrod",
-          "acs": 212,
-          "rating": 1.03,
-          "fkfd": 0.65,
-          "kpm": 16.7,
-          "vflPts": 6.5
-        },
-        {
           "name": "KovaQ",
           "acs": 201,
           "rating": 1.03,
           "fkfd": 1.29,
           "kpm": 15.8,
           "vflPts": 4.5
+        },
+        {
+          "name": "Setrod",
+          "acs": 212,
+          "rating": 1.03,
+          "fkfd": 0.65,
+          "kpm": 16.7,
+          "vflPts": 6.5
         },
         {
           "name": "BerLIN",
@@ -23964,52 +24290,123 @@
       "region": "china",
       "logo": "https://owcdn.net/img/64f9825408326.png",
       "matchW": 4,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 11,
-      "mapL": 10,
+      "mapL": 12,
       "players": [
         {
           "name": "zhe",
-          "acs": 246,
-          "rating": 1.33,
-          "fkfd": 2.6,
-          "kpm": 18.5,
-          "vflPts": 2.52
+          "acs": 216,
+          "rating": 1.14,
+          "fkfd": 2.0,
+          "kpm": 16.1,
+          "vflPts": 0.5
         },
         {
           "name": "Yuicaw",
-          "acs": 219,
-          "rating": 1.17,
-          "fkfd": 1.38,
-          "kpm": 17.4,
-          "vflPts": 3.1
-        },
-        {
-          "name": "stew",
-          "acs": 236,
-          "rating": 1.1,
-          "fkfd": 1.33,
-          "kpm": 18.5,
-          "vflPts": 2.86
-        },
-        {
-          "name": "coconut",
-          "acs": 156,
-          "rating": 0.96,
-          "fkfd": 0.71,
-          "kpm": 13.4,
-          "vflPts": 1.76
+          "acs": 208,
+          "rating": 1.01,
+          "fkfd": 1.12,
+          "kpm": 16.1,
+          "vflPts": 1.0
         },
         {
           "name": "jkuro",
-          "acs": 174,
-          "rating": 0.87,
+          "acs": 196,
+          "rating": 1.0,
           "fkfd": 1.0,
-          "kpm": 14.1,
-          "vflPts": 2.38
+          "kpm": 15.4,
+          "vflPts": 2.5
+        },
+        {
+          "name": "stew",
+          "acs": 213,
+          "rating": 0.93,
+          "fkfd": 1.62,
+          "kpm": 16.9,
+          "vflPts": 1.0
+        },
+        {
+          "name": "coconut",
+          "acs": 155,
+          "rating": 0.82,
+          "fkfd": 0.75,
+          "kpm": 11.9,
+          "vflPts": 0.0
         }
       ],
       "matches": [
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Haven",
+              "score": [
+                4,
+                13
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Lotus",
+              "team": ""
+            }
+          ],
+          "oppRating": 1304
+        },
         {
           "event": "China Kickoff",
           "rnd": "UR1",
@@ -24557,7 +24954,7 @@
           "oppRating": 1218
         }
       ],
-      "eloRating": 1373,
+      "eloRating": 1250,
       "ratingHistory": [
         {
           "event": "Start",
@@ -24607,6 +25004,13 @@
           "opp": "FPX",
           "result": "W",
           "rating": 1373
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1250
         }
       ]
     },
@@ -25634,49 +26038,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/6433a2cc3ae72.png",
       "matchW": 3,
-      "matchL": 3,
-      "mapW": 7,
-      "mapL": 8,
+      "matchL": 4,
+      "mapW": 8,
+      "mapL": 10,
       "players": [
         {
           "name": "deLb",
-          "acs": 256,
-          "rating": 1.4,
-          "fkfd": 2.71,
-          "kpm": 20.5,
-          "vflPts": 3.2
-        },
-        {
-          "name": "Abo",
-          "acs": 182,
-          "rating": 1.22,
-          "fkfd": 1.0,
-          "kpm": 14.7,
-          "vflPts": 2.86
-        },
-        {
-          "name": "Kai",
-          "acs": 246,
-          "rating": 1.11,
-          "fkfd": 1.14,
-          "kpm": 20.0,
-          "vflPts": 2.87
-        },
-        {
-          "name": "Viva",
-          "acs": 176,
-          "rating": 1.0,
-          "fkfd": 0.71,
-          "kpm": 11.7,
-          "vflPts": 2.07
+          "acs": 238,
+          "rating": 1.29,
+          "fkfd": 1.71,
+          "kpm": 19.4,
+          "vflPts": 3.33
         },
         {
           "name": "Xlele",
-          "acs": 198,
-          "rating": 0.97,
-          "fkfd": 1.56,
-          "kpm": 15.8,
+          "acs": 225,
+          "rating": 1.12,
+          "fkfd": 0.82,
+          "kpm": 18.5,
           "vflPts": 4.0
+        },
+        {
+          "name": "Abo",
+          "acs": 178,
+          "rating": 1.05,
+          "fkfd": 1.17,
+          "kpm": 13.6,
+          "vflPts": 1.33
+        },
+        {
+          "name": "Viva",
+          "acs": 174,
+          "rating": 0.89,
+          "fkfd": 0.64,
+          "kpm": 12.1,
+          "vflPts": 1.33
+        },
+        {
+          "name": "Kai",
+          "acs": 192,
+          "rating": 0.86,
+          "fkfd": 0.56,
+          "kpm": 14.7,
+          "vflPts": 1.33
         }
       ],
       "matches": [
@@ -26126,9 +26530,87 @@
             }
           ],
           "oppRating": 1372
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Xi Lai Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Lotus",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1608
         }
       ],
-      "eloRating": 1469,
+      "eloRating": 1420,
       "ratingHistory": [
         {
           "event": "Start",
@@ -26178,6 +26660,13 @@
           "opp": "WLV",
           "result": "W",
           "rating": 1469
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "XLG",
+          "result": "L",
+          "rating": 1420
         }
       ]
     },
@@ -27615,50 +28104,50 @@
       "name": "Xi Lai Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/671742f863b9b.png",
-      "matchW": 4,
+      "matchW": 5,
       "matchL": 3,
-      "mapW": 11,
-      "mapL": 9,
+      "mapW": 13,
+      "mapL": 10,
       "players": [
         {
-          "name": "happywei",
-          "acs": 279,
-          "rating": 1.38,
-          "fkfd": 2.43,
-          "kpm": 22.4,
-          "vflPts": 4.05
-        },
-        {
           "name": "WsLeo",
-          "acs": 216,
-          "rating": 1.32,
-          "fkfd": null,
-          "kpm": 17.6,
-          "vflPts": 2.6
+          "acs": 218,
+          "rating": 1.25,
+          "fkfd": 2.0,
+          "kpm": 17.8,
+          "vflPts": 3.33
         },
         {
-          "name": "NoMan",
-          "acs": 192,
-          "rating": 1.02,
-          "fkfd": 0.58,
-          "kpm": 15.6,
-          "vflPts": 2.75
+          "name": "happywei",
+          "acs": 250,
+          "rating": 1.21,
+          "fkfd": 2.0,
+          "kpm": 18.5,
+          "vflPts": 2.67
         },
         {
           "name": "Lysoar",
-          "acs": 182,
-          "rating": 0.98,
-          "fkfd": 0.71,
-          "kpm": 13.9,
-          "vflPts": 2.8
+          "acs": 202,
+          "rating": 1.04,
+          "fkfd": 1.6,
+          "kpm": 15.6,
+          "vflPts": 3.0
         },
         {
           "name": "Rarga",
-          "acs": 236,
-          "rating": 0.86,
-          "fkfd": 0.91,
-          "kpm": 17.2,
-          "vflPts": 3.3
+          "acs": 231,
+          "rating": 0.93,
+          "fkfd": 1.92,
+          "kpm": 16.9,
+          "vflPts": 3.0
+        },
+        {
+          "name": "NoMan",
+          "acs": 156,
+          "rating": 0.85,
+          "fkfd": 0.5,
+          "kpm": 12.5,
+          "vflPts": 1.67
         }
       ],
       "matches": [
@@ -28200,9 +28689,87 @@
             }
           ],
           "oppRating": 1766
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opponent": "Trace Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Breeze",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Split",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Xi Lai Gaming"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1469
         }
       ],
-      "eloRating": 1608,
+      "eloRating": 1657,
       "ratingHistory": [
         {
           "event": "Start",
@@ -28259,6 +28826,13 @@
           "opp": "DRG",
           "result": "W",
           "rating": 1608
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W1",
+          "opp": "TRC",
+          "result": "W",
+          "rating": 1657
         }
       ]
     },
@@ -28903,9 +29477,9 @@
       "name": "KIWOOM DRX",
       "region": "pacific",
       "logo": "https://owcdn.net/img/63b17abd77fc0.png",
-      "matchW": 3,
+      "matchW": 4,
       "matchL": 3,
-      "mapW": 8,
+      "mapW": 10,
       "mapL": 8,
       "players": [
         {
@@ -28950,6 +29524,77 @@
         }
       ],
       "matches": [
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opponent": "Team Secret",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                15,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Team Secret"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Team Secret"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Team Secret"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Kiwoom DRX"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1353
+        },
         {
           "event": "Pacific Kickoff",
           "rnd": "UR2",
@@ -29405,7 +30050,7 @@
           "oppRating": 1520
         }
       ],
-      "eloRating": 1640,
+      "eloRating": 1730,
       "ratingHistory": [
         {
           "event": "Start",
@@ -29455,6 +30100,13 @@
           "opp": "FS",
           "result": "W",
           "rating": 1640
+        },
+        {
+          "event": "Pacific Stage 1",
+          "rnd": "W1",
+          "opp": "TS",
+          "result": "W",
+          "rating": 1730
         }
       ]
     },
