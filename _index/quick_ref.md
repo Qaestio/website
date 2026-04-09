@@ -1,5 +1,5 @@
 # VCT 2026 Quick Reference
-_Last updated: 2026-04-05T18:05:33.920016+00:00_
+_Last updated: 2026-04-09T16:19:30.846737+00:00_
 
 ## Elo Rankings (all teams)
 
@@ -10,49 +10,49 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | 3 | G2 Esports | Americas | 1993 |
 | 4 | NRG | Americas | 1918 |
 | 5 | T1 | Pacific | 1899 |
-| 6 | BBL Esports | Emea | 1842 |
-| 7 | Global Esports | Pacific | 1780 |
-| 8 | Team Liquid | Emea | 1779 |
+| 6 | Global Esports | Pacific | 1780 |
+| 7 | Team Liquid | Emea | 1779 |
+| 8 | EDward Gaming | China | 1771 |
 | 9 | FURIA | Americas | 1741 |
-| 10 | KIWOOM DRX | Pacific | 1730 |
-| 11 | EDward Gaming | China | 1676 |
-| 12 | 100 Thieves | Americas | 1658 |
-| 13 | Xi Lai Gaming | China | 1657 |
-| 14 | All Gamers | China | 1656 |
+| 10 | All Gamers | China | 1739 |
+| 11 | KIWOOM DRX | Pacific | 1730 |
+| 12 | Xi Lai Gaming | China | 1728 |
+| 13 | BBL Esports | Emea | 1667 |
+| 14 | 100 Thieves | Americas | 1658 |
 | 15 | Gentle Mates | Emea | 1619 |
 | 16 | LEVIATÁN | Americas | 1606 |
-| 17 | TYLOO | China | 1570 |
-| 18 | FULL SENSE | Pacific | 1561 |
-| 19 | Team Vitality | Emea | 1551 |
-| 20 | Evil Geniuses | Americas | 1532 |
-| 21 | Rex Regum Qeon | Pacific | 1505 |
-| 22 | Cloud9 | Americas | 1483 |
-| 23 | FUT Esports | Emea | 1460 |
-| 24 | FNATIC | Emea | 1427 |
-| 25 | Guangzhou Huadu Bilibili Gaming | China | 1427 |
-| 26 | Trace Esports | China | 1420 |
-| 27 | Dragon Ranger Gaming | China | 1414 |
-| 28 | Natus Vincere | Emea | 1397 |
-| 29 | Team Heretics | Emea | 1394 |
-| 30 | DetonatioN FocusMe | Pacific | 1362 |
-| 31 | FunPlus Phoenix | China | 1352 |
+| 17 | FULL SENSE | Pacific | 1561 |
+| 18 | Evil Geniuses | Americas | 1532 |
+| 19 | FNATIC | Emea | 1511 |
+| 20 | Rex Regum Qeon | Pacific | 1505 |
+| 21 | Cloud9 | Americas | 1483 |
+| 22 | Eternal Fire | Emea | 1480 |
+| 23 | Team Vitality | Emea | 1467 |
+| 24 | FunPlus Phoenix | China | 1461 |
+| 25 | TYLOO | China | 1461 |
+| 26 | FUT Esports | Emea | 1460 |
+| 27 | Dragon Ranger Gaming | China | 1452 |
+| 28 | Wuxi Titan Esports Club | China | 1448 |
+| 29 | Natus Vincere | Emea | 1397 |
+| 30 | Team Heretics | Emea | 1394 |
+| 31 | DetonatioN FocusMe | Pacific | 1362 |
 | 32 | Gen.G | Pacific | 1351 |
 | 33 | ZETA DIVISION | Pacific | 1351 |
 | 34 | ENVY | Americas | 1337 |
 | 35 | MIBR | Americas | 1335 |
-| 36 | KRÜ Esports | Americas | 1322 |
-| 37 | Sentinels | Americas | 1318 |
-| 38 | VARREL | Pacific | 1309 |
-| 39 | LOUD | Americas | 1307 |
-| 40 | Eternal Fire | Emea | 1305 |
-| 41 | GIANTX | Emea | 1293 |
-| 42 | Wuxi Titan Esports Club | China | 1286 |
+| 36 | GIANTX | Emea | 1332 |
+| 37 | Trace Esports | China | 1325 |
+| 38 | KRÜ Esports | Americas | 1322 |
+| 39 | Sentinels | Americas | 1318 |
+| 40 | VARREL | Pacific | 1309 |
+| 41 | LOUD | Americas | 1307 |
+| 42 | Guangzhou Huadu Bilibili Gaming | China | 1265 |
 | 43 | Team Secret | Pacific | 1263 |
-| 44 | JD Mall JDG Esports | China | 1250 |
-| 45 | Karmine Corp | Emea | 1239 |
-| 46 | PCIFIC Esports | Emea | 1155 |
-| 47 | Wolves Esports | China | 1127 |
-| 48 | Nova Esports | China | 1061 |
+| 44 | Karmine Corp | Emea | 1239 |
+| 45 | JD Mall JDG Esports | China | 1167 |
+| 46 | PCIFIC Esports | Emea | 1116 |
+| 47 | Wolves Esports | China | 1089 |
+| 48 | Nova Esports | China | 990 |
 
 ## Americas Teams
 
@@ -93,34 +93,34 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
 | Team Liquid | 8 | 4 | 67% | 18 | 12 | 60% | 1779 |
-| BBL Esports | 6 | 2 | 75% | 14 | 8 | 64% | 1842 |
+| BBL Esports | 6 | 3 | 67% | 14 | 10 | 58% | 1667 |
+| FNATIC | 6 | 3 | 67% | 13 | 11 | 54% | 1511 |
 | Gentle Mates | 6 | 4 | 60% | 17 | 11 | 61% | 1619 |
-| FNATIC | 5 | 3 | 62% | 12 | 11 | 52% | 1427 |
-| Team Vitality | 4 | 3 | 57% | 9 | 7 | 56% | 1551 |
+| Team Vitality | 4 | 4 | 50% | 9 | 8 | 53% | 1467 |
+| GIANTX | 3 | 4 | 43% | 7 | 10 | 41% | 1332 |
 | Natus Vincere | 3 | 3 | 50% | 7 | 8 | 47% | 1397 |
 | Team Heretics | 3 | 4 | 43% | 8 | 9 | 47% | 1394 |
-| GIANTX | 2 | 4 | 33% | 5 | 9 | 36% | 1293 |
+| Eternal Fire | 2 | 4 | 33% | 6 | 8 | 43% | 1480 |
 | FUT Esports | 1 | 3 | 25% | 4 | 7 | 36% | 1460 |
 | Karmine Corp | 1 | 4 | 20% | 4 | 9 | 31% | 1239 |
-| Eternal Fire | 1 | 4 | 20% | 4 | 8 | 33% | 1305 |
-| PCIFIC Esports | 0 | 4 | 0% | 2 | 8 | 20% | 1155 |
+| PCIFIC Esports | 0 | 5 | 0% | 3 | 10 | 23% | 1116 |
 
 ## China Teams
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| EDward Gaming | 7 | 4 | 64% | 16 | 12 | 57% | 1676 |
-| All Gamers | 6 | 3 | 67% | 14 | 11 | 56% | 1656 |
-| TYLOO | 6 | 3 | 67% | 14 | 8 | 64% | 1570 |
-| Guangzhou Huadu Bilibili Gaming | 5 | 4 | 56% | 14 | 11 | 56% | 1427 |
-| Xi Lai Gaming | 5 | 3 | 62% | 13 | 10 | 57% | 1657 |
-| JD Mall JDG Esports | 4 | 4 | 50% | 11 | 12 | 48% | 1250 |
-| Trace Esports | 3 | 4 | 43% | 8 | 10 | 44% | 1420 |
-| Dragon Ranger Gaming | 3 | 4 | 43% | 8 | 10 | 44% | 1414 |
-| Wolves Esports | 2 | 5 | 29% | 6 | 12 | 33% | 1127 |
-| FunPlus Phoenix | 1 | 4 | 20% | 4 | 8 | 33% | 1352 |
-| Wuxi Titan Esports Club | 1 | 5 | 17% | 6 | 11 | 35% | 1286 |
-| Nova Esports | 0 | 5 | 0% | 1 | 10 | 9% | 1061 |
+| EDward Gaming | 8 | 4 | 67% | 18 | 12 | 60% | 1771 |
+| All Gamers | 7 | 3 | 70% | 16 | 11 | 59% | 1739 |
+| TYLOO | 6 | 4 | 60% | 15 | 10 | 60% | 1461 |
+| Xi Lai Gaming | 6 | 3 | 67% | 15 | 10 | 60% | 1728 |
+| Guangzhou Huadu Bilibili Gaming | 5 | 5 | 50% | 14 | 13 | 52% | 1265 |
+| JD Mall JDG Esports | 4 | 5 | 44% | 11 | 14 | 44% | 1167 |
+| Dragon Ranger Gaming | 4 | 4 | 50% | 10 | 11 | 48% | 1452 |
+| Trace Esports | 3 | 5 | 38% | 8 | 12 | 40% | 1325 |
+| FunPlus Phoenix | 2 | 4 | 33% | 6 | 9 | 40% | 1461 |
+| Wuxi Titan Esports Club | 2 | 5 | 29% | 8 | 11 | 42% | 1448 |
+| Wolves Esports | 2 | 6 | 25% | 7 | 14 | 33% | 1089 |
+| Nova Esports | 0 | 6 | 0% | 1 | 12 | 8% | 990 |
 
 ## Top 20 Players by ACS
 
@@ -128,90 +128,90 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 |---|--------|------|--------|-----|--------|------|-----|---------|
 | 1 | Jinggg | Paper Rex | Pacific | 305 | 1.39 | 2.18 | 24.0 | 5.67 |
 | 2 | BuZz | T1 | Pacific | 296 | 1.27 | 1.0 | 22.0 | 6.5 |
-| 3 | primmie | FULL SENSE | Pacific | 284 | 1.54 | 0 | 22.7 | 7.5 |
-| 4 | PatMen | Global Esports | Pacific | 278 | 1.49 | 5.33 | 22.0 | 7.5 |
-| 5 | Derke | Team Vitality | Emea | 276 | 1.59 | 0 | 22.0 | 4.75 |
-| 6 | ZmjjKK | EDward Gaming | China | 269 | 1.35 | 1.5 | 21.3 | 6.5 |
+| 3 | ZmjjKK | EDward Gaming | China | 292 | 1.43 | 1.54 | 23.1 | 8.5 |
+| 4 | Derke | Team Vitality | Emea | 289 | 1.51 | 2.83 | 23.3 | 2.0 |
+| 5 | primmie | FULL SENSE | Pacific | 284 | 1.54 | 0 | 22.7 | 7.5 |
+| 6 | PatMen | Global Esports | Pacific | 278 | 1.49 | 5.33 | 22.0 | 7.5 |
 | 7 | Meteor | T1 | Pacific | 262 | 1.26 | 1.42 | 20.5 | 5.0 |
-| 8 | Alfajer | FNATIC | Emea | 259 | 1.17 | 1.73 | 19.8 | 4.22 |
-| 9 | Sayonara | Team Vitality | Emea | 253 | 1.47 | 3.8 | 18.9 | 7.0 |
-| 10 | nephh | Guangzhou Huadu Bilibili Gaming | China | 251 | 1.47 | 1.0 | 21.1 | 8.5 |
+| 8 | Life | Dragon Ranger Gaming | China | 260 | 1.08 | 1.06 | 19.6 | 5.0 |
+| 9 | Alfajer | FNATIC | Emea | 259 | 1.19 | 1.5 | 19.8 | 0.33 |
+| 10 | splash | TYLOO | China | 254 | 0.99 | 0.94 | 18.7 | 3.33 |
 | 11 | Jemkin | Rex Regum Qeon | Pacific | 251 | 1.38 | 1.3 | 20.2 | 4.33 |
-| 12 | happywei | Xi Lai Gaming | China | 250 | 1.21 | 2.0 | 18.5 | 2.67 |
-| 13 | SpiritZ1 | Dragon Ranger Gaming | China | 250 | 1.15 | 0.93 | 18.5 | 5.0 |
-| 14 | Scales | TYLOO | China | 248 | 1.27 | 1.7 | 20.7 | 6.5 |
-| 15 | kellyS | Team Secret | Pacific | 247 | 1.16 | 1.0 | 18.7 | 3.0 |
-| 16 | Killua | FULL SENSE | Pacific | 246 | 1.25 | 1.0 | 21.6 | 6.5 |
-| 17 | Veqaj | FNATIC | Emea | 246 | 1.21 | 4.0 | 16.3 | 3.65 |
-| 18 | splash | TYLOO | China | 245 | 0.98 | 0.79 | 17.8 | 4.5 |
-| 19 | Ruxic | Natus Vincere | Emea | 243 | 1.36 | 2.2 | 19.6 | 4.0 |
-| 20 | dgzin | Evil Geniuses | Americas | 242 | 1.22 | 1.62 | 19.6 | 4.45 |
+| 12 | kellyS | Team Secret | Pacific | 247 | 1.16 | 1.0 | 18.7 | 3.0 |
+| 13 | Killua | FULL SENSE | Pacific | 246 | 1.25 | 1.0 | 21.6 | 6.5 |
+| 14 | Ruxic | Natus Vincere | Emea | 243 | 1.36 | 2.2 | 19.6 | 4.0 |
+| 15 | Smoggy | EDward Gaming | China | 243 | 1.2 | 0.75 | 18.5 | 6.0 |
+| 16 | whzy | Guangzhou Huadu Bilibili Gaming | China | 243 | 1.14 | 1.36 | 18.7 | 4.0 |
+| 17 | f4ngeer | All Gamers | China | 242 | 1.25 | 1.6 | 19.4 | 6.0 |
+| 18 | dgzin | Evil Geniuses | Americas | 242 | 1.22 | 1.62 | 19.6 | 4.45 |
+| 19 | hiro | Natus Vincere | Emea | 242 | 1.2 | 0.62 | 18.3 | 3.67 |
+| 20 | kamo | Team Liquid | Emea | 240 | 1.16 | 2.29 | 19.4 | 3.0 |
 
 ## Top 20 Players by VFL Points
 
 | # | Player | Team | Region | VFL Pts | ACS | Rating |
 |---|--------|------|--------|---------|-----|--------|
-| 1 | nephh | Guangzhou Huadu Bilibili Gaming | China | 8.5 | 251 | 1.47 |
+| 1 | ZmjjKK | EDward Gaming | China | 8.5 | 292 | 1.43 |
 | 2 | primmie | FULL SENSE | Pacific | 7.5 | 284 | 1.54 |
 | 3 | PatMen | Global Esports | Pacific | 7.5 | 278 | 1.49 |
-| 4 | Sayonara | Team Vitality | Emea | 7.0 | 253 | 1.47 |
+| 4 | Shr1mp | All Gamers | China | 7.0 | 200 | 1.19 |
 | 5 | BuZz | T1 | Pacific | 6.5 | 296 | 1.27 |
-| 6 | ZmjjKK | EDward Gaming | China | 6.5 | 269 | 1.35 |
-| 7 | Scales | TYLOO | China | 6.5 | 248 | 1.27 |
-| 8 | Killua | FULL SENSE | Pacific | 6.5 | 246 | 1.25 |
-| 9 | Setrod | FunPlus Phoenix | China | 6.5 | 212 | 1.03 |
-| 10 | Nicc | Dragon Ranger Gaming | China | 6.5 | 202 | 1.21 |
+| 6 | Killua | FULL SENSE | Pacific | 6.5 | 246 | 1.25 |
+| 7 | Favian | Eternal Fire | Emea | 6.5 | 213 | 1.1 |
+| 8 | K1ra | All Gamers | China | 6.5 | 206 | 1.1 |
+| 9 | Smoggy | EDward Gaming | China | 6.0 | 243 | 1.2 |
+| 10 | f4ngeer | All Gamers | China | 6.0 | 242 | 1.25 |
 | 11 | iZu | T1 | Pacific | 6.0 | 238 | 1.28 |
-| 12 | Erv | TYLOO | China | 6.0 | 228 | 1.1 |
-| 13 | Jinggg | Paper Rex | Pacific | 5.67 | 305 | 1.39 |
-| 14 | Life | Dragon Ranger Gaming | China | 5.5 | 230 | 0.93 |
-| 15 | UdoTan | Global Esports | Pacific | 5.5 | 225 | 1.13 |
-| 16 | Autumn | Global Esports | Pacific | 5.5 | 224 | 1.34 |
-| 17 | vo0kashu | Dragon Ranger Gaming | China | 5.5 | 210 | 1.22 |
-| 18 | Rosé | BBL Esports | Emea | 5.5 | 208 | 1.13 |
-| 19 | Ben1Ley | FunPlus Phoenix | China | 5.5 | 190 | 0.9 |
-| 20 | Flex1n | Dragon Ranger Gaming | China | 5.5 | 176 | 0.93 |
+| 12 | happywei | Xi Lai Gaming | China | 6.0 | 234 | 1.23 |
+| 13 | echo | Eternal Fire | Emea | 6.0 | 215 | 1.1 |
+| 14 | Coco | Wuxi Titan Esports Club | China | 6.0 | 204 | 0.99 |
+| 15 | Jinggg | Paper Rex | Pacific | 5.67 | 305 | 1.39 |
+| 16 | AAAAY | FunPlus Phoenix | China | 5.67 | 236 | 1.2 |
+| 17 | UdoTan | Global Esports | Pacific | 5.5 | 225 | 1.13 |
+| 18 | Autumn | Global Esports | Pacific | 5.5 | 224 | 1.34 |
+| 19 | Meteor | T1 | Pacific | 5.0 | 262 | 1.26 |
+| 20 | Life | Dragon Ranger Gaming | China | 5.0 | 260 | 1.08 |
 
 ## Top 20 Players by Rating
 
 | # | Player | Team | Region | Rating | ACS | VFL Pts |
 |---|--------|------|--------|--------|-----|---------|
-| 1 | Derke | Team Vitality | Emea | 1.59 | 276 | 4.75 |
-| 2 | primmie | FULL SENSE | Pacific | 1.54 | 284 | 7.5 |
+| 1 | primmie | FULL SENSE | Pacific | 1.54 | 284 | 7.5 |
+| 2 | Derke | Team Vitality | Emea | 1.51 | 289 | 2.0 |
 | 3 | PatMen | Global Esports | Pacific | 1.49 | 278 | 7.5 |
-| 4 | Sayonara | Team Vitality | Emea | 1.47 | 253 | 7.0 |
-| 5 | nephh | Guangzhou Huadu Bilibili Gaming | China | 1.47 | 251 | 8.5 |
-| 6 | Jinggg | Paper Rex | Pacific | 1.39 | 305 | 5.67 |
-| 7 | Jemkin | Rex Regum Qeon | Pacific | 1.38 | 251 | 4.33 |
-| 8 | Ruxic | Natus Vincere | Emea | 1.36 | 243 | 4.0 |
-| 9 | ZmjjKK | EDward Gaming | China | 1.35 | 269 | 6.5 |
-| 10 | Autumn | Global Esports | Pacific | 1.34 | 224 | 5.5 |
-| 11 | sociablEE | FUT Esports | Emea | 1.3 | 229 | 2.47 |
-| 12 | deLb | Trace Esports | China | 1.29 | 238 | 3.33 |
-| 13 | iZu | T1 | Pacific | 1.28 | 238 | 6.0 |
-| 14 | johnqt | Sentinels | Americas | 1.28 | 216 | 4.25 |
-| 15 | BuZz | T1 | Pacific | 1.27 | 296 | 6.5 |
-| 16 | Scales | TYLOO | China | 1.27 | 248 | 6.5 |
-| 17 | Meteor | T1 | Pacific | 1.26 | 262 | 5.0 |
-| 18 | dos9 | Karmine Corp | Emea | 1.26 | 218 | 3.15 |
-| 19 | wayne | Team Liquid | Emea | 1.26 | 194 | 3.04 |
-| 20 | Killua | FULL SENSE | Pacific | 1.25 | 246 | 6.5 |
+| 4 | ZmjjKK | EDward Gaming | China | 1.43 | 292 | 8.5 |
+| 5 | Jinggg | Paper Rex | Pacific | 1.39 | 305 | 5.67 |
+| 6 | Jemkin | Rex Regum Qeon | Pacific | 1.38 | 251 | 4.33 |
+| 7 | Ruxic | Natus Vincere | Emea | 1.36 | 243 | 4.0 |
+| 8 | Autumn | Global Esports | Pacific | 1.34 | 224 | 5.5 |
+| 9 | sociablEE | FUT Esports | Emea | 1.3 | 229 | 2.47 |
+| 10 | iZu | T1 | Pacific | 1.28 | 238 | 6.0 |
+| 11 | johnqt | Sentinels | Americas | 1.28 | 216 | 4.25 |
+| 12 | BuZz | T1 | Pacific | 1.27 | 296 | 6.5 |
+| 13 | Meteor | T1 | Pacific | 1.26 | 262 | 5.0 |
+| 14 | nephh | Guangzhou Huadu Bilibili Gaming | China | 1.26 | 228 | 1.5 |
+| 15 | dos9 | Karmine Corp | Emea | 1.26 | 218 | 3.15 |
+| 16 | wayne | Team Liquid | Emea | 1.26 | 194 | 3.04 |
+| 17 | Killua | FULL SENSE | Pacific | 1.25 | 246 | 6.5 |
+| 18 | f4ngeer | All Gamers | China | 1.25 | 242 | 6.0 |
+| 19 | Scales | TYLOO | China | 1.25 | 231 | 2.33 |
+| 20 | happywei | Xi Lai Gaming | China | 1.23 | 234 | 6.0 |
 
 ## Map Veto Statistics
 
 | Map | Picked | Banned | Decider |
 |-----|--------|--------|---------|
 | Abyss | 57 | 72 | 15 |
-| Split | 55 | 77 | 36 |
-| Pearl | 54 | 103 | 10 |
-| Haven | 52 | 92 | 24 |
-| Bind | 50 | 87 | 31 |
-| Breeze | 47 | 92 | 29 |
+| Pearl | 57 | 108 | 10 |
+| Split | 57 | 81 | 39 |
+| Haven | 56 | 96 | 24 |
+| Bind | 51 | 91 | 34 |
+| Breeze | 50 | 97 | 29 |
 | Corrode | 35 | 93 | 16 |
-| Lotus | 7 | 12 | 5 |
-| Fracture | 7 | 15 | 2 |
+| Lotus | 9 | 16 | 7 |
+| Fracture | 8 | 21 | 3 |
 
-## All Match Results (157 total)
+## All Match Results (166 total)
 
 | Event | Winner | Loser | Score |
 |-------|--------|-------|-------|
@@ -297,12 +297,14 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | EMEA Kickoff | BBL Esports | Team Vitality | 2-0 |
 | EMEA Kickoff | BBL Esports | Gentle Mates | 3-2 |
 | EMEA Stage 1 | BBL Esports | PCIFIC Esports | 2-0 |
+| EMEA Stage 1 | Eternal Fire | BBL Esports | 0-2 |
 | EMEA Kickoff | FNATIC | FUT Esports | 2-1 |
 | EMEA Kickoff | FNATIC | Team Liquid | 2-0 |
 | EMEA Kickoff | FNATIC | Natus Vincere | 2-1 |
 | EMEA Kickoff | FNATIC | Team Vitality | 2-0 |
 | EMEA Kickoff | Gentle Mates | FNATIC | 2-3 |
 | EMEA Stage 1 | FNATIC | Eternal Fire | 2-1 |
+| EMEA Stage 1 | FNATIC | Team Vitality | 1-0 |
 | EMEA Kickoff | Gentle Mates | FUT Esports | 0-2 |
 | EMEA Kickoff | Karmine Corp | FUT Esports | 1-2 |
 | EMEA Stage 1 | FUT Esports | Gentle Mates | 2-1 |
@@ -316,6 +318,7 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | EMEA Kickoff | Team Vitality | GIANTX | 0-2 |
 | EMEA Kickoff | Team Liquid | GIANTX | 1-2 |
 | EMEA Stage 1 | Team Vitality | GIANTX | 0-2 |
+| EMEA Stage 1 | GIANTX | PCIFIC Esports | 2-1 |
 | EMEA Kickoff | Natus Vincere | Karmine Corp | 0-2 |
 | EMEA Kickoff | Team Liquid | Karmine Corp | 1-2 |
 | EMEA Kickoff | Team Heretics | Karmine Corp | 1-2 |
@@ -334,6 +337,8 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | China Kickoff | All Gamers | Xi Lai Gaming | 3-2 |
 | China Stage 1 | All Gamers | Wuxi Titan Esports Club | 2-1 |
 | China Stage 1 | FunPlus Phoenix | All Gamers | 0-2 |
+| China Stage 1 | All Gamers | JD Mall JDG Esports | 2-0 |
+| China Stage 1 | Wuxi Titan Esports Club | Guangzhou Huadu Bilibili Gaming | 0-2 |
 | China Stage 1 | Guangzhou Huadu Bilibili Gaming | JD Mall JDG Esports | 2-0 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | FunPlus Phoenix | 2-0 |
 | China Kickoff | Guangzhou Huadu Bilibili Gaming | Trace Esports | 2-0 |
@@ -347,15 +352,18 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | China Kickoff | EDward Gaming | Dragon Ranger Gaming | 2-1 |
 | China Stage 1 | EDward Gaming | Nova Esports | 2-0 |
 | China Stage 1 | EDward Gaming | Wolves Esports | 2-0 |
+| China Stage 1 | EDward Gaming | Trace Esports | 2-0 |
 | China Kickoff | TYLOO | FunPlus Phoenix | 0-2 |
 | China Kickoff | JD Mall JDG Esports | FunPlus Phoenix | 1-2 |
 | China Stage 1 | JD Mall JDG Esports | FunPlus Phoenix | 1-2 |
+| China Stage 1 | FunPlus Phoenix | TYLOO | 2-1 |
 | China Kickoff | JD Mall JDG Esports | Wuxi Titan Esports Club | 2-1 |
 | China Kickoff | Dragon Ranger Gaming | JD Mall JDG Esports | 1-2 |
 | China Kickoff | Trace Esports | JD Mall JDG Esports | 1-2 |
 | China Kickoff | TYLOO | Nova Esports | 0-2 |
 | China Kickoff | Wolves Esports | Nova Esports | 1-2 |
 | China Stage 1 | Dragon Ranger Gaming | Nova Esports | 0-2 |
+| China Stage 1 | Xi Lai Gaming | Nova Esports | 0-2 |
 | China Stage 1 | TYLOO | Wuxi Titan Esports Club | 0-2 |
 | China Kickoff | Wuxi Titan Esports Club | Wolves Esports | 2-1 |
 | China Kickoff | TYLOO | Wuxi Titan Esports Club | 1-2 |
@@ -365,6 +373,7 @@ _Last updated: 2026-04-05T18:05:33.920016+00:00_
 | China Stage 1 | Xi Lai Gaming | Trace Esports | 1-2 |
 | China Kickoff | Dragon Ranger Gaming | TYLOO | 1-2 |
 | China Kickoff | Xi Lai Gaming | Wolves Esports | 0-2 |
+| China Stage 1 | Dragon Ranger Gaming | Wolves Esports | 1-2 |
 | China Stage 1 | Xi Lai Gaming | Dragon Ranger Gaming | 2-0 |
 | Pacific Stage 1 | KIWOOM DRX | Team Secret | 2-0 |
 | Pacific Kickoff | FULL SENSE | KIWOOM DRX | 1-2 |
