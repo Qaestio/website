@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-10T11:19:57.820822+00:00",
+  "lastUpdated": "2026-04-11T04:09:55.061698+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -2381,50 +2381,50 @@
       "name": "KRÜ Esports",
       "region": "americas",
       "logo": "https://owcdn.net/img/63976677069e1.png",
-      "matchW": 0,
+      "matchW": 1,
       "matchL": 3,
-      "mapW": 2,
+      "mapW": 4,
       "mapL": 6,
       "players": [
         {
-          "name": "NagZ",
-          "acs": 158,
-          "rating": 0.95,
-          "fkfd": 0.5,
-          "kpm": 12.3,
-          "vflPts": 1.12
+          "name": "mwzera",
+          "acs": 230,
+          "rating": 1.29,
+          "fkfd": 1.8,
+          "kpm": 16.9,
+          "vflPts": 6.0
         },
         {
-          "name": "mta",
-          "acs": 185,
-          "rating": 0.94,
-          "fkfd": 1.1,
-          "kpm": 14.5,
-          "vflPts": 1.5
+          "name": "saadhak",
+          "acs": 226,
+          "rating": 1.26,
+          "fkfd": 1.71,
+          "kpm": 18.9,
+          "vflPts": 6.0
         },
         {
-          "name": "benG",
-          "acs": 164,
-          "rating": 0.89,
-          "fkfd": 1.17,
-          "kpm": 12.5,
-          "vflPts": 1.25
+          "name": "Less",
+          "acs": 230,
+          "rating": 1.19,
+          "fkfd": 2.4,
+          "kpm": 17.8,
+          "vflPts": 5.0
         },
         {
-          "name": "infiltrator",
-          "acs": 206,
-          "rating": 0.86,
-          "fkfd": 0.74,
+          "name": "silentzz",
+          "acs": 180,
+          "rating": 1.1,
+          "fkfd": 2.4,
           "kpm": 15.4,
-          "vflPts": 1.88
+          "vflPts": 4.0
         },
         {
-          "name": "Governor",
-          "acs": 148,
-          "rating": 0.71,
-          "fkfd": 0.42,
-          "kpm": 11.2,
-          "vflPts": 1.0
+          "name": "Dantedeu5",
+          "acs": 212,
+          "rating": 0.82,
+          "fkfd": 0.67,
+          "kpm": 16.3,
+          "vflPts": 4.5
         }
       ],
       "matches": [
@@ -2654,9 +2654,80 @@
             }
           ],
           "oppRating": 1392
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "Sentinels",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Sentinels"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Sentinels"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Sentinels"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1318
         }
       ],
-      "eloRating": 1322,
+      "eloRating": 1410,
       "ratingHistory": [
         {
           "event": "Start",
@@ -2685,6 +2756,13 @@
           "opp": "LEVI",
           "result": "L",
           "rating": 1322
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "SEN",
+          "result": "W",
+          "rating": 1410
         }
       ]
     },
@@ -3443,50 +3521,50 @@
       "name": "MIBR",
       "region": "americas",
       "logo": "https://owcdn.net/img/632be7626d6d9.png",
-      "matchW": 2,
+      "matchW": 3,
       "matchL": 3,
-      "mapW": 8,
+      "mapW": 10,
       "mapL": 10,
       "players": [
         {
-          "name": "Verno",
-          "acs": 206,
-          "rating": 1.09,
-          "fkfd": 1.4,
-          "kpm": 15.6,
-          "vflPts": 2.56
+          "name": "tex",
+          "acs": 232,
+          "rating": 1.22,
+          "fkfd": 5.0,
+          "kpm": 17.6,
+          "vflPts": 7.0
         },
         {
           "name": "zekken",
-          "acs": 204,
-          "rating": 1.03,
-          "fkfd": 1.27,
-          "kpm": 15.2,
-          "vflPts": 2.67
+          "acs": 268,
+          "rating": 1.1,
+          "fkfd": 0.88,
+          "kpm": 19.8,
+          "vflPts": 6.5
         },
         {
-          "name": "aspas",
-          "acs": 196,
-          "rating": 0.98,
-          "fkfd": 1.0,
-          "kpm": 15.8,
-          "vflPts": 2.78
+          "name": "Verno",
+          "acs": 191,
+          "rating": 1.06,
+          "fkfd": 0.8,
+          "kpm": 15.6,
+          "vflPts": 4.5
         },
         {
           "name": "Mazino",
-          "acs": 197,
+          "acs": 177,
           "rating": 0.97,
-          "fkfd": 0.78,
-          "kpm": 15.2,
-          "vflPts": 2.39
+          "fkfd": 0.5,
+          "kpm": 14.3,
+          "vflPts": 4.5
         },
         {
-          "name": "tex",
-          "acs": 165,
-          "rating": 0.82,
-          "fkfd": 0.82,
-          "kpm": 13.2,
-          "vflPts": 1.83
+          "name": "aspas",
+          "acs": 181,
+          "rating": 0.96,
+          "fkfd": 1.25,
+          "kpm": 13.9,
+          "vflPts": 4.0
         }
       ],
       "matches": [
@@ -3900,9 +3978,80 @@
             }
           ],
           "oppRating": 1892
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "G2 Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                16,
+                14
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "MIBR"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "MIBR"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "MIBR"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1993
         }
       ],
-      "eloRating": 1335,
+      "eloRating": 1510,
       "ratingHistory": [
         {
           "event": "Start",
@@ -3945,6 +4094,13 @@
           "opp": "NRG",
           "result": "L",
           "rating": 1335
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "G2",
+          "result": "W",
+          "rating": 1510
         }
       ]
     },
@@ -5079,49 +5235,49 @@
       "region": "americas",
       "logo": "https://owcdn.net/img/62875027c8e06.png",
       "matchW": 1,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 2,
-      "mapL": 6,
+      "mapL": 8,
       "players": [
         {
           "name": "johnqt",
-          "acs": 216,
-          "rating": 1.28,
-          "fkfd": 1.33,
-          "kpm": 17.4,
-          "vflPts": 4.25
+          "acs": 230,
+          "rating": 1.1,
+          "fkfd": 0.29,
+          "kpm": 18.5,
+          "vflPts": 2.5
         },
         {
           "name": "Reduxx",
-          "acs": 189,
-          "rating": 0.95,
-          "fkfd": 1.06,
-          "kpm": 15.0,
-          "vflPts": 2.62
-        },
-        {
-          "name": "Kyu",
-          "acs": 177,
-          "rating": 0.9,
-          "fkfd": 0.56,
-          "kpm": 13.2,
-          "vflPts": 2.12
-        },
-        {
-          "name": "cortezia",
-          "acs": 176,
-          "rating": 0.85,
-          "fkfd": 0.88,
-          "kpm": 13.0,
+          "acs": 210,
+          "rating": 1.07,
+          "fkfd": 0.78,
+          "kpm": 15.8,
           "vflPts": 2.0
         },
         {
-          "name": "N4RRATE",
-          "acs": 187,
-          "rating": 0.8,
-          "fkfd": 1.0,
-          "kpm": 13.6,
-          "vflPts": 2.2
+          "name": "cortezia",
+          "acs": 147,
+          "rating": 0.78,
+          "fkfd": 0.71,
+          "kpm": 11.2,
+          "vflPts": 0.5
+        },
+        {
+          "name": "Victor",
+          "acs": 192,
+          "rating": 0.7,
+          "fkfd": 1.1,
+          "kpm": 14.3,
+          "vflPts": 1.5
+        },
+        {
+          "name": "JonahP",
+          "acs": 123,
+          "rating": 0.57,
+          "fkfd": 0.36,
+          "kpm": 8.1,
+          "vflPts": 0.5
         }
       ],
       "matches": [
@@ -5402,9 +5558,80 @@
             }
           ],
           "oppRating": 1512
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "KRÜ Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Sentinels"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Breeze",
+              "team": "Sentinels"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Haven",
+              "team": "KRÜ Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Split",
+              "team": "Sentinels"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1322
         }
       ],
-      "eloRating": 1318,
+      "eloRating": 1230,
       "ratingHistory": [
         {
           "event": "Start",
@@ -5440,6 +5667,13 @@
           "opp": "LEVI",
           "result": "L",
           "rating": 1318
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "KRÜ ",
+          "result": "L",
+          "rating": 1230
         }
       ]
     },
@@ -5448,49 +5682,49 @@
       "region": "americas",
       "logo": "https://owcdn.net/img/633822848a741.png",
       "matchW": 8,
-      "matchL": 4,
+      "matchL": 5,
       "mapW": 20,
-      "mapL": 9,
+      "mapL": 11,
       "players": [
+        {
+          "name": "BABYBAY",
+          "acs": 232,
+          "rating": 1.11,
+          "fkfd": 3.0,
+          "kpm": 17.6,
+          "vflPts": 3.0
+        },
         {
           "name": "valyn",
           "acs": 206,
-          "rating": 1.1,
-          "fkfd": 1.53,
-          "kpm": 16.0,
-          "vflPts": 3.66
-        },
-        {
-          "name": "BABYBAY",
-          "acs": 191,
-          "rating": 0.97,
-          "fkfd": 1.05,
-          "kpm": 15.1,
-          "vflPts": 3.45
+          "rating": 1.05,
+          "fkfd": 4.0,
+          "kpm": 15.6,
+          "vflPts": 2.0
         },
         {
           "name": "trent",
-          "acs": 191,
-          "rating": 1.12,
-          "fkfd": 1.13,
-          "kpm": 15.2,
-          "vflPts": 3.52
+          "acs": 172,
+          "rating": 0.95,
+          "fkfd": 1.5,
+          "kpm": 13.9,
+          "vflPts": 1.5
         },
         {
           "name": "leaf",
-          "acs": 204,
-          "rating": 1.01,
-          "fkfd": 0.91,
-          "kpm": 15.9,
-          "vflPts": 3.59
+          "acs": 168,
+          "rating": 0.85,
+          "fkfd": 0.5,
+          "kpm": 13.0,
+          "vflPts": 1.5
         },
         {
           "name": "jawgemo",
-          "acs": 219,
-          "rating": 0.96,
-          "fkfd": 0.94,
-          "kpm": 16.7,
-          "vflPts": 3.69
+          "acs": 200,
+          "rating": 0.74,
+          "fkfd": 0.67,
+          "kpm": 13.9,
+          "vflPts": 1.5
         }
       ],
       "matches": [
@@ -6380,9 +6614,80 @@
             }
           ],
           "oppRating": 1940
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "MIBR",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                14,
+                16
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "MIBR"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "MIBR"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "G2 Esports"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "MIBR"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Bind",
+              "team": ""
+            }
+          ],
+          "oppRating": 1335
         }
       ],
-      "eloRating": 1993,
+      "eloRating": 1818,
       "ratingHistory": [
         {
           "event": "Start",
@@ -6474,6 +6779,13 @@
           "opp": "PRX",
           "result": "L",
           "rating": 1993
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "MIBR",
+          "result": "L",
+          "rating": 1818
         }
       ]
     },
@@ -16086,50 +16398,50 @@
       "name": "FUT Esports",
       "region": "emea",
       "logo": "https://owcdn.net/img/632be9976b8fe.png",
-      "matchW": 1,
+      "matchW": 2,
       "matchL": 3,
-      "mapW": 4,
-      "mapL": 7,
+      "mapW": 6,
+      "mapL": 8,
       "players": [
         {
           "name": "sociablEE",
-          "acs": 229,
-          "rating": 1.3,
-          "fkfd": 2.0,
-          "kpm": 18.5,
-          "vflPts": 2.47
+          "acs": 220,
+          "rating": 1.24,
+          "fkfd": 2.5,
+          "kpm": 17.4,
+          "vflPts": 3.33
         },
         {
           "name": "yetujey",
-          "acs": 197,
-          "rating": 1.09,
+          "acs": 212,
+          "rating": 1.17,
           "fkfd": 1.67,
-          "kpm": 14.7,
-          "vflPts": 2.0
-        },
-        {
-          "name": "xeus",
-          "acs": 204,
-          "rating": 1.02,
-          "fkfd": 0.73,
-          "kpm": 17.8,
-          "vflPts": 2.45
+          "kpm": 16.5,
+          "vflPts": 4.0
         },
         {
           "name": "s0pp",
-          "acs": 204,
-          "rating": 0.98,
-          "fkfd": 2.12,
-          "kpm": 15.0,
+          "acs": 207,
+          "rating": 1.0,
+          "fkfd": 1.31,
+          "kpm": 15.8,
           "vflPts": 2.67
         },
         {
           "name": "KROSTALY",
-          "acs": 155,
-          "rating": 0.79,
-          "fkfd": 0.45,
-          "kpm": 12.5,
-          "vflPts": 1.82
+          "acs": 170,
+          "rating": 0.97,
+          "fkfd": 0.62,
+          "kpm": 13.2,
+          "vflPts": 2.67
+        },
+        {
+          "name": "xeus",
+          "acs": 200,
+          "rating": 0.93,
+          "fkfd": 0.46,
+          "kpm": 16.3,
+          "vflPts": 2.33
         }
       ],
       "matches": [
@@ -16437,9 +16749,87 @@
             }
           ],
           "oppRating": 1794
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opponent": "Natus Vincere",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                6
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1397
         }
       ],
-      "eloRating": 1460,
+      "eloRating": 1507,
       "ratingHistory": [
         {
           "event": "Start",
@@ -16475,6 +16865,13 @@
           "opp": "GM",
           "result": "W",
           "rating": 1460
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opp": "NAVI",
+          "result": "W",
+          "rating": 1507
         }
       ]
     },
@@ -16482,50 +16879,50 @@
       "name": "Gentle Mates",
       "region": "emea",
       "logo": "https://owcdn.net/img/6670153fa9120.png",
-      "matchW": 6,
+      "matchW": 7,
       "matchL": 4,
-      "mapW": 17,
-      "mapL": 11,
+      "mapW": 19,
+      "mapL": 12,
       "players": [
         {
           "name": "Minny",
-          "acs": 210,
-          "rating": 1.23,
-          "fkfd": 2.17,
-          "kpm": 17.8,
-          "vflPts": 3.54
+          "acs": 214,
+          "rating": 1.3,
+          "fkfd": 1.12,
+          "kpm": 17.6,
+          "vflPts": 3.67
         },
         {
           "name": "GLYPH",
-          "acs": 181,
-          "rating": 0.96,
+          "acs": 192,
+          "rating": 1.06,
           "fkfd": 1.0,
-          "kpm": 12.3,
-          "vflPts": 2.39
-        },
-        {
-          "name": "marteen",
-          "acs": 188,
-          "rating": 0.89,
-          "fkfd": 0.93,
-          "kpm": 13.6,
-          "vflPts": 4.61
-        },
-        {
-          "name": "bipo",
-          "acs": 184,
-          "rating": 0.81,
-          "fkfd": 0.65,
-          "kpm": 13.2,
-          "vflPts": 2.86
+          "kpm": 14.1,
+          "vflPts": 3.0
         },
         {
           "name": "starxo",
-          "acs": 159,
+          "acs": 196,
+          "rating": 0.89,
+          "fkfd": 0.8,
+          "kpm": 14.5,
+          "vflPts": 2.33
+        },
+        {
+          "name": "marteen",
+          "acs": 174,
+          "rating": 0.85,
+          "fkfd": 1.0,
+          "kpm": 12.8,
+          "vflPts": 1.67
+        },
+        {
+          "name": "bipo",
+          "acs": 166,
           "rating": 0.8,
-          "fkfd": 0.36,
-          "kpm": 11.9,
-          "vflPts": 2.86
+          "fkfd": 0.75,
+          "kpm": 12.3,
+          "vflPts": 1.67
         }
       ],
       "matches": [
@@ -17294,9 +17691,87 @@
             }
           ],
           "oppRating": 1711
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opponent": "Karmine Corp",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                9
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
+            }
+          ],
+          "oppRating": 1239
         }
       ],
-      "eloRating": 1619,
+      "eloRating": 1660,
       "ratingHistory": [
         {
           "event": "Start",
@@ -17374,6 +17849,13 @@
           "opp": "FUT",
           "result": "L",
           "rating": 1619
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opp": "KC",
+          "result": "W",
+          "rating": 1660
         }
       ]
     },
@@ -18012,49 +18494,49 @@
       "region": "emea",
       "logo": "https://owcdn.net/img/627403a0d9e48.png",
       "matchW": 1,
-      "matchL": 4,
-      "mapW": 4,
-      "mapL": 9,
+      "matchL": 5,
+      "mapW": 5,
+      "mapL": 11,
       "players": [
         {
           "name": "dos9",
-          "acs": 218,
-          "rating": 1.26,
-          "fkfd": 1.0,
-          "kpm": 18.9,
-          "vflPts": 3.15
-        },
-        {
-          "name": "LewN",
-          "acs": 202,
-          "rating": 0.96,
-          "fkfd": 0.86,
-          "kpm": 16.3,
-          "vflPts": 3.08
+          "acs": 217,
+          "rating": 1.15,
+          "fkfd": 1.17,
+          "kpm": 17.8,
+          "vflPts": 2.67
         },
         {
           "name": "N4RRATE",
-          "acs": 178,
-          "rating": 0.71,
-          "fkfd": 4.5,
-          "kpm": 11.7,
-          "vflPts": 2.2
+          "acs": 196,
+          "rating": 0.92,
+          "fkfd": 1.5,
+          "kpm": 14.5,
+          "vflPts": 2.0
+        },
+        {
+          "name": "LewN",
+          "acs": 182,
+          "rating": 0.87,
+          "fkfd": 1.0,
+          "kpm": 13.9,
+          "vflPts": 1.0
         },
         {
           "name": "SUYGETSU",
-          "acs": 147,
-          "rating": 0.61,
-          "fkfd": 0.37,
-          "kpm": 10.3,
-          "vflPts": 2.46
+          "acs": 169,
+          "rating": 0.85,
+          "fkfd": 0.54,
+          "kpm": 12.5,
+          "vflPts": 1.67
         },
         {
           "name": "Avez",
-          "acs": 162,
-          "rating": 0.57,
-          "fkfd": 0.75,
-          "kpm": 11.7,
-          "vflPts": 2.08
+          "acs": 172,
+          "rating": 0.81,
+          "fkfd": 0.71,
+          "kpm": 13.4,
+          "vflPts": 2.0
         }
       ],
       "matches": [
@@ -18433,9 +18915,87 @@
             }
           ],
           "oppRating": 1512
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opponent": "Gentle Mates",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                9,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Karmine Corp"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "Gentle Mates"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
+            }
+          ],
+          "oppRating": 1619
         }
       ],
-      "eloRating": 1239,
+      "eloRating": 1198,
       "ratingHistory": [
         {
           "event": "Start",
@@ -18478,6 +19038,13 @@
           "opp": "TL",
           "result": "L",
           "rating": 1239
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opp": "GM",
+          "result": "L",
+          "rating": 1198
         }
       ]
     },
@@ -18486,48 +19053,48 @@
       "region": "emea",
       "logo": "https://owcdn.net/img/62a4109ddbd7f.png",
       "matchW": 3,
-      "matchL": 3,
-      "mapW": 7,
-      "mapL": 8,
+      "matchL": 4,
+      "mapW": 8,
+      "mapL": 10,
       "players": [
         {
           "name": "Ruxic",
-          "acs": 243,
-          "rating": 1.36,
-          "fkfd": 2.2,
-          "kpm": 19.6,
-          "vflPts": 4.0
-        },
-        {
-          "name": "hiro",
-          "acs": 242,
-          "rating": 1.2,
-          "fkfd": 0.62,
-          "kpm": 18.3,
-          "vflPts": 3.67
-        },
-        {
-          "name": "Filu",
-          "acs": 208,
-          "rating": 1.2,
-          "fkfd": 1.27,
-          "kpm": 16.9,
-          "vflPts": 3.33
-        },
-        {
-          "name": "chloric",
-          "acs": 188,
-          "rating": 1.1,
-          "fkfd": 0.75,
-          "kpm": 13.6,
+          "acs": 235,
+          "rating": 1.21,
+          "fkfd": 3.0,
+          "kpm": 18.0,
           "vflPts": 2.0
         },
         {
+          "name": "hiro",
+          "acs": 231,
+          "rating": 1.14,
+          "fkfd": 0.56,
+          "kpm": 18.0,
+          "vflPts": 2.33
+        },
+        {
+          "name": "Filu",
+          "acs": 180,
+          "rating": 1.02,
+          "fkfd": 1.0,
+          "kpm": 14.7,
+          "vflPts": 1.33
+        },
+        {
+          "name": "chloric",
+          "acs": 179,
+          "rating": 0.98,
+          "fkfd": 0.71,
+          "kpm": 13.6,
+          "vflPts": 1.67
+        },
+        {
           "name": "Kolosha",
-          "acs": 140,
-          "rating": 0.58,
-          "fkfd": 0.35,
-          "kpm": 9.7,
+          "acs": 157,
+          "rating": 0.65,
+          "fkfd": 0.57,
+          "kpm": 11.0,
           "vflPts": 1.0
         }
       ],
@@ -18978,9 +19545,87 @@
             }
           ],
           "oppRating": 1492
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opponent": "FUT Esports",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                6,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Natus Vincere"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "FUT Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1460
         }
       ],
-      "eloRating": 1397,
+      "eloRating": 1350,
       "ratingHistory": [
         {
           "event": "Start",
@@ -19030,6 +19675,13 @@
           "opp": "TH",
           "result": "W",
           "rating": 1397
+        },
+        {
+          "event": "EMEA Stage 1",
+          "rnd": "W2",
+          "opp": "FUT",
+          "result": "L",
+          "rating": 1350
         }
       ]
     },
@@ -19075,12 +19727,12 @@
           "vflPts": 1.5
         },
         {
-          "name": "Koshmaras",
-          "acs": 146,
-          "rating": 0.66,
-          "fkfd": 0.45,
-          "kpm": 10.6,
-          "vflPts": 0.5
+          "name": "ComeBack",
+          "acs": 216,
+          "rating": 1.03,
+          "fkfd": 1.56,
+          "kpm": 17.4,
+          "vflPts": null
         }
       ],
       "matches": [
@@ -22052,6 +22704,14 @@
       "mapL": 11,
       "players": [
         {
+          "name": "f4ngeer",
+          "acs": 242,
+          "rating": 1.25,
+          "fkfd": 1.6,
+          "kpm": 19.4,
+          "vflPts": null
+        },
+        {
           "name": "Shr1mp",
           "acs": 200,
           "rating": 1.19,
@@ -22082,14 +22742,6 @@
           "fkfd": 0.89,
           "kpm": 10.1,
           "vflPts": null
-        },
-        {
-          "name": "Youze",
-          "acs": 144,
-          "rating": 0.5,
-          "fkfd": 0.8,
-          "kpm": 10.8,
-          "vflPts": 3.0
         }
       ],
       "matches": [
@@ -22938,53 +23590,131 @@
       "name": "Guangzhou Huadu Bilibili Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/63f25d72216c1.png",
-      "matchW": 5,
+      "matchW": 6,
       "matchL": 5,
-      "mapW": 14,
-      "mapL": 13,
+      "mapW": 16,
+      "mapL": 14,
       "players": [
         {
           "name": "nephh",
-          "acs": 228,
-          "rating": 1.26,
-          "fkfd": 0.86,
-          "kpm": 18.0,
-          "vflPts": 1.5
-        },
-        {
-          "name": "whzy",
-          "acs": 243,
-          "rating": 1.14,
-          "fkfd": 1.36,
-          "kpm": 18.7,
-          "vflPts": 4.0
-        },
-        {
-          "name": "rushia",
-          "acs": 211,
-          "rating": 1.0,
-          "fkfd": 0.75,
-          "kpm": 15.6,
-          "vflPts": 2.5
+          "acs": 221,
+          "rating": 1.21,
+          "fkfd": 1.0,
+          "kpm": 17.6,
+          "vflPts": 3.33
         },
         {
           "name": "Knight",
-          "acs": 175,
-          "rating": 0.97,
+          "acs": 192,
+          "rating": 1.09,
           "fkfd": 1.0,
-          "kpm": 13.0,
-          "vflPts": 1.0
+          "kpm": 14.7,
+          "vflPts": 4.67
+        },
+        {
+          "name": "whzy",
+          "acs": 222,
+          "rating": 1.03,
+          "fkfd": 1.13,
+          "kpm": 17.2,
+          "vflPts": 2.67
+        },
+        {
+          "name": "rushia",
+          "acs": 205,
+          "rating": 0.99,
+          "fkfd": 1.14,
+          "kpm": 15.4,
+          "vflPts": 2.67
         },
         {
           "name": "yilai",
-          "acs": 199,
-          "rating": 0.81,
-          "fkfd": 0.74,
-          "kpm": 15.2,
-          "vflPts": 3.0
+          "acs": 207,
+          "rating": 0.91,
+          "fkfd": 0.87,
+          "kpm": 15.8,
+          "vflPts": 3.67
         }
       ],
       "matches": [
+        {
+          "event": "China Stage 1",
+          "rnd": "W2",
+          "opponent": "FunPlus Phoenix",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                8
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                9,
+                13
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                2
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
+            }
+          ],
+          "oppRating": 1461
+        },
         {
           "event": "China Stage 1",
           "rnd": "W2",
@@ -23745,7 +24475,7 @@
           "oppRating": 1539
         }
       ],
-      "eloRating": 1265,
+      "eloRating": 1361,
       "ratingHistory": [
         {
           "event": "Start",
@@ -23823,6 +24553,13 @@
           "opp": "TEC",
           "result": "L",
           "rating": 1265
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W2",
+          "opp": "FPX",
+          "result": "W",
+          "rating": 1361
         }
       ]
     },
@@ -24872,49 +25609,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/65a17b313b131.png",
       "matchW": 2,
-      "matchL": 4,
-      "mapW": 6,
-      "mapL": 9,
+      "matchL": 5,
+      "mapW": 7,
+      "mapL": 11,
       "players": [
         {
           "name": "AAAAY",
-          "acs": 236,
-          "rating": 1.2,
-          "fkfd": 2.25,
-          "kpm": 19.1,
-          "vflPts": 5.67
-        },
-        {
-          "name": "Setrod",
-          "acs": 201,
-          "rating": 1.02,
-          "fkfd": 0.76,
-          "kpm": 15.4,
-          "vflPts": 2.0
-        },
-        {
-          "name": "KovaQ",
-          "acs": 198,
-          "rating": 1.02,
-          "fkfd": 1.14,
-          "kpm": 15.8,
+          "acs": 242,
+          "rating": 1.21,
+          "fkfd": 2.75,
+          "kpm": 19.4,
           "vflPts": 2.67
         },
         {
+          "name": "Setrod",
+          "acs": 204,
+          "rating": 1.0,
+          "fkfd": 0.75,
+          "kpm": 15.8,
+          "vflPts": 1.67
+        },
+        {
+          "name": "KovaQ",
+          "acs": 184,
+          "rating": 0.94,
+          "fkfd": 0.67,
+          "kpm": 14.7,
+          "vflPts": 0.67
+        },
+        {
           "name": "BerLIN",
-          "acs": 177,
-          "rating": 0.85,
+          "acs": 171,
+          "rating": 0.82,
           "fkfd": 0.64,
-          "kpm": 13.4,
-          "vflPts": 2.33
+          "kpm": 13.0,
+          "vflPts": 1.0
         },
         {
           "name": "Ben1Ley",
-          "acs": 171,
-          "rating": 0.77,
-          "fkfd": 0.79,
-          "kpm": 12.8,
-          "vflPts": 1.33
+          "acs": 184,
+          "rating": 0.81,
+          "fkfd": 0.73,
+          "kpm": 13.9,
+          "vflPts": 1.67
         }
       ],
       "matches": [
@@ -25328,9 +26065,87 @@
             }
           ],
           "oppRating": 1570
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W2",
+          "opponent": "Guangzhou Huadu Bilibili Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                8,
+                13
+              ]
+            },
+            {
+              "map": "Fracture",
+              "score": [
+                13,
+                9
+              ]
+            },
+            {
+              "map": "Pearl",
+              "score": [
+                2,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Split",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Haven",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Fracture",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Bind",
+              "team": "Guangzhou Huadu Bilibili Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "FunPlus Phoenix"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Pearl",
+              "team": ""
+            }
+          ],
+          "oppRating": 1265
         }
       ],
-      "eloRating": 1461,
+      "eloRating": 1365,
       "ratingHistory": [
         {
           "event": "Start",
@@ -25380,6 +26195,13 @@
           "opp": "TYL",
           "result": "W",
           "rating": 1461
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W2",
+          "opp": "BLG",
+          "result": "L",
+          "rating": 1365
         }
       ]
     },
@@ -27453,6 +28275,14 @@
       "mapL": 12,
       "players": [
         {
+          "name": "deLb",
+          "acs": 213,
+          "rating": 1.14,
+          "fkfd": 1.11,
+          "kpm": 16.7,
+          "vflPts": null
+        },
+        {
           "name": "Xlele",
           "acs": 227,
           "rating": 1.1,
@@ -27483,14 +28313,6 @@
           "fkfd": 0.6,
           "kpm": 11.4,
           "vflPts": 3.0
-        },
-        {
-          "name": "f4ngeer",
-          "acs": 225,
-          "rating": 1.2,
-          "fkfd": 1.09,
-          "kpm": 18.0,
-          "vflPts": 3.5
         }
       ],
       "matches": [
