@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T16:41:40.238151+00:00",
+  "lastUpdated": "2026-04-13T04:09:54.808929+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -804,49 +804,49 @@
       "region": "americas",
       "logo": "https://owcdn.net/img/628addcbd509e.png",
       "matchW": 4,
-      "matchL": 3,
+      "matchL": 4,
       "mapW": 9,
-      "mapL": 7,
+      "mapL": 9,
       "players": [
         {
-          "name": "v1c",
-          "acs": 197,
-          "rating": 1.08,
+          "name": "OXY",
+          "acs": 248,
+          "rating": 1.1,
           "fkfd": 1.0,
-          "kpm": 15.4,
-          "vflPts": 3.12
-        },
-        {
-          "name": "Xeppaa",
-          "acs": 197,
-          "rating": 1.04,
-          "fkfd": 1.0,
-          "kpm": 15.0,
-          "vflPts": 3.06
-        },
-        {
-          "name": "penny",
-          "acs": 189,
-          "rating": 0.95,
-          "fkfd": 0.69,
-          "kpm": 15.2,
-          "vflPts": 3.06
-        },
-        {
-          "name": "Zellsis",
-          "acs": 150,
-          "rating": 0.83,
-          "fkfd": 0.62,
-          "kpm": 10.8,
+          "kpm": 18.9,
           "vflPts": 2.0
         },
         {
-          "name": "OXY",
-          "acs": 225,
-          "rating": 1.06,
-          "fkfd": 1.24,
-          "kpm": 18.7,
-          "vflPts": 3.55
+          "name": "Zellsis",
+          "acs": 155,
+          "rating": 0.8,
+          "fkfd": 0.45,
+          "kpm": 11.9,
+          "vflPts": 0.5
+        },
+        {
+          "name": "v1c",
+          "acs": 130,
+          "rating": 0.73,
+          "fkfd": 1.0,
+          "kpm": 9.0,
+          "vflPts": 0.0
+        },
+        {
+          "name": "Xeppaa",
+          "acs": 166,
+          "rating": 0.69,
+          "fkfd": 0.0,
+          "kpm": 10.8,
+          "vflPts": 0.5
+        },
+        {
+          "name": "penny",
+          "acs": 143,
+          "rating": 0.57,
+          "fkfd": 0.79,
+          "kpm": 10.1,
+          "vflPts": 0.5
         }
       ],
       "matches": [
@@ -1360,9 +1360,80 @@
             }
           ],
           "oppRating": 1607
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "LEVIATÁN",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                6,
+                13
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                5,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Cloud9"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Cloud9"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Cloud9"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1606
         }
       ],
-      "eloRating": 1483,
+      "eloRating": 1384,
       "ratingHistory": [
         {
           "event": "Start",
@@ -1412,6 +1483,13 @@
           "opp": "100T",
           "result": "L",
           "rating": 1483
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "LEVI",
+          "result": "L",
+          "rating": 1384
         }
       ]
     },
@@ -1957,50 +2035,50 @@
       "name": "FURIA",
       "region": "americas",
       "logo": "https://owcdn.net/img/632be843b7d51.png",
-      "matchW": 4,
+      "matchW": 5,
       "matchL": 2,
-      "mapW": 11,
+      "mapW": 13,
       "mapL": 8,
       "players": [
         {
-          "name": "koalanoob",
-          "acs": 222,
-          "rating": 1.08,
-          "fkfd": 1.25,
-          "kpm": 17.6,
-          "vflPts": 3.21
-        },
-        {
-          "name": "artzin",
-          "acs": 186,
-          "rating": 1.0,
-          "fkfd": 0.81,
-          "kpm": 14.9,
-          "vflPts": 2.58
-        },
-        {
-          "name": "eeiu",
-          "acs": 199,
-          "rating": 1.11,
-          "fkfd": 1.33,
-          "kpm": 15.9,
-          "vflPts": 2.89
-        },
-        {
           "name": "alym",
-          "acs": 191,
-          "rating": 0.87,
-          "fkfd": 1.07,
-          "kpm": 14.7,
-          "vflPts": 2.53
+          "acs": 274,
+          "rating": 1.27,
+          "fkfd": 1.0,
+          "kpm": 21.6,
+          "vflPts": 6.5
         },
         {
           "name": "nerve",
-          "acs": 169,
-          "rating": 0.91,
-          "fkfd": 1.07,
-          "kpm": 12.8,
-          "vflPts": 2.0
+          "acs": 188,
+          "rating": 1.09,
+          "fkfd": 1.0,
+          "kpm": 16.3,
+          "vflPts": 5.0
+        },
+        {
+          "name": "koalanoob",
+          "acs": 224,
+          "rating": 1.08,
+          "fkfd": 1.56,
+          "kpm": 17.8,
+          "vflPts": 4.5
+        },
+        {
+          "name": "artzin",
+          "acs": 174,
+          "rating": 1.0,
+          "fkfd": 0.14,
+          "kpm": 14.7,
+          "vflPts": 4.0
+        },
+        {
+          "name": "eeiu",
+          "acs": 182,
+          "rating": 0.93,
+          "fkfd": 6.0,
+          "kpm": 13.9,
+          "vflPts": 4.0
         }
       ],
       "matches": [
@@ -2478,9 +2556,80 @@
             }
           ],
           "oppRating": 1910
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "NRG",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                7
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "NRG"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "FURIA"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "NRG"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "FURIA"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "NRG"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "FURIA"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Fracture",
+              "team": ""
+            }
+          ],
+          "oppRating": 1918
         }
       ],
-      "eloRating": 1741,
+      "eloRating": 1916,
       "ratingHistory": [
         {
           "event": "Start",
@@ -2530,6 +2679,13 @@
           "opp": "BBL",
           "result": "L",
           "rating": 1741
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "NRG",
+          "result": "W",
+          "rating": 1916
         }
       ]
     },
@@ -2926,50 +3082,50 @@
       "name": "LEVIATÁN",
       "region": "americas",
       "logo": "https://owcdn.net/img/61b8888cc3860.png",
-      "matchW": 2,
+      "matchW": 3,
       "matchL": 3,
-      "mapW": 5,
+      "mapW": 7,
       "mapL": 6,
       "players": [
         {
+          "name": "Neon",
+          "acs": 226,
+          "rating": 1.4,
+          "fkfd": 2.0,
+          "kpm": 17.8,
+          "vflPts": 6.0
+        },
+        {
           "name": "kiNgg",
-          "acs": 189,
-          "rating": 1.01,
-          "fkfd": 0.75,
-          "kpm": 15.0,
-          "vflPts": 2.55
+          "acs": 196,
+          "rating": 1.34,
+          "fkfd": 0.38,
+          "kpm": 16.1,
+          "vflPts": 5.5
         },
         {
           "name": "blowz",
-          "acs": 176,
-          "rating": 0.93,
-          "fkfd": 0.6,
-          "kpm": 13.4,
-          "vflPts": 2.09
+          "acs": 178,
+          "rating": 1.24,
+          "fkfd": null,
+          "kpm": 16.1,
+          "vflPts": 5.0
         },
         {
           "name": "Sato",
-          "acs": 190,
-          "rating": 0.9,
-          "fkfd": 0.65,
-          "kpm": 15.2,
-          "vflPts": 2.82
+          "acs": 216,
+          "rating": 1.06,
+          "fkfd": 1.14,
+          "kpm": 17.2,
+          "vflPts": 4.5
         },
         {
           "name": "spike",
-          "acs": 172,
-          "rating": 0.81,
-          "fkfd": 1.0,
-          "kpm": 13.0,
-          "vflPts": 2.0
-        },
-        {
-          "name": "Neon",
-          "acs": 212,
-          "rating": 1.14,
-          "fkfd": 2.44,
-          "kpm": 16.7,
-          "vflPts": 3.83
+          "acs": 248,
+          "rating": 1.03,
+          "fkfd": 2.0,
+          "kpm": 19.6,
+          "vflPts": 4.5
         }
       ],
       "matches": [
@@ -3328,9 +3484,80 @@
             }
           ],
           "oppRating": 1485
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "Cloud9",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                13,
+                6
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                5
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Cloud9"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "Cloud9"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "Cloud9"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Bind",
+              "team": "LEVIATÁN"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1483
         }
       ],
-      "eloRating": 1606,
+      "eloRating": 1705,
       "ratingHistory": [
         {
           "event": "Start",
@@ -3366,6 +3593,13 @@
           "opp": "SEN",
           "result": "W",
           "rating": 1606
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "C9",
+          "result": "W",
+          "rating": 1705
         }
       ]
     },
@@ -4350,49 +4584,49 @@
       "region": "americas",
       "logo": "https://owcdn.net/img/6610f026c1a9e.png",
       "matchW": 8,
-      "matchL": 5,
+      "matchL": 6,
       "mapW": 20,
-      "mapL": 14,
+      "mapL": 16,
       "players": [
         {
           "name": "brawk",
-          "acs": 184,
-          "rating": 1.01,
-          "fkfd": 0.89,
-          "kpm": 13.6,
-          "vflPts": 2.91
+          "acs": 236,
+          "rating": 1.1,
+          "fkfd": 1.0,
+          "kpm": 17.4,
+          "vflPts": 3.0
         },
         {
           "name": "mada",
-          "acs": 216,
-          "rating": 1.04,
-          "fkfd": 1.21,
-          "kpm": 16.7,
-          "vflPts": 3.26
+          "acs": 210,
+          "rating": 0.98,
+          "fkfd": 1.11,
+          "kpm": 16.3,
+          "vflPts": 2.0
         },
         {
           "name": "keiko",
-          "acs": 209,
-          "rating": 1.09,
-          "fkfd": 1.21,
-          "kpm": 16.8,
-          "vflPts": 3.53
-        },
-        {
-          "name": "skuba",
-          "acs": 199,
-          "rating": 1.09,
-          "fkfd": 1.19,
-          "kpm": 15.7,
-          "vflPts": 3.35
+          "acs": 216,
+          "rating": 0.95,
+          "fkfd": 1.33,
+          "kpm": 16.9,
+          "vflPts": 2.0
         },
         {
           "name": "Ethan",
-          "acs": 169,
-          "rating": 0.88,
-          "fkfd": 0.82,
-          "kpm": 12.8,
-          "vflPts": 2.38
+          "acs": 159,
+          "rating": 0.77,
+          "fkfd": 1.0,
+          "kpm": 10.8,
+          "vflPts": 1.0
+        },
+        {
+          "name": "skuba",
+          "acs": 140,
+          "rating": 0.59,
+          "fkfd": 0.22,
+          "kpm": 9.2,
+          "vflPts": 0.5
         }
       ],
       "matches": [
@@ -5374,9 +5608,80 @@
             }
           ],
           "oppRating": 2079
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opponent": "FURIA",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Pearl",
+              "score": [
+                7,
+                13
+              ]
+            },
+            {
+              "map": "Split",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Haven",
+              "team": "NRG"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Bind",
+              "team": "FURIA"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Pearl",
+              "team": "NRG"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Split",
+              "team": "FURIA"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "NRG"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "FURIA"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Fracture",
+              "team": ""
+            }
+          ],
+          "oppRating": 1741
         }
       ],
-      "eloRating": 1918,
+      "eloRating": 1743,
       "ratingHistory": [
         {
           "event": "Start",
@@ -5468,6 +5773,13 @@
           "opp": "PRX",
           "result": "L",
           "rating": 1918
+        },
+        {
+          "event": "Americas Stage 1",
+          "rnd": "W1",
+          "opp": "FUR",
+          "result": "L",
+          "rating": 1743
         }
       ]
     },

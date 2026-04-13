@@ -1,5 +1,5 @@
 # VCT 2026 Quick Reference
-_Last updated: 2026-04-12T16:41:40.238151+00:00_
+_Last updated: 2026-04-13T04:09:54.808929+00:00_
 
 ## Elo Rankings (all teams)
 
@@ -8,7 +8,7 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 1 | Paper Rex | Pacific | 2336 |
 | 2 | Nongshim RedForce | Pacific | 2197 |
 | 3 | T1 | Pacific | 1990 |
-| 4 | NRG | Americas | 1918 |
+| 4 | FURIA | Americas | 1916 |
 | 5 | KIWOOM DRX | Pacific | 1905 |
 | 6 | Team Liquid | Emea | 1872 |
 | 7 | Global Esports | Pacific | 1864 |
@@ -16,11 +16,11 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 9 | G2 Esports | Americas | 1818 |
 | 10 | Xi Lai Gaming | China | 1764 |
 | 11 | 100 Thieves | Americas | 1760 |
-| 12 | FURIA | Americas | 1741 |
-| 13 | BBL Esports | Emea | 1667 |
-| 14 | Gentle Mates | Emea | 1660 |
-| 15 | FULL SENSE | Pacific | 1651 |
-| 16 | LEVIATÁN | Americas | 1606 |
+| 12 | NRG | Americas | 1743 |
+| 13 | LEVIATÁN | Americas | 1705 |
+| 14 | BBL Esports | Emea | 1667 |
+| 15 | Gentle Mates | Emea | 1660 |
+| 16 | FULL SENSE | Pacific | 1651 |
 | 17 | All Gamers | China | 1600 |
 | 18 | TYLOO | China | 1600 |
 | 19 | Rex Regum Qeon | Pacific | 1592 |
@@ -28,13 +28,13 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 21 | FNATIC | Emea | 1511 |
 | 22 | MIBR | Americas | 1510 |
 | 23 | FUT Esports | Emea | 1507 |
-| 24 | Cloud9 | Americas | 1483 |
-| 25 | Eternal Fire | Emea | 1480 |
-| 26 | Team Vitality | Emea | 1467 |
-| 27 | Evil Geniuses | Americas | 1430 |
-| 28 | KRÜ Esports | Americas | 1410 |
-| 29 | Dragon Ranger Gaming | China | 1404 |
-| 30 | Trace Esports | China | 1391 |
+| 24 | Eternal Fire | Emea | 1480 |
+| 25 | Team Vitality | Emea | 1467 |
+| 26 | Evil Geniuses | Americas | 1430 |
+| 27 | KRÜ Esports | Americas | 1410 |
+| 28 | Dragon Ranger Gaming | China | 1404 |
+| 29 | Trace Esports | China | 1391 |
+| 30 | Cloud9 | Americas | 1384 |
 | 31 | FunPlus Phoenix | China | 1365 |
 | 32 | Guangzhou Huadu Bilibili Gaming | China | 1361 |
 | 33 | LOUD | Americas | 1358 |
@@ -58,14 +58,14 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 
 | Team | W | L | Win% | Map W | Map L | Map% | Elo |
 |------|---|---|------|-------|-------|------|-----|
-| NRG | 8 | 5 | 62% | 20 | 14 | 59% | 1918 |
+| NRG | 8 | 6 | 57% | 20 | 16 | 56% | 1743 |
 | G2 Esports | 8 | 5 | 62% | 20 | 11 | 65% | 1818 |
 | 100 Thieves | 6 | 3 | 67% | 13 | 9 | 59% | 1760 |
-| Cloud9 | 4 | 3 | 57% | 9 | 7 | 56% | 1483 |
-| FURIA | 4 | 2 | 67% | 11 | 8 | 58% | 1741 |
+| FURIA | 5 | 2 | 71% | 13 | 8 | 62% | 1916 |
+| Cloud9 | 4 | 4 | 50% | 9 | 9 | 50% | 1384 |
+| LEVIATÁN | 3 | 3 | 50% | 7 | 6 | 54% | 1705 |
 | MIBR | 3 | 3 | 50% | 10 | 10 | 50% | 1510 |
 | Evil Geniuses | 2 | 4 | 33% | 5 | 8 | 38% | 1430 |
-| LEVIATÁN | 2 | 3 | 40% | 5 | 6 | 45% | 1606 |
 | ENVY | 2 | 4 | 33% | 6 | 10 | 38% | 1286 |
 | KRÜ Esports | 1 | 3 | 25% | 4 | 6 | 40% | 1410 |
 | LOUD | 1 | 3 | 25% | 3 | 7 | 30% | 1358 |
@@ -131,21 +131,21 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 3 | primmie | FULL SENSE | Pacific | 285 | 1.53 | 3.67 | 23.1 | 7.0 |
 | 4 | ZmjjKK | EDward Gaming | China | 285 | 1.32 | 1.46 | 21.8 | 3.33 |
 | 5 | Killua | FULL SENSE | Pacific | 274 | 1.42 | 1.5 | 22.2 | 8.0 |
-| 6 | lukxo | LOUD | Americas | 273 | 1.44 | 2.29 | 22.0 | 4.67 |
-| 7 | BuZz | T1 | Pacific | 269 | 1.15 | 0.89 | 20.9 | 5.5 |
-| 8 | zekken | MIBR | Americas | 268 | 1.1 | 0.88 | 19.8 | 6.5 |
-| 9 | Jemkin | Rex Regum Qeon | Pacific | 267 | 1.39 | 1.44 | 21.3 | 7.5 |
-| 10 | Derke | Team Vitality | Emea | 267 | 1.31 | 1.64 | 20.9 | 2.0 |
-| 11 | Cryocells | 100 Thieves | Americas | 262 | 1.47 | 2.62 | 23.1 | 7.5 |
-| 12 | splash | TYLOO | China | 260 | 1.1 | 1.25 | 19.8 | 5.33 |
-| 13 | t3xture | Gen.G | Pacific | 254 | 1.18 | 1.35 | 19.6 | 4.0 |
-| 14 | Life | Dragon Ranger Gaming | China | 251 | 1.03 | 1.0 | 18.5 | 2.33 |
-| 15 | Alfajer | FNATIC | Emea | 249 | 1.16 | 1.6 | 19.4 | 0.33 |
-| 16 | zhe | JD Mall JDG Esports | China | 245 | 1.21 | 2.0 | 18.7 | 8.0 |
-| 17 | AAAAY | FunPlus Phoenix | China | 242 | 1.21 | 2.75 | 19.4 | 2.67 |
-| 18 | Meteor | T1 | Pacific | 242 | 1.15 | 1.18 | 17.8 | 5.0 |
-| 19 | f4ngeer | All Gamers | China | 238 | 1.24 | 1.33 | 18.9 | 2.33 |
-| 20 | PatMen | Global Esports | Pacific | 236 | 1.21 | 3.0 | 17.6 | 3.5 |
+| 6 | alym | FURIA | Americas | 274 | 1.27 | 1.0 | 21.6 | 6.5 |
+| 7 | lukxo | LOUD | Americas | 273 | 1.44 | 2.29 | 22.0 | 4.67 |
+| 8 | BuZz | T1 | Pacific | 269 | 1.15 | 0.89 | 20.9 | 5.5 |
+| 9 | zekken | MIBR | Americas | 268 | 1.1 | 0.88 | 19.8 | 6.5 |
+| 10 | Jemkin | Rex Regum Qeon | Pacific | 267 | 1.39 | 1.44 | 21.3 | 7.5 |
+| 11 | Derke | Team Vitality | Emea | 267 | 1.31 | 1.64 | 20.9 | 2.0 |
+| 12 | Cryocells | 100 Thieves | Americas | 262 | 1.47 | 2.62 | 23.1 | 7.5 |
+| 13 | splash | TYLOO | China | 260 | 1.1 | 1.25 | 19.8 | 5.33 |
+| 14 | t3xture | Gen.G | Pacific | 254 | 1.18 | 1.35 | 19.6 | 4.0 |
+| 15 | Life | Dragon Ranger Gaming | China | 251 | 1.03 | 1.0 | 18.5 | 2.33 |
+| 16 | Alfajer | FNATIC | Emea | 249 | 1.16 | 1.6 | 19.4 | 0.33 |
+| 17 | OXY | Cloud9 | Americas | 248 | 1.1 | 1.0 | 18.9 | 2.0 |
+| 18 | spike | LEVIATÁN | Americas | 248 | 1.03 | 2.0 | 19.6 | 4.5 |
+| 19 | zhe | JD Mall JDG Esports | China | 245 | 1.21 | 2.0 | 18.7 | 8.0 |
+| 20 | AAAAY | FunPlus Phoenix | China | 242 | 1.21 | 2.75 | 19.4 | 2.67 |
 
 ## Top 20 Players by VFL Points
 
@@ -158,19 +158,19 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 5 | primmie | FULL SENSE | Pacific | 7.0 | 285 | 1.53 |
 | 6 | tex | MIBR | Americas | 7.0 | 232 | 1.22 |
 | 7 | Kai | Trace Esports | China | 7.0 | 217 | 1.04 |
-| 8 | zekken | MIBR | Americas | 6.5 | 268 | 1.1 |
-| 9 | iZu | T1 | Pacific | 6.5 | 228 | 1.27 |
-| 10 | nAts | Team Liquid | Emea | 6.5 | 228 | 1.21 |
-| 11 | purp0 | Team Liquid | Emea | 6.5 | 216 | 1.29 |
-| 12 | Favian | Eternal Fire | Emea | 6.5 | 213 | 1.1 |
-| 13 | Darker | LOUD | Americas | 6.0 | 304 | 1.51 |
-| 14 | mwzera | KRÜ Esports | Americas | 6.0 | 230 | 1.29 |
-| 15 | Xlele | Trace Esports | China | 6.0 | 227 | 1.1 |
-| 16 | saadhak | KRÜ Esports | Americas | 6.0 | 226 | 1.26 |
-| 17 | echo | Eternal Fire | Emea | 6.0 | 215 | 1.1 |
-| 18 | BuZz | T1 | Pacific | 5.5 | 269 | 1.15 |
-| 19 | Asuna | 100 Thieves | Americas | 5.5 | 228 | 1.29 |
-| 20 | UdoTan | Global Esports | Pacific | 5.5 | 225 | 1.21 |
+| 8 | alym | FURIA | Americas | 6.5 | 274 | 1.27 |
+| 9 | zekken | MIBR | Americas | 6.5 | 268 | 1.1 |
+| 10 | iZu | T1 | Pacific | 6.5 | 228 | 1.27 |
+| 11 | nAts | Team Liquid | Emea | 6.5 | 228 | 1.21 |
+| 12 | purp0 | Team Liquid | Emea | 6.5 | 216 | 1.29 |
+| 13 | Favian | Eternal Fire | Emea | 6.5 | 213 | 1.1 |
+| 14 | Darker | LOUD | Americas | 6.0 | 304 | 1.51 |
+| 15 | mwzera | KRÜ Esports | Americas | 6.0 | 230 | 1.29 |
+| 16 | Xlele | Trace Esports | China | 6.0 | 227 | 1.1 |
+| 17 | Neon | LEVIATÁN | Americas | 6.0 | 226 | 1.4 |
+| 18 | saadhak | KRÜ Esports | Americas | 6.0 | 226 | 1.26 |
+| 19 | echo | Eternal Fire | Emea | 6.0 | 215 | 1.1 |
+| 20 | BuZz | T1 | Pacific | 5.5 | 269 | 1.15 |
 
 ## Top 20 Players by Rating
 
@@ -181,37 +181,37 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | 3 | Cryocells | 100 Thieves | Americas | 1.47 | 262 | 7.5 |
 | 4 | lukxo | LOUD | Americas | 1.44 | 273 | 4.67 |
 | 5 | Killua | FULL SENSE | Pacific | 1.42 | 274 | 8.0 |
-| 6 | Jemkin | Rex Regum Qeon | Pacific | 1.39 | 267 | 7.5 |
-| 7 | bang | 100 Thieves | Americas | 1.38 | 216 | 5.5 |
-| 8 | Jinggg | Paper Rex | Pacific | 1.37 | 307 | 4.67 |
-| 9 | ZmjjKK | EDward Gaming | China | 1.32 | 285 | 3.33 |
-| 10 | Derke | Team Vitality | Emea | 1.31 | 267 | 2.0 |
-| 11 | Minny | Gentle Mates | Emea | 1.3 | 214 | 3.67 |
-| 12 | mwzera | KRÜ Esports | Americas | 1.29 | 230 | 6.0 |
-| 13 | Asuna | 100 Thieves | Americas | 1.29 | 228 | 5.5 |
-| 14 | purp0 | Team Liquid | Emea | 1.29 | 216 | 6.5 |
-| 15 | iZu | T1 | Pacific | 1.27 | 228 | 6.5 |
-| 16 | saadhak | KRÜ Esports | Americas | 1.26 | 226 | 6.0 |
-| 17 | f4ngeer | All Gamers | China | 1.24 | 238 | 2.33 |
-| 18 | Autumn | Global Esports | Pacific | 1.24 | 221 | 4.5 |
-| 19 | sociablEE | FUT Esports | Emea | 1.24 | 220 | 3.33 |
-| 20 | tex | MIBR | Americas | 1.22 | 232 | 7.0 |
+| 6 | Neon | LEVIATÁN | Americas | 1.4 | 226 | 6.0 |
+| 7 | Jemkin | Rex Regum Qeon | Pacific | 1.39 | 267 | 7.5 |
+| 8 | bang | 100 Thieves | Americas | 1.38 | 216 | 5.5 |
+| 9 | Jinggg | Paper Rex | Pacific | 1.37 | 307 | 4.67 |
+| 10 | kiNgg | LEVIATÁN | Americas | 1.34 | 196 | 5.5 |
+| 11 | ZmjjKK | EDward Gaming | China | 1.32 | 285 | 3.33 |
+| 12 | Derke | Team Vitality | Emea | 1.31 | 267 | 2.0 |
+| 13 | Minny | Gentle Mates | Emea | 1.3 | 214 | 3.67 |
+| 14 | mwzera | KRÜ Esports | Americas | 1.29 | 230 | 6.0 |
+| 15 | Asuna | 100 Thieves | Americas | 1.29 | 228 | 5.5 |
+| 16 | purp0 | Team Liquid | Emea | 1.29 | 216 | 6.5 |
+| 17 | alym | FURIA | Americas | 1.27 | 274 | 6.5 |
+| 18 | iZu | T1 | Pacific | 1.27 | 228 | 6.5 |
+| 19 | saadhak | KRÜ Esports | Americas | 1.26 | 226 | 6.0 |
+| 20 | f4ngeer | All Gamers | China | 1.24 | 238 | 2.33 |
 
 ## Map Veto Statistics
 
 | Map | Picked | Banned | Decider |
 |-----|--------|--------|---------|
-| Haven | 62 | 109 | 24 |
-| Pearl | 61 | 121 | 12 |
-| Split | 61 | 91 | 44 |
+| Pearl | 63 | 121 | 12 |
+| Haven | 63 | 110 | 24 |
+| Split | 62 | 91 | 45 |
 | Abyss | 57 | 72 | 15 |
-| Bind | 56 | 101 | 38 |
-| Breeze | 53 | 110 | 32 |
+| Bind | 56 | 103 | 38 |
+| Breeze | 53 | 112 | 32 |
 | Corrode | 35 | 93 | 16 |
-| Lotus | 17 | 24 | 10 |
-| Fracture | 16 | 30 | 5 |
+| Lotus | 17 | 26 | 10 |
+| Fracture | 16 | 31 | 6 |
 
-## All Match Results (186 total)
+## All Match Results (188 total)
 
 | Event | Winner | Loser | Score |
 |-------|--------|-------|-------|
@@ -228,6 +228,7 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | Americas Kickoff | Cloud9 | LEVIATÁN | 2-0 |
 | Americas Kickoff | Cloud9 | ENVY | 2-1 |
 | Americas Kickoff | G2 Esports | Cloud9 | 0-2 |
+| Americas Stage 1 | LEVIATÁN | Cloud9 | 0-2 |
 | Americas Kickoff | ENVY | Evil Geniuses | 1-2 |
 | Americas Kickoff | Sentinels | Evil Geniuses | 0-2 |
 | Americas Kickoff | Evil Geniuses | LOUD | 2-0 |
@@ -237,6 +238,7 @@ _Last updated: 2026-04-12T16:41:40.238151+00:00_
 | Americas Kickoff | FURIA | MIBR | 3-2 |
 | Masters Santiago | Paper Rex | FURIA | 1-2 |
 | Masters Santiago | BBL Esports | FURIA | 1-2 |
+| Americas Stage 1 | FURIA | NRG | 2-0 |
 | Americas Kickoff | ENVY | KRÜ Esports | 1-2 |
 | Americas Kickoff | LEVIATÁN | KRÜ Esports | 0-2 |
 | Americas Stage 1 | KRÜ Esports | Sentinels | 2-0 |
