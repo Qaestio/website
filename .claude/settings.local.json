@@ -98,7 +98,9 @@
       "Bash(python -m pip install requests --target /c/Users/bearm/AppData/Roaming/Python/Python314/site-packages)",
       "Bash(PYTHONPATH=/c/Users/bearm/AppData/Roaming/Python/Python314/site-packages python scraper/scrape_vct.py)",
       "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json'\\)\\); print\\('lastUpdated:', d.get\\('lastUpdated'\\)\\); print\\('teams count:', len\\(d.get\\('teams', []\\)\\)\\)\")",
-      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\('lastUpdated:', d.get\\('lastUpdated'\\)\\); print\\('teams count:', len\\(d.get\\('teams', []\\)\\)\\)\")"
+      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\('lastUpdated:', d.get\\('lastUpdated'\\)\\); print\\('teams count:', len\\(d.get\\('teams', []\\)\\)\\)\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json'\\)\\); print\\(f'Teams: {len\\(d[\\\\\"teams\\\\\"]\\)}, lastUpdated: {d[\\\\\"lastUpdated\\\\\"]}'\\)\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\(f'Teams: {len\\(d[\\\\\"teams\\\\\"]\\)}, lastUpdated: {d[\\\\\"lastUpdated\\\\\"]}'\\)\")"
     ]
   }
 }
