@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T04:09:54.808929+00:00",
+  "lastUpdated": "2026-04-15T04:09:56.095620+00:00",
   "events": [
     "Americas Kickoff",
     "Pacific Kickoff",
@@ -27655,53 +27655,124 @@
       "name": "JD Mall JDG Esports",
       "region": "china",
       "logo": "https://owcdn.net/img/64f9825408326.png",
-      "matchW": 5,
+      "matchW": 6,
       "matchL": 5,
-      "mapW": 13,
+      "mapW": 15,
       "mapL": 14,
       "players": [
         {
           "name": "zhe",
-          "acs": 245,
-          "rating": 1.21,
-          "fkfd": 2.0,
-          "kpm": 18.7,
-          "vflPts": 8.0
+          "acs": 240,
+          "rating": 1.17,
+          "fkfd": 1.5,
+          "kpm": 18.3,
+          "vflPts": 5.0
         },
         {
           "name": "coconut",
-          "acs": 175,
-          "rating": 0.96,
-          "fkfd": 0.62,
-          "kpm": 13.0,
-          "vflPts": 3.5
+          "acs": 190,
+          "rating": 1.05,
+          "fkfd": 0.86,
+          "kpm": 14.3,
+          "vflPts": 7.0
         },
         {
           "name": "stew",
-          "acs": 199,
-          "rating": 0.94,
-          "fkfd": 1.08,
-          "kpm": 15.8,
+          "acs": 202,
+          "rating": 1.01,
+          "fkfd": 1.09,
+          "kpm": 16.3,
+          "vflPts": 6.5
+        },
+        {
+          "name": "Yuicaw",
+          "acs": 193,
+          "rating": 0.96,
+          "fkfd": 0.85,
+          "kpm": 15.0,
           "vflPts": 5.5
         },
         {
           "name": "jkuro",
           "acs": 180,
-          "rating": 0.93,
-          "fkfd": 0.67,
-          "kpm": 14.1,
-          "vflPts": 3.5
-        },
-        {
-          "name": "Yuicaw",
-          "acs": 184,
-          "rating": 0.9,
-          "fkfd": 0.83,
-          "kpm": 14.3,
-          "vflPts": 3.0
+          "rating": 0.95,
+          "fkfd": 1.0,
+          "kpm": 13.9,
+          "vflPts": 4.0
         }
       ],
       "matches": [
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opponent": "TYLOO",
+          "result": "W",
+          "matchScore": [
+            2,
+            0
+          ],
+          "maps": [
+            {
+              "map": "Bind",
+              "score": [
+                17,
+                15
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                13,
+                8
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "TYLOO"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Bind",
+              "team": "TYLOO"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "TYLOO"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1600
+        },
         {
           "event": "China Stage 1",
           "rnd": "W2",
@@ -28462,7 +28533,7 @@
           "oppRating": 1218
         }
       ],
-      "eloRating": 1342,
+      "eloRating": 1517,
       "ratingHistory": [
         {
           "event": "Start",
@@ -28533,6 +28604,13 @@
           "opp": "TEC",
           "result": "W",
           "rating": 1342
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opp": "TYL",
+          "result": "W",
+          "rating": 1517
         }
       ]
     },
@@ -29170,20 +29248,20 @@
           "vflPts": 2.5
         },
         {
-          "name": "Spitfires",
-          "acs": 213,
-          "rating": 0.98,
-          "fkfd": 1.31,
-          "kpm": 16.3,
-          "vflPts": 2.0
-        },
-        {
           "name": "Coco",
           "acs": 199,
           "rating": 0.98,
           "fkfd": 0.7,
           "kpm": 15.2,
           "vflPts": 1.5
+        },
+        {
+          "name": "Spitfires",
+          "acs": 213,
+          "rating": 0.98,
+          "fkfd": 1.31,
+          "kpm": 16.3,
+          "vflPts": 2.0
         },
         {
           "name": "Dynamite",
@@ -29872,49 +29950,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/6433a2cc3ae72.png",
       "matchW": 4,
-      "matchL": 5,
-      "mapW": 10,
-      "mapL": 12,
+      "matchL": 6,
+      "mapW": 11,
+      "mapL": 14,
       "players": [
         {
           "name": "deLb",
-          "acs": 213,
-          "rating": 1.14,
-          "fkfd": 1.11,
-          "kpm": 16.7,
-          "vflPts": null
-        },
-        {
-          "name": "Xlele",
-          "acs": 227,
+          "acs": 215,
           "rating": 1.1,
-          "fkfd": 0.9,
-          "kpm": 18.3,
-          "vflPts": 6.0
+          "fkfd": 1.22,
+          "kpm": 16.9,
+          "vflPts": 2.67
         },
         {
           "name": "Kai",
-          "acs": 217,
-          "rating": 1.04,
-          "fkfd": 0.88,
-          "kpm": 16.7,
-          "vflPts": 7.0
+          "acs": 226,
+          "rating": 1.05,
+          "fkfd": 0.93,
+          "kpm": 17.6,
+          "vflPts": 3.33
+        },
+        {
+          "name": "Xlele",
+          "acs": 221,
+          "rating": 1.05,
+          "fkfd": 0.82,
+          "kpm": 17.4,
+          "vflPts": 2.0
         },
         {
           "name": "Abo",
-          "acs": 189,
-          "rating": 1.02,
-          "fkfd": 0.89,
-          "kpm": 14.7,
-          "vflPts": 5.0
+          "acs": 194,
+          "rating": 1.04,
+          "fkfd": 1.0,
+          "kpm": 15.0,
+          "vflPts": 2.67
         },
         {
           "name": "Viva",
           "acs": 162,
-          "rating": 0.85,
-          "fkfd": 0.6,
+          "rating": 0.83,
+          "fkfd": 0.5,
           "kpm": 11.4,
-          "vflPts": 3.0
+          "vflPts": 1.33
         }
       ],
       "matches": [
@@ -30584,9 +30662,87 @@
             }
           ],
           "oppRating": 990
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opponent": "Dragon Ranger Gaming",
+          "result": "L",
+          "matchScore": [
+            1,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                13,
+                5
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                11,
+                13
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                10,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Split",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ],
+          "oppRating": 1404
         }
       ],
-      "eloRating": 1391,
+      "eloRating": 1345,
       "ratingHistory": [
         {
           "event": "Start",
@@ -30657,6 +30813,13 @@
           "opp": "NOV",
           "result": "W",
           "rating": 1391
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opp": "DRG",
+          "result": "L",
+          "rating": 1345
         }
       ]
     },
@@ -30665,49 +30828,49 @@
       "region": "china",
       "logo": "https://owcdn.net/img/63eb60fb08390.png",
       "matchW": 7,
-      "matchL": 4,
+      "matchL": 5,
       "mapW": 17,
-      "mapL": 11,
+      "mapL": 13,
       "players": [
         {
-          "name": "Erv",
-          "acs": 218,
-          "rating": 1.19,
-          "fkfd": 1.38,
-          "kpm": 15.8,
-          "vflPts": 3.67
-        },
-        {
           "name": "slowly",
-          "acs": 216,
-          "rating": 1.14,
-          "fkfd": 0.5,
-          "kpm": 16.9,
-          "vflPts": 3.0
+          "acs": 218,
+          "rating": 1.15,
+          "fkfd": 0.56,
+          "kpm": 17.2,
+          "vflPts": 3.5
         },
         {
-          "name": "splash",
-          "acs": 260,
-          "rating": 1.1,
-          "fkfd": 1.25,
-          "kpm": 19.8,
-          "vflPts": 5.33
+          "name": "Erv",
+          "acs": 203,
+          "rating": 1.05,
+          "fkfd": 1.0,
+          "kpm": 14.7,
+          "vflPts": 0.5
         },
         {
           "name": "Scales",
-          "acs": 210,
-          "rating": 1.06,
-          "fkfd": 1.62,
-          "kpm": 16.3,
+          "acs": 209,
+          "rating": 1.05,
+          "fkfd": 1.71,
+          "kpm": 16.1,
           "vflPts": 2.0
         },
         {
+          "name": "splash",
+          "acs": 257,
+          "rating": 1.05,
+          "fkfd": 1.17,
+          "kpm": 19.4,
+          "vflPts": 2.5
+        },
+        {
           "name": "sword9",
-          "acs": 147,
-          "rating": 0.88,
-          "fkfd": 0.43,
-          "kpm": 11.2,
-          "vflPts": 2.0
+          "acs": 156,
+          "rating": 0.9,
+          "fkfd": 0.29,
+          "kpm": 12.1,
+          "vflPts": 2.5
         }
       ],
       "matches": [
@@ -31497,9 +31660,80 @@
             }
           ],
           "oppRating": 1739
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opponent": "JD Mall JDG Esports",
+          "result": "L",
+          "matchScore": [
+            0,
+            2
+          ],
+          "maps": [
+            {
+              "map": "Bind",
+              "score": [
+                15,
+                17
+              ]
+            },
+            {
+              "map": "Haven",
+              "score": [
+                8,
+                13
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Lotus",
+              "team": "TYLOO"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Breeze",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Bind",
+              "team": "TYLOO"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Haven",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "TYLOO"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "JD Mall JDG Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Split",
+              "team": ""
+            }
+          ],
+          "oppRating": 1342
         }
       ],
-      "eloRating": 1600,
+      "eloRating": 1425,
       "ratingHistory": [
         {
           "event": "Start",
@@ -31584,6 +31818,13 @@
           "opp": "AG",
           "result": "W",
           "rating": 1600
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opp": "JDG",
+          "result": "L",
+          "rating": 1425
         }
       ]
     },
@@ -33297,50 +33538,50 @@
       "name": "Dragon Ranger Gaming",
       "region": "china",
       "logo": "https://owcdn.net/img/642233fc01f26.png",
-      "matchW": 4,
+      "matchW": 5,
       "matchL": 5,
-      "mapW": 11,
-      "mapL": 13,
+      "mapW": 13,
+      "mapL": 14,
       "players": [
         {
           "name": "vo0kashu",
-          "acs": 199,
-          "rating": 1.15,
+          "acs": 210,
+          "rating": 1.18,
           "fkfd": 1.43,
-          "kpm": 16.7,
-          "vflPts": 3.33
+          "kpm": 17.4,
+          "vflPts": 4.0
         },
         {
           "name": "Nicc",
-          "acs": 187,
-          "rating": 1.1,
-          "fkfd": 1.25,
-          "kpm": 13.9,
-          "vflPts": 2.0
-        },
-        {
-          "name": "Life",
-          "acs": 251,
-          "rating": 1.03,
+          "acs": 191,
+          "rating": 1.11,
           "fkfd": 1.0,
-          "kpm": 18.5,
-          "vflPts": 2.33
+          "kpm": 14.3,
+          "vflPts": 2.67
         },
         {
           "name": "SpiritZ1",
           "acs": 227,
-          "rating": 0.99,
-          "fkfd": 1.07,
+          "rating": 1.03,
+          "fkfd": 1.13,
+          "kpm": 17.2,
+          "vflPts": 2.67
+        },
+        {
+          "name": "Life",
+          "acs": 231,
+          "rating": 0.96,
+          "fkfd": 0.94,
           "kpm": 16.9,
-          "vflPts": 2.0
+          "vflPts": 1.67
         },
         {
           "name": "Flex1n",
-          "acs": 167,
-          "rating": 0.95,
+          "acs": 172,
+          "rating": 0.94,
           "fkfd": 1.0,
-          "kpm": 13.0,
-          "vflPts": 1.0
+          "kpm": 13.2,
+          "vflPts": 2.0
         }
       ],
       "matches": [
@@ -34024,9 +34265,87 @@
             }
           ],
           "oppRating": 1771
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opponent": "Trace Esports",
+          "result": "W",
+          "matchScore": [
+            2,
+            1
+          ],
+          "maps": [
+            {
+              "map": "Lotus",
+              "score": [
+                5,
+                13
+              ]
+            },
+            {
+              "map": "Bind",
+              "score": [
+                13,
+                11
+              ]
+            },
+            {
+              "map": "Breeze",
+              "score": [
+                13,
+                10
+              ]
+            }
+          ],
+          "veto": [
+            {
+              "step": 1,
+              "action": "ban",
+              "map": "Fracture",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 2,
+              "action": "ban",
+              "map": "Pearl",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 3,
+              "action": "pick",
+              "map": "Lotus",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 4,
+              "action": "pick",
+              "map": "Bind",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 5,
+              "action": "ban",
+              "map": "Split",
+              "team": "Dragon Ranger Gaming"
+            },
+            {
+              "step": 6,
+              "action": "ban",
+              "map": "Haven",
+              "team": "Trace Esports"
+            },
+            {
+              "step": 7,
+              "action": "decider",
+              "map": "Breeze",
+              "team": ""
+            }
+          ],
+          "oppRating": 1391
         }
       ],
-      "eloRating": 1404,
+      "eloRating": 1450,
       "ratingHistory": [
         {
           "event": "Start",
@@ -34097,6 +34416,13 @@
           "opp": "EDG",
           "result": "L",
           "rating": 1404
+        },
+        {
+          "event": "China Stage 1",
+          "rnd": "W3",
+          "opp": "TRC",
+          "result": "W",
+          "rating": 1450
         }
       ]
     },
