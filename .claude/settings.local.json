@@ -106,7 +106,9 @@
       "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json'\\)\\); print\\(f'teams: {len\\(d[\\\\\"teams\\\\\"]\\)}, lastUpdated: {d[\\\\\"lastUpdated\\\\\"]}'\\)\")",
       "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\(f'teams: {len\\(d[\\\\\"teams\\\\\"]\\)}, lastUpdated: {d[\\\\\"lastUpdated\\\\\"]}'\\)\")",
       "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json'\\)\\); print\\(len\\(d['teams']\\), 'teams'\\)\")",
-      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\(len\\(d['teams']\\), 'teams'\\)\")"
+      "Bash(python -c \"import json; d=json.load\\(open\\('vct_data.json', encoding='utf-8'\\)\\); print\\(len\\(d['teams']\\), 'teams'\\)\")",
+      "Bash(timeout 30 python monitor.py)",
+      "Bash(python monitor.py)"
     ]
   }
 }
